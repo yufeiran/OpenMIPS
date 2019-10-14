@@ -66,6 +66,62 @@ module ex(
     reg[`RegBus] HI;        //保存HI寄存器的最新值
     reg[`RegBus] LO;        //保存LO寄存器的最新值
     
+
+    /*************************************
+     **** 第一段：根据aluop_i指示的运算子类型进行运算，此时只有逻辑或运算
+     ******************************************************************/
+     
+     always@(*)begin
+        if(rst==`RstEnable)begin
+            logicout<=`ZeroWord;
+        end else begin
+            case(aluop_i)
+                `EXE_OR_OP:begin
+                    logicout<=reg1_i|reg2_i;
+                end
+                `EXE_AND_OP:begin
+                    logicout<=reg1_i&reg2_i;
+                end
+                `EXE_NOR_OP:begin
+                    logicout<=~(reg1_i|reg2_i);
+                end
+                `EXE_XOR_OP:begin
+                    logicout<=reg1_i^reg2_i;
+                end
+                default:begin
+                    logicout<=`ZeroWord;
+                end
+             endcase
+           end      //if
+         end        //always
+      
+      
+       /**************************************************************************
+      ******* 第二段：根据alusel_i指示的运算类型，选择一个运算结果作为最终结果
+      *************************************************************************/
+      
+     
+      always@(*)begin
+        if(rst==`RstEnable)begin
+            shiftres<=`ZeroWord;
+        end else begin
+            case(aluop_i)
+            `EXE_SLL_OP:begin
+                shiftres<=reg2_i<<reg1_i[4:0];
+            end
+            `EXE_SRL_OP:begin
+                shiftres<=reg2_i>>reg1_i[4:0];
+            end
+            `EXE_SRA_OP:begin
+                shiftres<= ({32{reg2_i[31]}}<<(6'd32-{1'b0,reg1_i[4:0]}))| reg2_i>>reg1_i[4:0];
+            end
+            default:begin
+                shiftres<=`ZeroWord;
+            end
+          endcase
+        end     //if
+      end       //always
+
     //处理HI/LO的数据相关
     always@(*)
     begin
@@ -106,26 +162,7 @@ module ex(
         end
    end
    
-   //MTHI\MTLO指令实现
-   always@(*)begin
-    if(rst==`RstEnable) begin
-        whilo_o<=`WriteDisable;
-        hi_o    <=`ZeroWord;
-        lo_o    <=`ZeroWord;
-    end else if(aluop_i == `EXE_MTHI_OP)begin
-        whilo_o<=`WriteEnable;
-        hi_o    <=reg1_i;
-        lo_o    <=LO;   
-     end else if(aluop_i==`EXE_MTLO_OP)begin
-        whilo_o<=`WriteEnable;
-        hi_o    <=HI;
-        lo_o    <=reg1_i;
-     end else begin
-        whilo_o <=`WriteDisable;
-        hi_o    <=`ZeroWord;
-        lo_o    <=`ZeroWord;
-     end
-   end
+
    
    always@(*) begin
         wd_o<=wd_i;
@@ -146,73 +183,28 @@ module ex(
         endcase
    end
                 
+    //MTHI\MTLO指令实现
+   always@(*)begin
+    if(rst==`RstEnable) begin
+        whilo_o<=`WriteDisable;
+        hi_o    <=`ZeroWord;
+        lo_o    <=`ZeroWord;
+    end else if(aluop_i == `EXE_MTHI_OP)begin
+        whilo_o<=`WriteEnable;
+        hi_o    <=reg1_i;
+        lo_o    <=LO;   
+     end else if(aluop_i==`EXE_MTLO_OP)begin
+        whilo_o<=`WriteEnable;
+        hi_o    <=HI;
+        lo_o    <=reg1_i;
+     end else begin
+        whilo_o <=`WriteDisable;
+        hi_o    <=`ZeroWord;
+        lo_o    <=`ZeroWord;
+     end
+   end
         
-    /*************************************
-     **** 第一段：根据aluop_i指示的运算子类型进行运算，此时只有逻辑或运算
-     ******************************************************************/
-     
-     always@(*)begin
-        if(rst==`RstEnable)begin
-            logicout<=`ZeroWord;
-        end else begin
-            case(aluop_i)
-                `EXE_OR_OP:begin
-                    logicout<=reg1_i|reg2_i;
-                end
-                `EXE_AND_OP:begin
-                    logicout<=reg1_i&reg2_i;
-                end
-                `EXE_NOR_OP:begin
-                    logicout<=~(reg1_i|reg2_i);
-                end
-                `EXE_XOR_OP:begin
-                    logicout<=reg1_i^reg2_i;
-                end
-                default:begin
-                    logicout<=`ZeroWord;
-                end
-             endcase
-           end      //if
-         end        //always
+
       
-      always@(*)begin
-        if(rst==`RstEnable)begin
-            shiftres<=`ZeroWord;
-        end else begin
-            case(aluop_i)
-            `EXE_SLL_OP:begin
-                shiftres<=reg2_i<<reg1_i[4:0];
-            end
-            `EXE_SRL_OP:begin
-                shiftres<=reg2_i>>reg1_i[4:0];
-            end
-            `EXE_SRA_OP:begin
-                shiftres<= ({32{reg2_i[31]}}<<(6'd32-{1'b0,reg1_i[4:0]}))| reg2_i>>reg1_i[4:0];
-            end
-            default:begin
-                shiftres<=`ZeroWord;
-            end
-          endcase
-        end     //if
-      end       //always
-      
-     /**************************************************************************
-      ******* 第二段：根据alusel_i指示的运算类型，选择一个运算结果作为最终结果
-      *************************************************************************/
-      
-      always@(*) begin
-        wd_o<=wd_i;     //wd_o等于wd_i，要写的目的寄存器地址
-        wreg_o<=wreg_i; 
-        case(alusel_i)
-            `EXE_RES_LOGIC: begin
-                wdata_o<=logicout;  //wdata_o中存放运算结果
-            end
-            `EXE_RES_SHIFT:begin
-                wdata_o<=shiftres;
-             end
-            default:begin
-                wdata_o<=`ZeroWord;
-            end
-          endcase
-       end
+
 endmodule
