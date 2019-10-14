@@ -1,0 +1,53 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Oct 10 16:07:39 2019
+# Process ID: 3664
+# Current directory: D:/codehub/VIVADO/LOONGSON/OpenMIPS
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7164 D:\codehub\VIVADO\LOONGSON\OpenMIPS\OpenMIPS.xpr
+# Log file: D:/codehub/VIVADO/LOONGSON/OpenMIPS/vivado.log
+# Journal file: D:/codehub/VIVADO/LOONGSON/OpenMIPS\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close [ open D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/inst_rom.v w ]
+add_files D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/inst_rom.v
+update_compile_order -fileset sources_1
+close [ open D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v w ]
+add_files D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+move_files -fileset sim_1 [get_files  D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/inst_rom.v]
+move_files [get_files  D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/inst_rom.v]
+update_compile_order -fileset sources_1
+file mkdir D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sim_1/new/openmips_min_sopc_tb.v w ]
+add_files -fileset sim_1 D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sim_1/new/openmips_min_sopc_tb.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source openmips_min_sopc_tb.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+remove_forces { {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/clk} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/rst} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/we} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/waddr} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/wdata} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/re1} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/raddr1} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/rdata1} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/re2} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/raddr2} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/regfile1/rdata2} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/clk} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/rst} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/rom_data_i} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/rom_addr_o} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/rom_ce_o} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_pc_i} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_inst_i} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_aluop_o} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_alusel_o} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg1_o} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_reg2_o} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wreg_o} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/id_wd_o} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/ex_aluop_i} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/ex_alusel_i} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/ex_reg1_i} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/ex_reg2_i} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/ex_wreg_i} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/ex_wd_i} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/ex_wreg_o} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/ex_wd_o} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/ex_wdata_o} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/mem_wreg_i} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/mem_wd_i} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/mem_wdata_i} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/mem_wreg_o} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/mem_wd_o} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/mem_wdata_o} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wreg_i} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wd_i} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/wb_wdata_i} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/reg1_read} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/reg2_read} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/reg1_data} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/reg2_data} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/reg1_addr} {/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/reg2_addr} }
+relaunch_sim
+relaunch_sim

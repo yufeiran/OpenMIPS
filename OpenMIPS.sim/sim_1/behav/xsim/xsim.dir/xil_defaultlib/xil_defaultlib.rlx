@@ -1,0 +1,20 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sim_1/new/openmips_min_sopc_tb.v,1570697081,verilog,,,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS.vh,openmips_min_sopc_tb,,,../../../../OpenMIPS.srcs/sources_1/new,,,,,
+D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS.vh,1570972099,verilog,,,,,,,,,,,,
+D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/ex.v,1570974725,verilog,,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/ex_mem.v,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS.vh,ex,,,../../../../OpenMIPS.srcs/sources_1/new,,,,,
+D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/ex_mem.v,1570975119,verilog,,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/hilo_reg.v,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS.vh,ex_mem,,,../../../../OpenMIPS.srcs/sources_1/new,,,,,
+D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/hilo_reg.v,1570971599,verilog,,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/id.v,,hilo_reg,,,../../../../OpenMIPS.srcs/sources_1/new,,,,,
+D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/id.v,1570972944,verilog,,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/id_ex.v,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS.vh,id,,,../../../../OpenMIPS.srcs/sources_1/new,,,,,
+D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/id_ex.v,1570687219,verilog,,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/if_id.v,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS.vh,id_ex,,,../../../../OpenMIPS.srcs/sources_1/new,,,,,
+D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/if_id.v,1570672167,verilog,,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/inst_rom.v,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS.vh,if_id,,,../../../../OpenMIPS.srcs/sources_1/new,,,,,
+D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/inst_rom.v,1570695767,verilog,,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/mem.v,,inst_rom,,,../../../../OpenMIPS.srcs/sources_1/new,,,,,
+D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/mem.v,1570975308,verilog,,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/mem_wb.v,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS.vh,mem,,,../../../../OpenMIPS.srcs/sources_1/new,,,,,
+D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/mem_wb.v,1570689113,verilog,,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS.vh,mem_wb,,,../../../../OpenMIPS.srcs/sources_1/new,,,,,
+D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v,1570957287,verilog,,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v,,openmips,,,../../../../OpenMIPS.srcs/sources_1/new,,,,,
+D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v,1570697255,verilog,,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/pc_reg.v,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS.vh,openmips_min_sopc,,,../../../../OpenMIPS.srcs/sources_1/new,,,,,
+D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/pc_reg.v,1570633426,verilog,,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/regfile.v,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS.vh,pc_reg,,,../../../../OpenMIPS.srcs/sources_1/new,,,,,
+D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/regfile.v,1570689854,verilog,,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sim_1/new/openmips_min_sopc_tb.v,D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS.vh,regfile,,,../../../../OpenMIPS.srcs/sources_1/new,,,,,
