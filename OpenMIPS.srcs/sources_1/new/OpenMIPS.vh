@@ -102,8 +102,8 @@
 `define EXE_SUBU_OP    8'b00100011
 `define EXE_ADDI_OP    8'b00001000
 `define EXE_ADDIU_OP   8'b00001001
-`define EXE_CLZ_OP     8'b00100000
-`define EXE_CLO_OP     8'b00100001
+`define EXE_CLZ_OP     8'b10110000
+`define EXE_CLO_OP     8'b10110001
 
 `define EXE_MULT_OP    8'b00011000
 `define EXE_MULTU_OP   8'b00011001

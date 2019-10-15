@@ -1,7 +1,4 @@
-Running: xsim.dir/openmips_min_sopc_tb_behav/xsimk.exe -simmode gui -wdb openmips_min_sopc_tb_behav.wdb -simrunnum 0 -socket 58876
+Running: xsim.dir/openmips_min_sopc_tb_behav/xsimk.exe -simmode gui -wdb openmips_min_sopc_tb_behav.wdb -simrunnum 0 -socket 52549
 Design successfully loaded
-Design Loading Memory Usage: 6912 KB (Peak: 6912 KB)
+Design Loading Memory Usage: 6476 KB (Peak: 6476 KB)
 Design Loading CPU Usage: 15 ms
-Simulation completed
-Simulation Memory Usage: 7892 KB (Peak: 7892 KB)
-Simulation CPU Usage: 15 ms

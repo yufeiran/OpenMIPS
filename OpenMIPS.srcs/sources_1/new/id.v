@@ -359,7 +359,7 @@ module id(
                   end
                   `EXE_SLTIU:begin
                     wreg_o<=`WriteEnable;
-                    aluop_o<=`EXE_SLTIU_OP;
+                    aluop_o<=`EXE_SLTU_OP;
                     alusel_o<=`EXE_RES_ARITHMETIC;
                     reg1_read_o<=1'b1;
                     reg2_read_o<=1'b0;
