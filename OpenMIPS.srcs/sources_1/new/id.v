@@ -38,6 +38,8 @@ module id(
 	input wire         mem_wreg_i,
 	input wire [`RegBus] mem_wdata_i,
 	input wire [`RegAddrBus] mem_wd_i,
+	
+	output reg        stallreq,
     
     // 输出到Regfile的信息
     output reg                  reg1_read_o,
@@ -82,6 +84,7 @@ module id(
             reg1_addr_o<=`NOPRegAddr;
             reg2_addr_o<=`NOPRegAddr;
             imm<=32'h0;
+            stallreq<=`NoStop;
         end else begin
             aluop_o<=`EXE_NOP_OP;
             alusel_o<=`EXE_RES_NOP;

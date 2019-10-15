@@ -15,6 +15,9 @@
 `define ChipEnable          1'b1                    //芯片使能
 `define ChipDisable         1'b0                    //芯片禁止
 
+`define Stop                1'b1                    //流水线暂停
+`define NoStop              1'b0                    //流水线继续
+
 //************************** 与具体指令有关的宏定义 *******************************
 `define EXE_ORI         6'b001101           //指令ori的指令码
 `define EXE_NOP         6'b000000
