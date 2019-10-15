@@ -49,9 +49,10 @@ module ex(
     input wire [`DoubleRegBus] hilo_temp_i,
     input wire [1:0]            cnt_i,
 
+    output reg stallreq,
 
-    
-    output wire stallreq_from_ex,
+    output reg[`DoubleRegBus] hilo_temp_o,
+    output reg[1:0]         cnt_o,
     
     //执行的结果
     output reg[`RegAddrBus]  wd_o,
@@ -82,14 +83,11 @@ module ex(
     wire[`RegBus]   opdata1_mult;   //乘法操作中的被乘数
     wire[`RegBus]   opdata2_mult;   //乘法操作中的乘数
     wire[`DoubleRegBus] hilo_temp;  //临时保存乘法结果，宽度为64位
-    reg[`DoubleRegBus] mulres;     //保存乘法结果，宽度为64位
-
-    wire[`RegBus]   opdata1_mult;
-    wire[`RegBus]   opdata2_mult;
-    wire[`DoubleRegBus] hilo_temp;
-    reg[`DoubleRegBus] hilo_temp_i;
-    reg                 stallreq_for_madd_msub;
+    reg[`DoubleRegBus] hilo_temp1;
     
+
+    reg                 stallreq_for_madd_msub;
+    reg[`DoubleRegBus] mulres;     //保存乘法结果，宽度为64位
     //第一段：计算以下5个变量的值
     
     //（1）如果是减法或有符号比较运算，则reg2_i_mux为reg2_i的补码,否则直接为reg2_i

@@ -2,8 +2,8 @@
 # Webtalk v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Oct 10 16:47:43 2019
-# Process ID: 8704
+# Start of session at: Mon Oct 14 20:35:24 2019
+# Process ID: 10544
 # Current directory: D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim/xsim.dir/openmips_min_sopc_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim/webtalk.log
