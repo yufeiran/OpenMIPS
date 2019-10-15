@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="40" Path="D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.xpr">
+<Project Version="7" Minor="40" Path="C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="4c9d15a03076431c966d8e493222eb77"/>
