@@ -73,7 +73,7 @@
 `define EXE_MSUB    6'b000100
 `define EXE_MSUBU   6'b000101
 
-`define EXE_DIV     6'b101010
+`define EXE_DIV     6'b011010
 `define EXE_DIVU    6'b011011
 
 //AluOp

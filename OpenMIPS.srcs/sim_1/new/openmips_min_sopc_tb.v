@@ -35,7 +35,7 @@ module openmips_min_sopc_tb(
     initial begin
         rst=`RstEnable;
         #195 rst=`RstDisable;
-        #1000 $stop;
+        #5000 $stop;
     end
     
     openmips_min_sopc openmips_min_sopc0(

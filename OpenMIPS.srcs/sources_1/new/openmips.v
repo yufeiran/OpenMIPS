@@ -192,6 +192,9 @@ module openmips(
         .cnt_i(cnt_i),
         
         .hilo_temp_i(hilo_temp_i),
+
+        .div_result_i(div_result),
+        .div_ready_i(div_ready),
         
         .stallreq(stallreq_from_ex),
         .wd_o(ex_wd_o),.wreg_o(ex_wreg_o),
@@ -202,7 +205,14 @@ module openmips(
         
         .hi_o(ex_hi_o),
         .lo_o(ex_lo_o),
-        .whilo_o(ex_whilo_o)
+        .whilo_o(ex_whilo_o),
+
+        .div_start_o(div_start),
+        .div_opdata2_o(div_opdata2),
+        .div_opdata1_o(div_opdata1),
+        .signed_div_o(signed_div)
+
+
         
         );
     //EX/MEMÄ£¿éÀý»¯

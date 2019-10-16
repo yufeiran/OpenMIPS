@@ -1,6 +1,7 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  --include "../../../../OpenMIPS.srcs/sources_1/new" \
 "../../../../OpenMIPS.srcs/sources_1/new/ctrl.v" \
+"../../../../OpenMIPS.srcs/sources_1/new/div.v" \
 "../../../../OpenMIPS.srcs/sources_1/new/ex.v" \
 "../../../../OpenMIPS.srcs/sources_1/new/ex_mem.v" \
 "../../../../OpenMIPS.srcs/sources_1/new/hilo_reg.v" \

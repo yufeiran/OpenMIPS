@@ -99,8 +99,12 @@ module div(
                         cnt<=cnt+1;
                     end else begin  //试商法结束
                         if((signed_div_i==1'b1)&&
-                        (opdata1_i[31]^opdata2_i[21]==1'b1))begin
+                        ((opdata1_i[31]^opdata2_i[21])==1'b1))begin
                             dividend[31:0]<=(~dividend[31:0]+1);        //求补码
+                        end
+                        if((signed_div_i==1'b1)&&
+                        ((opdata1_i[31]^dividend[64])==1'b1))begin
+                            dividend[64:33]<=(~dividend[64:33]+1);      //求补码
                         end
                         state<=`DivEnd;
                         cnt<=6'b000000;
@@ -112,7 +116,7 @@ module div(
 
             `DivEnd:begin
                 result_o<={dividend[64:33],dividend[31:0]};
-                ready_o<=`DivResultNotReady;
+                ready_o<=`DivResultReady;
                 if(start_i==`DivStop)begin
                     state<=`DivFree;
                     ready_o<=`DivResultNotReady;

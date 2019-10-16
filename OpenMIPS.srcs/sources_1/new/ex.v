@@ -120,7 +120,7 @@ module ex(
                     div_start_o<=`DivStart;
                     signed_div_o<=1'b1;
                     stallreq_for_div<=`Stop;
-                end else if(div_ready_i==`DivResultNotReady)begin
+                end else if(div_ready_i==`DivResultReady)begin
                     div_opdata1_o<=reg1_i;
                     div_opdata2_o<=reg2_i;
                     div_start_o<=`DivStop;
@@ -141,7 +141,7 @@ module ex(
                     div_start_o<=`DivStart;
                     signed_div_o<=1'b0;
                     stallreq_for_div<=`Stop;
-                end else if(div_ready_i==`DivResultNotReady)begin
+                end else if(div_ready_i==`DivResultReady)begin
                     div_opdata1_o<=reg1_i;
                     div_opdata2_o<=reg2_i;
                     div_start_o<=`DivStop;
