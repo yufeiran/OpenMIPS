@@ -102,6 +102,20 @@ module id(
                     case(op2)
                         5'b00000:   begin
                             case(op3)   
+                                `EXE_DIV:begin
+                                    wreg_o<=`WriteDisable;
+                                    aluop_o<=`EXE_DIV_OP;
+                                    reg1_read_o<=1'b1;
+                                    reg2_read_o<=1'b1;
+                                    instvalid<=`InstValid;
+                                end
+                                `EXE_DIVU:begin
+                                    wreg_o<=`WriteDisable;
+                                    aluop_o<=`EXE_DIVU_OP;
+                                    reg1_read_o<=1'b1;
+                                    reg2_read_o<=1'b1;
+                                    instvalid<=`InstValid;
+                                end
                                 `EXE_OR:begin   
                                     wreg_o  <=`WriteEnable;
                                     aluop_o <=`EXE_OR_OP;
