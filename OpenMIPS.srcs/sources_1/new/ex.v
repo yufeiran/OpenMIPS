@@ -52,6 +52,9 @@ module ex(
     input wire [`DoubleRegBus] div_result_i,
     input wire                 div_ready_i,
 
+    input wire [`RegBus] link_address_i,
+    input wire           is_in_delayslot_i,
+
     output reg stallreq,
 
     output reg[`DoubleRegBus] hilo_temp_o,
@@ -455,6 +458,9 @@ end
              end
              `EXE_RES_MUL:  begin
                 wdata_o<=mulres[31:0];
+             end
+             `EXE_RES_JUMP_BRANCH:begin
+                wdata_o<=link_address_i;
              end
              default:begin
                 wdata_o<=`ZeroWord;

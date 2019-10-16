@@ -43,6 +43,8 @@ module openmips(
     wire [`RegBus]      id_reg2_o;
     wire                id_wreg_o;
     wire[`RegAddrBus]   id_wd_o;
+    wire id_is_in_delayslot_o;
+    wire[`RegBus] id_link_address_o;
     
     //连接ID/EX模块输出与执行阶段EX模块的输入的变量
     wire [`AluOpBus] ex_aluop_i;
@@ -51,6 +53,8 @@ module openmips(
     wire [`RegBus]  ex_reg2_i;
     wire            ex_wreg_i;
     wire [`RegAddrBus] ex_wd_i;
+    wire ex_is_in_delayslot_i;
+    wire[`RegBus] ex_link_address_i;
     
     //连接执行EX模块的输出与EX/MEM模块的输入的变量
     wire            ex_wreg_o;
@@ -107,14 +111,27 @@ module openmips(
 
     //连接DIV模块的变量
     wire signed_div;
-    wire [31:0] div_opdata1;
-    wire [31:0] div_opdata2;
+    wire [`RegBus] div_opdata1;
+    wire [`RegBus] div_opdata2;
     wire  div_start;
-    wire [63:0] div_result;
+    wire [`DoubleRegBus] div_result;
     wire div_ready;
+
+    wire is_in_delayslot_i;
+    wire is_in_delayslot_o;
+    wire next_inst_in_delayslot_o;
+    wire id_branch_flag_o;
+    wire[`RegBus]branch_target_address;
     
     pc_reg pc_reg0(
-        .clk(clk),.rst(rst),.pc(pc),.ce(rom_ce_o),.stall(stall));
+        .clk(clk),
+        .rst(rst),
+        .pc(pc),
+        .ce(rom_ce_o),
+        .stall(stall),
+        .branch_flag_i(id_branch_flag_o),
+        .branch_target_address_i(branch_target_address)
+        );
     
     assign rom_addr_o=pc;       //指令存储器的输入地址是PC的值
     
@@ -135,10 +152,19 @@ module openmips(
         .ex_wreg_i(ex_wreg_o),.ex_wdata_i(ex_wdata_o),.ex_wd_i(ex_wd_o),
 
         .mem_wreg_i(mem_wreg_o),.mem_wdata_i(mem_wdata_o),.mem_wd_i(mem_wd_o),
+
+        .is_in_delayslot_i(is_in_delayslot_i),
         
         //送到regfile模块的信息
         .reg1_read_o(reg1_read),    .reg2_read_o(reg2_read),
         .reg1_addr_o(reg1_addr),    .reg2_addr_o(reg2_addr),
+
+        .next_inst_in_delayslot_o(next_inst_in_delayslot_o),
+        .branch_flag_o(id_branch_flag_o),
+        .branch_target_address_o(branch_target_address),
+        .link_addr_o(id_link_address_o),
+
+        .is_in_delayslot_o(id_is_in_delayslot_o),
         
         //送到ID/EX模块的信息
         .aluop_o(id_aluop_o),   .alusel_o(id_alusel_o),
@@ -168,7 +194,10 @@ module openmips(
         
         .ex_aluop(ex_aluop_i),  .ex_alusel(ex_alusel_i),
         .ex_reg1(ex_reg1_i),.ex_reg2(ex_reg2_i),
-        .ex_wd(ex_wd_i),.ex_wreg(ex_wreg_i)
+        .ex_wd(ex_wd_i),.ex_wreg(ex_wreg_i),
+        .ex_link_address(ex_link_address_i),
+        .ex_is_in_delayslot(ex_is_in_delayslot_i),
+        .is_in_delayslot_o(is_in_delayslot_i)
         );
      
      //EX模块例化
