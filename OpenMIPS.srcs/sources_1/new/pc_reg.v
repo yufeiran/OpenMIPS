@@ -24,7 +24,7 @@ module pc_reg(
     input wire      clk,
     input wire      rst,
     input wire[5:0]  stall,     //来自控制模块CTRL
-    input wire      brahch_flag_i,
+    input wire      branch_flag_i,
     input wire[`RegBus] branch_target_address_i,
 
     output reg[`InstAddrBus] pc,
@@ -42,7 +42,7 @@ module pc_reg(
         if(ce ==`ChipDisable) begin
             pc<=32'h00000000;       //指令存储器禁用的时候，PC为0
         end else if(stall[0]==`NoStop) begin
-            if(brahch_flag_i==`Branch)begin
+            if(branch_flag_i==`Branch)begin
                 pc<=branch_target_address_i;
             end else begin
                 pc<=pc+4'h4;

@@ -2,14 +2,14 @@
 # Webtalk v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Oct 16 23:16:11 2019
-# Process ID: 1276
+# Start of session at: Wed Oct 16 23:04:20 2019
+# Process ID: 6640
 # Current directory: C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim/xsim.dir/openmips_min_sopc_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
 source C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim/xsim.dir/openmips_min_sopc_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim/xsim.dir/openmips_min_sopc_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Oct 16 23:16:19 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
-webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 109.457 ; gain = 23.375
-INFO: [Common 17-206] Exiting Webtalk at Wed Oct 16 23:16:19 2019...
+INFO: [Common 17-186] 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim/xsim.dir/openmips_min_sopc_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Oct 16 23:04:27 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 109.598 ; gain = 23.465
+INFO: [Common 17-206] Exiting Webtalk at Wed Oct 16 23:04:27 2019...

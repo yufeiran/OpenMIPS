@@ -190,7 +190,10 @@ module openmips(
         .id_reg1(id_reg1_o),    .id_reg2(id_reg2_o),
         .id_wd(id_wd_o),    .id_wreg(id_wreg_o),
         .stall(stall),
-
+		.id_link_address(id_link_address_o),
+		.id_is_in_delayslot(id_is_in_delayslot_o),
+		.next_inst_in_delayslot_i(next_inst_in_delayslot_o),		
+	
         
         .ex_aluop(ex_aluop_i),  .ex_alusel(ex_alusel_i),
         .ex_reg1(ex_reg1_i),.ex_reg2(ex_reg2_i),
@@ -209,6 +212,9 @@ module openmips(
         .wd_i(ex_wd_i),.wreg_i(ex_wreg_i),
         .hi_i(hi),
         .lo_i(lo),
+
+        .is_in_delayslot_i(is_in_delayslot_i),
+        .link_address_i(ex_link_address_i),
         
         
         .wb_hi_i(wb_hi_i),
