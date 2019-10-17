@@ -37,6 +37,14 @@ module ex_mem(
 
     input wire [`DoubleRegBus] hilo_i,
     input wire [1:0]           cnt_i,
+
+    input wire [`AluOpBus]  ex_aluop,
+    input wire [`RegBus]    ex_mem_addr,
+    input wire [`RegBus]    ex_reg2,
+
+    output reg[`AluOpBus]   mem_aluop,
+    output reg[`RegBus]     mem_mem_addr,
+    output reg[`RegBus]     mem_reg2,
     
     //送到访存阶段的信息
     output reg  [`RegAddrBus] mem_wd,
@@ -78,6 +86,9 @@ module ex_mem(
             mem_whilo<=ex_whilo;
             hilo_o<={`ZeroWord,`ZeroWord};
             cnt_o<=2'b00;
+            mem_aluop<=ex_aluop;
+            mem_mem_addr<=ex_mem_addr;
+            mem_reg2<=ex_reg2;
         end else begin 
             hilo_o<=hilo_i;
             cnt_o<=cnt_i;

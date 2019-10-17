@@ -24,10 +24,18 @@
 module openmips(
     input wire clk,
     input wire rst,
+
     
     input wire [`RegBus]    rom_data_i,
     output wire [`RegBus]   rom_addr_o,
-    output wire             rom_ce_o
+    output wire             rom_ce_o,
+
+    input wire [`RegBus]    ram_data_i,
+    output wire [`RegBus]   ram_addr_o,
+    output wire [`RegBus]   ram_data_o,
+    output wire             ram_we_o,
+    output wire             ram_sel_o,
+    output wire             ram_ce_o
     );
     
     //连接IF/ID模块与链接阶段ID模块的变量
@@ -287,14 +295,21 @@ module openmips(
         .hi_i(mem_hi_i),
         .lo_i(mem_lo_i),
         .whilo_i(mem_whilo_i),
-        
+
+        .mem_data_i(ram_data_i),
         
         //送到MEM/WB模块的信息
         .wd_o(mem_wd_o), .wreg_o(mem_wreg_o),
         .wdata_o(mem_wdata_o),
         .hi_o(mem_hi_o),
         .lo_o(mem_lo_o),
-        .whilo_o(mem_whilo_o)
+        .whilo_o(mem_whilo_o),
+
+        .mem_addr_o(ram_addr_o),
+        .mem_we_o(ram_we_o),
+        .mem_sel_o(ram_sel_o),
+        .mem_data_o(ram_data_o),
+        .mem_ce_o(ram_sel_o)
         );
      
     //MEM/WB模块例化
