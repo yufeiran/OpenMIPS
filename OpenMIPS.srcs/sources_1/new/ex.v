@@ -55,6 +55,12 @@ module ex(
     input wire [`RegBus] link_address_i,
     input wire           is_in_delayslot_i,
 
+    input wire [`RegBus]    inst_i,
+
+    output wire [`AluOpBus] aluop_o,
+    output wire [`RegBus]   mem_addr_o,
+    output wire [`RegBus]   reg2_o,
+
     output reg stallreq,
 
     output reg[`DoubleRegBus] hilo_temp_o,
@@ -95,7 +101,15 @@ module ex(
     wire[`RegBus]   opdata2_mult;   //乘法操作中的乘数
     wire[`DoubleRegBus] hilo_temp;  //临时保存乘法结果，宽度为64位
     reg[`DoubleRegBus] hilo_temp1;
-    
+
+    //把aluop传到访存阶段，进行加载、存储指令
+    assign aluop_o=aluop_i;
+    //计算最终访存地址，由基地址加offset得来，所以需要ID阶段的inst传到ex来
+    assign mem_addr_o=reg1_i+{{16{inst_i[15]}},inst_i[15:0]};
+    //reg2_i就是要存到ram的数据，或者lwl、lwr指令要加载到目的寄存器的原始值
+    //将该值通过reg_o接口传递到访存阶段
+    assign reg2_o=reg2_i;
+
 
     reg                 stallreq_for_madd_msub;
     reg[`DoubleRegBus] mulres;     //保存乘法结果，宽度为64位
