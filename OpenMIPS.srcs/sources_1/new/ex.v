@@ -57,6 +57,26 @@ module ex(
 
     input wire [`RegBus]    inst_i,
 
+
+    //用来检测访存阶段的数据相关
+    input wire           mem_cp0_reg_we,
+    input wire [4:0]     mem_cp0_reg_write_addr,
+    input wire [`RegBus]    mem_cp0_reg_data,
+
+    //用来检测回写阶段的数据相关
+    input wire           wb_cp0_reg_we,
+    input wire [4:0]     wb_cp0_reg_write_addr,
+    input wire [`RegBus]    wb_cp0_reg_data,
+
+    //与CP0相连，用于读取其中指定寄存器的值
+    input wire [`RegBus]    cp0_reg_data_i,
+    output reg[4:0]         cp0_reg_read_addr_o,
+
+    //向下一流水线传递，用于写CP0中的指定寄存器
+    output reg              cp0_reg_we_o,
+    output reg[4:0]         cp0_reg_write_addr_o,
+    output reg[`RegBus]     cp0_reg_data_o,
+
     output wire [`AluOpBus] aluop_o,
     output wire [`RegBus]   mem_addr_o,
     output wire [`RegBus]   reg2_o,
@@ -303,6 +323,21 @@ end
                 `EXE_XOR_OP:begin
                     logicout<=reg1_i^reg2_i;
                 end
+                `EXE_MFC0_OP:begin
+                    cp0_reg_read_addr_o<=inst_i[15:11];
+                    moveres<=cp0_reg_data_i;
+                    if(mem_cp0_reg_we==`WriteEnable && 
+                        mem_cp0_reg_write_addr==inst_i[15:11])
+                    begin
+                        moveres<=mem_cp0_reg_data;
+                    end else if(wb_cp0_reg_we==`WriteEnable &&
+                                    wb_cp0_reg_write_addr==inst_i[15:11])
+                    begin
+                        moveres<=wb_cp0_reg_data;
+                    end
+                end
+
+            
                 default:begin
                     logicout<=`ZeroWord;
                 end
@@ -522,7 +557,22 @@ end
         lo_o    <=`ZeroWord;
      end
    end
-        
+
+    always@(*)begin
+        if(rst==`RstEnable)begin
+            cp0_reg_write_addr_o<=5'b00000;
+            cp0_reg_we_o<=`WriteDisable;
+            cp0_reg_data_o<=`ZeroWord;
+        end else if(aluop_i==`EXE_MTC0_OP)begin
+            cp0_reg_write_addr_o<=inst_i[15:11];
+            cp0_reg_we_o<=`WriteEnable;
+            cp0_reg_data_o<=reg1_i;
+        end else begin
+            cp0_reg_write_addr_o<=5'b00000;
+            cp0_reg_we_o<=`WriteDisable;
+            cp0_reg_data_o<=`ZeroWord;
+        end
+    end
 
     
 endmodule

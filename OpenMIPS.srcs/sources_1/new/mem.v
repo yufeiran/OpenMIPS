@@ -44,6 +44,14 @@ module mem(
     input wire              wb_LLbit_we_i,
     input wire              wb_LLbit_value_i,
 
+    input wire              cp0_reg_we_i,
+    input wire [4:0]        cp0_reg_write_addr_i,
+    input wire [`RegBus]    cp0_reg_data_i,
+
+    output reg              cp0_reg_we_o,
+    output reg [4:0]        cp0_reg_write_addr_o,
+    output reg [`RegBus]    cp0_reg_data_o,
+
     //新增的输出接口
     output reg              LLbit_we_o,
     output reg              LLbit_value_o,
