@@ -105,6 +105,9 @@
 `define EXE_SWL     6'b101010
 `define EXE_SWR     6'b101110
 
+`define EXE_LL      6'b110000
+`define EXE_SC      6'b111000
+
 `define InDelaySlot     1'b1
 `define NotInDelaySlot  1'b0
 //AluOp

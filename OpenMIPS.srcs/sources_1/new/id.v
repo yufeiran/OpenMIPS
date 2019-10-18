@@ -41,6 +41,8 @@ module id(
 
     input wire is_in_delayslot_i,
 
+    input wire [`AluOpBus]  ex_aluop_i,
+
     output wire[`RegBus]    inst_o,
 	
 	output wire        stallreq,
@@ -80,9 +82,6 @@ module id(
     //指示指令是否有效
     reg instvalid;
 
-    assign stallreq=`NoStop;
-
-    wire pre_inst_is_load;
 
     wire [`RegBus] pc_plus_8;
     wire [`RegBus] pc_plus_4;
@@ -96,6 +95,22 @@ module id(
     assign imm_sll2_signedext={{14{inst_i[15]}},inst_i[15:0],2'b00};
 
     assign inst_o=inst_i;
+
+    reg stallreq_for_reg1_loadrelate;
+    reg stallreq_for_reg2_loadrelate;
+    wire pre_inst_is_load;
+
+    //根据输入信号ex_aluop_i的值，判断上一条指令是否是加载指令，
+    //如果是加载指令，那么置pre_inst_is_load为1，反之置为0
+    assign pre_inst_is_load=((ex_aluop_i==`EXE_LB_OP)||
+                            (ex_aluop_i==`EXE_LBU_OP)||
+                            (ex_aluop_i==`EXE_LH_OP)||
+                            (ex_aluop_i==`EXE_LHU_OP)||
+                            (ex_aluop_i==`EXE_LW_OP)||
+                            (ex_aluop_i==`EXE_LWR_OP)||
+                            (ex_aluop_i==`EXE_LWL_OP)||
+                            (ex_aluop_i==`EXE_LL_OP)||
+                            (ex_aluop_i==`EXE_SC_OP))?1'b1:1'b0;
 
 
     
@@ -136,6 +151,25 @@ module id(
             next_inst_in_delayslot_o<=`NotInDelaySlot;
             
             case(op)
+                `EXE_LL:begin
+                    wreg_o<=`WriteEnable;
+                    aluop_o<=`EXE_LL_OP;
+                    alusel_o<=`EXE_RES_LOAD_STORE;
+                    reg1_read_o<=1'b1;
+                    reg2_read_o<=1'b0;
+                    wd_o<=inst_i[20:16];
+                    instvalid<=`InstValid;
+                end
+                `EXE_SC:begin
+                    wreg_o<=`WriteEnable;
+                    aluop_o<=`EXE_SC_OP;
+                    alusel_o<=`EXE_RES_LOAD_STORE;
+                    reg1_read_o<=1'b1;
+                    reg2_read_o<=1'b1;
+                    wd_o<=inst_i[20:16];
+                    instvalid<=`InstValid;
+                    alusel_o<=`EXE_RES_LOAD_STORE;
+                end
                 `EXE_LB:begin
                     wreg_o<=`WriteEnable;
                     aluop_o<=`EXE_LB_OP;
@@ -828,8 +862,11 @@ module id(
     //  1.reg1_o 要读取的寄存器是执行阶段要写的寄存器时 reg1_o=ex_wdata_i
     //  2.reg1_o 要读取的寄存器是访存阶段要写的寄存器时 reg1_o=mem_wdata_i
 	always @ (*) begin
+        stallreq_for_reg1_loadrelate<=`NoStop;
 		if(rst == `RstEnable) begin
 			reg1_o <= `ZeroWord;
+        end else if(pre_inst_is_load==1'b1&&ex_wd_i==reg1_addr_o&&reg1_read_o==1'b1)begin
+            stallreq_for_reg1_loadrelate<=`Stop;
 	   end else if((reg1_read_o==1'b1)&&(ex_wreg_i==1'b1)&&(ex_wd_i==reg1_addr_o))begin
 	       reg1_o<=ex_wdata_i;
 	   end else if((reg1_read_o==1'b1)&&(mem_wreg_i==1'b1)&&(mem_wd_i==reg1_addr_o))begin
@@ -845,19 +882,22 @@ module id(
 	
 	// reg2_o与reg1_o类似
 	always @ (*) begin
+        stallreq_for_reg2_loadrelate<=`NoStop;
 		if(rst == `RstEnable) begin
 			reg2_o <= `ZeroWord;
-	   end else if((reg2_read_o==1'b1)&&(ex_wreg_i==1'b1)&&(ex_wd_i==reg2_addr_o))begin
+        end else if(pre_inst_is_load==1'b1 && ex_wd_i==reg2_addr_o&&reg2_read_o==1'b1)begin
+            stallreq_for_reg2_loadrelate<=`Stop;    
+	    end else if((reg2_read_o==1'b1)&&(ex_wreg_i==1'b1)&&(ex_wd_i==reg2_addr_o))begin
 	       reg2_o<=ex_wdata_i;
-	   end else if((reg2_read_o==1'b1)&&(mem_wreg_i==1'b1)&&(mem_wd_i==reg2_addr_o))begin
+	    end else if((reg2_read_o==1'b1)&&(mem_wreg_i==1'b1)&&(mem_wd_i==reg2_addr_o))begin
 	       reg2_o<=mem_wdata_i;
-	  end else if(reg2_read_o == 1'b1) begin
-	  	reg2_o <= reg2_data_i;
-	  end else if(reg2_read_o == 1'b0) begin
-	  	reg2_o <= imm;
-	  end else begin
-	    reg2_o <= `ZeroWord;
-	  end
+	    end else if(reg2_read_o == 1'b1) begin
+	  	    reg2_o <= reg2_data_i;
+	    end else if(reg2_read_o == 1'b0) begin
+	  	    reg2_o <= imm;
+        end else begin
+            reg2_o <= `ZeroWord;
+        end
 	end
 
     always@(*)begin
@@ -867,4 +907,7 @@ module id(
             is_in_delayslot_o<=is_in_delayslot_i;
         end
     end
+
+    assign stallreq=stallreq_for_reg1_loadrelate|
+                    stallreq_for_reg2_loadrelate;
 endmodule

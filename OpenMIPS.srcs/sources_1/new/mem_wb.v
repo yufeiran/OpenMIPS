@@ -32,6 +32,12 @@ module mem_wb(
     input wire              mem_whilo,
 
     input wire[5:0]         stall,
+
+    input wire              mem_LLbit_we,
+    input wire              mem_LLbit_value,
+
+    output reg              wb_LLbit_we,
+    output reg              wb_LLbit_value,
     
     output reg[`RegAddrBus] wb_wd,
     output reg              wb_wreg,
@@ -64,6 +70,8 @@ module mem_wb(
             wb_hi<=mem_hi;
             wb_lo<=mem_lo;
             wb_whilo<=mem_whilo;
+            wb_LLbit_we<=mem_LLbit_we;
+            wb_LLbit_value<=mem_LLbit_value;
         end
     end
 endmodule
