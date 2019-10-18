@@ -82,6 +82,8 @@ module id(
 
     assign stallreq=`NoStop;
 
+    wire pre_inst_is_load;
+
     wire [`RegBus] pc_plus_8;
     wire [`RegBus] pc_plus_4;
 
@@ -94,6 +96,7 @@ module id(
     assign imm_sll2_signedext={{14{inst_i[15]}},inst_i[15:0],2'b00};
 
     assign inst_o=inst_i;
+
 
     
     /************************************************

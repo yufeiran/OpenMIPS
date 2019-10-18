@@ -88,7 +88,7 @@ module mem(
                 `EXE_LB_OP:begin
                     mem_addr_o<=mem_addr_i;
                     mem_we<=`WriteDisable;
-                    mem_ce_o<=`ChipDisable;
+                    mem_ce_o<=`ChipEnable;
                     case(mem_addr_i[1:0])
                         2'b00:begin
                             wdata_o<={{24{mem_data_i[31]}},mem_data_i[31:24]};
@@ -114,7 +114,7 @@ module mem(
                 `EXE_LBU_OP:begin
                     mem_addr_o<=mem_addr_i;
                     mem_we<=`WriteDisable;
-                    mem_ce_o<=`ChipDisable;
+                    mem_ce_o<=`ChipEnable;
                     case(mem_addr_i[1:0])
                         2'b00:begin
                             wdata_o<={{24{1'b0}},mem_data_i[31:24]};
@@ -213,7 +213,7 @@ module mem(
 
                     case(mem_addr_i[1:0])
                         2'b00:begin
-                            wdata_o<={reg2_i[31:8],2'b00};
+                            wdata_o<={reg2_i[31:8],mem_data_i[31:24]};
                         end
                         2'b01:begin
                             wdata_o<={reg2_i[31:16],mem_data_i[31:16]};
@@ -262,7 +262,7 @@ module mem(
                         2'b00:begin
                             mem_sel_o<=4'b1100;
                         end
-                        2'b01:begin
+                        2'b10:begin
                             mem_sel_o<=4'b0011;
                         end
                         default:begin
