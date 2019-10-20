@@ -37,6 +37,10 @@
 `define True_v 1'b1
 `define False_v 1'b0
 
+`define WB_IDLE     2'b00
+`define WB_BUSY     2'b01
+`define WB_WAIT_FOR_STALL   2'b11
+
 //************************** 与具体指令有关的宏定义 *******************************
 `define EXE_ORI         6'b001101           //指令ori的指令码
 `define EXE_NOP         6'b000000
