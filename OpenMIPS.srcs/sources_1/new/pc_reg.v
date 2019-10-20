@@ -27,6 +27,9 @@ module pc_reg(
     input wire      branch_flag_i,
     input wire[`RegBus] branch_target_address_i,
 
+    input wire      flush,
+    input wire[`RegBus] new_pc,
+
     output reg[`InstAddrBus] pc,
     output reg      ce
     );
@@ -41,11 +44,17 @@ module pc_reg(
     always@(posedge clk) begin
         if(ce ==`ChipDisable) begin
             pc<=32'h00000000;       //指令存储器禁用的时候，PC为0
-        end else if(stall[0]==`NoStop) begin
-            if(branch_flag_i==`Branch)begin
-                pc<=branch_target_address_i;
-            end else begin
-                pc<=pc+4'h4;
+        end else begin
+            if(flush==1'b1)begin
+                //输入信号flush==1表示异常发生，将从CTRL模块给出的异常处理
+                //例程入口地址new_pc处取指执行
+                pc<=new_pc;
+            end else if(stall[0]==`NoStop) begin
+                if(branch_flag_i==`Branch)begin
+                    pc<=branch_target_address_i;
+                end else begin
+                    pc<=pc+4'h4;
+                end
             end
         end
     end

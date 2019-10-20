@@ -66,8 +66,17 @@ module id(
     output reg[`RegBus]         reg1_o,
     output reg[`RegBus]         reg2_o,
     output reg[`RegAddrBus]     wd_o,
-    output reg                  wreg_o
+    output reg                  wreg_o,
+
+    output wire [31:0]          excepttype_o,
+    output wire [`RegBus]       current_inst_address_o
     );
+
+    reg excepttype_is_syscall;      //是否为系统调用异常
+    reg excepttype_is_eret;         //是否为异常返回指令eret
+
+
+  
     
     // 取得指令的指令码，功能码
     // 对于ori指令只需通过判断第26-31bit的值，即可判断是否是ori指令
@@ -82,6 +91,8 @@ module id(
     //指示指令是否有效
     reg instvalid;
 
+    assign excepttype_o={19'b0,excepttype_is_eret,2'b0,instvalid,excepttype_is_syscall,8'b0};
+    assign current_inst_address_o=pc_i;
 
     wire [`RegBus] pc_plus_8;
     wire [`RegBus] pc_plus_4;
@@ -133,6 +144,8 @@ module id(
             branch_target_address_o<=`ZeroWord;
             branch_flag_o<=`NotBranch;
             next_inst_in_delayslot_o<=`NotInDelaySlot;
+            excepttype_is_syscall<=`False_v;
+            excepttype_is_eret<=`False_v;
             
         end else begin
             aluop_o<=`EXE_NOP_OP;
@@ -149,6 +162,8 @@ module id(
             branch_target_address_o<=`ZeroWord;
             branch_flag_o<=`NotBranch;
             next_inst_in_delayslot_o<=`NotInDelaySlot;
+            excepttype_is_syscall<=`False_v;
+            excepttype_is_eret<=`False_v;
 
             if(inst_i[31:21]==11'b01000000000&&
                 inst_i[10:0]==11'b00000000000)
@@ -171,7 +186,6 @@ module id(
                 reg1_addr_o<=inst_i[20:16];
                 reg2_read_o<=1'b0;
             end
-            
             
             case(op)
                 `EXE_LL:begin
@@ -298,6 +312,66 @@ module id(
                 end
 
                 `EXE_SPECIAL_INST:  begin
+                    case(op3)
+                        `EXE_TEQ:begin
+                            wreg_o<=`WriteDisable;
+                            aluop_o<=`EXE_TEQ_OP;
+                            alusel_o<=`EXE_RES_NOP;
+                            reg1_read_o<=1'b0;
+                            reg2_read_o<=1'b0;
+                            instvalid<=`InstValid;
+                        end
+                        `EXE_TGE:begin
+                            wreg_o<=`WriteDisable;
+                            aluop_o<=`EXE_TGE_OP;
+                            alusel_o<=`EXE_RES_NOP;
+                            reg1_read_o<=1'b1;
+                            reg2_read_o<=1'b1;
+                            instvalid<=`InstValid;
+                        end
+                        `EXE_TGEU:begin
+                            wreg_o<=`WriteDisable;
+                            aluop_o<=`EXE_TGEU_OP;
+                            alusel_o<=`EXE_RES_NOP;
+                            reg1_read_o<=1'b1;
+                            reg2_read_o<=1'b1;
+                            instvalid<=`InstValid;
+                        end
+                        `EXE_TLT:begin
+                            wreg_o<=`WriteDisable;
+                            aluop_o<=`EXE_TLT_OP;
+                            alusel_o<=`EXE_RES_NOP;
+                            reg1_read_o<=1'b1;
+                            reg2_read_o<=1'b1;
+                            instvalid<=`InstValid;
+                        end
+                        `EXE_TLTU:begin
+                            wreg_o<=`WriteDisable;
+                            aluop_o<=`EXE_TLTU_OP;
+                            alusel_o<=`EXE_RES_NOP;
+                            reg1_read_o<=1'b1;
+                            reg2_read_o<=1'b1;
+                            instvalid<=`InstValid;
+                        end
+                        `EXE_TNE:begin
+                            wreg_o<=`WriteDisable;
+                            aluop_o<=`EXE_TNE_OP;
+                            alusel_o<=`EXE_RES_NOP;
+                            reg1_read_o<=1'b1;
+                            reg2_read_o<=1'b1;
+                            instvalid<=`InstValid;
+                        end
+                        `EXE_SYSCALL:begin
+                            wreg_o<=`WriteDisable;
+                            aluop_o<=`EXE_SYSCALL_OP;
+                            alusel_o<=`EXE_RES_NOP;
+                            reg1_read_o<=1'b0;
+                            reg2_read_o<=1'b0;
+                            instvalid<=`InstValid;
+                            excepttype_is_syscall<=`True_v;
+                        end
+
+                    endcase
                     case(op2)
                         5'b00000:   begin
                             case(op3)   
@@ -716,6 +790,61 @@ module id(
                   end
                   `EXE_REGIMM_INST:begin
                     case(op4)
+                        `EXE_TEQI:begin
+                            wreg_o<=`WriteDisable;
+                            aluop_o<=`EXE_TEQI_OP;
+                            alusel_o<=`EXE_RES_NOP;
+                            reg1_read_o<=1'b1;
+                            reg2_read_o<=1'b0;
+                            imm<={{16{inst_i[15]}},inst_i[15:0]};
+                            instvalid<=`InstValid;
+                        end
+                        `EXE_TGEI:begin
+                            wreg_o<=`WriteDisable;
+                            aluop_o<=`EXE_TGEI_OP;
+                            alusel_o<=`EXE_RES_NOP;
+                            reg1_read_o<=1'b1;
+                            reg2_read_o<=1'b0;
+                            imm<={{16{inst_i[15]}},inst_i[15:0]};
+                            instvalid<=`InstValid;
+                        end
+                        `EXE_TGEIU:begin
+                            wreg_o<=`WriteDisable;
+                            aluop_o<=`EXE_TGEIU_OP;
+                            alusel_o<=`EXE_RES_NOP;
+                            reg1_read_o<=1'b1;
+                            reg2_read_o<=1'b0;
+                            imm<={{16{inst_i[15]}},inst_i[15:0]};
+                            instvalid<=`InstValid;
+                        end
+                        `EXE_TLTI:begin
+                            wreg_o<=`WriteDisable;
+                            aluop_o<=`EXE_TLTI_OP;
+                            alusel_o<=`EXE_RES_NOP;
+                            reg1_read_o<=1'b1;
+                            reg2_read_o<=1'b0;
+                            imm<={{16{inst_i[15]}},inst_i[15:0]};
+                            instvalid<=`InstValid;
+                        end
+                        `EXE_TLTIU:begin
+                            wreg_o<=`WriteDisable;
+                            aluop_o<=`EXE_TLTIU_OP;
+                            alusel_o<=`EXE_RES_NOP;
+                            reg1_read_o<=1'b1;
+                            reg2_read_o<=1'b0;
+                            imm<={{16{inst_i[15]}},inst_i[15:0]};
+                            instvalid<=`InstValid;
+                        end
+                        `EXE_TNEI:begin
+                            wreg_o<=`WriteDisable;
+                            aluop_o<=`EXE_TNEI_OP;
+                            alusel_o<=`EXE_RES_NOP;
+                            reg1_read_o<=1'b1;
+                            reg2_read_o<=1'b0;
+                            imm<={{16{inst_i[15]}},inst_i[15:0]};
+                            instvalid<=`InstValid;
+                        end
+
                         `EXE_BGEZ:begin
                             wreg_o<=`WriteDisable;
                             aluop_o<=`EXE_BGEZ_OP;
@@ -784,6 +913,7 @@ module id(
                   end
                   `EXE_SPECIAL2_INST:begin
                     case(op3)
+
                         `EXE_MADD:  begin
                             wreg_o<=`WriteDisable;
                             aluop_o<=`EXE_MADD_OP;
@@ -847,6 +977,16 @@ module id(
                   default:begin
                   end
                endcase      //case op
+
+               if(inst_i==`EXE_ERET)begin
+                    wreg_o<=`WriteDisable;
+                    aluop_o<=`EXE_ERET_OP;
+                    alusel_o<=`EXE_RES_NOP;
+                    reg1_read_o<=1'b0;
+                    reg2_read_o<=1'b0;
+                    instvalid<=`InstValid;
+                    excepttype_is_eret<=`True_v;
+               end
                
                if(inst_i[31:21]==11'b00000000000)begin
                 if(op3==`EXE_SLL)begin

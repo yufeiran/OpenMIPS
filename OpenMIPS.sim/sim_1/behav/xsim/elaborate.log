@@ -3,6 +3,7 @@ Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
 Running: D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'compare_o' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v:577]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
