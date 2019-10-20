@@ -32,7 +32,6 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS
 INFO: [VRFC 10-311] analyzing module mem_wb
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module openmips
-INFO: [VRFC 10-2458] undeclared symbol cp0_compare, assumed default net type wire [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v:577]
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module openmips_min_sopc
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/pc_reg.v" into library xil_defaultlib
