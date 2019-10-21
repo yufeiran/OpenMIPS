@@ -82,38 +82,38 @@ module openmips_min_sopc(
     wire[31:0] s0_data_i;
     wire[31:0] s0_data_o;
     wire[31:0] s0_addr_o;
-    wire[31:0] s0_sel_i;
-    wire       s0_we_i;
-    wire       s0_cyc_i;
-    wire       s0_stb_i;
-    wire       s0_ack_o;
+    wire[31:0] s0_sel_o;
+    wire       s0_we_o;
+    wire       s0_cyc_o;
+    wire       s0_stb_o;
+    wire       s0_ack_i;
 
     wire[31:0] s1_data_i;
     wire[31:0] s1_data_o;
     wire[31:0] s1_addr_o;
-    wire[31:0] s1_sel_i;
-    wire       s1_we_i;
-    wire       s1_cyc_i;
-    wire       s1_stb_i;
-    wire       s1_ack_o;
+    wire[31:0] s1_sel_o;
+    wire       s1_we_o;
+    wire       s1_cyc_o;
+    wire       s1_stb_o;
+    wire       s1_ack_i;
 
     wire[31:0] s2_data_i;
     wire[31:0] s2_data_o;
     wire[31:0] s2_addr_o;
-    wire[31:0] s2_sel_i;
-    wire       s2_we_i;
-    wire       s2_cyc_i;
-    wire       s2_stb_i;
-    wire       s2_ack_o;
+    wire[31:0] s2_sel_o;
+    wire       s2_we_o;
+    wire       s2_cyc_o;
+    wire       s2_stb_o;
+    wire       s2_ack_i;
 
     wire[31:0] s3_data_i;
     wire[31:0] s3_data_o;
     wire[31:0] s3_addr_o;
-    wire[31:0] s3_sel_i;
-    wire       s3_we_i;
-    wire       s3_cyc_i;
-    wire       s3_stb_i;
-    wire       s3_ack_o;
+    wire[31:0] s3_sel_o;
+    wire       s3_we_o;
+    wire       s3_cyc_o;
+    wire       s3_stb_o;
+    wire       s3_ack_i;
 
 
     wire       sdram_init_done;
@@ -124,9 +124,6 @@ module openmips_min_sopc(
    
     openmips openmips0(
         .clk(clk),      .rst(rst),
-        .rom_addr_o(inst_addr), .rom_data_i(inst),
-        .rom_ce_o(rom_ce),
-        .ram_data_i(mem_data_o),
 
         .iwishbone_data_i(m1_data_o),.iwishbone_ack_i(m1_ack_o),
         .iwishbone_addr_o(m1_addr_i),.iwishbone_data_o(m1_data_i),
@@ -186,7 +183,7 @@ module openmips_min_sopc(
         //UART??????Wishbone????????????1
         .wb_clk_i(clk),.wb_rst_i(rst),
         .wb_adr_i(s1_addr_o[4:0]),.wb_dat_i(s1_data_o),
-        .wb_dat_o(s1_data_i),.wb_we_i(s1_cwe_o),
+        .wb_dat_o(s1_data_i),.wb_sel_i(s1_sel_o),
         .wb_stb_i(s1_stb_o),.wb_cyc_i(s1_cyc_o),
         .wb_ack_o(s1_ack_i),.wb_sel_i(s1_sel_o),
 
