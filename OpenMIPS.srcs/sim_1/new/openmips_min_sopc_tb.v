@@ -18,7 +18,6 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-`include"OpenMIPS.vh"
 
 module openmips_min_sopc_tb(
 
@@ -26,10 +25,18 @@ module openmips_min_sopc_tb(
     
     reg CLOCK_50;
     reg rst;
+    reg uart_in;
+    wire uart_out;
+    reg [15:0] gpio_in;
+    wire [3:0] dtube_cs_n;
+    wire [7:0] dtube_data;
     
     initial begin
         CLOCK_50=1'b0;
+        uart_in=1'b0;
+        gpio_in=16'b0;
         forever #10 CLOCK_50=~CLOCK_50;
+        
     end
     
     initial begin
@@ -39,7 +46,10 @@ module openmips_min_sopc_tb(
     
     openmips_min_sopc openmips_min_sopc0(
         .clk(CLOCK_50),
-        .rst(rst)
+        .rst(rst),.uart_in(uart_in),
+        .uart_out(uart_out),.gpio_i(gpio_in),
+         .dtube_cs_n(dtube_cs_n),
+        .dtube_data(dtube_data)
         );
     
 endmodule

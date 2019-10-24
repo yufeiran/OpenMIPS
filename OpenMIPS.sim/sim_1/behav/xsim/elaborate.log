@@ -3,30 +3,22 @@ Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
 Running: D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 4 for port 'ram_ce_o' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:55]
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 1 for port 'mem_ce_o' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v:486]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'iwishbone_sel_o' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:119]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'int_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:122]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'dwishbone_sel_o' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:126]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'if_inst' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v:243]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'wb_sel_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:141]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 17 for port 'wb_adr_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:157]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'wb_sel_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:160]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'wb_sel_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:174]
+WARNING: [VRFC 10-3091] actual bit length 26 differs from formal bit length 17 for port 'wb_adr_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:192]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'wb_sel_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:195]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'm0_sel_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:207]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'm1_sel_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:213]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 's0_sel_o' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:261]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 's1_sel_o' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:268]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 's2_sel_o' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:275]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 's3_sel_o' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:282]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'cpu_data_o' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v:666]
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.pc_reg
-Compiling module xil_defaultlib.if_id
-Compiling module xil_defaultlib.id
-Compiling module xil_defaultlib.regfile
-Compiling module xil_defaultlib.id_ex
-Compiling module xil_defaultlib.ex
-Compiling module xil_defaultlib.ex_mem
-Compiling module xil_defaultlib.mem
-Compiling module xil_defaultlib.mem_wb
-Compiling module xil_defaultlib.hilo_reg
-Compiling module xil_defaultlib.ctrl
-Compiling module xil_defaultlib.div
-Compiling module xil_defaultlib.LLbit_reg
-Compiling module xil_defaultlib.cp0_reg
-Compiling module xil_defaultlib.openmips
-Compiling module xil_defaultlib.inst_rom
-Compiling module xil_defaultlib.data_ram
-Compiling module xil_defaultlib.openmips_min_sopc
-Compiling module xil_defaultlib.openmips_min_sopc_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot openmips_min_sopc_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
