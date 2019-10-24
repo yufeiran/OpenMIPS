@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Oct 14 13:57:28 2019
+# Process ID: 12952
+# Current directory: C:/Users/Thinkpad/Documents/GitHub/OpenMIPS
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4604 C:\Users\Thinkpad\Documents\GitHub\OpenMIPS\OpenMIPS.xpr
+# Log file: C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/vivado.log
+# Journal file: C:/Users/Thinkpad/Documents/GitHub/OpenMIPS\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source openmips_min_sopc_tb.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/openmips_min_sopc_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/openmips_min_sopc_tb_behav.wcfg
+set_property xsim.view C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/openmips_min_sopc_tb_behav.wcfg [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/openmips_min_sopc_tb_behav.wcfg
+source openmips_min_sopc_tb.tcl
+relaunch_sim

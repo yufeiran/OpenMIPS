@@ -1,0 +1,6 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+(openmips_min_sopc_tb.openmips_min_sopc0.uart_top0) UART INFO: Data bus width is 32. Debug Interface present.
+
+(openmips_min_sopc_tb.openmips_min_sopc0.uart_top0) UART INFO: Doesn't have baudrate output
+

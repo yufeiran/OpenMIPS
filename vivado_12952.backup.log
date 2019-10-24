@@ -1,0 +1,563 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Oct 14 13:57:28 2019
+# Process ID: 12952
+# Current directory: C:/Users/Thinkpad/Documents/GitHub/OpenMIPS
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4604 C:\Users\Thinkpad\Documents\GitHub\OpenMIPS\OpenMIPS.xpr
+# Log file: C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/vivado.log
+# Journal file: C:/Users/Thinkpad/Documents/GitHub/OpenMIPS\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.xpr
+INFO: [Project 1-313] Project file moved from 'D:/codehub/VIVADO/LOONGSON/OpenMIPS' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 943.074 ; gain = 60.406
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'openmips_min_sopc_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj openmips_min_sopc_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/hilo_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hilo_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/inst_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module inst_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module openmips
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module openmips_min_sopc
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sim_1/new/openmips_min_sopc_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module openmips_min_sopc_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+"xelab -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 8 for port 'ex_alusel' [C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v:151]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'mem_whilo' [C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v:197]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.hilo_reg
+Compiling module xil_defaultlib.openmips
+Compiling module xil_defaultlib.inst_rom
+Compiling module xil_defaultlib.openmips_min_sopc
+Compiling module xil_defaultlib.openmips_min_sopc_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot openmips_min_sopc_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "openmips_min_sopc_tb_behav -key {Behavioral:sim_1:Functional:openmips_min_sopc_tb} -tclbatch {openmips_min_sopc_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source openmips_min_sopc_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 943.074 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'openmips_min_sopc_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 943.074 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'openmips_min_sopc_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj openmips_min_sopc_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+"xelab -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 8 for port 'ex_alusel' [C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v:151]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'mem_whilo' [C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v:197]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 943.074 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'openmips_min_sopc_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj openmips_min_sopc_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/hilo_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hilo_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/inst_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module inst_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module openmips
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module openmips_min_sopc
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sim_1/new/openmips_min_sopc_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module openmips_min_sopc_tb
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+"xelab -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 8 for port 'ex_alusel' [C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v:151]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'mem_whilo' [C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v:197]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.hilo_reg
+Compiling module xil_defaultlib.openmips
+Compiling module xil_defaultlib.inst_rom
+Compiling module xil_defaultlib.openmips_min_sopc
+Compiling module xil_defaultlib.openmips_min_sopc_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot openmips_min_sopc_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 943.074 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'openmips_min_sopc_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj openmips_min_sopc_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/hilo_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hilo_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/inst_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module inst_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module openmips
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module openmips_min_sopc
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sim_1/new/openmips_min_sopc_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module openmips_min_sopc_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+"xelab -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 8 for port 'ex_alusel' [C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v:185]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'mem_whilo' [C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v:243]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.hilo_reg
+Compiling module xil_defaultlib.openmips
+Compiling module xil_defaultlib.inst_rom
+Compiling module xil_defaultlib.openmips_min_sopc
+Compiling module xil_defaultlib.openmips_min_sopc_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot openmips_min_sopc_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1102.688 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'openmips_min_sopc_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj openmips_min_sopc_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/hilo_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hilo_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+ERROR: [VRFC 10-3805] use of undefined macro 'EXE_SYNC' [C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/id.v:158]
+ERROR: [VRFC 10-4982] syntax error near 'begin' [C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/id.v:158]
+ERROR: [VRFC 10-2790] Verilog 2000 keyword begin used in incorrect context [C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/id.v:158]
+ERROR: [VRFC 10-3805] use of undefined macro 'EXE_PREF' [C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/id.v:280]
+ERROR: [VRFC 10-4982] syntax error near 'begin' [C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/id.v:280]
+ERROR: [VRFC 10-2790] Verilog 2000 keyword begin used in incorrect context [C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/id.v:280]
+ERROR: [VRFC 10-554] default case should appear only once [C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/id.v:222]
+ERROR: [VRFC 10-2865] module 'id' ignored due to previous errors [C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/id.v:23]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'openmips_min_sopc_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj openmips_min_sopc_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/hilo_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hilo_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/inst_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module inst_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module openmips
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module openmips_min_sopc
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sim_1/new/openmips_min_sopc_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module openmips_min_sopc_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+"xelab -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 8 for port 'ex_alusel' [C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v:151]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'mem_whilo' [C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v:197]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.hilo_reg
+Compiling module xil_defaultlib.openmips
+Compiling module xil_defaultlib.inst_rom
+Compiling module xil_defaultlib.openmips_min_sopc
+Compiling module xil_defaultlib.openmips_min_sopc_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot openmips_min_sopc_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1102.688 ; gain = 0.000
+save_wave_config {C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/openmips_min_sopc_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/openmips_min_sopc_tb_behav.wcfg
+set_property xsim.view C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/openmips_min_sopc_tb_behav.wcfg [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'openmips_min_sopc_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj openmips_min_sopc_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/hilo_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hilo_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/inst_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module inst_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module openmips
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module openmips_min_sopc
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sim_1/new/openmips_min_sopc_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module openmips_min_sopc_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+"xelab -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 8 for port 'ex_alusel' [C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v:151]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'mem_whilo' [C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v:197]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.hilo_reg
+Compiling module xil_defaultlib.openmips
+Compiling module xil_defaultlib.inst_rom
+Compiling module xil_defaultlib.openmips_min_sopc
+Compiling module xil_defaultlib.openmips_min_sopc_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot openmips_min_sopc_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "openmips_min_sopc_tb_behav -key {Behavioral:sim_1:Functional:openmips_min_sopc_tb} -tclbatch {openmips_min_sopc_tb.tcl} -view {C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/openmips_min_sopc_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/openmips_min_sopc_tb_behav.wcfg
+open_wave_config: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1102.688 ; gain = 0.000
+source openmips_min_sopc_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1102.688 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'openmips_min_sopc_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1102.688 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'openmips_min_sopc_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj openmips_min_sopc_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/hilo_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hilo_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/inst_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module inst_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module openmips
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module openmips_min_sopc
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sim_1/new/openmips_min_sopc_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module openmips_min_sopc_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+"xelab -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 8 for port 'ex_alusel' [C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v:151]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'mem_whilo' [C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips.v:197]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.hilo_reg
+Compiling module xil_defaultlib.openmips
+Compiling module xil_defaultlib.inst_rom
+Compiling module xil_defaultlib.openmips_min_sopc
+Compiling module xil_defaultlib.openmips_min_sopc_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot openmips_min_sopc_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1102.688 ; gain = 0.000

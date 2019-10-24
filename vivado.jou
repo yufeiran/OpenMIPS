@@ -2,28 +2,34 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Oct 14 13:57:28 2019
-# Process ID: 12952
-# Current directory: C:/Users/Thinkpad/Documents/GitHub/OpenMIPS
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4604 C:\Users\Thinkpad\Documents\GitHub\OpenMIPS\OpenMIPS.xpr
-# Log file: C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/vivado.log
-# Journal file: C:/Users/Thinkpad/Documents/GitHub/OpenMIPS\vivado.jou
+# Start of session at: Thu Oct 24 21:50:14 2019
+# Process ID: 7668
+# Current directory: D:/codehub/VIVADO/LOONGSON/OpenMIPS
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7708 D:\codehub\VIVADO\LOONGSON\OpenMIPS\OpenMIPS.xpr
+# Log file: D:/codehub/VIVADO/LOONGSON/OpenMIPS/vivado.log
+# Journal file: D:/codehub/VIVADO/LOONGSON/OpenMIPS\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/OpenMIPS.xpr
+open_project D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.xpr
+launch_simulation
+open_wave_config D:/codehub/VIVADO/LOONGSON/OpenMIPS/openmips_min_sopc_tb_behav.wcfg
+source openmips_min_sopc_tb.tcl
 update_compile_order -fileset sources_1
-launch_simulation
-source openmips_min_sopc_tb.tcl
+run 10 us
 relaunch_sim
+update_compile_order -fileset sources_1
+run 10 us
 relaunch_sim
+run 10 us
 relaunch_sim
+run 10 us
 relaunch_sim
+update_compile_order -fileset sources_1
+run 10 us
+run 10 us
 relaunch_sim
-save_wave_config {C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/openmips_min_sopc_tb_behav.wcfg}
-add_files -fileset sim_1 -norecurse C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/openmips_min_sopc_tb_behav.wcfg
-set_property xsim.view C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/openmips_min_sopc_tb_behav.wcfg [get_filesets sim_1]
-close_sim
-launch_simulation
-open_wave_config C:/Users/Thinkpad/Documents/GitHub/OpenMIPS/openmips_min_sopc_tb_behav.wcfg
-source openmips_min_sopc_tb.tcl
+run 10 us
+run 10 us
+open_hw
+close_hw
 relaunch_sim

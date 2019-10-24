@@ -45,7 +45,7 @@ module openmips_min_sopc(
     wire[31:0] m0_data_i;
     wire[31:0] m0_data_o;
     wire[31:0]m0_addr_i;
-    wire[31:0]m0_sel_i;
+    wire[3:0]m0_sel_i;
     wire      m0_we_i;
     wire      m0_cyc_i;
     wire      m0_stb_i;
@@ -54,7 +54,7 @@ module openmips_min_sopc(
     wire[31:0] m1_data_i;
     wire[31:0] m1_data_o;
     wire[31:0]m1_addr_i;
-    wire[31:0]m1_sel_i;
+    wire[3:0]m1_sel_i;
     wire      m1_we_i;
     wire      m1_cyc_i;
     wire      m1_stb_i;
@@ -63,7 +63,7 @@ module openmips_min_sopc(
     wire[31:0] s0_data_i;
     wire[31:0] s0_data_o;
     wire[31:0] s0_addr_o;
-    wire[31:0] s0_sel_o;
+    wire[3:0] s0_sel_o;
     wire       s0_we_o;
     wire       s0_cyc_o;
     wire       s0_stb_o;
@@ -72,7 +72,7 @@ module openmips_min_sopc(
     wire[31:0] s1_data_i;
     wire[31:0] s1_data_o;
     wire[31:0] s1_addr_o;
-    wire[31:0] s1_sel_o;
+    wire[3:0] s1_sel_o;
     wire       s1_we_o;
     wire       s1_cyc_o;
     wire       s1_stb_o;
@@ -81,7 +81,7 @@ module openmips_min_sopc(
     wire[31:0] s2_data_i;
     wire[31:0] s2_data_o;
     wire[31:0] s2_addr_o;
-    wire[31:0] s2_sel_o;
+    wire[3:0] s2_sel_o;
     wire       s2_we_o;
     wire       s2_cyc_o;
     wire       s2_stb_o;
@@ -90,7 +90,7 @@ module openmips_min_sopc(
     wire[31:0] s3_data_i;
     wire[31:0] s3_data_o;
     wire[31:0] s3_addr_o;
-    wire[31:0] s3_sel_o;
+    wire[3:0] s3_sel_o;
     wire       s3_we_o;
     wire       s3_cyc_o;
     wire       s3_stb_o;

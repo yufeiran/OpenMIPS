@@ -52,6 +52,7 @@ module openmips(
     
     //连接IF/ID模块与链接阶段ID模块的变量
     wire [`InstAddrBus] pc;
+    wire [`InstBus] inst_i;
     wire [`InstAddrBus] id_pc_i;
     wire [`InstBus]     id_inst_i;
     
