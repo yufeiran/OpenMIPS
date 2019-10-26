@@ -1,0 +1,3089 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Oct 26 11:55:15 2019
+# Process ID: 9360
+# Current directory: D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/synth_1
+# Command line: vivado.exe -log openmips_min_sopc.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source openmips_min_sopc.tcl
+# Log file: D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/synth_1/openmips_min_sopc.vds
+# Journal file: D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source openmips_min_sopc.tcl -notrace
+Command: synth_design -top openmips_min_sopc -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10384 
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:11]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:12]
+WARNING: [Synth 8-2306] macro InstValid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:24]
+WARNING: [Synth 8-2306] macro InstInvalid redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:25]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 734.832 ; gain = 184.398
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'openmips_min_sopc' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:23]
+INFO: [Synth 8-6157] synthesizing module 'seg8' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/seg8.v:10]
+	Parameter CSN bound to: 4'b1111 
+	Parameter CS0 bound to: 4'b1110 
+	Parameter CS1 bound to: 4'b1101 
+	Parameter CS2 bound to: 4'b1011 
+	Parameter CS3 bound to: 4'b0111 
+INFO: [Synth 8-226] default block is never used [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/seg8.v:71]
+WARNING: [Synth 8-5788] Register clk_count_reg in module seg8 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/seg8.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'seg8' (1#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/seg8.v:10]
+INFO: [Synth 8-6157] synthesizing module 'openmips' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v:24]
+INFO: [Synth 8-6157] synthesizing module 'pc_reg' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/pc_reg.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'pc_reg' (2#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/pc_reg.v:23]
+INFO: [Synth 8-6157] synthesizing module 'if_id' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/if_id.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'if_id' (3#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/if_id.v:23]
+INFO: [Synth 8-6157] synthesizing module 'id' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/id.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/id.v:315]
+INFO: [Synth 8-6155] done synthesizing module 'id' (4#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/id.v:23]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/regfile.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (5#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/regfile.v:23]
+INFO: [Synth 8-6157] synthesizing module 'id_ex' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/id_ex.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'id_ex' (6#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/id_ex.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ex' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ex' (7#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ex_mem' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex_mem.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ex_mem' (8#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex_mem.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mem' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v:23]
+INFO: [Synth 8-226] default block is never used [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v:252]
+INFO: [Synth 8-226] default block is never used [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v:278]
+INFO: [Synth 8-226] default block is never used [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v:349]
+INFO: [Synth 8-226] default block is never used [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v:374]
+INFO: [Synth 8-226] default block is never used [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v:398]
+INFO: [Synth 8-226] default block is never used [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v:444]
+INFO: [Synth 8-226] default block is never used [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v:470]
+INFO: [Synth 8-6155] done synthesizing module 'mem' (9#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mem_wb' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem_wb.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mem_wb' (10#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem_wb.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hilo_reg' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/hilo_reg.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hilo_reg' (11#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/hilo_reg.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ctrl' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ctrl.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ctrl' (12#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ctrl.v:23]
+INFO: [Synth 8-6157] synthesizing module 'div' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/div.v:23]
+WARNING: [Synth 8-6014] Unused sequential element temp_op1_reg was removed.  [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/div.v:67]
+WARNING: [Synth 8-6014] Unused sequential element temp_op2_reg was removed.  [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/div.v:72]
+INFO: [Synth 8-6155] done synthesizing module 'div' (13#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/div.v:23]
+INFO: [Synth 8-6157] synthesizing module 'LLbit_reg' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/LLbit_reg.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'LLbit_reg' (14#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/LLbit_reg.v:23]
+INFO: [Synth 8-6157] synthesizing module 'cp0_reg' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/cp0_reg.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/cp0_reg.v:72]
+INFO: [Synth 8-6155] done synthesizing module 'cp0_reg' (15#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/cp0_reg.v:23]
+INFO: [Synth 8-6157] synthesizing module 'wishbone_bus_if' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/wishbone_bus_if.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'wishbone_bus_if' (16#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/wishbone_bus_if.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'openmips' (17#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v:24]
+WARNING: [Synth 8-689] width (8) of port connection 'int_i' does not match port width (6) of module 'openmips' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:147]
+INFO: [Synth 8-6157] synthesizing module 'gpio_top' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/gpio/gpio_top.v:115]
+	Parameter dw bound to: 32 - type: integer 
+	Parameter aw bound to: 8 - type: integer 
+	Parameter gw bound to: 32 - type: integer 
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/gpio/gpio_top.v:987]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/gpio/gpio_top.v:987]
+INFO: [Synth 8-6155] done synthesizing module 'gpio_top' (18#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/gpio/gpio_top.v:115]
+INFO: [Synth 8-6157] synthesizing module 'wb_rom' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_rom.v:23]
+INFO: [Synth 8-6157] synthesizing module 'rom_0' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/synth_1/.Xil/Vivado-9360-DESKTOP-MI6UCPP/realtime/rom_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rom_0' (19#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/synth_1/.Xil/Vivado-9360-DESKTOP-MI6UCPP/realtime/rom_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'wb_rom' (20#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_rom.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'wb_adr_i' does not match port width (17) of module 'wb_rom' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:182]
+INFO: [Synth 8-6157] synthesizing module 'uart_top' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_top.v:140]
+	Parameter uart_data_width bound to: 32 - type: integer 
+	Parameter uart_addr_width bound to: 5 - type: integer 
+INFO: [Synth 8-251] () UART INFO: Data bus width is 32. Debug Interface present.
+ [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_top.v:329]
+INFO: [Synth 8-251] () UART INFO: Doesn't have baudrate output
+ [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_top.v:334]
+INFO: [Synth 8-6157] synthesizing module 'uart_wb' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_wb.v:142]
+INFO: [Synth 8-6155] done synthesizing module 'uart_wb' (21#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_wb.v:142]
+INFO: [Synth 8-6157] synthesizing module 'uart_regs' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v:231]
+INFO: [Synth 8-6157] synthesizing module 'uart_transmitter' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_transmitter.v:154]
+	Parameter s_idle bound to: 3'b000 
+	Parameter s_send_start bound to: 3'b001 
+	Parameter s_send_byte bound to: 3'b010 
+	Parameter s_send_parity bound to: 3'b011 
+	Parameter s_send_stop bound to: 3'b100 
+	Parameter s_pop_byte bound to: 3'b101 
+INFO: [Synth 8-6157] synthesizing module 'uart_tfifo' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_tfifo.v:144]
+	Parameter fifo_width bound to: 8 - type: integer 
+	Parameter fifo_depth bound to: 16 - type: integer 
+	Parameter fifo_pointer_w bound to: 4 - type: integer 
+	Parameter fifo_counter_w bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'raminfr' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/raminfr.v:83]
+	Parameter addr_width bound to: 4 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter depth bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'raminfr' (22#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/raminfr.v:83]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tfifo' (23#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_tfifo.v:144]
+INFO: [Synth 8-6155] done synthesizing module 'uart_transmitter' (24#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_transmitter.v:154]
+INFO: [Synth 8-6157] synthesizing module 'uart_sync_flops' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_sync_flops.v:71]
+	Parameter Tp bound to: 1 - type: integer 
+	Parameter width bound to: 1 - type: integer 
+	Parameter init_value bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'uart_sync_flops' (25#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_sync_flops.v:71]
+INFO: [Synth 8-6157] synthesizing module 'uart_receiver' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_receiver.v:198]
+	Parameter sr_idle bound to: 4'b0000 
+	Parameter sr_rec_start bound to: 4'b0001 
+	Parameter sr_rec_bit bound to: 4'b0010 
+	Parameter sr_rec_parity bound to: 4'b0011 
+	Parameter sr_rec_stop bound to: 4'b0100 
+	Parameter sr_check_parity bound to: 4'b0101 
+	Parameter sr_rec_prepare bound to: 4'b0110 
+	Parameter sr_end_bit bound to: 4'b0111 
+	Parameter sr_ca_lc_parity bound to: 4'b1000 
+	Parameter sr_wait1 bound to: 4'b1001 
+	Parameter sr_push bound to: 4'b1010 
+INFO: [Synth 8-6157] synthesizing module 'uart_rfifo' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_rfifo.v:150]
+	Parameter fifo_width bound to: 11 - type: integer 
+	Parameter fifo_depth bound to: 16 - type: integer 
+	Parameter fifo_pointer_w bound to: 4 - type: integer 
+	Parameter fifo_counter_w bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_rfifo' (26#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_rfifo.v:150]
+WARNING: [Synth 8-6014] Unused sequential element rbit_in_reg was removed.  [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_receiver.v:280]
+INFO: [Synth 8-6155] done synthesizing module 'uart_receiver' (27#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_receiver.v:198]
+INFO: [Synth 8-6155] done synthesizing module 'uart_regs' (28#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v:231]
+INFO: [Synth 8-6157] synthesizing module 'uart_debug_if' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_debug_if.v:89]
+INFO: [Synth 8-6155] done synthesizing module 'uart_debug_if' (29#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_debug_if.v:89]
+INFO: [Synth 8-6155] done synthesizing module 'uart_top' (30#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_top.v:140]
+INFO: [Synth 8-6157] synthesizing module 'wb_ram' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_ram.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'wb_ram' (31#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_ram.v:23]
+WARNING: [Synth 8-689] width (26) of port connection 'wb_adr_i' does not match port width (17) of module 'wb_ram' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:217]
+INFO: [Synth 8-6157] synthesizing module 'wb_conmax_top' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_top.v:61]
+	Parameter dw bound to: 32 - type: integer 
+	Parameter aw bound to: 32 - type: integer 
+	Parameter rf_addr bound to: 4'b1111 
+	Parameter pri_sel0 bound to: 2'b10 
+	Parameter pri_sel1 bound to: 2'b10 
+	Parameter pri_sel2 bound to: 2'b10 
+	Parameter pri_sel3 bound to: 2'b10 
+	Parameter pri_sel4 bound to: 2'b10 
+	Parameter pri_sel5 bound to: 2'b10 
+	Parameter pri_sel6 bound to: 2'b10 
+	Parameter pri_sel7 bound to: 2'b10 
+	Parameter pri_sel8 bound to: 2'b10 
+	Parameter pri_sel9 bound to: 2'b10 
+	Parameter pri_sel10 bound to: 2'b10 
+	Parameter pri_sel11 bound to: 2'b10 
+	Parameter pri_sel12 bound to: 2'b10 
+	Parameter pri_sel13 bound to: 2'b10 
+	Parameter pri_sel14 bound to: 2'b10 
+	Parameter pri_sel15 bound to: 2'b10 
+	Parameter sw bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'wb_conmax_master_if' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v:61]
+	Parameter dw bound to: 32 - type: integer 
+	Parameter aw bound to: 32 - type: integer 
+	Parameter sw bound to: 4 - type: integer 
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v:442]
+INFO: [Synth 8-226] default block is never used [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v:442]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v:586]
+INFO: [Synth 8-226] default block is never used [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v:586]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v:610]
+INFO: [Synth 8-226] default block is never used [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v:610]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v:634]
+INFO: [Synth 8-226] default block is never used [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v:634]
+INFO: [Synth 8-6155] done synthesizing module 'wb_conmax_master_if' (32#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v:61]
+INFO: [Synth 8-6157] synthesizing module 'wb_conmax_slave_if' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:61]
+	Parameter pri_sel bound to: 2'b10 
+	Parameter aw bound to: 32 - type: integer 
+	Parameter dw bound to: 32 - type: integer 
+	Parameter sw bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'wb_conmax_arb' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_arb.v:63]
+	Parameter grant0 bound to: 3'b000 
+	Parameter grant1 bound to: 3'b001 
+	Parameter grant2 bound to: 3'b010 
+	Parameter grant3 bound to: 3'b011 
+	Parameter grant4 bound to: 3'b100 
+	Parameter grant5 bound to: 3'b101 
+	Parameter grant6 bound to: 3'b110 
+	Parameter grant7 bound to: 3'b111 
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_arb.v:115]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_arb.v:115]
+INFO: [Synth 8-6155] done synthesizing module 'wb_conmax_arb' (33#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_arb.v:63]
+INFO: [Synth 8-6157] synthesizing module 'wb_conmax_msel' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_msel.v:61]
+	Parameter pri_sel bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'wb_conmax_pri_enc' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_enc.v:61]
+	Parameter pri_sel bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'wb_conmax_pri_dec' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_dec.v:61]
+	Parameter pri_sel bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'wb_conmax_pri_dec' (34#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_dec.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'wb_conmax_pri_enc' (35#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_enc.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'wb_conmax_msel' (36#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_msel.v:61]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:296]
+INFO: [Synth 8-226] default block is never used [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:296]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:310]
+INFO: [Synth 8-226] default block is never used [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:310]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:324]
+INFO: [Synth 8-226] default block is never used [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:324]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:352]
+INFO: [Synth 8-226] default block is never used [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:352]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:392]
+INFO: [Synth 8-226] default block is never used [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:392]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:406]
+INFO: [Synth 8-226] default block is never used [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:406]
+INFO: [Synth 8-6155] done synthesizing module 'wb_conmax_slave_if' (37#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:61]
+INFO: [Synth 8-6157] synthesizing module 'wb_conmax_rf' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_rf.v:61]
+	Parameter rf_addr bound to: 4'b1111 
+	Parameter dw bound to: 32 - type: integer 
+	Parameter aw bound to: 32 - type: integer 
+	Parameter sw bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'wb_conmax_rf' (38#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_rf.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'wb_conmax_top' (39#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_top.v:61]
+WARNING: [Synth 8-7023] instance 'wb_conmax_top0' of module 'wb_conmax_top' has 242 connections declared, but only 238 given [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:227]
+INFO: [Synth 8-6155] done synthesizing module 'openmips_min_sopc' (40#1) [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:23]
+WARNING: [Synth 8-3917] design openmips_min_sopc has port dtube_cs_n[7] driven by constant 1
+WARNING: [Synth 8-3917] design openmips_min_sopc has port dtube_cs_n[6] driven by constant 1
+WARNING: [Synth 8-3917] design openmips_min_sopc has port dtube_cs_n[5] driven by constant 1
+WARNING: [Synth 8-3917] design openmips_min_sopc has port dtube_cs_n[4] driven by constant 1
+WARNING: [Synth 8-3331] design wb_ram has unconnected port wb_rst_i
+WARNING: [Synth 8-3331] design wb_ram has unconnected port wb_sel_i[2]
+WARNING: [Synth 8-3331] design wb_ram has unconnected port wb_sel_i[1]
+WARNING: [Synth 8-3331] design wb_ram has unconnected port wb_sel_i[0]
+WARNING: [Synth 8-3331] design wb_ram has unconnected port wb_adr_i[1]
+WARNING: [Synth 8-3331] design wb_ram has unconnected port wb_adr_i[0]
+WARNING: [Synth 8-3331] design uart_receiver has unconnected port lcr[7]
+WARNING: [Synth 8-3331] design uart_receiver has unconnected port lcr[6]
+WARNING: [Synth 8-3331] design uart_transmitter has unconnected port lcr[7]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_rst_i
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_we_i
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_sel_i[3]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_sel_i[2]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_sel_i[1]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_sel_i[0]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_adr_i[1]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_adr_i[0]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[31]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[30]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[29]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[28]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[27]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[26]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[25]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[24]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[23]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[22]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[21]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[20]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[19]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[18]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[17]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[16]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[15]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[14]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[13]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[12]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[11]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[10]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[9]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[8]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[7]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[6]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[5]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[4]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[3]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[2]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[1]
+WARNING: [Synth 8-3331] design wb_rom has unconnected port wb_dat_i[0]
+WARNING: [Synth 8-3331] design LLbit_reg has unconnected port LLbit_i
+WARNING: [Synth 8-3331] design mem_wb has unconnected port stall[3]
+WARNING: [Synth 8-3331] design mem_wb has unconnected port stall[2]
+WARNING: [Synth 8-3331] design mem_wb has unconnected port stall[1]
+WARNING: [Synth 8-3331] design mem_wb has unconnected port stall[0]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[31]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[30]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[29]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[28]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[27]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[26]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[25]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[24]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[23]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[22]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[21]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[20]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[19]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[18]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[17]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[16]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[15]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[14]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[13]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[7]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[6]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[5]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[4]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[3]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[2]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[1]
+WARNING: [Synth 8-3331] design mem has unconnected port excepttype_i[0]
+WARNING: [Synth 8-3331] design ex_mem has unconnected port stall[5]
+WARNING: [Synth 8-3331] design ex_mem has unconnected port stall[2]
+WARNING: [Synth 8-3331] design ex_mem has unconnected port stall[1]
+WARNING: [Synth 8-3331] design ex_mem has unconnected port stall[0]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[31]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[30]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[29]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[28]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[27]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[26]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[25]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[24]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[23]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[22]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[21]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[20]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[19]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[18]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[17]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 847.723 ; gain = 297.289
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 847.723 ; gain = 297.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 847.723 ; gain = 297.289
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/synth_1/.Xil/Vivado-9360-DESKTOP-MI6UCPP/rom_0/rom_0/rom_0_in_context.xdc] for cell 'wb_rom0/rom'
+Finished Parsing XDC File [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/synth_1/.Xil/Vivado-9360-DESKTOP-MI6UCPP/rom_0/rom_0/rom_0_in_context.xdc] for cell 'wb_rom0/rom'
+Parsing XDC File [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/constrs_1/new/nexys4ddr.xdc]
+Finished Parsing XDC File [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/constrs_1/new/nexys4ddr.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/constrs_1/new/nexys4ddr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/openmips_min_sopc_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/openmips_min_sopc_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1020.438 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.110 . Memory (MB): peak = 1020.438 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'wb_rom0/rom' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1028.840 ; gain = 478.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1028.840 ; gain = 478.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for wb_rom0/rom. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1028.840 ; gain = 478.406
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "branch_flag_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex.v:351]
+INFO: [Synth 8-5546] ROM "LLbit_value_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "LLbit_value_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "mem_sel_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mem_sel_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mem_sel_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mem_sel_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mem_sel_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'div'
+INFO: [Synth 8-5546] ROM "status_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cause_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'wishbone_cyc_o_reg' into 'wishbone_stb_o_reg' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/wishbone_bus_if.v:66]
+INFO: [Synth 8-802] inferred FSM for state register 'wishbone_state_reg' in module 'wishbone_bus_if'
+INFO: [Synth 8-802] inferred FSM for state register 'wbstate_reg' in module 'uart_wb'
+INFO: [Synth 8-5544] ROM "wb_adr_int_lsb" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_tfifo.v:211]
+INFO: [Synth 8-802] inferred FSM for state register 'tstate_reg' in module 'uart_transmitter'
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_rfifo.v:254]
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'uart_receiver'
+INFO: [Synth 8-5544] ROM "toc_value" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rparity_xor" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v:697]
+INFO: [Synth 8-5544] ROM "block_value" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "block_value" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "trigger_level" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'reg2_o_reg' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/id.v:1050]
+WARNING: [Synth 8-327] inferring latch for variable 'reg1_o_reg' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/id.v:1030]
+WARNING: [Synth 8-327] inferring latch for variable 'cp0_reg_read_addr_o_reg' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex.v:526]
+WARNING: [Synth 8-327] inferring latch for variable 'stallreq_for_madd_msub_reg' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex.v:402]
+WARNING: [Synth 8-327] inferring latch for variable 'hilo_temp_o_reg' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex.v:400]
+WARNING: [Synth 8-327] inferring latch for variable 'cnt_o_reg' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex.v:401]
+WARNING: [Synth 8-327] inferring latch for variable 'hilo_temp1_reg' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex.v:409]
+WARNING: [Synth 8-327] inferring latch for variable 'cp0_cause_reg' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v:147]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_data_o_reg' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v:199]
+WARNING: [Synth 8-327] inferring latch for variable 'new_pc_reg' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ctrl.v:43]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                               00 |                               00
+                 iSTATE0 |                               01 |                               01
+                  iSTATE |                               10 |                               10
+                 iSTATE2 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'div'
+WARNING: [Synth 8-327] inferring latch for variable 'data_o_reg' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/cp0_reg.v:174]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                               00 |                               00
+                  iSTATE |                               01 |                               01
+                 iSTATE1 |                               10 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wishbone_state_reg' using encoding 'sequential' in module 'wishbone_bus_if'
+WARNING: [Synth 8-327] inferring latch for variable 'cpu_data_o_reg' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/wishbone_bus_if.v:124]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               00
+                 iSTATE0 |                              010 |                               01
+                 iSTATE2 |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wbstate_reg' using encoding 'one-hot' in module 'uart_wb'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  s_idle |                              000 |                              000
+              s_pop_byte |                              001 |                              101
+            s_send_start |                              010 |                              001
+             s_send_byte |                              011 |                              010
+           s_send_parity |                              100 |                              011
+             s_send_stop |                              101 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'tstate_reg' using encoding 'sequential' in module 'uart_transmitter'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 sr_idle |                             0000 |                             0000
+            sr_rec_start |                             0001 |                             0001
+          sr_rec_prepare |                             0010 |                             0110
+              sr_rec_bit |                             0011 |                             0010
+              sr_end_bit |                             0100 |                             0111
+           sr_rec_parity |                             0101 |                             0011
+         sr_ca_lc_parity |                             0110 |                             1000
+         sr_check_parity |                             0111 |                             0101
+                sr_wait1 |                             1000 |                             1001
+             sr_rec_stop |                             1001 |                             0100
+                 sr_push |                             1010 |                             1010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'sequential' in module 'uart_receiver'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1028.840 ; gain = 478.406
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------+------------+----------+
+|      |RTL Partition          |Replication |Instances |
++------+-----------------------+------------+----------+
+|1     |openmips_min_sopc__GB0 |           1|     43276|
+|2     |openmips               |           1|     23061|
++------+-----------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 4     
+	   3 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 13    
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 5     
+	   2 Input      3 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 3     
+	   2 Input      4 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 3     
++---XORs : 
+	                9 Bit    Wide XORs := 1     
+	                8 Bit    Wide XORs := 1     
+	                7 Bit    Wide XORs := 1     
+	                6 Bit    Wide XORs := 1     
+	                5 Bit    Wide XORs := 1     
++---Registers : 
+	               65 Bit    Registers := 1     
+	               64 Bit    Registers := 2     
+	               32 Bit    Registers := 50    
+	               16 Bit    Registers := 17    
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 12    
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 10    
+	                4 Bit    Registers := 12    
+	                3 Bit    Registers := 99    
+	                2 Bit    Registers := 20    
+	                1 Bit    Registers := 356   
++---RAMs : 
+	            1024K Bit         RAMs := 1     
+	             1024 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     65 Bit        Muxes := 5     
+	   4 Input     65 Bit        Muxes := 2     
+	   2 Input     64 Bit        Muxes := 10    
+	   3 Input     64 Bit        Muxes := 2     
+	   4 Input     64 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 88    
+	  11 Input     32 Bit        Muxes := 3     
+	   8 Input     32 Bit        Muxes := 1     
+	  33 Input     32 Bit        Muxes := 1     
+	   5 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 8     
+	   3 Input     32 Bit        Muxes := 13    
+	   9 Input     32 Bit        Muxes := 1     
+	   7 Input     32 Bit        Muxes := 2     
+	   6 Input     32 Bit        Muxes := 4     
+	   7 Input     24 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 2     
+	  11 Input     11 Bit        Muxes := 1     
+	   8 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	  33 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 15    
+	   4 Input      8 Bit        Muxes := 4     
+	  11 Input      8 Bit        Muxes := 2     
+	   9 Input      8 Bit        Muxes := 1     
+	   3 Input      7 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 1     
+	  27 Input      7 Bit        Muxes := 1     
+	  11 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   6 Input      7 Bit        Muxes := 2     
+	  33 Input      6 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 3     
+	   4 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 15    
+	  11 Input      5 Bit        Muxes := 1     
+	   5 Input      5 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 3     
+	   6 Input      5 Bit        Muxes := 2     
+	  33 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 5     
+	   3 Input      4 Bit        Muxes := 4     
+	  15 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 14    
+	  11 Input      4 Bit        Muxes := 3     
+	   6 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 128   
+	  33 Input      3 Bit        Muxes := 6     
+	   8 Input      3 Bit        Muxes := 3     
+	   7 Input      3 Bit        Muxes := 481   
+	  27 Input      3 Bit        Muxes := 2     
+	  11 Input      3 Bit        Muxes := 2     
+	   9 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 7     
+	   4 Input      3 Bit        Muxes := 18    
+	   6 Input      3 Bit        Muxes := 85    
+	  27 Input      2 Bit        Muxes := 2     
+	   8 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 45    
+	   3 Input      2 Bit        Muxes := 3     
+	  15 Input      2 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 416   
+	   8 Input      1 Bit        Muxes := 11    
+	   3 Input      1 Bit        Muxes := 25    
+	  33 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 35    
+	  11 Input      1 Bit        Muxes := 15    
+	   6 Input      1 Bit        Muxes := 17    
+	  28 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 4     
+	  27 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 644   
+	  15 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module openmips_min_sopc 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module pc_reg 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module if_id 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module id 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 15    
+	  11 Input     32 Bit        Muxes := 3     
+	   8 Input     32 Bit        Muxes := 1     
+	  33 Input     32 Bit        Muxes := 1     
+	   5 Input     32 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	  33 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   4 Input      8 Bit        Muxes := 1     
+	   3 Input      7 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 1     
+	  27 Input      7 Bit        Muxes := 1     
+	  11 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 8     
+	  11 Input      5 Bit        Muxes := 1     
+	   5 Input      5 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 2     
+	  33 Input      4 Bit        Muxes := 1     
+	  33 Input      3 Bit        Muxes := 6     
+	   8 Input      3 Bit        Muxes := 3     
+	   7 Input      3 Bit        Muxes := 1     
+	  27 Input      3 Bit        Muxes := 2     
+	  11 Input      3 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   4 Input      3 Bit        Muxes := 1     
+	  27 Input      2 Bit        Muxes := 2     
+	   8 Input      2 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 9     
+	   3 Input      1 Bit        Muxes := 2     
+	  33 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 12    
+	   4 Input      1 Bit        Muxes := 4     
+	  11 Input      1 Bit        Muxes := 4     
+	   6 Input      1 Bit        Muxes := 2     
+	  28 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 2     
+	  27 Input      1 Bit        Muxes := 1     
+Module regfile 
+Detailed RTL Component Info : 
++---RAMs : 
+	             1024 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 8     
+Module id_ex 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 6     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 5     
+Module ex 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 4     
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input      6 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 7     
+	   3 Input     64 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 27    
+	   4 Input     32 Bit        Muxes := 2     
+	   5 Input     32 Bit        Muxes := 2     
+	   3 Input     32 Bit        Muxes := 2     
+	  33 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 20    
+	   5 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 4     
+Module ex_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 8     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 5     
+Module mem 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 12    
+	   4 Input     32 Bit        Muxes := 6     
+	   3 Input     32 Bit        Muxes := 1     
+	   9 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   8 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 3     
+	   3 Input      4 Bit        Muxes := 2     
+	  15 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	  15 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	  15 Input      1 Bit        Muxes := 5     
+Module mem_wb 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 5     
+Module hilo_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+Module ctrl 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   7 Input     32 Bit        Muxes := 1     
+	   6 Input      5 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 1     
+Module div 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               65 Bit    Registers := 1     
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     65 Bit        Muxes := 5     
+	   4 Input     65 Bit        Muxes := 2     
+	   2 Input     64 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 1     
+	   4 Input      6 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 6     
+Module LLbit_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module cp0_reg 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 6     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 8     
+	   6 Input     32 Bit        Muxes := 3     
+	   3 Input     32 Bit        Muxes := 1     
+	   7 Input     32 Bit        Muxes := 1     
+	   7 Input     24 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+	   6 Input      1 Bit        Muxes := 4     
+	   7 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 1     
+Module wishbone_bus_if__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   3 Input     32 Bit        Muxes := 4     
+	   3 Input      4 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 8     
+Module wishbone_bus_if 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   3 Input     32 Bit        Muxes := 4     
+	   3 Input      4 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 8     
+Module seg8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+Module gpio_top 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     32 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 10    
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module wb_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module uart_wb 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   6 Input     32 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 3     
+Module uart_tfifo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 3     
+Module uart_transmitter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	                8 Bit    Wide XORs := 1     
+	                7 Bit    Wide XORs := 1     
+	                6 Bit    Wide XORs := 1     
+	                5 Bit    Wide XORs := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+	   6 Input      7 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 2     
+	   4 Input      5 Bit        Muxes := 1     
+	   6 Input      5 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 10    
+Module uart_sync_flops 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module uart_rfifo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 16    
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 52    
+	   4 Input      1 Bit        Muxes := 19    
+Module uart_receiver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	                9 Bit    Wide XORs := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 2     
+	  11 Input     11 Bit        Muxes := 1     
+	   8 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   4 Input      8 Bit        Muxes := 2     
+	  11 Input      8 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 6     
+	  11 Input      4 Bit        Muxes := 3     
+	  11 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 1     
+	  11 Input      1 Bit        Muxes := 11    
+Module uart_regs 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      4 Bit         XORs := 1     
++---Registers : 
+	                8 Bit    Registers := 6     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 35    
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 4     
+	   9 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+Module uart_debug_if 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
+Module wb_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---RAMs : 
+	            1024K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 4     
+Module wb_conmax_master_if__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module wb_conmax_master_if__2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module wb_conmax_master_if__3 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module wb_conmax_master_if__4 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module wb_conmax_master_if__5 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module wb_conmax_master_if__6 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module wb_conmax_master_if__7 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module wb_conmax_master_if 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module wb_conmax_arb__9 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__15 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__14 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__13 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__12 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__11 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__10 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__9 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__8 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__8 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__7 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__6 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__5 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__14 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__23 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__22 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__21 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__20 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__19 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__18 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__17 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__16 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__13 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__12 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__11 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__10 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__2 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__19 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__31 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__30 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__29 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__28 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__27 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__26 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__25 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__24 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__18 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__17 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__16 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__15 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__3 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__3 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__24 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__39 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__38 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__37 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__36 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__35 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__34 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__33 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__32 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__23 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__22 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__21 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__20 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__4 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__4 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__29 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__47 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__46 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__45 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__44 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__43 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__42 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__41 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__40 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__5 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__28 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__27 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__26 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__25 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__5 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__5 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__34 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__55 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__54 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__53 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__52 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__51 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__50 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__49 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__48 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__6 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__33 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__32 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__31 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__30 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__6 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__6 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__39 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__63 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__62 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__61 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__60 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__59 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__58 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__57 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__56 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__7 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__38 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__37 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__36 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__35 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__7 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__7 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__44 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__71 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__70 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__69 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__68 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__67 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__66 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__65 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__64 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__8 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__43 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__42 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__41 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__40 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__8 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__8 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__49 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__79 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__78 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__77 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__76 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__75 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__74 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__73 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__72 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__9 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__48 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__47 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__46 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__45 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__9 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__9 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__54 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__87 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__86 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__85 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__84 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__83 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__82 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__81 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__80 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__10 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__53 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__52 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__51 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__50 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__10 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__10 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__59 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__95 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__94 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__93 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__92 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__91 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__90 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__89 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__88 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__11 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__58 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__57 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__56 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__55 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__11 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__11 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__64 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__103 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__102 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__101 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__100 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__99 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__98 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__97 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__96 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__12 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__63 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__62 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__61 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__60 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__12 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__12 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__69 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__111 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__110 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__109 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__108 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__107 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__106 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__105 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__104 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__13 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__68 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__67 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__66 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__65 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__13 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__13 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__74 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__119 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__118 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__117 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__116 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__115 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__114 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__113 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__112 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__14 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__73 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__72 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__71 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__70 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__14 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__14 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__79 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__127 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__126 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__125 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__124 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__123 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__122 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__121 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__120 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__15 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__78 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__77 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__76 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__75 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__15 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__15 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__5 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__6 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__7 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__2 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__3 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__4 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_rf 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 17    
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP hilo_temp, operation Mode is: A*B.
+DSP Report: operator hilo_temp is absorbed into DSP hilo_temp.
+DSP Report: operator hilo_temp is absorbed into DSP hilo_temp.
+DSP Report: Generating DSP hilo_temp, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator hilo_temp is absorbed into DSP hilo_temp.
+DSP Report: operator hilo_temp is absorbed into DSP hilo_temp.
+DSP Report: Generating DSP hilo_temp, operation Mode is: A*B.
+DSP Report: operator hilo_temp is absorbed into DSP hilo_temp.
+DSP Report: operator hilo_temp is absorbed into DSP hilo_temp.
+DSP Report: Generating DSP hilo_temp, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator hilo_temp is absorbed into DSP hilo_temp.
+DSP Report: operator hilo_temp is absorbed into DSP hilo_temp.
+INFO: [Synth 8-5544] ROM "regs/receiver/toc_value" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "regs/receiver/" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-3917] design openmips_min_sopc has port dtube_cs_n[7] driven by constant 1
+WARNING: [Synth 8-3917] design openmips_min_sopc has port dtube_cs_n[6] driven by constant 1
+WARNING: [Synth 8-3917] design openmips_min_sopc has port dtube_cs_n[5] driven by constant 1
+WARNING: [Synth 8-3917] design openmips_min_sopc has port dtube_cs_n[4] driven by constant 1
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[2]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[2]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[0]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[0]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[3]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/cause_o_reg[0]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[3]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[1]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[3]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[1]' (FDSE) to 'openmips0/cp0_reg0/prid_o_reg[8]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/cause_o_reg[1]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[3]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[3]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[3]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[3]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[4]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[4]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[4]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[4]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[5]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[5]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[6]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[6]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[6]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[6]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (openmips0/cp0_reg0/\cause_o_reg[6] )
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[7]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[7]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[7]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[9]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/cause_o_reg[7]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[9]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[8]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[9]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[8]' (FDSE) to 'openmips0/cp0_reg0/prid_o_reg[18]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[9]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[9]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[9]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[10]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[10]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[10]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[10]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[11]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[11]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[11]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[11]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[12]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[12]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[12]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[12]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[13]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[13]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[13]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[13]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[14]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[14]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[14]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[14]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[15]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[15]' (FDSE) to 'openmips0/cp0_reg0/prid_o_reg[18]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[15]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[16]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[16]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[16]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[16]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[17]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/cause_o_reg[16]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[17]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[17]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[17]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[17]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[20]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/cause_o_reg[17]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[20]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[18]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[20]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[18]' (FDSE) to 'openmips0/cp0_reg0/prid_o_reg[19]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/cause_o_reg[18]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[20]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[19]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[20]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[19]' (FDSE) to 'openmips0/cp0_reg0/prid_o_reg[22]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/cause_o_reg[19]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[20]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[20]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[20]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[20]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[21]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/cause_o_reg[20]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[21]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[21]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[21]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[21]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[23]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/cause_o_reg[21]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[23]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[22]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[23]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (openmips0/cp0_reg0/\prid_o_reg[22] )
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[23]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[23]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[23]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[24]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[24]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[24]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[24]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[25]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/cause_o_reg[24]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[25]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[25]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[25]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[25]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[26]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/cause_o_reg[25]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[26]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[26]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[26]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[26]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[27]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/cause_o_reg[26]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[27]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[27]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[27]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[27]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[28]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/cause_o_reg[27]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[28]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[28]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[28]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[28]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[29]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/cause_o_reg[28]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[29]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[29]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[29]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[29]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[30]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/cause_o_reg[29]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[30]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[30]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[30]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/prid_o_reg[30]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[31]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/cause_o_reg[30]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[31]'
+INFO: [Synth 8-3886] merging instance 'openmips0/cp0_reg0/config_o_reg[31]' (FDRE) to 'openmips0/cp0_reg0/prid_o_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (openmips0/cp0_reg0/\prid_o_reg[31] )
+INFO: [Synth 8-3886] merging instance 'openmips0/iwishbone_bus_if/wishbone_sel_o_reg[0]' (FDRE) to 'openmips0/iwishbone_bus_if/wishbone_sel_o_reg[1]'
+INFO: [Synth 8-3886] merging instance 'openmips0/iwishbone_bus_if/wishbone_sel_o_reg[1]' (FDRE) to 'openmips0/iwishbone_bus_if/wishbone_sel_o_reg[2]'
+INFO: [Synth 8-3886] merging instance 'openmips0/iwishbone_bus_if/wishbone_sel_o_reg[2]' (FDRE) to 'openmips0/iwishbone_bus_if/wishbone_sel_o_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (openmips0/iwishbone_bus_if/wishbone_we_o_reg)
+INFO: [Synth 8-3886] merging instance 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[0]' (FDRE) to 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[31]'
+INFO: [Synth 8-3886] merging instance 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[1]' (FDRE) to 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[31]'
+INFO: [Synth 8-3886] merging instance 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[2]' (FDRE) to 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[31]'
+INFO: [Synth 8-3886] merging instance 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[3]' (FDRE) to 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[31]'
+INFO: [Synth 8-3886] merging instance 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[4]' (FDRE) to 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[31]'
+INFO: [Synth 8-3886] merging instance 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[5]' (FDRE) to 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[31]'
+INFO: [Synth 8-3886] merging instance 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[6]' (FDRE) to 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[31]'
+INFO: [Synth 8-3886] merging instance 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[7]' (FDRE) to 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[31]'
+INFO: [Synth 8-3886] merging instance 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[8]' (FDRE) to 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[31]'
+INFO: [Synth 8-3886] merging instance 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[9]' (FDRE) to 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[31]'
+INFO: [Synth 8-3886] merging instance 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[10]' (FDRE) to 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[31]'
+INFO: [Synth 8-3886] merging instance 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[11]' (FDRE) to 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[31]'
+INFO: [Synth 8-3886] merging instance 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[12]' (FDRE) to 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[31]'
+INFO: [Synth 8-3886] merging instance 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[13]' (FDRE) to 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[31]'
+INFO: [Synth 8-3886] merging instance 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[14]' (FDRE) to 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[31]'
+INFO: [Synth 8-3886] merging instance 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[15]' (FDRE) to 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[31]'
+INFO: [Synth 8-3886] merging instance 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[16]' (FDRE) to 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[31]'
+INFO: [Synth 8-3886] merging instance 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[17]' (FDRE) to 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[31]'
+INFO: [Synth 8-3886] merging instance 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[18]' (FDRE) to 'openmips0/iwishbone_bus_if/wishbone_data_o_reg[31]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (openmips0/iwishbone_bus_if/\wishbone_data_o_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[31]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[30]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[29]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[28]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[27]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[26]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[25]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[24]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[23]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[22]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[21]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[20]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[19]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[18]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[17]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[16]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[7]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[6]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[5]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[4]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[3]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[2]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[1]) is unused and will be removed from module mem.
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[0]) is unused and will be removed from module mem.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\gpio_top0/sync_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/wb_conmax_top0/m7/s15_cyc_o_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/wb_conmax_top0/m6/s15_cyc_o_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/wb_conmax_top0/m5/s15_cyc_o_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/wb_conmax_top0/m4/s15_cyc_o_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/wb_conmax_top0/m3/s15_cyc_o_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/wb_conmax_top0/m2/s15_cyc_o_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/wb_conmax_top0/s1/m2_cyc_r_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\gpio_top0/sync_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/wb_conmax_top0/s3/m2_cyc_r_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/wb_conmax_top0/s2/m2_cyc_r_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/wb_conmax_top0/s0/m2_cyc_r_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/wb_conmax_top0/s15/m2_cyc_r_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\gpio_top0/sync_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (openmips0/cp0_reg0/\cause_o_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (openmips0/mem0/\cp0_cause_reg[13] )
+WARNING: [Synth 8-3332] Sequential element (cp0_cause_reg[13]) is unused and will be removed from module mem.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:15 ; elapsed = 00:02:22 . Memory (MB): peak = 1216.324 ; gain = 665.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|wb_ram:     | ram_reg    | 32 K x 32(READ_FIRST)  | W | R |                        |   |   | Port A           | 0      | 32     | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++-------------------+--------------------------------------------------+-----------+----------------------+---------------+
+|Module Name        | RTL Object                                       | Inference | Size (Depth x Width) | Primitives    | 
++-------------------+--------------------------------------------------+-----------+----------------------+---------------+
+|openmips0/regfile1 | regs_reg                                         | Implied   | 32 x 32              | RAM32M x 12   | 
+|openmips_min_sopc  | uart_top0/regs/receiver/fifo_rx/rfifo/ram_reg    | Implied   | 16 x 8               | RAM32M x 2    | 
+|openmips_min_sopc  | uart_top0/regs/transmitter/fifo_tx/tfifo/ram_reg | Implied   | 16 x 8               | RAM32M x 2    | 
++-------------------+--------------------------------------------------+-----------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ex          | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ex          | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ex          | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ex          | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/wb_rami_110/wb_ram/ram_reg_0_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++------+-----------------------+------------+----------+
+|      |RTL Partition          |Replication |Instances |
++------+-----------------------+------------+----------+
+|1     |openmips_min_sopc__GB0 |           1|      4655|
+|2     |openmips               |           1|     12838|
++------+-----------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:29 ; elapsed = 00:02:36 . Memory (MB): peak = 1216.324 ; gain = 665.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:44 ; elapsed = 00:02:52 . Memory (MB): peak = 1216.324 ; gain = 665.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|wb_ram:     | ram_reg    | 32 K x 32(READ_FIRST)  | W | R |                        |   |   | Port A           | 0      | 32     | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping  Report
++-------------------+--------------------------------------------------+-----------+----------------------+---------------+
+|Module Name        | RTL Object                                       | Inference | Size (Depth x Width) | Primitives    | 
++-------------------+--------------------------------------------------+-----------+----------------------+---------------+
+|openmips0/regfile1 | regs_reg                                         | Implied   | 32 x 32              | RAM32M x 12   | 
+|openmips_min_sopc  | uart_top0/regs/receiver/fifo_rx/rfifo/ram_reg    | Implied   | 16 x 8               | RAM32M x 2    | 
+|openmips_min_sopc  | uart_top0/regs/transmitter/fifo_tx/tfifo/ram_reg | Implied   | 16 x 8               | RAM32M x 2    | 
++-------------------+--------------------------------------------------+-----------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------+------------+----------+
+|      |RTL Partition          |Replication |Instances |
++------+-----------------------+------------+----------+
+|1     |openmips_min_sopc__GB0 |           1|      4655|
+|2     |openmips               |           1|     12862|
++------+-----------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance wb_ram/ram_reg_0_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:50 ; elapsed = 00:02:59 . Memory (MB): peak = 1216.324 ; gain = 665.891
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5365] Flop rst_count_reg[9] is being inverted and renamed to rst_count_reg[9]_inv.
+INFO: [Synth 8-6064] Net n_0_4870 is driving 128 big block pins (URAM, BRAM and DSP loads). Created 13 replicas of its driver. 
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:53 ; elapsed = 00:03:01 . Memory (MB): peak = 1216.324 ; gain = 665.891
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:53 ; elapsed = 00:03:01 . Memory (MB): peak = 1216.324 ; gain = 665.891
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:54 ; elapsed = 00:03:03 . Memory (MB): peak = 1216.324 ; gain = 665.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:54 ; elapsed = 00:03:03 . Memory (MB): peak = 1216.324 ; gain = 665.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:54 ; elapsed = 00:03:03 . Memory (MB): peak = 1216.324 ; gain = 665.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:54 ; elapsed = 00:03:03 . Memory (MB): peak = 1216.324 ; gain = 665.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |rom_0         |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |rom_0    |     1|
+|2     |BUFG     |    10|
+|3     |CARRY4   |   212|
+|4     |DSP48E1  |     4|
+|5     |LUT1     |   211|
+|6     |LUT2     |   688|
+|7     |LUT3     |   434|
+|8     |LUT4     |   735|
+|9     |LUT5     |   769|
+|10    |LUT6     |  1949|
+|11    |MUXF7    |    38|
+|12    |MUXF8    |    16|
+|13    |RAM32M   |    16|
+|14    |RAMB36E1 |    32|
+|15    |FDCE     |   898|
+|16    |FDPE     |    33|
+|17    |FDRE     |  1337|
+|18    |FDSE     |     3|
+|19    |LD       |    69|
+|20    |LDC      |   295|
+|21    |IBUF     |    19|
+|22    |OBUF     |    17|
++------+---------+------+
+
+Report Instance Areas: 
++------+------------------------+----------------------+------+
+|      |Instance                |Module                |Cells |
++------+------------------------+----------------------+------+
+|1     |top                     |                      |  7817|
+|2     |  gpio_top0             |gpio_top              |   329|
+|3     |  openmips0             |openmips              |  5811|
+|4     |    LLbit_reg0          |LLbit_reg             |     1|
+|5     |    cp0_reg0            |cp0_reg               |   231|
+|6     |    ctrl0               |ctrl                  |    61|
+|7     |    div0                |div                   |   444|
+|8     |    dwishbone_bus_if    |wishbone_bus_if       |   521|
+|9     |    ex0                 |ex                    |   476|
+|10    |    ex_mem0             |ex_mem                |  1056|
+|11    |    hilo_reg0           |hilo_reg              |    64|
+|12    |    id0                 |id                    |   111|
+|13    |    id_ex0              |id_ex                 |  1460|
+|14    |    if_id0              |if_id                 |   588|
+|15    |    iwishbone_bus_if    |wishbone_bus_if_29    |   357|
+|16    |    mem0                |mem                   |    69|
+|17    |    mem_wb0             |mem_wb                |   278|
+|18    |    pc_reg0             |pc_reg                |    80|
+|19    |    regfile1            |regfile               |    12|
+|20    |  seg80                 |seg8                  |    39|
+|21    |  uart_top0             |uart_top              |   877|
+|22    |    regs                |uart_regs             |   684|
+|23    |      i_uart_sync_flops |uart_sync_flops       |     3|
+|24    |      receiver          |uart_receiver         |   396|
+|25    |        fifo_rx         |uart_rfifo            |   250|
+|26    |          rfifo         |raminfr_28            |    19|
+|27    |      transmitter       |uart_transmitter      |   102|
+|28    |        fifo_tx         |uart_tfifo            |    51|
+|29    |          tfifo         |raminfr               |    12|
+|30    |    wb_interface        |uart_wb               |   193|
+|31    |  wb_conmax_top0        |wb_conmax_top         |   562|
+|32    |    m0                  |wb_conmax_master_if   |     5|
+|33    |    m1                  |wb_conmax_master_if_0 |     5|
+|34    |    rf                  |wb_conmax_rf          |   462|
+|35    |    s0                  |wb_conmax_slave_if    |    27|
+|36    |      msel              |wb_conmax_msel_23     |    24|
+|37    |        arb0            |wb_conmax_arb_24      |     1|
+|38    |        arb1            |wb_conmax_arb_25      |     1|
+|39    |        arb2            |wb_conmax_arb_26      |    18|
+|40    |        arb3            |wb_conmax_arb_27      |     1|
+|41    |    s1                  |wb_conmax_slave_if_1  |    17|
+|42    |      msel              |wb_conmax_msel_18     |    14|
+|43    |        arb0            |wb_conmax_arb_19      |     1|
+|44    |        arb1            |wb_conmax_arb_20      |     1|
+|45    |        arb2            |wb_conmax_arb_21      |     8|
+|46    |        arb3            |wb_conmax_arb_22      |     1|
+|47    |    s15                 |wb_conmax_slave_if_2  |    15|
+|48    |      msel              |wb_conmax_msel_13     |    12|
+|49    |        arb0            |wb_conmax_arb_14      |     1|
+|50    |        arb1            |wb_conmax_arb_15      |     1|
+|51    |        arb2            |wb_conmax_arb_16      |     6|
+|52    |        arb3            |wb_conmax_arb_17      |     1|
+|53    |    s2                  |wb_conmax_slave_if_3  |    14|
+|54    |      msel              |wb_conmax_msel_8      |    11|
+|55    |        arb0            |wb_conmax_arb_9       |     1|
+|56    |        arb1            |wb_conmax_arb_10      |     1|
+|57    |        arb2            |wb_conmax_arb_11      |     5|
+|58    |        arb3            |wb_conmax_arb_12      |     1|
+|59    |    s3                  |wb_conmax_slave_if_4  |    17|
+|60    |      msel              |wb_conmax_msel        |    14|
+|61    |        arb0            |wb_conmax_arb         |     1|
+|62    |        arb1            |wb_conmax_arb_5       |     1|
+|63    |        arb2            |wb_conmax_arb_6       |     8|
+|64    |        arb3            |wb_conmax_arb_7       |     1|
+|65    |  wb_ram                |wb_ram                |    65|
+|66    |  wb_rom0               |wb_rom                |    66|
++------+------------------------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:55 ; elapsed = 00:03:03 . Memory (MB): peak = 1216.324 ; gain = 665.891
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 41 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:39 ; elapsed = 00:02:55 . Memory (MB): peak = 1216.324 ; gain = 484.773
+Synthesis Optimization Complete : Time (s): cpu = 00:02:55 ; elapsed = 00:03:03 . Memory (MB): peak = 1216.324 ; gain = 665.891
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 682 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1216.324 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 380 instances were transformed.
+  LD => LDCE: 69 instances
+  LDC => LDCE: 295 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 16 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+350 Infos, 228 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:02 ; elapsed = 00:03:12 . Memory (MB): peak = 1216.324 ; gain = 919.508
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1216.324 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/synth_1/openmips_min_sopc.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file openmips_min_sopc_utilization_synth.rpt -pb openmips_min_sopc_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 26 11:58:32 2019...

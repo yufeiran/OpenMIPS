@@ -2,216 +2,162 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Oct 24 21:50:14 2019
-# Process ID: 7668
+# Start of session at: Fri Oct 25 20:39:42 2019
+# Process ID: 9828
 # Current directory: D:/codehub/VIVADO/LOONGSON/OpenMIPS
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7708 D:\codehub\VIVADO\LOONGSON\OpenMIPS\OpenMIPS.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4180 D:\codehub\VIVADO\LOONGSON\OpenMIPS\OpenMIPS.xpr
 # Log file: D:/codehub/VIVADO/LOONGSON/OpenMIPS/vivado.log
 # Journal file: D:/codehub/VIVADO/LOONGSON/OpenMIPS\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/codehub/Desktop/xilinx-coe-generator-master/output/output.coe'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_gen_0 -dir d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip
+INFO: [filemgmt 56-101] Creating core container 'd:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/blk_mem_gen_0.xcix' for IP 'blk_mem_gen_0'
+set_property -dict [list CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {32} CONFIG.Write_Depth_A {131071} CONFIG.Read_Width_A {32} CONFIG.Write_Width_B {32} CONFIG.Read_Width_B {32} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/output.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_gen_0]
+generate_target {instantiation_template} [get_files d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_gen_0'...
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -no_script -reset -force -quiet
+remove_files  d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+file delete -force d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/blk_mem_gen_0.xcix
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name ram_0 -dir d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip
+INFO: [filemgmt 56-101] Creating core container 'd:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/ram_0.xcix' for IP 'ram_0'
+set_property -dict [list CONFIG.Component_Name {ram_0} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {32} CONFIG.Write_Depth_A {131071} CONFIG.Read_Width_A {32} CONFIG.Write_Width_B {32} CONFIG.Read_Width_B {32} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/output.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips ram_0]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ram_0' to 'ram_0' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/ram_0/ram_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ram_0'...
+generate_target all [get_files  d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/ram_0/ram_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ram_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ram_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'ram_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ram_0'...
+generate_target: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 850.043 ; gain = 0.000
+catch { config_ip_cache -export [get_ips -all ram_0] }
+export_ip_user_files -of_objects [get_files d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/ram_0/ram_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/ram_0/ram_0.xci]
+launch_runs -jobs 4 ram_0_synth_1
+[Fri Oct 25 20:42:38 2019] Launched ram_0_synth_1...
+Run output will be captured here: D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/ram_0_synth_1/runme.log
+export_simulation -of_objects [get_files d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/ram_0/ram_0.xci] -directory D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.ip_user_files/sim_scripts -ip_user_files_dir D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.ip_user_files -ipstatic_source_dir D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.cache/compile_simlib/modelsim} {questa=D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.cache/compile_simlib/questa} {riviera=D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.cache/compile_simlib/riviera} {activehdl=D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+export_ip_user_files -of_objects  [get_files d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/ram_0/ram_0.xci] -no_script -reset -force -quiet
+remove_files  -fileset ram_0 d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/ram_0/ram_0.xci
+INFO: [Project 1-386] Moving file 'd:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/ram_0/ram_0.xci' from fileset 'ram_0' to fileset 'sources_1'.
+INFO: [Project 1-386] Moving file 'd:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/ram_0.xcix' from fileset 'ram_0' to fileset 'sources_1'.
+file delete -force d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/ram_0.xcix
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name rom_0 -dir d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip
+INFO: [filemgmt 56-101] Creating core container 'd:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/rom_0.xcix' for IP 'rom_0'
+set_property -dict [list CONFIG.Component_Name {rom_0} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {32} CONFIG.Write_Depth_A {131071} CONFIG.Read_Width_A {32} CONFIG.Write_Width_B {32} CONFIG.Read_Width_B {32} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/output.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips rom_0]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'rom_0' to 'rom_0' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/rom_0/rom_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'rom_0'...
+generate_target all [get_files  d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/rom_0/rom_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'rom_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'rom_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'rom_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'rom_0'...
+generate_target: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 858.090 ; gain = 0.000
+catch { config_ip_cache -export [get_ips -all rom_0] }
+export_ip_user_files -of_objects [get_files d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/rom_0/rom_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/rom_0/rom_0.xci]
+launch_runs -jobs 4 rom_0_synth_1
+[Fri Oct 25 20:43:46 2019] Launched rom_0_synth_1...
+Run output will be captured here: D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/rom_0_synth_1/runme.log
+export_simulation -of_objects [get_files d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/rom_0/rom_0.xci] -directory D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.ip_user_files/sim_scripts -ip_user_files_dir D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.ip_user_files -ipstatic_source_dir D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.cache/compile_simlib/modelsim} {questa=D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.cache/compile_simlib/questa} {riviera=D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.cache/compile_simlib/riviera} {activehdl=D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+wait_on_run rom_0_synth_1
+[Fri Oct 25 20:44:23 2019] Waiting for rom_0_synth_1 to finish...
+[Fri Oct 25 20:44:28 2019] Waiting for rom_0_synth_1 to finish...
+[Fri Oct 25 20:44:33 2019] Waiting for rom_0_synth_1 to finish...
+[Fri Oct 25 20:44:38 2019] Waiting for rom_0_synth_1 to finish...
+[Fri Oct 25 20:44:48 2019] Waiting for rom_0_synth_1 to finish...
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+[Fri Oct 25 20:44:53 2019] Interrupt received
+
+*** Running vivado
+    with args -log rom_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source rom_0.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source rom_0.tcl -notrace
+Command: synth_design -top rom_0 -part xc7a100tcsg324-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4848 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 726.484 ; gain = 176.758
+---------------------------------------------------------------------------------
+wait_on_run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:30 . Memory (MB): peak = 858.090 ; gain = 0.000
+INFO: [Common 17-344] 'wait_on_run' was cancelled
+ERROR: [Vivado 12-4146] Open Elaborated Design failed due to the following error:
+ERROR: [Common 17-69] Command failed: 
+
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Fri Oct 25 20:45:10 2019] Launched rom_0_synth_1, synth_1...
+Run output will be captured here:
+rom_0_synth_1: D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/rom_0_synth_1/runme.log
+synth_1: D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/synth_1/runme.log
+[Fri Oct 25 20:45:10 2019] Launched impl_1...
+Run output will be captured here: D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/impl_1/runme.log
 launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/xilinx/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-54] Inspecting design source files for 'openmips_min_sopc_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim/output.coe'
+INFO: [SIM-utils-43] Exported 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim/rom_0.mif'
+INFO: [SIM-utils-43] Exported 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim/output.coe'
+INFO: [SIM-utils-43] Exported 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim/output.coe'
+INFO: [SIM-utils-43] Exported 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim/output.coe'
+INFO: [SIM-utils-43] Exported 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim/output.coe'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'd:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/rom_0/rom_0.xml'
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
 "xvlog --incr --relax -prj openmips_min_sopc_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/LLbit_reg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module LLbit_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/cp0_reg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cp0_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ctrl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ctrl
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/div.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module div
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ex
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex_mem.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ex_mem
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/gpio/gpio_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module gpio_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/hilo_reg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hilo_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/id.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module id
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/id_ex.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module id_ex
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/if_id.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module if_id
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mem
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem_wb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mem_wb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module openmips
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v" into library xil_defaultlib
-WARNING: [VRFC 10-3507] macro 'RstEnable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:2]
-WARNING: [VRFC 10-3507] macro 'RstDisable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:3]
-WARNING: [VRFC 10-3507] macro 'ZeroWord' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:4]
-WARNING: [VRFC 10-3507] macro 'WriteEnable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:5]
-WARNING: [VRFC 10-3507] macro 'WriteDisable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:6]
-WARNING: [VRFC 10-3507] macro 'ReadEnable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:7]
-WARNING: [VRFC 10-3507] macro 'ReadDisable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:8]
-WARNING: [VRFC 10-3507] macro 'AluOpBus' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:9]
-WARNING: [VRFC 10-3507] macro 'AluSelBus' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:10]
-WARNING: [VRFC 10-3507] macro 'InstValid' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:11]
-WARNING: [VRFC 10-3507] macro 'InstInvalid' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:12]
-WARNING: [VRFC 10-3507] macro 'ChipEnable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:15]
-WARNING: [VRFC 10-3507] macro 'ChipDisable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:16]
-WARNING: [VRFC 10-3507] macro 'Stop' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:18]
-WARNING: [VRFC 10-3507] macro 'NoStop' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:19]
-WARNING: [VRFC 10-3507] macro 'InstValid' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:24]
-WARNING: [VRFC 10-3507] macro 'InstInvalid' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:25]
-WARNING: [VRFC 10-3507] macro 'EXE_ORI' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:45]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:76]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTI_OP' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:177]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU_OP' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:178]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDI_OP' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:183]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDIU_OP' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:184]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_MOVE' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:253]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_ARITHMETIC' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:254]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_LOAD_STORE' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:257]
-WARNING: [VRFC 10-3507] macro 'InstAddrBus' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:264]
-WARNING: [VRFC 10-3507] macro 'InstBus' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:265]
-WARNING: [VRFC 10-3507] macro 'InstMemNum' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:266]
-WARNING: [VRFC 10-3507] macro 'InstMemNumLog2' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:267]
-WARNING: [VRFC 10-3507] macro 'RegAddrBus' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:277]
-WARNING: [VRFC 10-3507] macro 'RegBus' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:278]
-WARNING: [VRFC 10-3507] macro 'RegWidth' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:279]
-WARNING: [VRFC 10-3507] macro 'DoubleRegWidth' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:280]
-WARNING: [VRFC 10-3507] macro 'DoubleRegBus' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:281]
-WARNING: [VRFC 10-3507] macro 'RegNum' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:282]
-WARNING: [VRFC 10-3507] macro 'RegNumLog2' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:283]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COUNT' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:298]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COMPARE' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:299]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_STATUS' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:300]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CAUSE' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:301]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_EPC' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:302]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_PrId' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:303]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CONFIG' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:304]
-INFO: [VRFC 10-311] analyzing module openmips_min_sopc
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/pc_reg.v" into library xil_defaultlib
-WARNING: [VRFC 10-3507] macro 'RstEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:2]
-WARNING: [VRFC 10-3507] macro 'RstDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:3]
-WARNING: [VRFC 10-3507] macro 'ZeroWord' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:4]
-WARNING: [VRFC 10-3507] macro 'WriteEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:5]
-WARNING: [VRFC 10-3507] macro 'WriteDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:6]
-WARNING: [VRFC 10-3507] macro 'ReadEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:7]
-WARNING: [VRFC 10-3507] macro 'ReadDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:8]
-WARNING: [VRFC 10-3507] macro 'AluOpBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:9]
-WARNING: [VRFC 10-3507] macro 'AluSelBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:10]
-WARNING: [VRFC 10-3507] macro 'Stop' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:13]
-WARNING: [VRFC 10-3507] macro 'NoStop' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:14]
-WARNING: [VRFC 10-3507] macro 'ChipEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:25]
-WARNING: [VRFC 10-3507] macro 'ChipDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:26]
-WARNING: [VRFC 10-3507] macro 'EXE_ORI' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:35]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:58]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTI_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:157]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:158]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDI_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:163]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDIU_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:164]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_MOVE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:234]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_ARITHMETIC' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:235]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_LOAD_STORE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:238]
-WARNING: [VRFC 10-3507] macro 'InstAddrBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:244]
-WARNING: [VRFC 10-3507] macro 'InstBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:245]
-WARNING: [VRFC 10-3507] macro 'InstMemNum' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:246]
-WARNING: [VRFC 10-3507] macro 'InstMemNumLog2' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:247]
-WARNING: [VRFC 10-3507] macro 'RegAddrBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:257]
-WARNING: [VRFC 10-3507] macro 'RegBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:258]
-WARNING: [VRFC 10-3507] macro 'RegWidth' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:259]
-WARNING: [VRFC 10-3507] macro 'DoubleRegWidth' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:260]
-WARNING: [VRFC 10-3507] macro 'DoubleRegBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:261]
-WARNING: [VRFC 10-3507] macro 'RegNum' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:262]
-WARNING: [VRFC 10-3507] macro 'RegNumLog2' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:263]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COUNT' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:277]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COMPARE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:278]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_STATUS' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:279]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CAUSE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:280]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_EPC' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:281]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_PrId' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:282]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CONFIG' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:283]
-INFO: [VRFC 10-311] analyzing module pc_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/raminfr.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module raminfr
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/regfile.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module regfile
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/seg8.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module seg8
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_debug_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_debug_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_receiver.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_receiver
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_regs
-INFO: [VRFC 10-2458] undeclared symbol rf_overrun, assumed default net type wire [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v:400]
-INFO: [VRFC 10-2458] undeclared symbol rf_push_pulse, assumed default net type wire [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v:400]
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_rfifo.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_rfifo
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_sync_flops.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_sync_flops
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_tfifo.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_tfifo
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_transmitter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_transmitter
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_wb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_wb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_arb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_arb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_master_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_msel.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_msel
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_dec.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_pri_dec
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_enc.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_pri_enc
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_rf.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_rf
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_slave_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_ram.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_ram
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_rom.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_rom
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/wishbone_bus_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wishbone_bus_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sim_1/new/openmips_min_sopc_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module openmips_min_sopc_tb
-run_program: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 744.363 ; gain = 0.000
-INFO: [USF-XSim-69] 'compile' step finished in '7' seconds
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.ip_user_files/ip/rom_0/sim/rom_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom_0
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-"xelab -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log"
+"xelab -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_3 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log"
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log 
+Running: D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_3 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'int_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:122]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 17 for port 'wb_adr_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:157]
-WARNING: [VRFC 10-3091] actual bit length 26 differs from formal bit length 17 for port 'wb_adr_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:192]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 8 for port 'dtube_cs_n' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sim_1/new/openmips_min_sopc_tb.v:54]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'int_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:147]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 17 for port 'wb_adr_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:182]
+WARNING: [VRFC 10-3091] actual bit length 26 differs from formal bit length 17 for port 'wb_adr_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:217]
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex.v" Line 35. Module ex doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex_mem.v" Line 35. Module ex_mem doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ctrl.v" Line 35. Module ctrl doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/div.v" Line 35. Module div doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/LLbit_reg.v" Line 35. Module LLbit_reg doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/cp0_reg.v" Line 36. Module cp0_reg doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.seg8
@@ -232,6 +178,12 @@ Compiling module xil_defaultlib.cp0_reg
 Compiling module xil_defaultlib.wishbone_bus_if
 Compiling module xil_defaultlib.openmips
 Compiling module xil_defaultlib.gpio_top
+Compiling module blk_mem_gen_v8_4_3.blk_mem_gen_v8_4_3_output_stage(...
+Compiling module blk_mem_gen_v8_4_3.blk_mem_gen_v8_4_3_output_stage(...
+Compiling module blk_mem_gen_v8_4_3.blk_mem_gen_v8_4_3_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_3.blk_mem_gen_v8_4_3_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_3.blk_mem_gen_v8_4_3(C_FAMILY="art...
+Compiling module xil_defaultlib.rom_0
 Compiling module xil_defaultlib.wb_rom
 Compiling module xil_defaultlib.uart_wb
 Compiling module xil_defaultlib.raminfr
@@ -256,8 +208,18 @@ Compiling module xil_defaultlib.openmips_min_sopc
 Compiling module xil_defaultlib.openmips_min_sopc_tb
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot openmips_min_sopc_tb_behav
-run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 744.363 ; gain = 0.000
-INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim/xsim.dir/openmips_min_sopc_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim/xsim.dir/openmips_min_sopc_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Oct 25 20:51:46 2019. For additional details about this file, please refer to the WebTalk help file at D:/xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 91.680 ; gain = 0.000
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct 25 20:51:46 2019...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 858.090 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '15' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
@@ -266,8 +228,7 @@ INFO: [USF-XSim-8] Loading simulator feature
 Vivado Simulator 2019.1
 Time resolution is 1 ps
 open_wave_config D:/codehub/VIVADO/LOONGSON/OpenMIPS/openmips_min_sopc_tb_behav.wcfg
-WARNING: Simulation object /openmips_min_sopc_tb/openmips_min_sopc0/openmips0/rom_addr_o was not found in the design.
-open_wave_config: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 744.363 ; gain = 0.000
+open_wave_config: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 884.914 ; gain = 19.914
 source openmips_min_sopc_tb.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
@@ -279,1454 +240,137 @@ source openmips_min_sopc_tb.tcl
 #   }
 # }
 # run 1000ns
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module openmips_min_sopc_tb.openmips_min_sopc0.wb_rom0.rom.inst.native_mem_module.blk_mem_gen_v8_4_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
 (openmips_min_sopc_tb.openmips_min_sopc0.uart_top0) UART INFO: Data bus width is 32. Debug Interface present.
 
 (openmips_min_sopc_tb.openmips_min_sopc0.uart_top0) UART INFO: Doesn't have baudrate output
 
-xsim: Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 880.941 ; gain = 136.578
+xsim: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1055.230 ; gain = 196.031
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'openmips_min_sopc_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 880.941 ; gain = 136.578
-update_compile_order -fileset sources_1
-run 10 us
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'openmips_min_sopc_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj openmips_min_sopc_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/LLbit_reg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module LLbit_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/cp0_reg.v" into library xil_defaultlib
-WARNING: [VRFC 10-3507] macro 'RstEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:2]
-WARNING: [VRFC 10-3507] macro 'RstDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:3]
-WARNING: [VRFC 10-3507] macro 'ZeroWord' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:4]
-WARNING: [VRFC 10-3507] macro 'WriteEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:5]
-WARNING: [VRFC 10-3507] macro 'WriteDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:6]
-WARNING: [VRFC 10-3507] macro 'ReadEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:7]
-WARNING: [VRFC 10-3507] macro 'ReadDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:8]
-WARNING: [VRFC 10-3507] macro 'AluOpBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:9]
-WARNING: [VRFC 10-3507] macro 'AluSelBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:10]
-WARNING: [VRFC 10-3507] macro 'InstValid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
-WARNING: [VRFC 10-3507] macro 'InstInvalid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
-WARNING: [VRFC 10-3507] macro 'ChipEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:15]
-WARNING: [VRFC 10-3507] macro 'ChipDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:16]
-WARNING: [VRFC 10-3507] macro 'Stop' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:18]
-WARNING: [VRFC 10-3507] macro 'NoStop' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:19]
-WARNING: [VRFC 10-3507] macro 'InstValid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
-WARNING: [VRFC 10-3507] macro 'InstInvalid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
-WARNING: [VRFC 10-3507] macro 'EXE_ORI' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:45]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:76]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTI_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:177]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:178]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDI_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:183]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDIU_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:184]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_MOVE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:253]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_ARITHMETIC' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:254]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_LOAD_STORE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:257]
-WARNING: [VRFC 10-3507] macro 'InstAddrBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:264]
-WARNING: [VRFC 10-3507] macro 'InstBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:265]
-WARNING: [VRFC 10-3507] macro 'InstMemNum' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:266]
-WARNING: [VRFC 10-3507] macro 'InstMemNumLog2' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:267]
-WARNING: [VRFC 10-3507] macro 'RegAddrBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:277]
-WARNING: [VRFC 10-3507] macro 'RegBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:278]
-WARNING: [VRFC 10-3507] macro 'RegWidth' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:279]
-WARNING: [VRFC 10-3507] macro 'DoubleRegWidth' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:280]
-WARNING: [VRFC 10-3507] macro 'DoubleRegBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:281]
-WARNING: [VRFC 10-3507] macro 'RegNum' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:282]
-WARNING: [VRFC 10-3507] macro 'RegNumLog2' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:283]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COUNT' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:298]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COMPARE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:299]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_STATUS' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:300]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CAUSE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:301]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_EPC' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:302]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_PrId' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:303]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CONFIG' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:304]
-INFO: [VRFC 10-311] analyzing module cp0_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ctrl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ctrl
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/div.v" into library xil_defaultlib
-WARNING: [VRFC 10-3507] macro 'RstEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:2]
-WARNING: [VRFC 10-3507] macro 'RstDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:3]
-WARNING: [VRFC 10-3507] macro 'ZeroWord' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:4]
-WARNING: [VRFC 10-3507] macro 'WriteEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:5]
-WARNING: [VRFC 10-3507] macro 'WriteDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:6]
-WARNING: [VRFC 10-3507] macro 'ReadEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:7]
-WARNING: [VRFC 10-3507] macro 'ReadDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:8]
-WARNING: [VRFC 10-3507] macro 'AluOpBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:9]
-WARNING: [VRFC 10-3507] macro 'AluSelBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:10]
-WARNING: [VRFC 10-3507] macro 'Stop' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:13]
-WARNING: [VRFC 10-3507] macro 'NoStop' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:14]
-WARNING: [VRFC 10-3507] macro 'ChipEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:25]
-WARNING: [VRFC 10-3507] macro 'ChipDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:26]
-WARNING: [VRFC 10-3507] macro 'EXE_ORI' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:35]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:58]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTI_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:157]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:158]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDI_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:163]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDIU_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:164]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_MOVE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:234]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_ARITHMETIC' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:235]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_LOAD_STORE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:238]
-WARNING: [VRFC 10-3507] macro 'InstAddrBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:244]
-WARNING: [VRFC 10-3507] macro 'InstBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:245]
-WARNING: [VRFC 10-3507] macro 'InstMemNum' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:246]
-WARNING: [VRFC 10-3507] macro 'InstMemNumLog2' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:247]
-WARNING: [VRFC 10-3507] macro 'RegAddrBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:257]
-WARNING: [VRFC 10-3507] macro 'RegBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:258]
-WARNING: [VRFC 10-3507] macro 'RegWidth' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:259]
-WARNING: [VRFC 10-3507] macro 'DoubleRegWidth' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:260]
-WARNING: [VRFC 10-3507] macro 'DoubleRegBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:261]
-WARNING: [VRFC 10-3507] macro 'RegNum' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:262]
-WARNING: [VRFC 10-3507] macro 'RegNumLog2' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:263]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COUNT' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:277]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COMPARE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:278]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_STATUS' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:279]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CAUSE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:280]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_EPC' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:281]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_PrId' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:282]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CONFIG' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:283]
-INFO: [VRFC 10-311] analyzing module div
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ex
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex_mem.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ex_mem
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/gpio/gpio_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module gpio_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/hilo_reg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hilo_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/id.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module id
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/id_ex.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module id_ex
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/if_id.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module if_id
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mem
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem_wb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mem_wb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module openmips
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module openmips_min_sopc
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/pc_reg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module pc_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/raminfr.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module raminfr
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/regfile.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module regfile
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/seg8.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module seg8
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_debug_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_debug_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_receiver.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_receiver
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_regs
-INFO: [VRFC 10-2458] undeclared symbol rf_overrun, assumed default net type wire [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v:400]
-INFO: [VRFC 10-2458] undeclared symbol rf_push_pulse, assumed default net type wire [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v:400]
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_rfifo.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_rfifo
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_sync_flops.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_sync_flops
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_tfifo.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_tfifo
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_transmitter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_transmitter
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_wb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_wb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_arb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_arb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_master_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_msel.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_msel
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_dec.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_pri_dec
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_enc.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_pri_enc
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_rf.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_rf
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_slave_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_ram.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_ram
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_rom.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_rom
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/wishbone_bus_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wishbone_bus_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sim_1/new/openmips_min_sopc_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module openmips_min_sopc_tb
-run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 902.734 ; gain = 0.000
-INFO: [USF-XSim-69] 'compile' step finished in '7' seconds
-launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 902.734 ; gain = 0.000
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-"xelab -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'int_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:122]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 17 for port 'wb_adr_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:157]
-WARNING: [VRFC 10-3091] actual bit length 26 differs from formal bit length 17 for port 'wb_adr_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:192]
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/LLbit_reg.v" Line 35. Module LLbit_reg doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.seg8
-Compiling module xil_defaultlib.pc_reg
-Compiling module xil_defaultlib.if_id
-Compiling module xil_defaultlib.id
-Compiling module xil_defaultlib.regfile
-Compiling module xil_defaultlib.id_ex
-Compiling module xil_defaultlib.ex
-Compiling module xil_defaultlib.ex_mem
-Compiling module xil_defaultlib.mem
-Compiling module xil_defaultlib.mem_wb
-Compiling module xil_defaultlib.hilo_reg
-Compiling module xil_defaultlib.ctrl
-Compiling module xil_defaultlib.div
-Compiling module xil_defaultlib.LLbit_reg
-Compiling module xil_defaultlib.cp0_reg
-Compiling module xil_defaultlib.wishbone_bus_if
-Compiling module xil_defaultlib.openmips
-Compiling module xil_defaultlib.gpio_top
-Compiling module xil_defaultlib.wb_rom
-Compiling module xil_defaultlib.uart_wb
-Compiling module xil_defaultlib.raminfr
-Compiling module xil_defaultlib.uart_tfifo
-Compiling module xil_defaultlib.uart_transmitter
-Compiling module xil_defaultlib.uart_sync_flops(width=1,init_val...
-Compiling module xil_defaultlib.uart_rfifo(fifo_width=11)
-Compiling module xil_defaultlib.uart_receiver
-Compiling module xil_defaultlib.uart_regs
-Compiling module xil_defaultlib.uart_debug_if
-Compiling module xil_defaultlib.uart_top
-Compiling module xil_defaultlib.wb_ram
-Compiling module xil_defaultlib.wb_conmax_master_if(sw=4)
-Compiling module xil_defaultlib.wb_conmax_arb
-Compiling module xil_defaultlib.wb_conmax_pri_dec(pri_sel=2'b10)
-Compiling module xil_defaultlib.wb_conmax_pri_enc(pri_sel=2'b10)
-Compiling module xil_defaultlib.wb_conmax_msel(pri_sel=2'b10)
-Compiling module xil_defaultlib.wb_conmax_slave_if(sw=4)
-Compiling module xil_defaultlib.wb_conmax_rf(sw=4)
-Compiling module xil_defaultlib.wb_conmax_top_default
-Compiling module xil_defaultlib.openmips_min_sopc
-Compiling module xil_defaultlib.openmips_min_sopc_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot openmips_min_sopc_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-(openmips_min_sopc_tb.openmips_min_sopc0.uart_top0) UART INFO: Data bus width is 32. Debug Interface present.
+launch_simulation: Time (s): cpu = 00:00:18 ; elapsed = 00:00:33 . Memory (MB): peak = 1055.230 ; gain = 197.141
+run 10 ms
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:00:19 ; elapsed = 00:00:15 . Memory (MB): peak = 1099.957 ; gain = 40.184
+INFO: [Common 17-344] 'run' was cancelled
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/synth_1
 
-(openmips_min_sopc_tb.openmips_min_sopc0.uart_top0) UART INFO: Doesn't have baudrate output
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Fri Oct 25 20:52:25 2019] Launched synth_1...
+Run output will be captured here: D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/synth_1/runme.log
+[Fri Oct 25 20:52:25 2019] Launched impl_1...
+Run output will be captured here: D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/synth_1
 
-relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 902.734 ; gain = 0.000
-update_compile_order -fileset sources_1
-run 10 us
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'openmips_min_sopc_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj openmips_min_sopc_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/LLbit_reg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module LLbit_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/cp0_reg.v" into library xil_defaultlib
-WARNING: [VRFC 10-3507] macro 'RstEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:2]
-WARNING: [VRFC 10-3507] macro 'RstDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:3]
-WARNING: [VRFC 10-3507] macro 'ZeroWord' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:4]
-WARNING: [VRFC 10-3507] macro 'WriteEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:5]
-WARNING: [VRFC 10-3507] macro 'WriteDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:6]
-WARNING: [VRFC 10-3507] macro 'ReadEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:7]
-WARNING: [VRFC 10-3507] macro 'ReadDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:8]
-WARNING: [VRFC 10-3507] macro 'AluOpBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:9]
-WARNING: [VRFC 10-3507] macro 'AluSelBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:10]
-WARNING: [VRFC 10-3507] macro 'InstValid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
-WARNING: [VRFC 10-3507] macro 'InstInvalid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
-WARNING: [VRFC 10-3507] macro 'ChipEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:15]
-WARNING: [VRFC 10-3507] macro 'ChipDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:16]
-WARNING: [VRFC 10-3507] macro 'Stop' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:18]
-WARNING: [VRFC 10-3507] macro 'NoStop' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:19]
-WARNING: [VRFC 10-3507] macro 'InstValid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
-WARNING: [VRFC 10-3507] macro 'InstInvalid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
-WARNING: [VRFC 10-3507] macro 'EXE_ORI' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:45]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:76]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTI_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:177]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:178]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDI_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:183]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDIU_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:184]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_MOVE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:253]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_ARITHMETIC' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:254]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_LOAD_STORE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:257]
-WARNING: [VRFC 10-3507] macro 'InstAddrBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:264]
-WARNING: [VRFC 10-3507] macro 'InstBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:265]
-WARNING: [VRFC 10-3507] macro 'InstMemNum' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:266]
-WARNING: [VRFC 10-3507] macro 'InstMemNumLog2' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:267]
-WARNING: [VRFC 10-3507] macro 'RegAddrBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:277]
-WARNING: [VRFC 10-3507] macro 'RegBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:278]
-WARNING: [VRFC 10-3507] macro 'RegWidth' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:279]
-WARNING: [VRFC 10-3507] macro 'DoubleRegWidth' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:280]
-WARNING: [VRFC 10-3507] macro 'DoubleRegBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:281]
-WARNING: [VRFC 10-3507] macro 'RegNum' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:282]
-WARNING: [VRFC 10-3507] macro 'RegNumLog2' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:283]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COUNT' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:298]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COMPARE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:299]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_STATUS' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:300]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CAUSE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:301]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_EPC' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:302]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_PrId' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:303]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CONFIG' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:304]
-INFO: [VRFC 10-311] analyzing module cp0_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ctrl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ctrl
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/div.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module div
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ex
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex_mem.v" into library xil_defaultlib
-WARNING: [VRFC 10-3507] macro 'RstEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:2]
-WARNING: [VRFC 10-3507] macro 'RstDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:3]
-WARNING: [VRFC 10-3507] macro 'ZeroWord' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:4]
-WARNING: [VRFC 10-3507] macro 'WriteEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:5]
-WARNING: [VRFC 10-3507] macro 'WriteDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:6]
-WARNING: [VRFC 10-3507] macro 'ReadEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:7]
-WARNING: [VRFC 10-3507] macro 'ReadDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:8]
-WARNING: [VRFC 10-3507] macro 'AluOpBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:9]
-WARNING: [VRFC 10-3507] macro 'AluSelBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:10]
-WARNING: [VRFC 10-3507] macro 'Stop' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:13]
-WARNING: [VRFC 10-3507] macro 'NoStop' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:14]
-WARNING: [VRFC 10-3507] macro 'ChipEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:25]
-WARNING: [VRFC 10-3507] macro 'ChipDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:26]
-WARNING: [VRFC 10-3507] macro 'EXE_ORI' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:35]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:58]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTI_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:157]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:158]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDI_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:163]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDIU_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:164]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_MOVE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:234]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_ARITHMETIC' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:235]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_LOAD_STORE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:238]
-WARNING: [VRFC 10-3507] macro 'InstAddrBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:244]
-WARNING: [VRFC 10-3507] macro 'InstBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:245]
-WARNING: [VRFC 10-3507] macro 'InstMemNum' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:246]
-WARNING: [VRFC 10-3507] macro 'InstMemNumLog2' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:247]
-WARNING: [VRFC 10-3507] macro 'RegAddrBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:257]
-WARNING: [VRFC 10-3507] macro 'RegBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:258]
-WARNING: [VRFC 10-3507] macro 'RegWidth' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:259]
-WARNING: [VRFC 10-3507] macro 'DoubleRegWidth' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:260]
-WARNING: [VRFC 10-3507] macro 'DoubleRegBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:261]
-WARNING: [VRFC 10-3507] macro 'RegNum' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:262]
-WARNING: [VRFC 10-3507] macro 'RegNumLog2' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:263]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COUNT' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:277]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COMPARE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:278]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_STATUS' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:279]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CAUSE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:280]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_EPC' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:281]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_PrId' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:282]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CONFIG' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:283]
-INFO: [VRFC 10-311] analyzing module ex_mem
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/gpio/gpio_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module gpio_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/hilo_reg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hilo_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/id.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module id
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/id_ex.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module id_ex
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/if_id.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module if_id
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mem
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem_wb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mem_wb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module openmips
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module openmips_min_sopc
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/pc_reg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module pc_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/raminfr.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module raminfr
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/regfile.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module regfile
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/seg8.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module seg8
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_debug_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_debug_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_receiver.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_receiver
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_regs
-INFO: [VRFC 10-2458] undeclared symbol rf_overrun, assumed default net type wire [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v:400]
-INFO: [VRFC 10-2458] undeclared symbol rf_push_pulse, assumed default net type wire [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v:400]
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_rfifo.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_rfifo
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_sync_flops.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_sync_flops
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_tfifo.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_tfifo
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_transmitter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_transmitter
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_wb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_wb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_arb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_arb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_master_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_msel.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_msel
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_dec.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_pri_dec
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_enc.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_pri_enc
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_rf.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_rf
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_slave_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_ram.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_ram
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_rom.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_rom
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/wishbone_bus_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wishbone_bus_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sim_1/new/openmips_min_sopc_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module openmips_min_sopc_tb
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 902.734 ; gain = 0.000
-INFO: [USF-XSim-69] 'compile' step finished in '7' seconds
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 902.734 ; gain = 0.000
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-"xelab -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'int_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:122]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 17 for port 'wb_adr_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:157]
-WARNING: [VRFC 10-3091] actual bit length 26 differs from formal bit length 17 for port 'wb_adr_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:192]
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/LLbit_reg.v" Line 35. Module LLbit_reg doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.seg8
-Compiling module xil_defaultlib.pc_reg
-Compiling module xil_defaultlib.if_id
-Compiling module xil_defaultlib.id
-Compiling module xil_defaultlib.regfile
-Compiling module xil_defaultlib.id_ex
-Compiling module xil_defaultlib.ex
-Compiling module xil_defaultlib.ex_mem
-Compiling module xil_defaultlib.mem
-Compiling module xil_defaultlib.mem_wb
-Compiling module xil_defaultlib.hilo_reg
-Compiling module xil_defaultlib.ctrl
-Compiling module xil_defaultlib.div
-Compiling module xil_defaultlib.LLbit_reg
-Compiling module xil_defaultlib.cp0_reg
-Compiling module xil_defaultlib.wishbone_bus_if
-Compiling module xil_defaultlib.openmips
-Compiling module xil_defaultlib.gpio_top
-Compiling module xil_defaultlib.wb_rom
-Compiling module xil_defaultlib.uart_wb
-Compiling module xil_defaultlib.raminfr
-Compiling module xil_defaultlib.uart_tfifo
-Compiling module xil_defaultlib.uart_transmitter
-Compiling module xil_defaultlib.uart_sync_flops(width=1,init_val...
-Compiling module xil_defaultlib.uart_rfifo(fifo_width=11)
-Compiling module xil_defaultlib.uart_receiver
-Compiling module xil_defaultlib.uart_regs
-Compiling module xil_defaultlib.uart_debug_if
-Compiling module xil_defaultlib.uart_top
-Compiling module xil_defaultlib.wb_ram
-Compiling module xil_defaultlib.wb_conmax_master_if(sw=4)
-Compiling module xil_defaultlib.wb_conmax_arb
-Compiling module xil_defaultlib.wb_conmax_pri_dec(pri_sel=2'b10)
-Compiling module xil_defaultlib.wb_conmax_pri_enc(pri_sel=2'b10)
-Compiling module xil_defaultlib.wb_conmax_msel(pri_sel=2'b10)
-Compiling module xil_defaultlib.wb_conmax_slave_if(sw=4)
-Compiling module xil_defaultlib.wb_conmax_rf(sw=4)
-Compiling module xil_defaultlib.wb_conmax_top_default
-Compiling module xil_defaultlib.openmips_min_sopc
-Compiling module xil_defaultlib.openmips_min_sopc_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot openmips_min_sopc_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-(openmips_min_sopc_tb.openmips_min_sopc0.uart_top0) UART INFO: Data bus width is 32. Debug Interface present.
-
-(openmips_min_sopc_tb.openmips_min_sopc0.uart_top0) UART INFO: Doesn't have baudrate output
-
-relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 902.734 ; gain = 0.000
-run 10 us
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'openmips_min_sopc_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj openmips_min_sopc_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/LLbit_reg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module LLbit_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/cp0_reg.v" into library xil_defaultlib
-WARNING: [VRFC 10-3507] macro 'RstEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:2]
-WARNING: [VRFC 10-3507] macro 'RstDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:3]
-WARNING: [VRFC 10-3507] macro 'ZeroWord' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:4]
-WARNING: [VRFC 10-3507] macro 'WriteEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:5]
-WARNING: [VRFC 10-3507] macro 'WriteDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:6]
-WARNING: [VRFC 10-3507] macro 'ReadEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:7]
-WARNING: [VRFC 10-3507] macro 'ReadDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:8]
-WARNING: [VRFC 10-3507] macro 'AluOpBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:9]
-WARNING: [VRFC 10-3507] macro 'AluSelBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:10]
-WARNING: [VRFC 10-3507] macro 'InstValid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
-WARNING: [VRFC 10-3507] macro 'InstInvalid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
-WARNING: [VRFC 10-3507] macro 'ChipEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:15]
-WARNING: [VRFC 10-3507] macro 'ChipDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:16]
-WARNING: [VRFC 10-3507] macro 'Stop' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:18]
-WARNING: [VRFC 10-3507] macro 'NoStop' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:19]
-WARNING: [VRFC 10-3507] macro 'InstValid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
-WARNING: [VRFC 10-3507] macro 'InstInvalid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
-WARNING: [VRFC 10-3507] macro 'EXE_ORI' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:45]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:76]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTI_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:177]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:178]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDI_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:183]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDIU_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:184]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_MOVE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:253]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_ARITHMETIC' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:254]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_LOAD_STORE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:257]
-WARNING: [VRFC 10-3507] macro 'InstAddrBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:264]
-WARNING: [VRFC 10-3507] macro 'InstBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:265]
-WARNING: [VRFC 10-3507] macro 'InstMemNum' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:266]
-WARNING: [VRFC 10-3507] macro 'InstMemNumLog2' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:267]
-WARNING: [VRFC 10-3507] macro 'RegAddrBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:277]
-WARNING: [VRFC 10-3507] macro 'RegBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:278]
-WARNING: [VRFC 10-3507] macro 'RegWidth' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:279]
-WARNING: [VRFC 10-3507] macro 'DoubleRegWidth' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:280]
-WARNING: [VRFC 10-3507] macro 'DoubleRegBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:281]
-WARNING: [VRFC 10-3507] macro 'RegNum' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:282]
-WARNING: [VRFC 10-3507] macro 'RegNumLog2' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:283]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COUNT' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:298]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COMPARE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:299]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_STATUS' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:300]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CAUSE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:301]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_EPC' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:302]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_PrId' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:303]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CONFIG' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:304]
-INFO: [VRFC 10-311] analyzing module cp0_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ctrl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ctrl
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/div.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module div
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ex
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex_mem.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ex_mem
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/gpio/gpio_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module gpio_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/hilo_reg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hilo_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/id.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module id
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/id_ex.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module id_ex
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/if_id.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module if_id
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v" into library xil_defaultlib
-WARNING: [VRFC 10-3507] macro 'RstEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:2]
-WARNING: [VRFC 10-3507] macro 'RstDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:3]
-WARNING: [VRFC 10-3507] macro 'ZeroWord' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:4]
-WARNING: [VRFC 10-3507] macro 'WriteEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:5]
-WARNING: [VRFC 10-3507] macro 'WriteDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:6]
-WARNING: [VRFC 10-3507] macro 'ReadEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:7]
-WARNING: [VRFC 10-3507] macro 'ReadDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:8]
-WARNING: [VRFC 10-3507] macro 'AluOpBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:9]
-WARNING: [VRFC 10-3507] macro 'AluSelBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:10]
-WARNING: [VRFC 10-3507] macro 'Stop' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:13]
-WARNING: [VRFC 10-3507] macro 'NoStop' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:14]
-WARNING: [VRFC 10-3507] macro 'ChipEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:25]
-WARNING: [VRFC 10-3507] macro 'ChipDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:26]
-WARNING: [VRFC 10-3507] macro 'EXE_ORI' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:35]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:58]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTI_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:157]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:158]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDI_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:163]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDIU_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:164]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_MOVE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:234]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_ARITHMETIC' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:235]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_LOAD_STORE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:238]
-WARNING: [VRFC 10-3507] macro 'InstAddrBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:244]
-WARNING: [VRFC 10-3507] macro 'InstBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:245]
-WARNING: [VRFC 10-3507] macro 'InstMemNum' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:246]
-WARNING: [VRFC 10-3507] macro 'InstMemNumLog2' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:247]
-WARNING: [VRFC 10-3507] macro 'RegAddrBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:257]
-WARNING: [VRFC 10-3507] macro 'RegBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:258]
-WARNING: [VRFC 10-3507] macro 'RegWidth' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:259]
-WARNING: [VRFC 10-3507] macro 'DoubleRegWidth' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:260]
-WARNING: [VRFC 10-3507] macro 'DoubleRegBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:261]
-WARNING: [VRFC 10-3507] macro 'RegNum' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:262]
-WARNING: [VRFC 10-3507] macro 'RegNumLog2' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:263]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COUNT' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:277]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COMPARE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:278]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_STATUS' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:279]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CAUSE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:280]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_EPC' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:281]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_PrId' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:282]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CONFIG' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:283]
-INFO: [VRFC 10-311] analyzing module mem
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem_wb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mem_wb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module openmips
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module openmips_min_sopc
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/pc_reg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module pc_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/raminfr.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module raminfr
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/regfile.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module regfile
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/seg8.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module seg8
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_debug_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_debug_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_receiver.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_receiver
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_regs
-INFO: [VRFC 10-2458] undeclared symbol rf_overrun, assumed default net type wire [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v:400]
-INFO: [VRFC 10-2458] undeclared symbol rf_push_pulse, assumed default net type wire [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v:400]
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_rfifo.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_rfifo
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_sync_flops.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_sync_flops
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_tfifo.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_tfifo
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_transmitter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_transmitter
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_wb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_wb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_arb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_arb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_master_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_msel.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_msel
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_dec.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_pri_dec
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_enc.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_pri_enc
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_rf.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_rf
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_slave_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_ram.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_ram
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_rom.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_rom
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/wishbone_bus_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wishbone_bus_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sim_1/new/openmips_min_sopc_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module openmips_min_sopc_tb
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 909.801 ; gain = 0.000
-INFO: [USF-XSim-69] 'compile' step finished in '7' seconds
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 909.801 ; gain = 0.000
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-"xelab -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'int_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:122]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 17 for port 'wb_adr_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:157]
-WARNING: [VRFC 10-3091] actual bit length 26 differs from formal bit length 17 for port 'wb_adr_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:192]
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/LLbit_reg.v" Line 35. Module LLbit_reg doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.seg8
-Compiling module xil_defaultlib.pc_reg
-Compiling module xil_defaultlib.if_id
-Compiling module xil_defaultlib.id
-Compiling module xil_defaultlib.regfile
-Compiling module xil_defaultlib.id_ex
-Compiling module xil_defaultlib.ex
-Compiling module xil_defaultlib.ex_mem
-Compiling module xil_defaultlib.mem
-Compiling module xil_defaultlib.mem_wb
-Compiling module xil_defaultlib.hilo_reg
-Compiling module xil_defaultlib.ctrl
-Compiling module xil_defaultlib.div
-Compiling module xil_defaultlib.LLbit_reg
-Compiling module xil_defaultlib.cp0_reg
-Compiling module xil_defaultlib.wishbone_bus_if
-Compiling module xil_defaultlib.openmips
-Compiling module xil_defaultlib.gpio_top
-Compiling module xil_defaultlib.wb_rom
-Compiling module xil_defaultlib.uart_wb
-Compiling module xil_defaultlib.raminfr
-Compiling module xil_defaultlib.uart_tfifo
-Compiling module xil_defaultlib.uart_transmitter
-Compiling module xil_defaultlib.uart_sync_flops(width=1,init_val...
-Compiling module xil_defaultlib.uart_rfifo(fifo_width=11)
-Compiling module xil_defaultlib.uart_receiver
-Compiling module xil_defaultlib.uart_regs
-Compiling module xil_defaultlib.uart_debug_if
-Compiling module xil_defaultlib.uart_top
-Compiling module xil_defaultlib.wb_ram
-Compiling module xil_defaultlib.wb_conmax_master_if(sw=4)
-Compiling module xil_defaultlib.wb_conmax_arb
-Compiling module xil_defaultlib.wb_conmax_pri_dec(pri_sel=2'b10)
-Compiling module xil_defaultlib.wb_conmax_pri_enc(pri_sel=2'b10)
-Compiling module xil_defaultlib.wb_conmax_msel(pri_sel=2'b10)
-Compiling module xil_defaultlib.wb_conmax_slave_if(sw=4)
-Compiling module xil_defaultlib.wb_conmax_rf(sw=4)
-Compiling module xil_defaultlib.wb_conmax_top_default
-Compiling module xil_defaultlib.openmips_min_sopc
-Compiling module xil_defaultlib.openmips_min_sopc_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot openmips_min_sopc_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-(openmips_min_sopc_tb.openmips_min_sopc0.uart_top0) UART INFO: Data bus width is 32. Debug Interface present.
-
-(openmips_min_sopc_tb.openmips_min_sopc0.uart_top0) UART INFO: Doesn't have baudrate output
-
-relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 909.801 ; gain = 0.000
-run 10 us
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'openmips_min_sopc_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj openmips_min_sopc_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/LLbit_reg.v" into library xil_defaultlib
-WARNING: [VRFC 10-3507] macro 'InstValid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
-WARNING: [VRFC 10-3507] macro 'InstInvalid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
-INFO: [VRFC 10-311] analyzing module LLbit_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/cp0_reg.v" into library xil_defaultlib
-WARNING: [VRFC 10-3507] macro 'InstValid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
-WARNING: [VRFC 10-3507] macro 'InstInvalid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
-INFO: [VRFC 10-311] analyzing module cp0_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ctrl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ctrl
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/div.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module div
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ex
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex_mem.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ex_mem
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/gpio/gpio_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module gpio_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/hilo_reg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hilo_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/id.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module id
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/id_ex.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module id_ex
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/if_id.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module if_id
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mem
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem_wb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mem_wb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v" into library xil_defaultlib
-WARNING: [VRFC 10-3507] macro 'RstEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:2]
-WARNING: [VRFC 10-3507] macro 'RstDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:3]
-WARNING: [VRFC 10-3507] macro 'ZeroWord' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:4]
-WARNING: [VRFC 10-3507] macro 'WriteEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:5]
-WARNING: [VRFC 10-3507] macro 'WriteDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:6]
-WARNING: [VRFC 10-3507] macro 'ReadEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:7]
-WARNING: [VRFC 10-3507] macro 'ReadDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:8]
-WARNING: [VRFC 10-3507] macro 'AluOpBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:9]
-WARNING: [VRFC 10-3507] macro 'AluSelBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:10]
-WARNING: [VRFC 10-3507] macro 'Stop' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:13]
-WARNING: [VRFC 10-3507] macro 'NoStop' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:14]
-WARNING: [VRFC 10-3507] macro 'ChipEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:25]
-WARNING: [VRFC 10-3507] macro 'ChipDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:26]
-WARNING: [VRFC 10-3507] macro 'EXE_ORI' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:35]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:58]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTI_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:157]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:158]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDI_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:163]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDIU_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:164]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_MOVE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:234]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_ARITHMETIC' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:235]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_LOAD_STORE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:238]
-WARNING: [VRFC 10-3507] macro 'InstAddrBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:244]
-WARNING: [VRFC 10-3507] macro 'InstBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:245]
-WARNING: [VRFC 10-3507] macro 'InstMemNum' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:246]
-WARNING: [VRFC 10-3507] macro 'InstMemNumLog2' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:247]
-WARNING: [VRFC 10-3507] macro 'RegAddrBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:257]
-WARNING: [VRFC 10-3507] macro 'RegBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:258]
-WARNING: [VRFC 10-3507] macro 'RegWidth' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:259]
-WARNING: [VRFC 10-3507] macro 'DoubleRegWidth' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:260]
-WARNING: [VRFC 10-3507] macro 'DoubleRegBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:261]
-WARNING: [VRFC 10-3507] macro 'RegNum' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:262]
-WARNING: [VRFC 10-3507] macro 'RegNumLog2' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:263]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COUNT' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:277]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COMPARE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:278]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_STATUS' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:279]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CAUSE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:280]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_EPC' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:281]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_PrId' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:282]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CONFIG' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:283]
-INFO: [VRFC 10-311] analyzing module openmips
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v" into library xil_defaultlib
-WARNING: [VRFC 10-3507] macro 'RstEnable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:2]
-WARNING: [VRFC 10-3507] macro 'RstDisable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:3]
-WARNING: [VRFC 10-3507] macro 'ZeroWord' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:4]
-WARNING: [VRFC 10-3507] macro 'WriteEnable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:5]
-WARNING: [VRFC 10-3507] macro 'WriteDisable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:6]
-WARNING: [VRFC 10-3507] macro 'ReadEnable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:7]
-WARNING: [VRFC 10-3507] macro 'ReadDisable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:8]
-WARNING: [VRFC 10-3507] macro 'AluOpBus' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:9]
-WARNING: [VRFC 10-3507] macro 'AluSelBus' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:10]
-WARNING: [VRFC 10-3507] macro 'ChipEnable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:15]
-WARNING: [VRFC 10-3507] macro 'ChipDisable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:16]
-WARNING: [VRFC 10-3507] macro 'Stop' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:18]
-WARNING: [VRFC 10-3507] macro 'NoStop' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:19]
-WARNING: [VRFC 10-3507] macro 'EXE_ORI' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:45]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:76]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTI_OP' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:177]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU_OP' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:178]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDI_OP' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:183]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDIU_OP' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:184]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_MOVE' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:253]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_ARITHMETIC' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:254]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_LOAD_STORE' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:257]
-WARNING: [VRFC 10-3507] macro 'InstAddrBus' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:264]
-WARNING: [VRFC 10-3507] macro 'InstBus' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:265]
-WARNING: [VRFC 10-3507] macro 'InstMemNum' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:266]
-WARNING: [VRFC 10-3507] macro 'InstMemNumLog2' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:267]
-WARNING: [VRFC 10-3507] macro 'RegAddrBus' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:277]
-WARNING: [VRFC 10-3507] macro 'RegBus' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:278]
-WARNING: [VRFC 10-3507] macro 'RegWidth' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:279]
-WARNING: [VRFC 10-3507] macro 'DoubleRegWidth' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:280]
-WARNING: [VRFC 10-3507] macro 'DoubleRegBus' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:281]
-WARNING: [VRFC 10-3507] macro 'RegNum' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:282]
-WARNING: [VRFC 10-3507] macro 'RegNumLog2' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:283]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COUNT' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:298]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COMPARE' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:299]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_STATUS' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:300]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CAUSE' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:301]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_EPC' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:302]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_PrId' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:303]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CONFIG' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS\OpenMIPS.vh:304]
-INFO: [VRFC 10-311] analyzing module openmips_min_sopc
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/pc_reg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module pc_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/raminfr.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module raminfr
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/regfile.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module regfile
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/seg8.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module seg8
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_debug_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_debug_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_receiver.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_receiver
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_regs
-INFO: [VRFC 10-2458] undeclared symbol rf_overrun, assumed default net type wire [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v:400]
-INFO: [VRFC 10-2458] undeclared symbol rf_push_pulse, assumed default net type wire [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v:400]
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_rfifo.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_rfifo
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_sync_flops.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_sync_flops
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_tfifo.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_tfifo
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_transmitter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_transmitter
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_wb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_wb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_arb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_arb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_master_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_msel.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_msel
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_dec.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_pri_dec
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_enc.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_pri_enc
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_rf.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_rf
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_slave_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_ram.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_ram
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_rom.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_rom
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/wishbone_bus_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wishbone_bus_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sim_1/new/openmips_min_sopc_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module openmips_min_sopc_tb
-run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 909.801 ; gain = 0.000
-INFO: [USF-XSim-69] 'compile' step finished in '7' seconds
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 909.801 ; gain = 0.000
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-"xelab -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'int_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:122]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 17 for port 'wb_adr_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:157]
-WARNING: [VRFC 10-3091] actual bit length 26 differs from formal bit length 17 for port 'wb_adr_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:192]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.seg8
-Compiling module xil_defaultlib.pc_reg
-Compiling module xil_defaultlib.if_id
-Compiling module xil_defaultlib.id
-Compiling module xil_defaultlib.regfile
-Compiling module xil_defaultlib.id_ex
-Compiling module xil_defaultlib.ex
-Compiling module xil_defaultlib.ex_mem
-Compiling module xil_defaultlib.mem
-Compiling module xil_defaultlib.mem_wb
-Compiling module xil_defaultlib.hilo_reg
-Compiling module xil_defaultlib.ctrl
-Compiling module xil_defaultlib.div
-Compiling module xil_defaultlib.LLbit_reg
-Compiling module xil_defaultlib.cp0_reg
-Compiling module xil_defaultlib.wishbone_bus_if
-Compiling module xil_defaultlib.openmips
-Compiling module xil_defaultlib.gpio_top
-Compiling module xil_defaultlib.wb_rom
-Compiling module xil_defaultlib.uart_wb
-Compiling module xil_defaultlib.raminfr
-Compiling module xil_defaultlib.uart_tfifo
-Compiling module xil_defaultlib.uart_transmitter
-Compiling module xil_defaultlib.uart_sync_flops(width=1,init_val...
-Compiling module xil_defaultlib.uart_rfifo(fifo_width=11)
-Compiling module xil_defaultlib.uart_receiver
-Compiling module xil_defaultlib.uart_regs
-Compiling module xil_defaultlib.uart_debug_if
-Compiling module xil_defaultlib.uart_top
-Compiling module xil_defaultlib.wb_ram
-Compiling module xil_defaultlib.wb_conmax_master_if(sw=4)
-Compiling module xil_defaultlib.wb_conmax_arb
-Compiling module xil_defaultlib.wb_conmax_pri_dec(pri_sel=2'b10)
-Compiling module xil_defaultlib.wb_conmax_pri_enc(pri_sel=2'b10)
-Compiling module xil_defaultlib.wb_conmax_msel(pri_sel=2'b10)
-Compiling module xil_defaultlib.wb_conmax_slave_if(sw=4)
-Compiling module xil_defaultlib.wb_conmax_rf(sw=4)
-Compiling module xil_defaultlib.wb_conmax_top_default
-Compiling module xil_defaultlib.openmips_min_sopc
-Compiling module xil_defaultlib.openmips_min_sopc_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot openmips_min_sopc_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-(openmips_min_sopc_tb.openmips_min_sopc0.uart_top0) UART INFO: Data bus width is 32. Debug Interface present.
-
-(openmips_min_sopc_tb.openmips_min_sopc0.uart_top0) UART INFO: Doesn't have baudrate output
-
-relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 909.801 ; gain = 0.000
-update_compile_order -fileset sources_1
-run 10 us
-run 10 us
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'openmips_min_sopc_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj openmips_min_sopc_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/LLbit_reg.v" into library xil_defaultlib
-WARNING: [VRFC 10-3507] macro 'InstValid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
-WARNING: [VRFC 10-3507] macro 'InstInvalid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
-INFO: [VRFC 10-311] analyzing module LLbit_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/cp0_reg.v" into library xil_defaultlib
-WARNING: [VRFC 10-3507] macro 'InstValid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
-WARNING: [VRFC 10-3507] macro 'InstInvalid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
-INFO: [VRFC 10-311] analyzing module cp0_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ctrl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ctrl
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/div.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module div
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ex
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex_mem.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ex_mem
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/gpio/gpio_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module gpio_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/hilo_reg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hilo_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/id.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module id
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/id_ex.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module id_ex
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/if_id.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module if_id
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mem
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem_wb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mem_wb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module openmips
-INFO: [VRFC 10-2458] undeclared symbol rom_addr_o, assumed default net type wire [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v:238]
-INFO: [VRFC 10-2458] undeclared symbol inst_i, assumed default net type wire [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v:243]
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module openmips_min_sopc
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/pc_reg.v" into library xil_defaultlib
-WARNING: [VRFC 10-3507] macro 'RstEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:2]
-WARNING: [VRFC 10-3507] macro 'RstDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:3]
-WARNING: [VRFC 10-3507] macro 'ZeroWord' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:4]
-WARNING: [VRFC 10-3507] macro 'WriteEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:5]
-WARNING: [VRFC 10-3507] macro 'WriteDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:6]
-WARNING: [VRFC 10-3507] macro 'ReadEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:7]
-WARNING: [VRFC 10-3507] macro 'ReadDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:8]
-WARNING: [VRFC 10-3507] macro 'AluOpBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:9]
-WARNING: [VRFC 10-3507] macro 'AluSelBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:10]
-WARNING: [VRFC 10-3507] macro 'Stop' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:13]
-WARNING: [VRFC 10-3507] macro 'NoStop' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:14]
-WARNING: [VRFC 10-3507] macro 'ChipEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:25]
-WARNING: [VRFC 10-3507] macro 'ChipDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:26]
-WARNING: [VRFC 10-3507] macro 'EXE_ORI' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:35]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:58]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTI_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:157]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:158]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDI_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:163]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDIU_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:164]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_MOVE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:234]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_ARITHMETIC' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:235]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_LOAD_STORE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:238]
-WARNING: [VRFC 10-3507] macro 'InstAddrBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:244]
-WARNING: [VRFC 10-3507] macro 'InstBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:245]
-WARNING: [VRFC 10-3507] macro 'InstMemNum' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:246]
-WARNING: [VRFC 10-3507] macro 'InstMemNumLog2' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:247]
-WARNING: [VRFC 10-3507] macro 'RegAddrBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:257]
-WARNING: [VRFC 10-3507] macro 'RegBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:258]
-WARNING: [VRFC 10-3507] macro 'RegWidth' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:259]
-WARNING: [VRFC 10-3507] macro 'DoubleRegWidth' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:260]
-WARNING: [VRFC 10-3507] macro 'DoubleRegBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:261]
-WARNING: [VRFC 10-3507] macro 'RegNum' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:262]
-WARNING: [VRFC 10-3507] macro 'RegNumLog2' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:263]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COUNT' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:277]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COMPARE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:278]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_STATUS' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:279]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CAUSE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:280]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_EPC' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:281]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_PrId' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:282]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CONFIG' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:283]
-INFO: [VRFC 10-311] analyzing module pc_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/raminfr.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module raminfr
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/regfile.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module regfile
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/seg8.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module seg8
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_debug_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_debug_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_receiver.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_receiver
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_regs
-INFO: [VRFC 10-2458] undeclared symbol rf_overrun, assumed default net type wire [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v:400]
-INFO: [VRFC 10-2458] undeclared symbol rf_push_pulse, assumed default net type wire [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v:400]
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_rfifo.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_rfifo
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_sync_flops.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_sync_flops
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_tfifo.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_tfifo
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_transmitter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_transmitter
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_wb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_wb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_arb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_arb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_master_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_msel.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_msel
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_dec.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_pri_dec
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_enc.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_pri_enc
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_rf.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_rf
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_slave_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_ram.v" into library xil_defaultlib
-WARNING: [VRFC 10-3507] macro 'RstEnable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:2]
-WARNING: [VRFC 10-3507] macro 'RstDisable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:3]
-WARNING: [VRFC 10-3507] macro 'ZeroWord' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:4]
-WARNING: [VRFC 10-3507] macro 'WriteEnable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:5]
-WARNING: [VRFC 10-3507] macro 'WriteDisable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:6]
-WARNING: [VRFC 10-3507] macro 'ReadEnable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:7]
-WARNING: [VRFC 10-3507] macro 'ReadDisable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:8]
-WARNING: [VRFC 10-3507] macro 'AluOpBus' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:9]
-WARNING: [VRFC 10-3507] macro 'AluSelBus' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:10]
-WARNING: [VRFC 10-3507] macro 'ChipEnable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:15]
-WARNING: [VRFC 10-3507] macro 'ChipDisable' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:16]
-WARNING: [VRFC 10-3507] macro 'Stop' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:18]
-WARNING: [VRFC 10-3507] macro 'NoStop' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:19]
-WARNING: [VRFC 10-3507] macro 'EXE_ORI' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:45]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:76]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTI_OP' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:177]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU_OP' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:178]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDI_OP' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:183]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDIU_OP' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:184]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_MOVE' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:253]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_ARITHMETIC' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:254]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_LOAD_STORE' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:257]
-WARNING: [VRFC 10-3507] macro 'InstAddrBus' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:264]
-WARNING: [VRFC 10-3507] macro 'InstBus' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:265]
-WARNING: [VRFC 10-3507] macro 'InstMemNum' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:266]
-WARNING: [VRFC 10-3507] macro 'InstMemNumLog2' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:267]
-WARNING: [VRFC 10-3507] macro 'RegAddrBus' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:277]
-WARNING: [VRFC 10-3507] macro 'RegBus' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:278]
-WARNING: [VRFC 10-3507] macro 'RegWidth' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:279]
-WARNING: [VRFC 10-3507] macro 'DoubleRegWidth' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:280]
-WARNING: [VRFC 10-3507] macro 'DoubleRegBus' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:281]
-WARNING: [VRFC 10-3507] macro 'RegNum' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:282]
-WARNING: [VRFC 10-3507] macro 'RegNumLog2' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:283]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COUNT' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:298]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COMPARE' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:299]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_STATUS' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:300]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CAUSE' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:301]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_EPC' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:302]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_PrId' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:303]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CONFIG' redefined [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:304]
-INFO: [VRFC 10-311] analyzing module wb_ram
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_rom.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_rom
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/wishbone_bus_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wishbone_bus_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sim_1/new/openmips_min_sopc_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module openmips_min_sopc_tb
-run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 909.801 ; gain = 0.000
-INFO: [USF-XSim-69] 'compile' step finished in '7' seconds
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 909.801 ; gain = 0.000
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-"xelab -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'int_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:122]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'if_inst' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v:243]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 17 for port 'wb_adr_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:157]
-WARNING: [VRFC 10-3091] actual bit length 26 differs from formal bit length 17 for port 'wb_adr_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:192]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'cpu_data_o' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v:666]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.seg8
-Compiling module xil_defaultlib.pc_reg
-Compiling module xil_defaultlib.if_id
-Compiling module xil_defaultlib.id
-Compiling module xil_defaultlib.regfile
-Compiling module xil_defaultlib.id_ex
-Compiling module xil_defaultlib.ex
-Compiling module xil_defaultlib.ex_mem
-Compiling module xil_defaultlib.mem
-Compiling module xil_defaultlib.mem_wb
-Compiling module xil_defaultlib.hilo_reg
-Compiling module xil_defaultlib.ctrl
-Compiling module xil_defaultlib.div
-Compiling module xil_defaultlib.LLbit_reg
-Compiling module xil_defaultlib.cp0_reg
-Compiling module xil_defaultlib.wishbone_bus_if
-Compiling module xil_defaultlib.openmips
-Compiling module xil_defaultlib.gpio_top
-Compiling module xil_defaultlib.wb_rom
-Compiling module xil_defaultlib.uart_wb
-Compiling module xil_defaultlib.raminfr
-Compiling module xil_defaultlib.uart_tfifo
-Compiling module xil_defaultlib.uart_transmitter
-Compiling module xil_defaultlib.uart_sync_flops(width=1,init_val...
-Compiling module xil_defaultlib.uart_rfifo(fifo_width=11)
-Compiling module xil_defaultlib.uart_receiver
-Compiling module xil_defaultlib.uart_regs
-Compiling module xil_defaultlib.uart_debug_if
-Compiling module xil_defaultlib.uart_top
-Compiling module xil_defaultlib.wb_ram
-Compiling module xil_defaultlib.wb_conmax_master_if(sw=4)
-Compiling module xil_defaultlib.wb_conmax_arb
-Compiling module xil_defaultlib.wb_conmax_pri_dec(pri_sel=2'b10)
-Compiling module xil_defaultlib.wb_conmax_pri_enc(pri_sel=2'b10)
-Compiling module xil_defaultlib.wb_conmax_msel(pri_sel=2'b10)
-Compiling module xil_defaultlib.wb_conmax_slave_if(sw=4)
-Compiling module xil_defaultlib.wb_conmax_rf(sw=4)
-Compiling module xil_defaultlib.wb_conmax_top_default
-Compiling module xil_defaultlib.openmips_min_sopc
-Compiling module xil_defaultlib.openmips_min_sopc_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot openmips_min_sopc_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-(openmips_min_sopc_tb.openmips_min_sopc0.uart_top0) UART INFO: Data bus width is 32. Debug Interface present.
-
-(openmips_min_sopc_tb.openmips_min_sopc0.uart_top0) UART INFO: Doesn't have baudrate output
-
-relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 909.801 ; gain = 0.000
-run 10 us
-run 10 us
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Fri Oct 25 20:57:01 2019] Launched synth_1...
+Run output will be captured here: D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/synth_1/runme.log
+[Fri Oct 25 20:57:01 2019] Launched impl_1...
+Run output will be captured here: D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/impl_1/runme.log
 open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292709934A
+set_property PROGRAM.FILE {D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/impl_1/openmips_min_sopc.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+ERROR: [Labtools 27-2312] Device xc7a100t_0 is no longer available.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target.
+Use open_hw_target to re-register the hardware device.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292709934A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292709934A
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/impl_1/openmips_min_sopc.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/impl_1/openmips_min_sopc.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 close_hw
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'openmips_min_sopc_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj openmips_min_sopc_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/LLbit_reg.v" into library xil_defaultlib
-WARNING: [VRFC 10-3507] macro 'InstValid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:24]
-WARNING: [VRFC 10-3507] macro 'InstInvalid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:25]
-INFO: [VRFC 10-311] analyzing module LLbit_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/cp0_reg.v" into library xil_defaultlib
-WARNING: [VRFC 10-3507] macro 'InstValid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:11]
-WARNING: [VRFC 10-3507] macro 'InstInvalid' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/OpenMIPS.vh:12]
-INFO: [VRFC 10-311] analyzing module cp0_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ctrl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ctrl
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/div.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module div
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ex
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex_mem.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ex_mem
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/gpio/gpio_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module gpio_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/hilo_reg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module hilo_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/id.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module id
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/id_ex.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module id_ex
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/if_id.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module if_id
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mem
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem_wb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mem_wb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module openmips
-INFO: [VRFC 10-2458] undeclared symbol rom_addr_o, assumed default net type wire [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v:238]
-INFO: [VRFC 10-2458] undeclared symbol inst_i, assumed default net type wire [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v:243]
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module openmips_min_sopc
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/pc_reg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module pc_reg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/raminfr.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module raminfr
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/regfile.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module regfile
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/seg8.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module seg8
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_debug_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_debug_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_receiver.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_receiver
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_regs
-INFO: [VRFC 10-2458] undeclared symbol rf_overrun, assumed default net type wire [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v:400]
-INFO: [VRFC 10-2458] undeclared symbol rf_push_pulse, assumed default net type wire [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v:400]
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_rfifo.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_rfifo
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_sync_flops.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_sync_flops
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_tfifo.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_tfifo
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_transmitter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_transmitter
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/uart/uart_wb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_wb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_arb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_arb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_master_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_msel.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_msel
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_dec.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_pri_dec
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_enc.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_pri_enc
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_rf.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_rf
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_slave_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_conmax_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_ram.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_ram
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/wb_rom.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module wb_rom
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/wishbone_bus_if.v" into library xil_defaultlib
-WARNING: [VRFC 10-3507] macro 'RstEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:2]
-WARNING: [VRFC 10-3507] macro 'RstDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:3]
-WARNING: [VRFC 10-3507] macro 'ZeroWord' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:4]
-WARNING: [VRFC 10-3507] macro 'WriteEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:5]
-WARNING: [VRFC 10-3507] macro 'WriteDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:6]
-WARNING: [VRFC 10-3507] macro 'ReadEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:7]
-WARNING: [VRFC 10-3507] macro 'ReadDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:8]
-WARNING: [VRFC 10-3507] macro 'AluOpBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:9]
-WARNING: [VRFC 10-3507] macro 'AluSelBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:10]
-WARNING: [VRFC 10-3507] macro 'Stop' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:13]
-WARNING: [VRFC 10-3507] macro 'NoStop' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:14]
-WARNING: [VRFC 10-3507] macro 'ChipEnable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:25]
-WARNING: [VRFC 10-3507] macro 'ChipDisable' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:26]
-WARNING: [VRFC 10-3507] macro 'EXE_ORI' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:35]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:58]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTI_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:157]
-WARNING: [VRFC 10-3507] macro 'EXE_SLTIU_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:158]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDI_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:163]
-WARNING: [VRFC 10-3507] macro 'EXE_ADDIU_OP' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:164]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_MOVE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:234]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_ARITHMETIC' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:235]
-WARNING: [VRFC 10-3507] macro 'EXE_RES_LOAD_STORE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:238]
-WARNING: [VRFC 10-3507] macro 'InstAddrBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:244]
-WARNING: [VRFC 10-3507] macro 'InstBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:245]
-WARNING: [VRFC 10-3507] macro 'InstMemNum' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:246]
-WARNING: [VRFC 10-3507] macro 'InstMemNumLog2' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:247]
-WARNING: [VRFC 10-3507] macro 'RegAddrBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:257]
-WARNING: [VRFC 10-3507] macro 'RegBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:258]
-WARNING: [VRFC 10-3507] macro 'RegWidth' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:259]
-WARNING: [VRFC 10-3507] macro 'DoubleRegWidth' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:260]
-WARNING: [VRFC 10-3507] macro 'DoubleRegBus' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:261]
-WARNING: [VRFC 10-3507] macro 'RegNum' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:262]
-WARNING: [VRFC 10-3507] macro 'RegNumLog2' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:263]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COUNT' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:277]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_COMPARE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:278]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_STATUS' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:279]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CAUSE' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:280]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_EPC' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:281]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_PrId' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:282]
-WARNING: [VRFC 10-3507] macro 'CP0_REG_CONFIG' redefined [../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/defines.v:283]
-INFO: [VRFC 10-311] analyzing module wishbone_bus_if
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sim_1/new/openmips_min_sopc_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module openmips_min_sopc_tb
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 909.801 ; gain = 0.000
-INFO: [USF-XSim-69] 'compile' step finished in '7' seconds
-launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 909.801 ; gain = 0.000
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.sim/sim_1/behav/xsim'
-"xelab -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 4c9d15a03076431c966d8e493222eb77 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot openmips_min_sopc_tb_behav xil_defaultlib.openmips_min_sopc_tb xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 6 for port 'int_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:122]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'if_inst' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v:243]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 17 for port 'wb_adr_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:157]
-WARNING: [VRFC 10-3091] actual bit length 26 differs from formal bit length 17 for port 'wb_adr_i' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:192]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'cpu_data_o' [D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v:666]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.seg8
-Compiling module xil_defaultlib.pc_reg
-Compiling module xil_defaultlib.if_id
-Compiling module xil_defaultlib.id
-Compiling module xil_defaultlib.regfile
-Compiling module xil_defaultlib.id_ex
-Compiling module xil_defaultlib.ex
-Compiling module xil_defaultlib.ex_mem
-Compiling module xil_defaultlib.mem
-Compiling module xil_defaultlib.mem_wb
-Compiling module xil_defaultlib.hilo_reg
-Compiling module xil_defaultlib.ctrl
-Compiling module xil_defaultlib.div
-Compiling module xil_defaultlib.LLbit_reg
-Compiling module xil_defaultlib.cp0_reg
-Compiling module xil_defaultlib.wishbone_bus_if
-Compiling module xil_defaultlib.openmips
-Compiling module xil_defaultlib.gpio_top
-Compiling module xil_defaultlib.wb_rom
-Compiling module xil_defaultlib.uart_wb
-Compiling module xil_defaultlib.raminfr
-Compiling module xil_defaultlib.uart_tfifo
-Compiling module xil_defaultlib.uart_transmitter
-Compiling module xil_defaultlib.uart_sync_flops(width=1,init_val...
-Compiling module xil_defaultlib.uart_rfifo(fifo_width=11)
-Compiling module xil_defaultlib.uart_receiver
-Compiling module xil_defaultlib.uart_regs
-Compiling module xil_defaultlib.uart_debug_if
-Compiling module xil_defaultlib.uart_top
-Compiling module xil_defaultlib.wb_ram
-Compiling module xil_defaultlib.wb_conmax_master_if(sw=4)
-Compiling module xil_defaultlib.wb_conmax_arb
-Compiling module xil_defaultlib.wb_conmax_pri_dec(pri_sel=2'b10)
-Compiling module xil_defaultlib.wb_conmax_pri_enc(pri_sel=2'b10)
-Compiling module xil_defaultlib.wb_conmax_msel(pri_sel=2'b10)
-Compiling module xil_defaultlib.wb_conmax_slave_if(sw=4)
-Compiling module xil_defaultlib.wb_conmax_rf(sw=4)
-Compiling module xil_defaultlib.wb_conmax_top_default
-Compiling module xil_defaultlib.openmips_min_sopc
-Compiling module xil_defaultlib.openmips_min_sopc_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot openmips_min_sopc_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
-Vivado Simulator 2019.1
-Time resolution is 1 ps
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list CONFIG.Coe_File {C:/output.coe}] [get_ips rom_0]
+generate_target all [get_files  d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/rom_0/rom_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'rom_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'rom_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'rom_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'rom_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'rom_0'...
+generate_target: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2320.617 ; gain = 0.000
+catch { config_ip_cache -export [get_ips -all rom_0] }
+export_ip_user_files -of_objects [get_files d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/rom_0/rom_0.xci] -no_script -sync -force -quiet
+reset_run rom_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/rom_0_synth_1
+
+launch_runs -jobs 4 rom_0_synth_1
+[Fri Oct 25 21:20:50 2019] Launched rom_0_synth_1...
+Run output will be captured here: D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/rom_0_synth_1/runme.log
+export_simulation -of_objects [get_files d:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.srcs/sources_1/ip/rom_0/rom_0.xci] -directory D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.ip_user_files/sim_scripts -ip_user_files_dir D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.ip_user_files -ipstatic_source_dir D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.cache/compile_simlib/modelsim} {questa=D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.cache/compile_simlib/questa} {riviera=D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.cache/compile_simlib/riviera} {activehdl=D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Fri Oct 25 21:21:03 2019] Launched rom_0_synth_1, synth_1...
+Run output will be captured here:
+rom_0_synth_1: D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/rom_0_synth_1/runme.log
+synth_1: D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/synth_1/runme.log
+[Fri Oct 25 21:21:03 2019] Launched impl_1...
+Run output will be captured here: D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292709934A
+set_property PROGRAM.FILE {D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/impl_1/openmips_min_sopc.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+create_hw_cfgmem -hw_device [get_hw_devices xc7a100t_0] -mem_dev [lindex [get_cfgmem_parts {28f00am29ew-bpi-x16}] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.runs/impl_1/openmips_min_sopc.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 2320.617 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 25 23:51:07 2019...

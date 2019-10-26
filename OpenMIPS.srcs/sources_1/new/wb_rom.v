@@ -40,24 +40,39 @@ module wb_rom(
     assign wr_data[15:8]=wb_sel_i[3]?wb_dat_i[15:8]:wb_dat_o[15:8];
     assign wr_data[7:0]=wb_sel_i[3]?wb_dat_i[7:0]:wb_dat_o[7:0];
     
+    `define waitrom 0
+    `define finishrom 1   
+    reg state;  
     always@(posedge wb_clk_i)
     begin
         if(wb_ack_o)
             wb_ack_o<=1'b0;
-        else if(wb_cyc_i&wb_stb_i&!wb_ack_o)
-            wb_ack_o<=1'b1;
-        else wb_ack_o<=1'b0;
+        else if(wb_cyc_i&wb_stb_i)
+        begin
+            if(state==`waitrom)
+                state<=`finishrom;
+            else if(!wb_ack_o)
+                wb_ack_o<=1'b1;
+        end
+        else 
+        begin
+            wb_ack_o<=1'b0;
+            state<=`waitrom;
+        end
     end
     
-    reg [31:0] ram[0:`InstMemNum-1];
     
-    initial $readmemh("inst_rom.data",ram);
+    
+
+    reg [31:0] ram[0:`InstMemNum-1];
+    wire [31:0] wb_dat_o_w;
     
     always@(posedge wb_clk_i)
     begin
-        wb_dat_o<=ram[wb_adr_i[`InstMemNumLog2-1:2]];
-        if(wb_cyc_i&wb_stb_i&wb_we_i&wb_ack_o)
-            ram[wb_adr_i[`InstMemNumLog2-1:2]]<=wr_data;
+        wb_dat_o<=wb_dat_o_w;
     end
+    
+    
+    rom_0 rom(.addra({2'b00,wb_adr_i[`InstMemNumLog2-1:2]}),.clka(wb_clk_i),.douta(wb_dat_o_w),.ena(1'b1));
     
 endmodule

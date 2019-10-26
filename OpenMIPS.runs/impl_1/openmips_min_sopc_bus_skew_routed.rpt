@@ -1,0 +1,15 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Oct 26 12:01:21 2019
+| Host         : DESKTOP-MI6UCPP running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file openmips_min_sopc_bus_skew_routed.rpt -pb openmips_min_sopc_bus_skew_routed.pb -rpx openmips_min_sopc_bus_skew_routed.rpx
+| Design       : openmips_min_sopc
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

@@ -22,7 +22,7 @@
 
 module openmips_min_sopc(
     input wire clk,
-    input wire rst,
+    input wire rst_n,
 
  	//????
 	input wire                   uart_in,
@@ -32,9 +32,14 @@ module openmips_min_sopc(
 	input wire[15:0]             gpio_i,
 	//output wire[31:0]            gpio_o,
 
-    output wire[3:0]dtube_cs_n,
+    output wire[7:0]dtube_cs_n,
     output wire[7:0]dtube_data
     );
+    
+    
+    wire [3:0]dtube_cs_n_temp;
+    
+    assign dtube_cs_n={4'b1111,dtube_cs_n_temp};
 
     wire [7:0] int;
     wire timer_int;
@@ -98,12 +103,32 @@ module openmips_min_sopc(
     
     wire[31:0] gpio_o;
     
+    wire rst;
+
+    
+    reg[10:0] rst_count=0;
+    
+    reg rst_n_in;
+    
+    always@(posedge clk)
+    begin
+        if(rst_count<10'd512)
+        begin
+            rst_n_in<=0;
+            rst_count<=rst_count+1;
+        end
+        else 
+            rst_n_in<=rst_n;
+        
+    end
+    assign rst=~rst_n_in;
+    
     
      seg8 seg80(
  	 .clk_i(clk),		
 	 .rst(rst),	
 	 .gpio_out(gpio_o),	
-	 .dtube_cs_n(dtube_cs_n),	
+	 .dtube_cs_n(dtube_cs_n_temp),	
 	 .dtube_data(dtube_data)
  );
   
@@ -149,8 +174,8 @@ module openmips_min_sopc(
         .ext_padoe_o()
     );
 
-  //assign gpio_i_temp = {15'h0000, sdram_init_done, gpio_i}; sdram_init_done 没有了 换成1'b0
-    assign gpio_i_temp={16'h0000,gpio_i};
+  //assign gpio_i_temp = {15'h0000, sdram_init_done, gpio_i}; sdram_init_done 没有了 换成1'b1
+    assign gpio_i_temp={15'h0000,1'b1,gpio_i};
 	wb_rom wb_rom0(
     .wb_clk_i(clk),
     .wb_rst_i(rst),

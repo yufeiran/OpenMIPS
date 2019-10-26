@@ -8,7 +8,7 @@
   "../../../ipstatic/simulation/blk_mem_gen_v8_4.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../../OpenMIPS.srcs/sources_1/ip/rom_0/sim/rom_0.v" \
+  "../../../ip/rom_0/sim/rom_0.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

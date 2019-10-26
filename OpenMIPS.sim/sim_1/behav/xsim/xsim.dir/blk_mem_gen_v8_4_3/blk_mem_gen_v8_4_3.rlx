@@ -1,0 +1,5 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+D:/codehub/VIVADO/LOONGSON/OpenMIPS/OpenMIPS.ip_user_files/ipstatic/simulation/blk_mem_gen_v8_4.v,1571929644,verilog,,,,STATE_LOGIC_v8_4;beh_vlog_ff_ce_clr_v8_4;beh_vlog_ff_clr_v8_4;beh_vlog_ff_pre_v8_4;beh_vlog_muxf7_v8_4;blk_mem_axi_read_wrapper_beh_v8_4;blk_mem_axi_regs_fwd_v8_4;blk_mem_axi_write_wrapper_beh_v8_4;blk_mem_gen_v8_4_3;blk_mem_gen_v8_4_3_mem_module;blk_mem_gen_v8_4_3_output_stage;blk_mem_gen_v8_4_3_softecc_output_reg_stage;read_netlist_v8_4;write_netlist_v8_4,,,../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS,,,,,
