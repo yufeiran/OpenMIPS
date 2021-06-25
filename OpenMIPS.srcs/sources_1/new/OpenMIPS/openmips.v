@@ -51,7 +51,7 @@ module openmips(
     );
     
     //连接IF/ID模块与链接阶段ID模块的变量
-    wire [`InstAddrBus] pc;
+     wire [`InstAddrBus] pc;
     wire [`InstBus] inst_i;
     wire [`InstAddrBus] id_pc_i;
     wire [`InstBus]     id_inst_i;
@@ -69,6 +69,7 @@ module openmips(
     wire[`RegBus] id_inst_o;
     wire[31:0] id_excepttype_o;
     wire[`RegBus] id_current_inst_address_o;
+    wire inst_tlb_refillD, inst_tlb_invalidD;
     
     //连接ID/EX模块输出与执行阶段EX模块的输入的变量
     wire [`AluOpBus] ex_aluop_i;
@@ -119,6 +120,7 @@ module openmips(
     wire[31:0]       mem_excepttype_i;
     wire             mem_is_in_delayslot_i;
     wire[`RegBus]    mem_current_inst_address_i;
+    wire inst_tlb_refillE, inst_tlb_invalidE;
     
     //连接访存阶段MEM模块的输出与MEM/WB模块的输入的变量
     wire            mem_wreg_o;
@@ -189,7 +191,7 @@ module openmips(
     wire id_branch_flag_o;
     wire[`RegBus]branch_target_address;
 
-	    //连接CTRL模块的变量
+	//连接CTRL模块的变量
     wire [5:0] stall;
     wire stallreq_from_id;
     wire stallreq_from_ex;
@@ -223,6 +225,31 @@ module openmips(
     wire [`RegBus]ram_data_o;
     wire ram_ce_o;
     wire [`RegBus]ram_data_i;
+
+    wire [3:0] tlb_typeD,tlb_typeE,tlb_typeM;
+    wire [19:0] inst_pfn, data_pfn;
+    wire no_cache_i,no_cache_d;
+
+
+    wire [31:0] cp0_random;
+    wire [31:0] cp0_index;
+    wire [31:0] cp0_EntryHi;
+    wire [31:0] cp0_EntryLo0;
+    wire [31:0] cp0_EntryLo1;
+    wire [31:0] cp0_PageMask;
+
+    wire [31:0] tlb_EntryHi;
+    wire [31:0] tlb_entry_lo0;
+    wire [31:0] tlb_entry_lo1;
+    wire [31:0] tlb_page_mask;
+    wire [31:0] tlb_entry_hi;
+    wire [31:0] tlb_index;
+
+    wire inst_tlb_refillF;
+    wire inst_tlb_invalidF;
+    wire data_tlb_refillM;
+    wire data_tlb_invalidM;
+    wire data_tlb_modifyM;
     
     pc_reg pc_reg0(
         .clk(clk),
@@ -242,7 +269,12 @@ module openmips(
     if_id if_id0(
         .clk(clk),.rst(rst),.if_pc(pc),.flush(flush),
         .if_inst(inst_i),.id_pc(id_pc_i),
-        .id_inst(id_inst_i),.stall(stall)
+        .id_inst(id_inst_i),.stall(stall),
+        .inst_tlb_refillF(inst_tlb_refillF & rom_ce),
+        .inst_tlb_invalidF(inst_tlb_invalidF&rom_ce),
+
+        .inst_tlb_refillD(inst_tlb_refillD),
+        .inst_tlb_invalidD(inst_tlb_invalidD)
         );
     
     //译码阶段ID模块例化
@@ -277,7 +309,8 @@ module openmips(
         .reg1_o(id_reg1_o), .reg2_o(id_reg2_o),
         .wd_o(id_wd_o), .wreg_o(id_wreg_o),.stallreq(stallreq_from_id),
         .excepttype_o(id_excepttype_o),
-        .current_inst_address_o(id_current_inst_address_o)
+        .current_inst_address_o(id_current_inst_address_o),
+        .tlb_typeD(tlb_typeD)
     );
     
     //通用寄存器Regfile模块例化
@@ -306,6 +339,9 @@ module openmips(
 		.next_inst_in_delayslot_i(next_inst_in_delayslot_o),	
         .id_excepttype(id_excepttype_o),
         .id_current_inst_address(id_current_inst_address_o),	
+        .tlb_typeD(tlb_typeD),
+        .inst_tlb_refillD(inst_tlb_refillD),
+        .inst_tlb_invalidD(inst_tlb_invalidD),
 	
         .ex_inst(ex_inst_i),
         .ex_aluop(ex_aluop_i),  .ex_alusel(ex_alusel_i),
@@ -315,7 +351,10 @@ module openmips(
         .ex_is_in_delayslot(ex_is_in_delayslot_i),
         .is_in_delayslot_o(is_in_delayslot_i),
         .ex_excepttype(ex_excepttype_i),
-        .ex_current_inst_address(ex_current_inst_address_i)
+        .ex_current_inst_address(ex_current_inst_address_i),
+        .tlb_typeE(tlb_typeE),
+        .inst_tlb_refillE(inst_tlb_refillE),
+        .inst_tlb_invalidE(inst_tlb_invalidE)
         );
      
      //EX模块例化
@@ -425,6 +464,7 @@ module openmips(
         .ex_excepttype(ex_excepttype_o),
         .ex_is_in_delayslot(ex_is_in_delayslot_o),
         .ex_current_inst_address(ex_current_inst_address_o),
+        .tlb_typeE(tlb_typeE),
         
         .mem_aluop(mem_aluop_i),
         .mem_mem_addr(mem_mem_addr_i),
@@ -436,6 +476,8 @@ module openmips(
         .mem_cp0_reg_we(mem_cp0_reg_we_i),
         .mem_cp0_reg_write_addr(mem_cp0_reg_write_addr_i),
         .mem_cp0_reg_data(mem_cp0_reg_data_i),
+        .inst_tlb_refillE(inst_tlb_refillE),
+        .inst_tlb_invalidE(inst_tlb_invalidE),
         
         //送到访存阶段MEM模块的信息
         .mem_wd(mem_wd_i),.mem_wreg(mem_wreg_i),
@@ -446,7 +488,10 @@ module openmips(
 
         .mem_excepttype(mem_excepttype_i),
         .mem_is_in_delayslot(mem_is_in_delayslot_i),
-        .mem_current_inst_address(mem_current_inst_address_i) 
+        .mem_current_inst_address(mem_current_inst_address_i),
+        .tlb_typeM(tlb_typeM),
+        .inst_tlb_refillM(inst_tlb_refillM),
+        .inst_tlb_invalidM(inst_tlb_invalidM)
     );
     
     //MEM模块化
@@ -595,6 +640,8 @@ module openmips(
         .LLbit_o(LLbit_o)
     );
 
+    assign {TLBWR,TLBWI,TLBR,TLBP}=tlb_typeM;
+
     cp0_reg cp0_reg0(
         .clk(clk),
         .rst(rst),
@@ -609,6 +656,14 @@ module openmips(
         .current_inst_addr_i(mem_current_inst_address_o),
         .is_in_delayslot_i(mem_is_in_delayslot_o),
 
+        .tlb_typeM(tlb_typeM),
+        .entry_lo0_in(tlb_entry_lo0),
+        .entry_lo1_in(tlb_entry_lo1),
+        .page_mask_in(tlb_page_mask),
+        .entry_hi_in(tlb_entry_hi),
+        .index_in(tlb_index),
+
+
         .data_o(cp0_data_o),
         .count_o(cp0_count),
         .compare_o(cp0_compare),
@@ -618,8 +673,54 @@ module openmips(
         .config_o(cp0_config),
         .prid_o(cp0_prid),
 
+        .random_o(cp0_random),
+        .index_o(cp0_index),
+        .EntryHi_o(cp0_EntryHi),
+        .EntryLo0_o(cp0_EntryLo0),
+        .EntryLo1_o(cp0_EntryLo1),
+        .PageMask_o(cp0_PageMask),
+
         .timer_int_o(timer_int_o)
     );
+
+    tlb tlb0(
+    .rst(rst),
+    .clk(clk),
+    .stallM(stall[3]),
+    .flushM(flush),
+    .inst_vaddr(pc),
+    .data_vaddr(ram_addr_o),
+    .inst_en(rom_ce_o),
+    .mem_read_enM(ram_ce_o),
+    .mem_write_enM(ram_we_o),
+    .inst_pfn(inst_pfn),
+    .data_pfn(data_pfn),
+    .no_cache_i(no_cache_i),
+    .no_cache_d(no_cache_d),
+
+    .inst_tlb_refill(inst_tlb_invalidF),
+    .inst_tlb_invalid(inst_tlb_invalidF),
+    .data_tlb_refill(data_tlb_refillM),
+    .data_tlb_invalid(data_tlb_invalidM),
+    .data_tlb_modify(data_tlb_modify),
+
+    .TLBP(TLBP),
+    .TLBR(TLBR),
+    .TLBWI(TLBWI),
+    .TLBWR(TLBWR),
+    .EntryHi_in(cp0_EntryHi),
+    .PageMask_in(cp0_PageMask),
+    .EntryLo0_in(cp0_EntryLo0),
+    .EntryLo1_in(cp0_EntryLo1),
+    .Index_in(cp0_index),
+    .Random_in(cp0_random),
+
+    .EntryHi_out(tlb_EntryHi),
+    .PageMask_out(tlb_page_mask),
+    .EntryLo0_out(tlb_entry_lo0),
+    .EntryLo1_out(tlb_entry_lo1),
+    .Index_out(tlb_index)
+);
 
     wishbone_bus_if dwishbone_bus_if(       //data总线接口
         .clk(clk),

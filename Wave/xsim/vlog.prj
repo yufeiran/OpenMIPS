@@ -1,0 +1,46 @@
+verilog xil_defaultlib --include "../../OpenMIPS.srcs/sources_1/new/OpenMIPS" \
+"../../OpenMIPS.ip_user_files/ip/rom_0/sim/rom_0.v" \
+"../../OpenMIPS.srcs/sources_1/new/OpenMIPS/LLbit_reg.v" \
+"../../OpenMIPS.srcs/sources_1/new/OpenMIPS/cp0_reg.v" \
+"../../OpenMIPS.srcs/sources_1/new/OpenMIPS/ctrl.v" \
+"../../OpenMIPS.srcs/sources_1/new/OpenMIPS/div.v" \
+"../../OpenMIPS.srcs/sources_1/new/OpenMIPS/ex.v" \
+"../../OpenMIPS.srcs/sources_1/new/OpenMIPS/ex_mem.v" \
+"../../OpenMIPS.srcs/sources_1/new/gpio/gpio_top.v" \
+"../../OpenMIPS.srcs/sources_1/new/OpenMIPS/hilo_reg.v" \
+"../../OpenMIPS.srcs/sources_1/new/OpenMIPS/id.v" \
+"../../OpenMIPS.srcs/sources_1/new/OpenMIPS/id_ex.v" \
+"../../OpenMIPS.srcs/sources_1/new/OpenMIPS/if_id.v" \
+"../../OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v" \
+"../../OpenMIPS.srcs/sources_1/new/OpenMIPS/mem_wb.v" \
+"../../OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v" \
+"../../OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v" \
+"../../OpenMIPS.srcs/sources_1/new/OpenMIPS/pc_reg.v" \
+"../../OpenMIPS.srcs/sources_1/new/uart/raminfr.v" \
+"../../OpenMIPS.srcs/sources_1/new/OpenMIPS/regfile.v" \
+"../../OpenMIPS.srcs/sources_1/new/seg8.v" \
+"../../OpenMIPS.srcs/sources_1/new/uart/uart_debug_if.v" \
+"../../OpenMIPS.srcs/sources_1/new/uart/uart_receiver.v" \
+"../../OpenMIPS.srcs/sources_1/new/uart/uart_regs.v" \
+"../../OpenMIPS.srcs/sources_1/new/uart/uart_rfifo.v" \
+"../../OpenMIPS.srcs/sources_1/new/uart/uart_sync_flops.v" \
+"../../OpenMIPS.srcs/sources_1/new/uart/uart_tfifo.v" \
+"../../OpenMIPS.srcs/sources_1/new/uart/uart_top.v" \
+"../../OpenMIPS.srcs/sources_1/new/uart/uart_transmitter.v" \
+"../../OpenMIPS.srcs/sources_1/new/uart/uart_wb.v" \
+"../../OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_arb.v" \
+"../../OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v" \
+"../../OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_msel.v" \
+"../../OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_dec.v" \
+"../../OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_enc.v" \
+"../../OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_rf.v" \
+"../../OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v" \
+"../../OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_top.v" \
+"../../OpenMIPS.srcs/sources_1/new/wb_ram.v" \
+"../../OpenMIPS.srcs/sources_1/new/wb_rom.v" \
+"../../OpenMIPS.srcs/sources_1/new/OpenMIPS/wishbone_bus_if.v" \
+"../../OpenMIPS.srcs/sim_1/new/openmips_min_sopc_tb.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

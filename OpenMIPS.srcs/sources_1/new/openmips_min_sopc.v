@@ -21,8 +21,10 @@
 `include"OpenMIPS\OpenMIPS.vh"
 
 module openmips_min_sopc(
-    input wire clk,
+    input wire clk_in,
     input wire rst_n,
+    
+    input wire flash_continue,
 
  	//????
 	input wire                   uart_in,
@@ -31,20 +33,61 @@ module openmips_min_sopc(
 	//GPIO??
 	input wire[15:0]             gpio_i,
 	//output wire[31:0]            gpio_o,
+	
+	input wire ps2k_clk,	//PS2接口时钟信号
+    input wire ps2k_data,		//PS2接口数据信号
 
     output wire[7:0]dtube_cs_n,
-    output wire[7:0]dtube_data
+    output wire[7:0]dtube_data,
+    
+    output wire LED0,
+    output wire LED1,
+    output wire LED2,
+    
+    output wire VGA_HS_O,
+    output wire VGA_VS_O,
+    output wire [3:0] VGA_R,
+    output wire [3:0] VGA_G,
+    output wire [3:0] VGA_B,
+    //flash control
+    output  cs_n,
+    input sdi,
+    output  sdo,
+    output  wp_n,
+    output  hld_n,
+    
+    //ddr2 
+    inout [15:0]            ddr2_dq,
+	inout [1:0]             ddr2_dqs_n,
+	inout [1:0]             ddr2_dqs_p,
+	output [12:0]           ddr2_addr,
+	output [2:0]            ddr2_ba,
+	output                  ddr2_ras_n,
+	output                  ddr2_cas_n,
+	output                  ddr2_we_n,
+	output [0:0]            ddr2_ck_p,
+	output [0:0]            ddr2_ck_n,
+	output [0:0]            ddr2_cke,
+	output [0:0]            ddr2_cs_n,
+	output [1:0]            ddr2_dm,
+	output [0:0]            ddr2_odt
     );
     
+
     
     wire [3:0]dtube_cs_n_temp;
     
-    assign dtube_cs_n={4'b1111,dtube_cs_n_temp};
+    
+    wire [1:0] sm_bit;  //keyboard test
+    wire [7:0] sm_seg;
+    
+    assign dtube_cs_n={2'b11,sm_bit,dtube_cs_n_temp};
 
-    wire [7:0] int;
+    wire [5:0] int;
     wire timer_int;
     wire gpio_int;
     wire uart_int;
+    wire keyboard_int;
     wire [31:0] gpio_i_temp;
 
     wire[31:0] m0_data_i;
@@ -101,6 +144,24 @@ module openmips_min_sopc(
     wire       s3_stb_o;
     wire       s3_ack_i;
     
+    wire[31:0] s4_data_i;
+    wire[31:0] s4_data_o;
+    wire[31:0] s4_addr_o;
+    wire[3:0] s4_sel_o;
+    wire       s4_we_o;
+    wire       s4_cyc_o;
+    wire       s4_stb_o;
+    wire       s4_ack_i;
+    
+     wire[31:0] s5_data_i;
+    wire[31:0] s5_data_o;
+    wire[31:0] s5_addr_o;
+    wire[3:0] s5_sel_o;
+    wire       s5_we_o;
+    wire       s5_cyc_o;
+    wire       s5_stb_o;
+    wire       s5_ack_i;
+    reg [31:0] s5_reg_data_o;
     wire[31:0] gpio_o;
     
     wire rst;
@@ -109,29 +170,45 @@ module openmips_min_sopc(
     reg[10:0] rst_count=0;
     
     reg rst_n_in;
+    reg clk_R=0;
+    wire clk;
     
-    always@(posedge clk)
+    always@(posedge clk_in)
+    begin
+        s5_reg_data_o<=s5_data_o;
+    end
+    always@(posedge clk_in)
     begin
         if(rst_count<10'd512)
         begin
             rst_n_in<=0;
             rst_count<=rst_count+1;
+
         end
         else 
+        begin
             rst_n_in<=rst_n;
-        
+
+        end
+    end
+    
+    always@(posedge clk_in)
+    begin
+        clk_R<=~clk_R;
     end
     assign rst=~rst_n_in;
+    assign clk=clk_R;
+        
     
-    
+    wire [7:0] seg80_data;
      seg8 seg80(
  	 .clk_i(clk),		
 	 .rst(rst),	
 	 .gpio_out(gpio_o),	
 	 .dtube_cs_n(dtube_cs_n_temp),	
-	 .dtube_data(dtube_data)
+	 .dtube_data(seg80_data)
  );
-  
+  assign dtube_data=seg80_data;
 
 
     //wire       sdram_init_done;
@@ -156,8 +233,12 @@ module openmips_min_sopc(
         );
 
     //OpenMIPS?????,????????UART???GPIO??
-    assign int={3'b000,gpio_int,uart_int,timer_int};
-        
+    //keyboard_int
+    assign int={2'b00,keyboard_int,gpio_int,uart_int,timer_int};
+    
+    assign LED0=keyboard_int;
+    assign LED1=0;
+    assign LED2=0;
     //??GPIO
     gpio_top gpio_top0(
         //GPIO???Wishbone????????????2
@@ -173,20 +254,64 @@ module openmips_min_sopc(
         .ext_pad_o(gpio_o),     //???32?????
         .ext_padoe_o()
     );
+    
+   wire sdram_init_done;
 
   //assign gpio_i_temp = {15'h0000, sdram_init_done, gpio_i}; sdram_init_done 没有了 换成1'b1
-    assign gpio_i_temp={15'h0000,1'b1,gpio_i};
-	wb_rom wb_rom0(
-    .wb_clk_i(clk),
+    assign gpio_i_temp={15'h0000,sdram_init_done,gpio_i};
+
+    
+	flash_rom flash_rom(
+    .wb_clk_i(clk_in), //100MHz
     .wb_rst_i(rst),
-    .wb_adr_i(s3_addr_o),
+    .wb_adr_i({s3_addr_o[23:2],2'b00}),
     .wb_dat_o(s3_data_i),
     .wb_dat_i(s3_data_o),
     .wb_sel_i(s3_sel_o),
     .wb_we_i(s3_we_o),
     .wb_stb_i(s3_stb_o), 
     .wb_cyc_i(s3_cyc_o), 
-    .wb_ack_o(s3_ack_i)
+    .wb_ack_o(s3_ack_i),
+    
+    .flash_continue(flash_continue),
+    .cs_n(cs_n),
+    .sdi(sdi),
+    .sdo(sdo),
+    .wp_n(wp_n),
+    .hld_n(hld_n)
+  );
+  
+  
+   DDR2 DDR2(
+     .wb_rst_i(1'b0),
+     .wb_clk_i(clk_in),
+                    
+     .wb_stb_i(s0_stb_o),
+     .wb_ack_o(s0_ack_i),
+     .wb_adr_i({s0_addr_o[26:2],2'b00}),
+     .wb_we_i(s0_we_o),
+     .wb_dat_i(s0_data_o),
+     .wb_sel_i(s0_sel_o),
+     .wb_dat_o(s0_data_i),
+     .wb_cyc_i(s0_cyc_o),
+     
+     .init_calib_complete(sdram_init_done),
+    
+	/************************/
+		.ddr2_ck_p(ddr2_ck_p),
+		.ddr2_ck_n(ddr2_ck_n),
+		.ddr2_cke(ddr2_cke),
+		.ddr2_cs_n(ddr2_cs_n),
+		.ddr2_ras_n(ddr2_ras_n),
+		.ddr2_cas_n(ddr2_cas_n),
+		.ddr2_we_n(ddr2_we_n),
+		.ddr2_dm(ddr2_dm),
+		.ddr2_ba(ddr2_ba),
+		.ddr2_addr(ddr2_addr),
+		.ddr2_dq(ddr2_dq),
+		.ddr2_dqs_p(ddr2_dqs_p),
+		.ddr2_dqs_n(ddr2_dqs_n),
+		.ddr2_odt(ddr2_odt)
   );
 
     //??UART???
@@ -207,7 +332,7 @@ module openmips_min_sopc(
         .ri_pad_i(1'b0),.dcd_pad_i(1'b0),
         .rts_pad_o(),.dtr_pad_o()
     );
-
+   /*
    wb_ram wb_ram(
      .wb_rst_i(rst),
      .wb_clk_i(clk),
@@ -222,6 +347,29 @@ module openmips_min_sopc(
      .wb_cyc_i(s0_cyc_o)
 
   );
+  */
+  
+  GraphicsController GraphicsController(
+    .wb_clk_i(clk_in),  //100MHZ
+    .wb_rst_i(rst),
+    .wb_stb_i(s4_stb_o),
+     .wb_ack_o(s4_ack_i),
+     .wb_adr_i(s4_addr_o[25:0]),
+     .wb_we_i(s4_we_o),
+     .wb_dat_i(s4_data_o),
+     .wb_sel_i(s4_sel_o),
+     .wb_dat_o(s4_data_i),
+     .wb_cyc_i(s4_cyc_o),
+    .VGA_HS_O(VGA_HS_O),
+    .VGA_VS_O(VGA_VS_O),
+    .VGA_R(VGA_R),
+    .VGA_G(VGA_G),
+    .VGA_B(VGA_B)
+    );
+    wire ps2_state;
+    wire [7:0]keyboard_dtube_data;
+   ps2_keyboard_driver ps2_keyboard_driver(clk_in,rst_n,gpio_i[0],ps2k_clk,ps2k_data,sm_bit,keyboard_dtube_data,ps2_state,keyboard_int,s5_cyc_o,s5_stb_o,s5_we_o,s5_sel_o,s5_addr_o,s5_data_o,s5_data_i,s5_ack_i);
+   
 
     //??WB_CONMAX
     wb_conmax_top wb_conmax_top0(
@@ -309,18 +457,18 @@ module openmips_min_sopc(
         .s3_stb_o(s3_stb_o),.s3_ack_i(s3_ack_i),
         .s3_err_i(1'b0),.s3_rty_i(1'b0),
 
-        //?????4
-        .s4_data_i(),.s4_data_o(),
-        .s4_addr_o(),.s4_sel_o(),
-        .s4_we_o(),.s4_cyc_o(),
-        .s4_stb_o(),.s4_ack_i(1'b0),
+        //?????4 VGA RAM
+        .s4_data_i(s4_data_i),.s4_data_o(s4_data_o),
+        .s4_addr_o(s4_addr_o),.s4_sel_o(s4_sel_o),
+        .s4_we_o(s4_we_o),.s4_cyc_o(s4_cyc_o),
+        .s4_stb_o(s4_stb_o),.s4_ack_i(s4_ack_i),
         .s4_err_i(1'b0),.s4_rty_i(1'b0),
 
         //?????5
-        .s5_data_i(),.s5_data_o(),
-        .s5_addr_o(),.s5_sel_o(),
-        .s5_we_o(),.s5_cyc_o(),
-        .s5_stb_o(),.s5_ack_i(1'b0),
+        .s5_data_i(s5_data_i),.s5_data_o(s5_data_o),
+        .s5_addr_o(s5_addr_o),.s5_sel_o(s5_sel_o),
+        .s5_we_o(s5_we_o),.s5_cyc_o(s5_cyc_o),
+        .s5_stb_o(s5_stb_o),.s5_ack_i(s5_ack_i),
         .s5_err_i(1'b0),.s5_rty_i(1'b0),
 
         //?????6

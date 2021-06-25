@@ -33,25 +33,20 @@ module wb_rom(
     output reg        wb_ack_o
     );
     
-    wire [31:0] wr_data;
-    
-    assign wr_data[31:24]=wb_sel_i[3]?wb_dat_i[31:24]:wb_dat_o[31:24];
-    assign wr_data[23:16]=wb_sel_i[3]?wb_dat_i[23:16]:wb_dat_o[23:16];
-    assign wr_data[15:8]=wb_sel_i[3]?wb_dat_i[15:8]:wb_dat_o[15:8];
-    assign wr_data[7:0]=wb_sel_i[3]?wb_dat_i[7:0]:wb_dat_o[7:0];
     
     `define waitrom 0
-    `define finishrom 1   
-    reg state;  
+    `define waitrom1 1
+    `define finishrom 2   
+    reg[1:0] state=`waitrom;  
     always@(posedge wb_clk_i)
     begin
-        if(wb_ack_o)
-            wb_ack_o<=1'b0;
-        else if(wb_cyc_i&wb_stb_i)
+        if(wb_cyc_i&wb_stb_i)
         begin
             if(state==`waitrom)
+                state<=`waitrom1;
+            else if(state==`waitrom1)
                 state<=`finishrom;
-            else if(!wb_ack_o)
+            else if(state==`finishrom&& !wb_ack_o)
                 wb_ack_o<=1'b1;
         end
         else 
@@ -61,18 +56,14 @@ module wb_rom(
         end
     end
     
-    
-    
-
-    reg [31:0] ram[0:`InstMemNum-1];
     wire [31:0] wb_dat_o_w;
     
     always@(posedge wb_clk_i)
     begin
         wb_dat_o<=wb_dat_o_w;
     end
+    wire [14:0]addr_rom={2'b00,wb_adr_i[14:2]};
     
-    
-    rom_0 rom(.addra({2'b00,wb_adr_i[`InstMemNumLog2-1:2]}),.clka(wb_clk_i),.douta(wb_dat_o_w),.ena(1'b1));
+    rom_0 rom(.addra(addr_rom),.clka(wb_clk_i),.douta(wb_dat_o_w),.ena(1'b1));
     
 endmodule

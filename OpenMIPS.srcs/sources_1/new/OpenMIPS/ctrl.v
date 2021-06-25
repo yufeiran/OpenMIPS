@@ -27,6 +27,12 @@ module ctrl(
     input wire stallreq_from_if,
     input wire stallreq_from_mem,
 
+    input wire inst_tlb_refill,
+    input wire inst_tlb_invalid,
+    input wire data_tlb_refill,
+    input wire data_tlb_invalid,
+    input wire data_tlb_modify,
+
     input wire [31:0] excepttype_i,
     input wire [`RegBus]    cp0_epc_i,
 
@@ -41,7 +47,8 @@ module ctrl(
             stall<=6'b000000;
             flush<=1'b0;
             new_pc<=`ZeroWord;
-        end else if(excepttype_i!=`ZeroWord)begin
+        end else if(excepttype_i!=`ZeroWord||inst_tlb_refill==1'b1||inst_tlb_invalid==1'b1||data_tlb_refill==1'b1
+        ||data_tlb_invalid==1'b1||data_tlb_modify==1'b1)begin
             flush<=1'b1;
             stall<=6'b000000;
             case(excepttype_i)
@@ -64,6 +71,15 @@ module ctrl(
                     new_pc<=cp0_epc_i;      //异常返回指令eret
                 end
                 default:begin
+                    if(inst_tlb_refill==1'b1||inst_tlb_invalid==1'b1)begin
+                        new_pc<=32'h00000200;
+                    end
+                    else if(data_tlb_refill==1'b1||data_tlb_invalid==1'b1)begin
+                        new_pc<=32'h00000380;
+                    end
+                    else if(data_tlb_modify==1'b1)begin
+                        new_pc<=32'h00000380;
+                    end
                 end
             endcase
         end else if(stallreq_from_mem==`Stop)begin

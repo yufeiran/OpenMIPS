@@ -1,0 +1,94 @@
+Vivado Simulator 2019.1
+Time resolution is 1 fs
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module openmips_min_sopc_tb.openmips_min_sopc0.flash_rom.rom0.inst.native_mem_module.blk_mem_gen_v8_4_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+############# Write Clocks PLLE2_ADV Parameters #############
+
+nCK_PER_CLK      =       4
+CLK_PERIOD       =    4999
+CLKIN1_PERIOD    =   4.999
+DIVCLK_DIVIDE    =       1
+CLKFBOUT_MULT    =       6
+VCO_PERIOD       =   833.0
+CLKOUT0_DIVIDE_F =       2
+CLKOUT1_DIVIDE   =       4
+CLKOUT2_DIVIDE   =      64
+CLKOUT3_DIVIDE   =      16
+CLKOUT0_PERIOD   =    1666
+CLKOUT1_PERIOD   =    3332
+CLKOUT2_PERIOD   =   53312
+CLKOUT3_PERIOD   =   13328
+CLKOUT4_PERIOD   =    6664
+############################################################
+
+############# MMCME2_ADV Parameters #############
+
+MMCM_MULT_F           =          15
+MMCM_VCO_FREQ (MHz)   = 1200.000
+MMCM_VCO_PERIOD       = 833.333
+#################################################
+
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : BYTE_LANES_B0 = f BYTE_LANES_B1 = 0 DATA_CTL_B0 = 5 DATA_CTL_B1 = 0
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : HIGHEST_LANE =           4 HIGHEST_LANE_B0 =           4 HIGHEST_LANE_B1 =           0
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : HIGHEST_BANK =           1
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : FREQ_REF_PERIOD         = 1666.00 
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : DDR_TCK                 = 3333 
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_S2_TAPS_SIZE         = 13.02 
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_CIRC_BUF_EARLY       = 1 
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_CIRC_BUF_OFFSET      = 1783.43 
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_CIRC_BUF_META_ZONE   = 200.00 
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_STG2_FINE_INTR_DLY   = 944.72 
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_STG2_COARSE_INTR_DLY = 604.85 
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_STG2_INTRINSIC_DELAY = 1549.57 
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_CIRC_BUF_DELAY       = 60 
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_INTRINSIC_DELAY      = 1549.57 
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_DELAY                = 2330.51 
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_OCLK_DELAY           = 0 
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : L_PHY_0_PO_FINE_DELAY   = 60 
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PI_STG1_INTRINSIC_DELAY = 0.00 
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PI_STG2_INTRINSIC_DELAY = 919.47 
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PI_INTRINSIC_DELAY      = 919.47 
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PI_MAX_STG2_DELAY       = 819.98 
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PI_OFFSET               = 212.00 
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PI_STG2_DELAY           = 212.00 
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy :PI_STG2_DELAY_CAND       = 212.00 
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : DEFAULT_RCLK_DELAY      = 16 
+openmips_min_sopc_tb.openmips_min_sopc0.DDR2.Ram.Inst_DDR.u_mig_7series_0_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : RCLK_SELECT_EDGE        = 111 
+(openmips_min_sopc_tb.openmips_min_sopc0.uart_top0) UART INFO: Data bus width is 32. Debug Interface present.
+
+(openmips_min_sopc_tb.openmips_min_sopc0.uart_top0) UART INFO: Doesn't have baudrate output
+
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module openmips_min_sopc_tb.openmips_min_sopc0.GraphicsController.ascii.inst.native_mem_module.blk_mem_gen_v8_4_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module openmips_min_sopc_tb.openmips_min_sopc0.GraphicsController.showRam.inst.native_mem_module.blk_mem_gen_v8_4_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 2195862.0 ps WARNING: 200 us is required before CKE goes active.
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 7235485.0 ps INFO: Precharge All
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 8968819.0 ps INFO: Load Mode 2
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 8968819.0 ps INFO: Load Mode 2 High Temperature Self Refresh rate = 1X (0C-85C)
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 10702152.0 ps INFO: Load Mode 3
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 12435485.0 ps INFO: Load Mode 1
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 12435485.0 ps INFO: Load Mode 1 DLL Enable = Enabled
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 12435485.0 ps INFO: Load Mode 1 Output Drive Strength = Full
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 12435485.0 ps INFO: Load Mode 1 ODT Rtt = 50 Ohm
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 12435485.0 ps INFO: Load Mode 1 Additive Latency =           0
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 12435485.0 ps INFO: Load Mode 1 OCD Program = OCD Exit
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 12435485.0 ps INFO: Load Mode 1 DQS_N Enable = Enabled
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 12435485.0 ps INFO: Load Mode 1 RDQS Enable = Disabled
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 12435485.0 ps INFO: Load Mode 1 Output Enable = Enabled
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 14168819.0 ps INFO: Load Mode 0
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 14168819.0 ps INFO: Load Mode 0 Burst Length =  8
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 14168819.0 ps INFO: Load Mode 0 Burst Order = Sequential
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 14168819.0 ps INFO: Load Mode 0 CAS Latency =           5
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 14168819.0 ps INFO: Load Mode 0 Test Mode = Normal
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 14168819.0 ps INFO: Load Mode 0 DLL Reset = Reset DLL
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 14168819.0 ps INFO: Load Mode 0 Write Recovery =           5
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 14168819.0 ps INFO: Load Mode 0 Power Down Mode = Fast Exit
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 15902152.0 ps INFO: Precharge All
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 17635485.0 ps INFO: Refresh  
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 19368819.0 ps INFO: Refresh  
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 21102152.0 ps INFO: Refresh  
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 22835485.0 ps INFO: Refresh  

@@ -1,0 +1,11 @@
+===================================
+Configuration Memory information
+===================================
+File Format        MCS
+Interface          SPIX1
+Size               16M
+Start Address      0x00000000
+End Address        0x00FFFFFF
+
+Addr1         Addr2         Date                    File(s)
+0x00000000    0x0000034E    May 12 16:39:31 2021    E:/codehub/OpenMIPS_without_ddr/OpenMIPS/GPIOImage.bin

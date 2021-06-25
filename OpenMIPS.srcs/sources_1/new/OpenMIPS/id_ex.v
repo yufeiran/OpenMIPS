@@ -45,6 +45,10 @@ module id_ex(
     input wire [`RegBus]    id_current_inst_address,
     input wire [31:0]       id_excepttype,
 
+    input wire [3:0]        tlb_typeD,
+
+    input wire inst_tlb_refillD, inst_tlb_invalidD,
+
     output reg [`RegBus]    ex_current_inst_address,
     output reg [31:0]       ex_excepttype,
 
@@ -60,7 +64,11 @@ module id_ex(
     output reg[`RegBus]     ex_reg1,
     output reg[`RegBus]     ex_reg2,
     output reg[`RegAddrBus] ex_wd,
-    output reg              ex_wreg
+    output reg              ex_wreg,
+
+    output reg inst_tlb_refillE, inst_tlb_invalidE,
+
+    output reg [3:0] tlb_typeE
     );
     always@(posedge clk) begin
         if(rst==`RstEnable) begin
@@ -76,6 +84,9 @@ module id_ex(
             ex_inst<=`ZeroWord;
             ex_excepttype<=`ZeroWord;
             ex_current_inst_address<=`ZeroWord;
+            tlb_typeE<=0;
+            inst_tlb_refillE        <= 0;
+            inst_tlb_invalidE       <= 0;
         end else if(flush==1'b1)begin
             ex_aluop<=`EXE_NOP_OP;
             ex_alusel<=`EXE_RES_NOP;
@@ -89,6 +100,9 @@ module id_ex(
             ex_inst<=`ZeroWord;
             ex_excepttype<=`ZeroWord;
             ex_current_inst_address<=`ZeroWord;
+            tlb_typeE<=0;
+            inst_tlb_refillE        <=  0;
+            inst_tlb_invalidE       <=  0;
         end else if(stall[2]==`Stop && stall[3]==`NoStop)begin
             ex_aluop<=`EXE_NOP_OP;
             ex_alusel<=`EXE_RES_NOP;
@@ -101,6 +115,9 @@ module id_ex(
             ex_inst<=`ZeroWord;
             ex_excepttype<=`ZeroWord;
             ex_current_inst_address<=`ZeroWord;
+            tlb_typeE<=0;
+            inst_tlb_refillE        <=  0;
+            inst_tlb_invalidE       <=  0;
         end else if(stall[2]==`NoStop) begin
             ex_aluop<=id_aluop;
             ex_alusel<=id_alusel;
@@ -114,6 +131,9 @@ module id_ex(
             ex_inst<=id_inst;
             ex_excepttype<=id_excepttype;
             ex_current_inst_address<=id_current_inst_address;
+            tlb_typeE<=tlb_typeD;
+            inst_tlb_refillE <=  inst_tlb_refillD  ;
+            inst_tlb_invalidE<=  inst_tlb_invalidD ;
          end
        end
 endmodule

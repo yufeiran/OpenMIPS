@@ -69,12 +69,14 @@ module id(
     output reg                  wreg_o,
 
     output wire [31:0]          excepttype_o,
-    output wire [`RegBus]       current_inst_address_o
+    output wire [`RegBus]       current_inst_address_o,
+
+    output wire [3:0] tlb_typeD
     );
 
     reg excepttype_is_syscall;      //是否为系统调用异常
     reg excepttype_is_eret;         //是否为异常返回指令eret
-
+    wire TLBWR, TLBWI, TLBP, TLBR;
 
   
     
@@ -186,7 +188,6 @@ module id(
                 reg1_addr_o<=inst_i[20:16];
                 reg2_read_o<=1'b0;
             end
-            
             case(op)
                 `EXE_LL:begin
                     wreg_o<=`WriteEnable;
@@ -1073,4 +1074,10 @@ module id(
 
     assign stallreq=stallreq_for_reg1_loadrelate|
                     stallreq_for_reg2_loadrelate;
+
+    assign TLBWI 	= !(inst_i[31:26] ^ `EXE_COP0) & !(inst_i[5:0] ^ `EXE_TLBWI	);
+	assign TLBP 	= !(inst_i[31:26] ^ `EXE_COP0) & !(inst_i[5:0] ^ `EXE_TLBP	);
+	assign TLBR 	= !(inst_i[31:26] ^ `EXE_COP0) & !(inst_i[5:0] ^ `EXE_TLBR	);
+	assign TLBWR 	= !(inst_i[31:26] ^ `EXE_COP0) & !(inst_i[5:0] ^ `EXE_TLBWR	);
+	assign tlb_typeD = {TLBWR, TLBWI, TLBR, TLBP};
 endmodule

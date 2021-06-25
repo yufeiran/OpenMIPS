@@ -51,6 +51,9 @@ module ex_mem(
     input wire              ex_is_in_delayslot,
     input wire [`RegBus]    ex_current_inst_address,
 
+    input wire [3:0]        tlb_typeE,
+    input wire inst_tlb_refillE, inst_tlb_invalidE,
+
     output reg[31:0]        mem_excepttype,
     output reg              mem_is_in_delayslot,
     output reg[`RegBus]     mem_current_inst_address,
@@ -73,7 +76,10 @@ module ex_mem(
 
     //增加的输出接口
     output reg[`DoubleRegBus] hilo_o,
-    output reg[1:0]           cnt_o
+    output reg[1:0]           cnt_o,
+
+    output reg[3:0]           tlb_typeM,
+    output reg inst_tlb_refillM, inst_tlb_invalidM
     );
     
     always@(posedge clk) begin
@@ -95,6 +101,9 @@ module ex_mem(
             mem_excepttype<=`ZeroWord;
             mem_is_in_delayslot<=`NotInDelaySlot;
             mem_current_inst_address<=`ZeroWord;
+            tlb_typeM<=0;
+            inst_tlb_refillM        <= 0;
+            inst_tlb_invalidM       <= 0;
         end else if(flush==1'b1)begin
             mem_wd<=`NOPRegAddr;
             mem_wreg<=`WriteDisable;
@@ -113,6 +122,9 @@ module ex_mem(
             mem_excepttype<=`ZeroWord;
             mem_is_in_delayslot<=`NotInDelaySlot;
             mem_current_inst_address<=`ZeroWord;
+            tlb_typeM<=0;
+            inst_tlb_refillM        <= 0;
+            inst_tlb_invalidM       <= 0;
         end else if(stall[3]==`Stop && stall[4]==`NoStop)begin
             mem_wd<=`NOPRegAddr;
             mem_wreg<=`WriteDisable;
@@ -131,6 +143,9 @@ module ex_mem(
             mem_excepttype<=`ZeroWord;
             mem_is_in_delayslot<=`NotInDelaySlot;
             mem_current_inst_address<=`ZeroWord;
+            tlb_typeM<=0;
+            inst_tlb_refillM        <= 0;
+            inst_tlb_invalidM       <= 0;
         end else if(stall[3]==`NoStop) begin
             mem_wd<=ex_wd;
             mem_wreg<=ex_wreg;
@@ -149,6 +164,9 @@ module ex_mem(
             mem_excepttype<=ex_excepttype;
             mem_is_in_delayslot<=ex_is_in_delayslot;
             mem_current_inst_address<=ex_current_inst_address;
+            inst_tlb_refillM        <=inst_tlb_refillE  ;
+            inst_tlb_invalidM       <=inst_tlb_invalidE ;
+            tlb_typeM<=tlb_typeE;
         end else begin 
             hilo_o<=hilo_i;
             cnt_o<=cnt_i;

@@ -21,8 +21,7 @@
 `define Branch              1'b1
 `define NotBranch           1'b0
 
-`define InstValid   1'b0
-`define InstInvalid 1'b1
+
 `define InDelaySlot 1'b1
 `define NotInDelaySlot 1'b0
 `define InterruptAssert 1'b1
@@ -229,6 +228,12 @@
 
 `define EXE_MFC0_OP 8'b01011101
 `define EXE_MTC0_OP 8'b01100000
+//TLB op may be conflict
+`define EXE_COP0     6'b010000
+`define EXE_TLBR     6'b000001
+`define EXE_TLBP     6'b001000
+`define EXE_TLBWI    6'b000010
+`define EXE_TLBWR    6'b000110
 
 `define EXE_SYSCALL_OP 8'b00001100
 
@@ -302,6 +307,55 @@
 `define CP0_REG_EPC     5'b01110
 `define CP0_REG_PrId    5'b01111
 `define CP0_REG_CONFIG  5'b10000
+`define CP0_REG_CONTEXT 5'b00100
+
+
+
+`define CP0_REG_INDEX     5'd0
+`define CP0_REG_EntryHi   5'd10
+`define CP0_REG_EntryLo0  5'd2 
+`define CP0_REG_EntryLo1  5'd3 
+`define CP0_REG_PageMask      5'd5 
+`define CP0_REG_WIRED   5'd6
+
+`define CP0_REG_BADVADDR 5'd8
+`define CP0_REG_RANDOM  5'b00001
+
+
+
+
 
 `define InterruptAssert 1'b1
 `define InterruptNotAssert 1'b0
+
+//********************TLB
+`define TLB_SUM     6'd32
+`define TLB_SUM_log2 6'd5
+`define TAG_WIDTH   20
+`define OFFSET_WIDTH 12
+
+
+//index
+`define INDEX_BITS `TLB_SUM_log2-1:0
+//random
+`define RANDOM_BITS `TLB_SUM_log2-1:0
+//wired
+`define WIRED_BITS  `TLB_SUM_log2-1:0
+
+//EntryHi
+`define VPN2_BITS 31:13
+`define ASID_BITS 7:0
+//G bit in TLB entry
+`define G_BIT 12
+//PageMask
+`define MASK_BITS 24:13 
+//EntryLo
+`define PFN_BITS 25:6
+`define FLAG_BITS 5:0
+`define V_BIT 1
+`define D_BIT 2
+`define C_BITS 5:3
+
+//context
+`define PTE_BASE_BITS 31:23
+`define BAD_VPN2_BITS 22:4

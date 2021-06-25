@@ -1,0 +1,24 @@
+SET_FLAG MODE BATCH
+SET_FLAG STANDALONE_MODE TRUE
+SET_PREFERENCE upgrade_mode yes
+SET_PREFERENCE ipi_mode no
+SET_PREFERENCE devicefamily artix7
+SET_PREFERENCE device xc7a100t
+SET_PREFERENCE speedgrade -1
+SET_PREFERENCE package csg324
+SET_PREFERENCE verilogsim false
+SET_PREFERENCE vhdlsim true
+SET_PREFERENCE designentry VHDL
+SET_PREFERENCE outputdirectory d:/codehub/VIVADO/Nexys-4-DDR-Music-Looper/src/ip/mig_7series_0/_tmp/
+SET_PREFERENCE subworkingdirectory d:/codehub/VIVADO/Nexys-4-DDR-Music-Looper/src/ip/mig_7series_0/_tmp/
+SET_PREFERENCE flowvendor Other
+SET_PREFERENCE tool vivado
+SET_PREFERENCE compnamestatus 0
+SET_PARAMETER component_name mig_7series_0
+SET_PARAMETER xml_input_file D:/codehub/VIVADO/Nexys-4-DDR-Music-Looper/src/ip/mig_7series_0/mig_b.prj
+SET_PARAMETER data_dir_path C:/Xilinx/Vivado/2019.1/data/ip/xilinx/mig_7series_v4_2
+SET_CORE_NAME Memory Interface Generator (MIG 7 Series)
+SET_CORE_VERSION 4.2
+SET_CORE_VLNV xilinx.com:ip:mig_7series:4.2
+SET_CORE_PATH C:/Xilinx/Vivado/2019.1/data/ip/xilinx/mig_7series_v4_2
+SET_CORE_DATASHEET C:/Xilinx/Vivado/2019.1/data/ip/xilinx/mig_7series_v4_2/data/docs/ds176_7series_MIS.pdf
