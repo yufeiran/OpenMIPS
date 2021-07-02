@@ -1,6 +1,6 @@
 # OpenMIPS
 
-一个OpenMIPS prot on Nexys4 DDR
+一个OpenMIPS port on Nexys4 DDR
 
 根据《自己动手写ＣＰＵ》实现
 
