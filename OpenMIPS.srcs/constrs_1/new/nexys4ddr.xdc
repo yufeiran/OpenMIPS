@@ -271,27 +271,16 @@ set_property -dict {PACKAGE_PIN L13 IOSTANDARD LVCMOS33} [get_ports cs_n]
 
 
 
+set_property MARK_DEBUG false [get_nets DDR2/p_r]
+set_property MARK_DEBUG false [get_nets DDR2/r_r]
 
 
-
-
-
-
-
-
-
-
-connect_debug_port u_ila_0/probe15 [get_nets [list flash_rom/init_flag]]
-
-
-connect_debug_port u_ila_0/clk [get_nets [list clk_in_IBUF_BUFG]]
-connect_debug_port dbg_hub/clk [get_nets clk_in_IBUF_BUFG]
 
 create_debug_core u_ila_0 ila
 set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
 set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
 set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
-set_property C_DATA_DEPTH 2048 [get_debug_cores u_ila_0]
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
 set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
 set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
 set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
@@ -299,16 +288,24 @@ set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
 set_property port_width 1 [get_debug_ports u_ila_0/clk]
 connect_debug_port u_ila_0/clk [get_nets [list clk_BUFG]]
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
-set_property port_width 3 [get_debug_ports u_ila_0/probe0]
-connect_debug_port u_ila_0/probe0 [get_nets [list {DDR2/state[0]} {DDR2/state[1]} {DDR2/state[2]}]]
+set_property port_width 31 [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {openmips0/pc0[1]} {openmips0/pc0[2]} {openmips0/pc0[3]} {openmips0/pc0[4]} {openmips0/pc0[5]} {openmips0/pc0[6]} {openmips0/pc0[7]} {openmips0/pc0[8]} {openmips0/pc0[9]} {openmips0/pc0[10]} {openmips0/pc0[11]} {openmips0/pc0[12]} {openmips0/pc0[13]} {openmips0/pc0[14]} {openmips0/pc0[15]} {openmips0/pc0[16]} {openmips0/pc0[17]} {openmips0/pc0[18]} {openmips0/pc0[19]} {openmips0/pc0[20]} {openmips0/pc0[21]} {openmips0/pc0[22]} {openmips0/pc0[23]} {openmips0/pc0[24]} {openmips0/pc0[25]} {openmips0/pc0[26]} {openmips0/pc0[27]} {openmips0/pc0[28]} {openmips0/pc0[29]} {openmips0/pc0[30]} {openmips0/pc0[31]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
-set_property port_width 5 [get_debug_ports u_ila_0/probe1]
-connect_debug_port u_ila_0/probe1 [get_nets [list {flash_rom/state[0]} {flash_rom/state[1]} {flash_rom/state[2]} {flash_rom/state[3]} {flash_rom/state[4]}]]
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {ps2_keyboard_driver/int_r_reg_0[0]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
 set_property port_width 32 [get_debug_ports u_ila_0/probe2]
-connect_debug_port u_ila_0/probe2 [get_nets [list {openmips0/pc[0]} {openmips0/pc[1]} {openmips0/pc[2]} {openmips0/pc[3]} {openmips0/pc[4]} {openmips0/pc[5]} {openmips0/pc[6]} {openmips0/pc[7]} {openmips0/pc[8]} {openmips0/pc[9]} {openmips0/pc[10]} {openmips0/pc[11]} {openmips0/pc[12]} {openmips0/pc[13]} {openmips0/pc[14]} {openmips0/pc[15]} {openmips0/pc[16]} {openmips0/pc[17]} {openmips0/pc[18]} {openmips0/pc[19]} {openmips0/pc[20]} {openmips0/pc[21]} {openmips0/pc[22]} {openmips0/pc[23]} {openmips0/pc[24]} {openmips0/pc[25]} {openmips0/pc[26]} {openmips0/pc[27]} {openmips0/pc[28]} {openmips0/pc[29]} {openmips0/pc[30]} {openmips0/pc[31]}]]
+connect_debug_port u_ila_0/probe2 [get_nets [list {s5_reg_data_o[0]} {s5_reg_data_o[1]} {s5_reg_data_o[2]} {s5_reg_data_o[3]} {s5_reg_data_o[4]} {s5_reg_data_o[5]} {s5_reg_data_o[6]} {s5_reg_data_o[7]} {s5_reg_data_o[8]} {s5_reg_data_o[9]} {s5_reg_data_o[10]} {s5_reg_data_o[11]} {s5_reg_data_o[12]} {s5_reg_data_o[13]} {s5_reg_data_o[14]} {s5_reg_data_o[15]} {s5_reg_data_o[16]} {s5_reg_data_o[17]} {s5_reg_data_o[18]} {s5_reg_data_o[19]} {s5_reg_data_o[20]} {s5_reg_data_o[21]} {s5_reg_data_o[22]} {s5_reg_data_o[23]} {s5_reg_data_o[24]} {s5_reg_data_o[25]} {s5_reg_data_o[26]} {s5_reg_data_o[27]} {s5_reg_data_o[28]} {s5_reg_data_o[29]} {s5_reg_data_o[30]} {s5_reg_data_o[31]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list ps2_keyboard_driver/bus_use]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list ps2_keyboard_driver/wb_ack_o_i_1__1_n_9]]
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]

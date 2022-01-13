@@ -1,0 +1,39 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Jan 13 08:24:45 2022
+| Host         : DESKTOP-5BPV03O running 64-bit major release  (build 9200)
+| Command      : report_design_analysis -logic_level_distribution -file opt_report_design_analysis_0.rpt
+| Design       : openmips_min_sopc
+| Device       : xc7a100t
+| Design State : Optimized
+---------------------------------------------------------------------------------------------------------
+
+Report Design Analysis
+
+Table of Contents
+-----------------
+1. Logic Level Distribution
+
+1. Logic Level Distribution
+---------------------------
+
++--------------------+-------------+----+---+-----+
+|   End Point Clock  | Requirement |  0 | 1 |  5  |
++--------------------+-------------+----+---+-----+
+| (none)             | 5.000ns     |  1 | 0 |   0 |
+| clk_out2_clk_wiz_0 | 5.000ns     | 15 | 1 |   0 |
+| clk_pll_i          | 3.333ns     | 59 | 0 |   0 |
+| mem_refclk         | 1.875ns     |  2 | 0 |   0 |
+| oserdes_clk        | 3.333ns     |  4 | 0 |   0 |
+| oserdes_clk_2      | 3.333ns     |  4 | 0 |   0 |
+| oserdes_clkdiv     | 3.333ns     |  5 | 0 |   0 |
+| oserdes_clkdiv_1   | 3.333ns     |  1 | 0 |   0 |
+| oserdes_clkdiv_2   | 3.333ns     |  5 | 0 |   0 |
+| oserdes_clkdiv_3   | 3.333ns     |  1 | 0 |   0 |
+| sys_clk_pin        | 3.333ns     | 33 | 0 | 869 |
++--------------------+-------------+----+---+-----+
+* Columns represent the logic levels per end point clock
+** Distribution is for top worst 1000 paths
+
+

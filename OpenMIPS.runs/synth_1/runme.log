@@ -1,0 +1,3033 @@
+
+*** Running vivado
+    with args -log openmips_min_sopc.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source openmips_min_sopc.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source openmips_min_sopc.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental E:/codehub/OpenMIPS_final/OpenMIPS.srcs/utils_1/imports/synth_1/openmips_min_sopc.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from E:/codehub/OpenMIPS_final/OpenMIPS.srcs/utils_1/imports/synth_1/openmips_min_sopc.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top openmips_min_sopc -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4352 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 748.562 ; gain = 178.367
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'openmips_min_sopc' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:23]
+INFO: [Synth 8-6157] synthesizing module 'seg8' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/seg8.v:10]
+	Parameter CSN bound to: 4'b1111 
+	Parameter CS0 bound to: 4'b1110 
+	Parameter CS1 bound to: 4'b1101 
+	Parameter CS2 bound to: 4'b1011 
+	Parameter CS3 bound to: 4'b0111 
+INFO: [Synth 8-226] default block is never used [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/seg8.v:71]
+WARNING: [Synth 8-5788] Register clk_count_reg in module seg8 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/seg8.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'seg8' (1#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/seg8.v:10]
+INFO: [Synth 8-6157] synthesizing module 'openmips' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v:24]
+INFO: [Synth 8-6157] synthesizing module 'pc_reg' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/pc_reg.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'pc_reg' (2#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/pc_reg.v:23]
+INFO: [Synth 8-6157] synthesizing module 'if_id' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/if_id.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'if_id' (3#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/if_id.v:23]
+INFO: [Synth 8-6157] synthesizing module 'id' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/id.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/id.v:316]
+INFO: [Synth 8-6155] done synthesizing module 'id' (4#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/id.v:23]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/regfile.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (5#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/regfile.v:23]
+INFO: [Synth 8-6157] synthesizing module 'id_ex' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/id_ex.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'id_ex' (6#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/id_ex.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ex' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ex' (7#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ex_mem' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex_mem.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ex_mem' (8#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/ex_mem.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mem' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v:23]
+INFO: [Synth 8-226] default block is never used [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v:252]
+INFO: [Synth 8-226] default block is never used [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v:278]
+INFO: [Synth 8-226] default block is never used [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v:349]
+INFO: [Synth 8-226] default block is never used [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v:374]
+INFO: [Synth 8-226] default block is never used [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v:398]
+INFO: [Synth 8-226] default block is never used [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v:444]
+INFO: [Synth 8-226] default block is never used [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v:470]
+INFO: [Synth 8-6155] done synthesizing module 'mem' (9#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mem_wb' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem_wb.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mem_wb' (10#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/mem_wb.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hilo_reg' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/hilo_reg.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hilo_reg' (11#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/hilo_reg.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ctrl' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/ctrl.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ctrl' (12#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/ctrl.v:23]
+WARNING: [Synth 8-7023] instance 'ctrl0' of module 'ctrl' has 15 connections declared, but only 10 given [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v:605]
+INFO: [Synth 8-6157] synthesizing module 'div' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/div.v:23]
+WARNING: [Synth 8-6014] Unused sequential element temp_op1_reg was removed.  [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/div.v:67]
+WARNING: [Synth 8-6014] Unused sequential element temp_op2_reg was removed.  [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/div.v:72]
+INFO: [Synth 8-6155] done synthesizing module 'div' (13#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/div.v:23]
+INFO: [Synth 8-6157] synthesizing module 'LLbit_reg' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/LLbit_reg.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'LLbit_reg' (14#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/LLbit_reg.v:23]
+INFO: [Synth 8-6157] synthesizing module 'cp0_reg' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/cp0_reg.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/cp0_reg.v:102]
+INFO: [Synth 8-6155] done synthesizing module 'cp0_reg' (15#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/cp0_reg.v:23]
+WARNING: [Synth 8-7023] instance 'cp0_reg0' of module 'cp0_reg' has 39 connections declared, but only 31 given [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v:645]
+INFO: [Synth 8-6157] synthesizing module 'tlb' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/tlb.v:3]
+WARNING: [Synth 8-6014] Unused sequential element find_index2_r_reg was removed.  [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/tlb.v:333]
+WARNING: [Synth 8-3848] Net inst_paddr in module/entity tlb does not have driver. [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/tlb.v:15]
+WARNING: [Synth 8-3848] Net data_paddr in module/entity tlb does not have driver. [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/tlb.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'tlb' (16#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/tlb.v:3]
+WARNING: [Synth 8-7023] instance 'tlb0' of module 'tlb' has 35 connections declared, but only 33 given [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v:686]
+INFO: [Synth 8-6157] synthesizing module 'phy_bus_addr_conv' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/phy_bus_addr_conv.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'phy_bus_addr_conv' (17#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/phy_bus_addr_conv.v:55]
+INFO: [Synth 8-6157] synthesizing module 'wishbone_bus_if' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/wishbone_bus_if.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'wishbone_bus_if' (18#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/wishbone_bus_if.v:23]
+WARNING: [Synth 8-3848] Net tlb_entry_hi in module/entity openmips does not have driver. [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v:245]
+WARNING: [Synth 8-3848] Net rom_ce_o in module/entity openmips does not have driver. [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v:693]
+WARNING: [Synth 8-3848] Net inst_tlb_refillF in module/entity openmips does not have driver. [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v:248]
+INFO: [Synth 8-6155] done synthesizing module 'openmips' (19#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v:24]
+INFO: [Synth 8-6157] synthesizing module 'gpio_top' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/gpio/gpio_top.v:115]
+	Parameter dw bound to: 32 - type: integer 
+	Parameter aw bound to: 8 - type: integer 
+	Parameter gw bound to: 32 - type: integer 
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/gpio/gpio_top.v:987]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/gpio/gpio_top.v:987]
+INFO: [Synth 8-6155] done synthesizing module 'gpio_top' (20#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/gpio/gpio_top.v:115]
+INFO: [Synth 8-6157] synthesizing module 'flash_rom' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:23]
+	Parameter IDLE bound to: 5'b00000 
+	Parameter START bound to: 5'b00010 
+	Parameter INST_OUT bound to: 5'b00011 
+	Parameter ADDR1_OUT bound to: 5'b00100 
+	Parameter ADDR2_OUT bound to: 5'b00101 
+	Parameter ADDR3_OUT bound to: 5'b00110 
+	Parameter WRITE_DATA bound to: 5'b00111 
+	Parameter READ_DATA bound to: 5'b01000 
+	Parameter READ_DATA1 bound to: 5'b01001 
+	Parameter READ_DATA2 bound to: 5'b01010 
+	Parameter READ_DATA3 bound to: 5'b01011 
+	Parameter READ_DATA4 bound to: 5'b01100 
+	Parameter READ_DATA5 bound to: 5'b01101 
+	Parameter WAITING bound to: 5'b10000 
+	Parameter ENDING bound to: 5'b10001 
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:62]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:64]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:65]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:68]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:69]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:70]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:71]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:72]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:73]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:74]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:78]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:81]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:86]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:145]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:402]
+INFO: [Synth 8-6157] synthesizing module 'STARTUPE2' [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:77870]
+	Parameter PROG_USR bound to: FALSE - type: string 
+	Parameter SIM_CCLK_FREQ bound to: 10.000000 - type: float 
+INFO: [Synth 8-6155] done synthesizing module 'STARTUPE2' (21#1) [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:77870]
+INFO: [Synth 8-6157] synthesizing module 'rom0' [E:/codehub/OpenMIPS_final/OpenMIPS.runs/synth_1/.Xil/Vivado-1772-DESKTOP-5BPV03O/realtime/rom0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rom0' (22#1) [E:/codehub/OpenMIPS_final/OpenMIPS.runs/synth_1/.Xil/Vivado-1772-DESKTOP-5BPV03O/realtime/rom0_stub.v:6]
+WARNING: [Synth 8-6014] Unused sequential element temp_reg was removed.  [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:138]
+WARNING: [Synth 8-6014] Unused sequential element wait_count_reg was removed.  [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:140]
+INFO: [Synth 8-4471] merging register 'hld_n_reg' into 'wp_n_reg' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:123]
+INFO: [Synth 8-4471] merging register 'addr_req_reg' into 'wp_n_reg' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:420]
+WARNING: [Synth 8-6014] Unused sequential element hld_n_reg was removed.  [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:123]
+WARNING: [Synth 8-6014] Unused sequential element addr_req_reg was removed.  [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:420]
+INFO: [Synth 8-6155] done synthesizing module 'flash_rom' (23#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DDR2' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/ddr/DDR2.v:27]
+	Parameter tenhz bound to: 10000000 - type: integer 
+	Parameter IDLE bound to: 5'b00000 
+	Parameter START bound to: 5'b00001 
+	Parameter WRITE bound to: 5'b00010 
+	Parameter READ bound to: 5'b00011 
+	Parameter WAIT bound to: 5'b00100 
+	Parameter ENDING bound to: 5'b00101 
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [E:/codehub/OpenMIPS_final/OpenMIPS.runs/synth_1/.Xil/Vivado-1772-DESKTOP-5BPV03O/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (24#1) [E:/codehub/OpenMIPS_final/OpenMIPS.runs/synth_1/.Xil/Vivado-1772-DESKTOP-5BPV03O/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'Ram2Ddr' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/ddr/Ram2Ddr.vhd:63]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "GRAY" *) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/ddr/Ram2Ddr.vhd:132]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/ddr/Ram2Ddr.vhd:139]
+INFO: [Synth 8-3491] module 'mig_7series_0' declared at 'E:/codehub/OpenMIPS_final/OpenMIPS.runs/synth_1/.Xil/Vivado-1772-DESKTOP-5BPV03O/realtime/mig_7series_0_stub.v:5' bound to instance 'Inst_DDR' of component 'mig_7series_0' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/ddr/Ram2Ddr.vhd:196]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_0' [E:/codehub/OpenMIPS_final/OpenMIPS.runs/synth_1/.Xil/Vivado-1772-DESKTOP-5BPV03O/realtime/mig_7series_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_0' (25#1) [E:/codehub/OpenMIPS_final/OpenMIPS.runs/synth_1/.Xil/Vivado-1772-DESKTOP-5BPV03O/realtime/mig_7series_0_stub.v:5]
+WARNING: [Synth 8-614] signal 'calib_complete' is read in the process but is not in the sensitivity list [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/ddr/Ram2Ddr.vhd:436]
+WARNING: [Synth 8-6014] Unused sequential element ram_ub_int_reg was removed.  [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/ddr/Ram2Ddr.vhd:250]
+WARNING: [Synth 8-6014] Unused sequential element ram_lb_int_reg was removed.  [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/ddr/Ram2Ddr.vhd:251]
+INFO: [Synth 8-256] done synthesizing module 'Ram2Ddr' (26#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/ddr/Ram2Ddr.vhd:63]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/ddr/DDR2.v:227]
+WARNING: [Synth 8-5788] Register wait_count_reg in module DDR2 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/ddr/DDR2.v:233]
+WARNING: [Synth 8-5788] Register mem_a_reg in module DDR2 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/ddr/DDR2.v:89]
+WARNING: [Synth 8-5788] Register mem_dq_i_reg in module DDR2 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/ddr/DDR2.v:94]
+WARNING: [Synth 8-5788] Register wb_dat_o_reg in module DDR2 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/ddr/DDR2.v:276]
+WARNING: [Synth 8-3848] Net chipTemp in module/entity DDR2 does not have driver. [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/ddr/DDR2.v:115]
+INFO: [Synth 8-6155] done synthesizing module 'DDR2' (27#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/ddr/DDR2.v:27]
+INFO: [Synth 8-6157] synthesizing module 'uart_top' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/uart_top.v:140]
+	Parameter uart_data_width bound to: 32 - type: integer 
+	Parameter uart_addr_width bound to: 5 - type: integer 
+INFO: [Synth 8-251] () UART INFO: Data bus width is 32. Debug Interface present.
+ [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/uart_top.v:329]
+INFO: [Synth 8-251] () UART INFO: Doesn't have baudrate output
+ [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/uart_top.v:334]
+INFO: [Synth 8-6157] synthesizing module 'uart_wb' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/uart_wb.v:142]
+INFO: [Synth 8-6155] done synthesizing module 'uart_wb' (28#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/uart_wb.v:142]
+INFO: [Synth 8-6157] synthesizing module 'uart_regs' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v:231]
+INFO: [Synth 8-6157] synthesizing module 'uart_transmitter' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/uart_transmitter.v:154]
+	Parameter s_idle bound to: 3'b000 
+	Parameter s_send_start bound to: 3'b001 
+	Parameter s_send_byte bound to: 3'b010 
+	Parameter s_send_parity bound to: 3'b011 
+	Parameter s_send_stop bound to: 3'b100 
+	Parameter s_pop_byte bound to: 3'b101 
+INFO: [Synth 8-6157] synthesizing module 'uart_tfifo' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/uart_tfifo.v:144]
+	Parameter fifo_width bound to: 8 - type: integer 
+	Parameter fifo_depth bound to: 16 - type: integer 
+	Parameter fifo_pointer_w bound to: 4 - type: integer 
+	Parameter fifo_counter_w bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'raminfr' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/raminfr.v:83]
+	Parameter addr_width bound to: 4 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter depth bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'raminfr' (29#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/raminfr.v:83]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tfifo' (30#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/uart_tfifo.v:144]
+INFO: [Synth 8-6155] done synthesizing module 'uart_transmitter' (31#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/uart_transmitter.v:154]
+INFO: [Synth 8-6157] synthesizing module 'uart_sync_flops' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/uart_sync_flops.v:71]
+	Parameter Tp bound to: 1 - type: integer 
+	Parameter width bound to: 1 - type: integer 
+	Parameter init_value bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'uart_sync_flops' (32#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/uart_sync_flops.v:71]
+INFO: [Synth 8-6157] synthesizing module 'uart_receiver' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/uart_receiver.v:198]
+	Parameter sr_idle bound to: 4'b0000 
+	Parameter sr_rec_start bound to: 4'b0001 
+	Parameter sr_rec_bit bound to: 4'b0010 
+	Parameter sr_rec_parity bound to: 4'b0011 
+	Parameter sr_rec_stop bound to: 4'b0100 
+	Parameter sr_check_parity bound to: 4'b0101 
+	Parameter sr_rec_prepare bound to: 4'b0110 
+	Parameter sr_end_bit bound to: 4'b0111 
+	Parameter sr_ca_lc_parity bound to: 4'b1000 
+	Parameter sr_wait1 bound to: 4'b1001 
+	Parameter sr_push bound to: 4'b1010 
+INFO: [Synth 8-6157] synthesizing module 'uart_rfifo' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/uart_rfifo.v:150]
+	Parameter fifo_width bound to: 11 - type: integer 
+	Parameter fifo_depth bound to: 16 - type: integer 
+	Parameter fifo_pointer_w bound to: 4 - type: integer 
+	Parameter fifo_counter_w bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_rfifo' (33#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/uart_rfifo.v:150]
+WARNING: [Synth 8-6014] Unused sequential element rbit_in_reg was removed.  [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/uart_receiver.v:280]
+INFO: [Synth 8-6155] done synthesizing module 'uart_receiver' (34#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/uart_receiver.v:198]
+INFO: [Synth 8-6155] done synthesizing module 'uart_regs' (35#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/uart_regs.v:231]
+INFO: [Synth 8-6157] synthesizing module 'uart_debug_if' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/uart_debug_if.v:89]
+INFO: [Synth 8-6155] done synthesizing module 'uart_debug_if' (36#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/uart_debug_if.v:89]
+INFO: [Synth 8-6155] done synthesizing module 'uart_top' (37#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/uart/uart_top.v:140]
+INFO: [Synth 8-6157] synthesizing module 'GraphicsController' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/GraphicsController.v:23]
+INFO: [Synth 8-6157] synthesizing module 'vga1024x768' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/vga1024x768.v:23]
+	Parameter HS_STA bound to: 24 - type: integer 
+	Parameter HS_END bound to: 160 - type: integer 
+	Parameter HA_STA bound to: 304 - type: integer 
+	Parameter VS_STA bound to: 771 - type: integer 
+	Parameter VS_END bound to: 777 - type: integer 
+	Parameter VA_END bound to: 768 - type: integer 
+	Parameter LINE bound to: 1328 - type: integer 
+	Parameter SCREEN bound to: 806 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'vga1024x768' (38#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/vga1024x768.v:23]
+WARNING: [Synth 8-7023] instance 'display' of module 'vga1024x768' has 11 connections declared, but only 7 given [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/GraphicsController.v:93]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [E:/codehub/OpenMIPS_final/OpenMIPS.runs/synth_1/.Xil/Vivado-1772-DESKTOP-5BPV03O/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (39#1) [E:/codehub/OpenMIPS_final/OpenMIPS.runs/synth_1/.Xil/Vivado-1772-DESKTOP-5BPV03O/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [E:/codehub/OpenMIPS_final/OpenMIPS.runs/synth_1/.Xil/Vivado-1772-DESKTOP-5BPV03O/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (40#1) [E:/codehub/OpenMIPS_final/OpenMIPS.runs/synth_1/.Xil/Vivado-1772-DESKTOP-5BPV03O/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/GraphicsController.v:153]
+WARNING: [Synth 8-6014] Unused sequential element lineBuffer_reg was removed.  [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/GraphicsController.v:157]
+WARNING: [Synth 8-6014] Unused sequential element isDrawPoint_reg was removed.  [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/GraphicsController.v:158]
+WARNING: [Synth 8-6014] Unused sequential element lineNowX_reg was removed.  [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/GraphicsController.v:159]
+WARNING: [Synth 8-6014] Unused sequential element wordbuf_reg was removed.  [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/GraphicsController.v:160]
+WARNING: [Synth 8-3848] Net inputDataOuputShowRamW in module/entity GraphicsController does not have driver. [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/GraphicsController.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'GraphicsController' (41#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/GraphicsController.v:23]
+WARNING: [Synth 8-689] width (26) of port connection 'wb_adr_i' does not match port width (17) of module 'GraphicsController' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:367]
+INFO: [Synth 8-6157] synthesizing module 'ps2_keyboard_driver' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/keyboard.v:22]
+	Parameter N2 bound to: 50000 - type: integer 
+WARNING: [Synth 8-5788] Register int_r_reg in module ps2_keyboard_driver is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/keyboard.v:61]
+WARNING: [Synth 8-5788] Register ps2_byte_r_reg in module ps2_keyboard_driver is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/keyboard.v:203]
+WARNING: [Synth 8-5788] Register wb_dat_o_reg in module ps2_keyboard_driver is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/keyboard.v:204]
+INFO: [Synth 8-6155] done synthesizing module 'ps2_keyboard_driver' (42#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/keyboard.v:22]
+WARNING: [Synth 8-689] width (32) of port connection 'wb_adr_i' does not match port width (17) of module 'ps2_keyboard_driver' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:381]
+INFO: [Synth 8-6157] synthesizing module 'wb_conmax_top' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_top.v:61]
+	Parameter dw bound to: 32 - type: integer 
+	Parameter aw bound to: 32 - type: integer 
+	Parameter rf_addr bound to: 4'b1111 
+	Parameter pri_sel0 bound to: 2'b10 
+	Parameter pri_sel1 bound to: 2'b10 
+	Parameter pri_sel2 bound to: 2'b10 
+	Parameter pri_sel3 bound to: 2'b10 
+	Parameter pri_sel4 bound to: 2'b10 
+	Parameter pri_sel5 bound to: 2'b10 
+	Parameter pri_sel6 bound to: 2'b10 
+	Parameter pri_sel7 bound to: 2'b10 
+	Parameter pri_sel8 bound to: 2'b10 
+	Parameter pri_sel9 bound to: 2'b10 
+	Parameter pri_sel10 bound to: 2'b10 
+	Parameter pri_sel11 bound to: 2'b10 
+	Parameter pri_sel12 bound to: 2'b10 
+	Parameter pri_sel13 bound to: 2'b10 
+	Parameter pri_sel14 bound to: 2'b10 
+	Parameter pri_sel15 bound to: 2'b10 
+	Parameter sw bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'wb_conmax_master_if' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v:61]
+	Parameter dw bound to: 32 - type: integer 
+	Parameter aw bound to: 32 - type: integer 
+	Parameter sw bound to: 4 - type: integer 
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v:442]
+INFO: [Synth 8-226] default block is never used [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v:442]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v:586]
+INFO: [Synth 8-226] default block is never used [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v:586]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v:610]
+INFO: [Synth 8-226] default block is never used [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v:610]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v:634]
+INFO: [Synth 8-226] default block is never used [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v:634]
+INFO: [Synth 8-6155] done synthesizing module 'wb_conmax_master_if' (43#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_master_if.v:61]
+INFO: [Synth 8-6157] synthesizing module 'wb_conmax_slave_if' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:61]
+	Parameter pri_sel bound to: 2'b10 
+	Parameter aw bound to: 32 - type: integer 
+	Parameter dw bound to: 32 - type: integer 
+	Parameter sw bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'wb_conmax_arb' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_arb.v:63]
+	Parameter grant0 bound to: 3'b000 
+	Parameter grant1 bound to: 3'b001 
+	Parameter grant2 bound to: 3'b010 
+	Parameter grant3 bound to: 3'b011 
+	Parameter grant4 bound to: 3'b100 
+	Parameter grant5 bound to: 3'b101 
+	Parameter grant6 bound to: 3'b110 
+	Parameter grant7 bound to: 3'b111 
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_arb.v:115]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_arb.v:115]
+INFO: [Synth 8-6155] done synthesizing module 'wb_conmax_arb' (44#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_arb.v:63]
+INFO: [Synth 8-6157] synthesizing module 'wb_conmax_msel' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_msel.v:61]
+	Parameter pri_sel bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'wb_conmax_pri_enc' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_enc.v:61]
+	Parameter pri_sel bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'wb_conmax_pri_dec' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_dec.v:61]
+	Parameter pri_sel bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'wb_conmax_pri_dec' (45#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_dec.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'wb_conmax_pri_enc' (46#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_pri_enc.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'wb_conmax_msel' (47#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_msel.v:61]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:296]
+INFO: [Synth 8-226] default block is never used [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:296]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:310]
+INFO: [Synth 8-226] default block is never used [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:310]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:324]
+INFO: [Synth 8-226] default block is never used [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:324]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:352]
+INFO: [Synth 8-226] default block is never used [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:352]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:392]
+INFO: [Synth 8-226] default block is never used [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:392]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:406]
+INFO: [Synth 8-226] default block is never used [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:406]
+INFO: [Synth 8-6155] done synthesizing module 'wb_conmax_slave_if' (48#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_slave_if.v:61]
+INFO: [Synth 8-6157] synthesizing module 'wb_conmax_rf' [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_rf.v:61]
+	Parameter rf_addr bound to: 4'b1111 
+	Parameter dw bound to: 32 - type: integer 
+	Parameter aw bound to: 32 - type: integer 
+	Parameter sw bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'wb_conmax_rf' (49#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_rf.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'wb_conmax_top' (50#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/wb_conmax/wb_conmax_top.v:61]
+WARNING: [Synth 8-7023] instance 'wb_conmax_top0' of module 'wb_conmax_top' has 242 connections declared, but only 238 given [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:385]
+WARNING: [Synth 8-3848] Net s6_data_i in module/entity openmips_min_sopc does not have driver. [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:166]
+WARNING: [Synth 8-3848] Net s6_ack_i in module/entity openmips_min_sopc does not have driver. [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:173]
+INFO: [Synth 8-6155] done synthesizing module 'openmips_min_sopc' (51#1) [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v:23]
+WARNING: [Synth 8-3917] design openmips_min_sopc has port dtube_cs_n[7] driven by constant 1
+WARNING: [Synth 8-3917] design openmips_min_sopc has port dtube_cs_n[6] driven by constant 1
+WARNING: [Synth 8-3917] design openmips_min_sopc has port LED1 driven by constant 0
+WARNING: [Synth 8-3917] design openmips_min_sopc has port LED2 driven by constant 0
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port read
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_we_i
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_sel_i[3]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_sel_i[2]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_sel_i[1]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_sel_i[0]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_adr_i[16]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_adr_i[15]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_adr_i[14]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_adr_i[13]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_adr_i[12]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_adr_i[11]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_adr_i[10]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_adr_i[9]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_adr_i[8]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_adr_i[7]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_adr_i[6]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_adr_i[5]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_adr_i[4]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_adr_i[3]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_adr_i[2]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_adr_i[1]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_adr_i[0]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[31]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[30]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[29]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[28]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[27]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[26]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[25]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[24]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[23]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[22]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[21]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[20]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[19]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[18]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[17]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[16]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[15]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[14]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[13]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[12]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[11]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[10]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[9]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[8]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[7]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[6]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[5]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[4]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[3]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[2]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[1]
+WARNING: [Synth 8-3331] design ps2_keyboard_driver has unconnected port wb_dat_i[0]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_sel_i[3]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_sel_i[2]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_sel_i[1]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_sel_i[0]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_adr_i[16]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_adr_i[15]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_adr_i[14]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_adr_i[13]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[31]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[30]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[29]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[28]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[27]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[26]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[25]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[24]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[23]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[22]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[21]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[20]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[19]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[18]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[17]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[16]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[15]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[14]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[13]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[12]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[11]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[10]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[9]
+WARNING: [Synth 8-3331] design GraphicsController has unconnected port wb_dat_i[8]
+WARNING: [Synth 8-3331] design uart_receiver has unconnected port lcr[7]
+WARNING: [Synth 8-3331] design uart_receiver has unconnected port lcr[6]
+WARNING: [Synth 8-3331] design uart_transmitter has unconnected port lcr[7]
+WARNING: [Synth 8-3331] design Ram2Ddr has unconnected port ram_ub
+WARNING: [Synth 8-3331] design Ram2Ddr has unconnected port ram_lb
+WARNING: [Synth 8-3331] design flash_rom has unconnected port wb_we_i
+WARNING: [Synth 8-3331] design flash_rom has unconnected port wb_sel_i[3]
+WARNING: [Synth 8-3331] design flash_rom has unconnected port wb_sel_i[2]
+WARNING: [Synth 8-3331] design flash_rom has unconnected port wb_sel_i[1]
+WARNING: [Synth 8-3331] design flash_rom has unconnected port wb_sel_i[0]
+WARNING: [Synth 8-3331] design flash_rom has unconnected port wb_dat_i[31]
+WARNING: [Synth 8-3331] design flash_rom has unconnected port wb_dat_i[30]
+WARNING: [Synth 8-3331] design flash_rom has unconnected port wb_dat_i[29]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 957.922 ; gain = 387.727
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 957.922 ; gain = 387.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 957.922 ; gain = 387.727
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/codehub/OpenMIPS_final/OpenMIPS.runs/synth_1/.Xil/Vivado-1772-DESKTOP-5BPV03O/blk_mem_gen_0_1/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'GraphicsController/ascii'
+Finished Parsing XDC File [E:/codehub/OpenMIPS_final/OpenMIPS.runs/synth_1/.Xil/Vivado-1772-DESKTOP-5BPV03O/blk_mem_gen_0_1/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'GraphicsController/ascii'
+Parsing XDC File [E:/codehub/OpenMIPS_final/OpenMIPS.runs/synth_1/.Xil/Vivado-1772-DESKTOP-5BPV03O/rom0/rom0/rom0_in_context.xdc] for cell 'flash_rom/rom0'
+Finished Parsing XDC File [E:/codehub/OpenMIPS_final/OpenMIPS.runs/synth_1/.Xil/Vivado-1772-DESKTOP-5BPV03O/rom0/rom0/rom0_in_context.xdc] for cell 'flash_rom/rom0'
+Parsing XDC File [e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc] for cell 'DDR2/Ram/Inst_DDR'
+Finished Parsing XDC File [e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc] for cell 'DDR2/Ram/Inst_DDR'
+Parsing XDC File [e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'DDR2/clk_1'
+Finished Parsing XDC File [e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'DDR2/clk_1'
+Parsing XDC File [E:/codehub/OpenMIPS_final/OpenMIPS.runs/synth_1/.Xil/Vivado-1772-DESKTOP-5BPV03O/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'GraphicsController/showRam'
+Finished Parsing XDC File [E:/codehub/OpenMIPS_final/OpenMIPS.runs/synth_1/.Xil/Vivado-1772-DESKTOP-5BPV03O/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'GraphicsController/showRam'
+Parsing XDC File [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/constrs_1/new/nexys4ddr.xdc]
+WARNING: [Vivado 12-507] No nets matched 'DDR2/p_r'. [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/constrs_1/new/nexys4ddr.xdc:274]
+WARNING: [Vivado 12-507] No nets matched 'DDR2/r_r'. [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/constrs_1/new/nexys4ddr.xdc:275]
+Finished Parsing XDC File [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/constrs_1/new/nexys4ddr.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/constrs_1/new/nexys4ddr.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/openmips_min_sopc_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/constrs_1/new/nexys4ddr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/openmips_min_sopc_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/openmips_min_sopc_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [E:/codehub/OpenMIPS_final/OpenMIPS.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/codehub/OpenMIPS_final/OpenMIPS.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1324.129 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.113 . Memory (MB): peak = 1324.129 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'GraphicsController/ascii' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'GraphicsController/showRam' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'flash_rom/rom0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1333.934 ; gain = 763.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1333.934 ; gain = 763.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[0]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[0]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[10]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[10]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[11]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[11]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[12]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[12]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[1]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[1]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[2]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[2]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[3]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[3]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[4]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[4]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[5]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[5]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[6]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[6]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[7]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[7]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[8]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[8]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_addr[9]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_addr[9]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ba[0]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_ba[0]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ba[1]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_ba[1]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ba[2]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_ba[2]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_cas_n. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_cas_n. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ck_n[0]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_ck_n[0]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ck_p[0]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_ck_p[0]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_cke[0]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_cke[0]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_cs_n[0]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_cs_n[0]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dm[0]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dm[0]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dm[1]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dm[1]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[0]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[0]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[10]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[10]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[11]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[11]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[12]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[12]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[13]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[13]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[14]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[14]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[15]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[15]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[1]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[1]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[2]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[2]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[3]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 66).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[3]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[4]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 68).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[4]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[5]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 70).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[5]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[6]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 72).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[6]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[7]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 74).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[7]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[8]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 76).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[8]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dq[9]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 78).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dq[9]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dqs_n[0]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 80).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dqs_n[0]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dqs_n[1]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 82).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dqs_n[1]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dqs_p[0]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 84).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dqs_p[0]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_dqs_p[1]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 86).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_dqs_p[1]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_odt[0]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 88).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_odt[0]. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ras_n. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 90).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_ras_n. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr2_we_n. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 92).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr2_we_n. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 93).
+Applied set_property IO_BUFFER_TYPE = NONE for clk_in. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_in. (constraint file  e:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
+Applied set_property DONT_TOUCH = true for GraphicsController/ascii. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for flash_rom/rom0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for DDR2/Ram/Inst_DDR. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for DDR2/clk_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for GraphicsController/showRam. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1333.934 ; gain = 763.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1333.934 ; gain = 763.738
+---------------------------------------------------------------------------------
+GraphicsController__GB2GraphicsController__GB1GraphicsController__GB0openmips__GB1openmips__GB0---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1333.934 ; gain = 763.738
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "sck_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "dataout" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "sdo_count" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "datain" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "addr" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "read_data" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "read_count" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1333.934 ; gain = 763.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Mimic Skeleton from Reference
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Mimic Skeleton from Reference : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1333.934 ; gain = 763.738
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: yes
+
+   Stitch points used : unchanged
+
+
+2. Change Summary
+
+Report Incremental Modules: 
++------+----------------+------------+----------+----------+
+|      |Changed Modules |Replication |Instances |Changed % |
++------+----------------+------------+----------+----------+
+|1     |flash_rom       |           1|      1265|  0.870157|
++------+----------------+------------+----------+----------+
+
+
+   Full Design Size (number of cells) : 145376
+   Resynthesis Design Size (number of cells) : 46150
+   Resynth % : 31.745268
+
+
+3. Reference Checkpoint Information
+
++--------------------------------------------------------------------------------------------------------+
+| DCP Location:  | E:/codehub/OpenMIPS_final/OpenMIPS.srcs/utils_1/imports/synth_1/openmips_min_sopc.dcp |
++--------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------+------------------------------+
+|         DCP Information        |             Value            |
++--------------------------------+------------------------------+
+| Vivado Version                 |                    v2019.1 |
+| DCP State                      |                              |
++--------------------------------+------------------------------+
+
+
+4.  Report RTL Partitions:
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |openmips_min_sopc__GC0          |           1|     46150|
+|2     |openmips__GB0_#REUSE#           |           1|         0|
+|3     |openmips__GB1_#REUSE#           |           1|         0|
+|4     |GraphicsController__GB0_#REUSE# |           1|         0|
+|5     |GraphicsController__GB1_#REUSE# |           1|         0|
+|6     |GraphicsController__GB2_#REUSE# |           1|         0|
++------+--------------------------------+------------+----------+
+
+
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |openmips_min_sopc__GC0          |           1|     46150|
+|2     |openmips__GB0_#REUSE#           |           1|         0|
+|3     |openmips__GB1_#REUSE#           |           1|         0|
+|4     |GraphicsController__GB0_#REUSE# |           1|         0|
+|5     |GraphicsController__GB1_#REUSE# |           1|         0|
+|6     |GraphicsController__GB2_#REUSE# |           1|         0|
++------+--------------------------------+------------+----------+
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |openmips_min_sopc__GC0          |           1|     46150|
+|2     |openmips__GB0_#REUSE#           |           1|         0|
+|3     |openmips__GB1_#REUSE#           |           1|         0|
+|4     |GraphicsController__GB0_#REUSE# |           1|         0|
+|5     |GraphicsController__GB1_#REUSE# |           1|         0|
+|6     |GraphicsController__GB2_#REUSE# |           1|         0|
++------+--------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 4     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 6     
+	   2 Input      3 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 2     
+	   2 Input      4 Bit         XORs := 1     
++---XORs : 
+	                9 Bit    Wide XORs := 1     
+	                8 Bit    Wide XORs := 1     
+	                7 Bit    Wide XORs := 1     
+	                6 Bit    Wide XORs := 1     
+	                5 Bit    Wide XORs := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               32 Bit    Registers := 20    
+	               27 Bit    Registers := 3     
+	               24 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 22    
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 16    
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 10    
+	                4 Bit    Registers := 13    
+	                3 Bit    Registers := 99    
+	                2 Bit    Registers := 21    
+	                1 Bit    Registers := 362   
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 8     
+	   6 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
+	  15 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   6 Input     16 Bit        Muxes := 1     
+	  16 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 2     
+	  11 Input     11 Bit        Muxes := 1     
+	   8 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 14    
+	   4 Input      8 Bit        Muxes := 2     
+	  11 Input      8 Bit        Muxes := 4     
+	   9 Input      8 Bit        Muxes := 1     
+	  44 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 11    
+	   6 Input      7 Bit        Muxes := 2     
+	   6 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 14    
+	   3 Input      5 Bit        Muxes := 1     
+	  15 Input      5 Bit        Muxes := 1     
+	   6 Input      5 Bit        Muxes := 2     
+	   4 Input      5 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	  15 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 12    
+	  11 Input      4 Bit        Muxes := 4     
+	   6 Input      4 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 128   
+	   6 Input      3 Bit        Muxes := 83    
+	   2 Input      3 Bit        Muxes := 4     
+	   4 Input      3 Bit        Muxes := 17    
+	  11 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 480   
+	   2 Input      2 Bit        Muxes := 35    
+	  15 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 371   
+	   5 Input      1 Bit        Muxes := 2     
+	  15 Input      1 Bit        Muxes := 9     
+	   4 Input      1 Bit        Muxes := 26    
+	   6 Input      1 Bit        Muxes := 19    
+	   3 Input      1 Bit        Muxes := 6     
+	  11 Input      1 Bit        Muxes := 12    
+	  44 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 640   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module openmips_min_sopc 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+Module seg8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+Module gpio_top 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     32 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 10    
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module flash_rom__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	                8 Bit    Registers := 4     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	  15 Input     16 Bit        Muxes := 1     
+	  16 Input     11 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 6     
+	   2 Input      7 Bit        Muxes := 10    
+	   2 Input      5 Bit        Muxes := 8     
+	   3 Input      5 Bit        Muxes := 1     
+	  15 Input      5 Bit        Muxes := 1     
+	  15 Input      4 Bit        Muxes := 1     
+	  15 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	  15 Input      1 Bit        Muxes := 9     
+	   4 Input      1 Bit        Muxes := 1     
+Module Ram2Ddr 
+Detailed RTL Component Info : 
++---Registers : 
+	              128 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	               27 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   6 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module DDR2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               27 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   6 Input     16 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   6 Input      5 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	   6 Input      1 Bit        Muxes := 8     
+Module uart_wb 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   6 Input     32 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 3     
+Module uart_tfifo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 3     
+Module uart_transmitter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	                8 Bit    Wide XORs := 1     
+	                7 Bit    Wide XORs := 1     
+	                6 Bit    Wide XORs := 1     
+	                5 Bit    Wide XORs := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+	   6 Input      7 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 2     
+	   4 Input      5 Bit        Muxes := 1     
+	   6 Input      5 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 10    
+Module uart_sync_flops 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module uart_rfifo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 16    
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 52    
+	   4 Input      1 Bit        Muxes := 19    
+Module uart_receiver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	                9 Bit    Wide XORs := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 2     
+	  11 Input     11 Bit        Muxes := 1     
+	   8 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   4 Input      8 Bit        Muxes := 2     
+	  11 Input      8 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 6     
+	  11 Input      4 Bit        Muxes := 3     
+	  11 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 1     
+	  11 Input      1 Bit        Muxes := 11    
+Module uart_regs 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      4 Bit         XORs := 1     
++---Registers : 
+	                8 Bit    Registers := 6     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 35    
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 4     
+	   9 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+Module uart_debug_if 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
+Module ps2_keyboard_driver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	  11 Input      8 Bit        Muxes := 2     
+	  44 Input      8 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 13    
+	  11 Input      1 Bit        Muxes := 1     
+	  44 Input      1 Bit        Muxes := 1     
+Module wb_conmax_master_if__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module wb_conmax_master_if__2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module wb_conmax_master_if__3 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module wb_conmax_master_if__4 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module wb_conmax_master_if__5 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module wb_conmax_master_if__6 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module wb_conmax_master_if__7 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module wb_conmax_master_if 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module wb_conmax_arb__9 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__15 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__14 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__13 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__12 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__11 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__10 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__9 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__8 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__8 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__7 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__6 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__5 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__14 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__23 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__22 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__21 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__20 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__19 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__18 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__17 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__16 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__13 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__12 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__11 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__10 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__2 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__19 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__31 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__30 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__29 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__28 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__27 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__26 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__25 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__24 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__18 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__17 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__16 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__15 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__3 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__3 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__24 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__39 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__38 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__37 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__36 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__35 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__34 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__33 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__32 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__23 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__22 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__21 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__20 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__4 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__4 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__29 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__47 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__46 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__45 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__44 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__43 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__42 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__41 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__40 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__5 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__28 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__27 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__26 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__25 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__5 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__5 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__34 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__55 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__54 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__53 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__52 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__51 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__50 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__49 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__48 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__6 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__33 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__32 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__31 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__30 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__6 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__6 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__39 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__63 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__62 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__61 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__60 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__59 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__58 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__57 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__56 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__7 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__38 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__37 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__36 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__35 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__7 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__7 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__44 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__71 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__70 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__69 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__68 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__67 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__66 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__65 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__64 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__8 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__43 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__42 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__41 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__40 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__8 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__8 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__49 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__79 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__78 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__77 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__76 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__75 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__74 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__73 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__72 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__9 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__48 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__47 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__46 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__45 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__9 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__9 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__54 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__87 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__86 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__85 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__84 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__83 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__82 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__81 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__80 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__10 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__53 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__52 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__51 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__50 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__10 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__10 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__59 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__95 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__94 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__93 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__92 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__91 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__90 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__89 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__88 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__11 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__58 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__57 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__56 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__55 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__11 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__11 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__64 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__103 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__102 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__101 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__100 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__99 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__98 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__97 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__96 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__12 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__63 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__62 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__61 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__60 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__12 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__12 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__69 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__111 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__110 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__109 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__108 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__107 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__106 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__105 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__104 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__13 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__68 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__67 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__66 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__65 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__13 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__13 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__74 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__119 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__118 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__117 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__116 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__115 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__114 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__113 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__112 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__14 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__73 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__72 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__71 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__70 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__14 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__14 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb__79 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__127 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__126 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__125 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__124 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__123 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__122 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__121 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__120 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc__15 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__78 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__77 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__76 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__75 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel__15 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if__15 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_arb 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_pri_dec__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__5 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__6 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec__7 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_dec 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module wb_conmax_pri_enc 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module wb_conmax_arb__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__2 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__3 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_arb__4 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 8     
+Module wb_conmax_msel 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+Module wb_conmax_slave_if 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
+Module wb_conmax_rf 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 17    
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 1 processes.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design openmips_min_sopc has port dtube_cs_n[7] driven by constant 1
+WARNING: [Synth 8-3917] design openmips_min_sopc has port dtube_cs_n[6] driven by constant 1
+WARNING: [Synth 8-3917] design openmips_min_sopc has port LED1 driven by constant 0
+WARNING: [Synth 8-3917] design openmips_min_sopc has port LED2 driven by constant 0
+INFO: [Synth 8-5544] ROM "regs/receiver/toc_value" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "regs/receiver/" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "ps2_asci" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3886] merging instance 'flash_rom/wr_cnt_reg[14]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/wr_cnt_reg[15]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/wr_cnt_reg[13]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/wr_cnt_reg[12]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/wr_cnt_reg[11]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/wr_cnt_reg[10]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/wr_cnt_reg[9]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/wr_cnt_reg[8]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/wr_cnt_reg[7]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/wr_cnt_reg[6]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/wr_cnt_reg[5]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/wr_cnt_reg[4]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/wr_cnt_reg[3]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/wr_cnt_reg[2]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/wr_cnt_reg[1]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/wr_cnt_reg[0]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/rd_cnt_reg[14]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/rd_cnt_reg[15]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/rd_cnt_reg[13]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/rd_cnt_reg[12]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/rd_cnt_reg[11]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/rd_cnt_reg[10]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/rd_cnt_reg[9]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/rd_cnt_reg[8]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/rd_cnt_reg[7]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/rd_cnt_reg[6]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/rd_cnt_reg[5]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/rd_cnt_reg[4]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/rd_cnt_reg[3]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/rd_cnt_reg[2]' (FD) to 'flash_rom/wp_n_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/rd_cnt_reg[1]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3886] merging instance 'flash_rom/rd_cnt_reg[0]' (FD) to 'flash_rom/wrh_rdl_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\flash_rom/wrh_rdl_reg )
+INFO: [Synth 8-3886] merging instance 'DDR2/mem_a_reg[1]' (FDE) to 'DDR2/mem_a_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\DDR2/mem_a_reg[0] )
+INFO: [Synth 8-3886] merging instance 'gpio_top0/sync_reg[17]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/sync_reg[18]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/sync_reg[19]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/sync_reg[20]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/sync_reg[21]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/sync_reg[22]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/sync_reg[23]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/sync_reg[24]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/sync_reg[25]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/sync_reg[26]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/sync_reg[27]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/sync_reg[28]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/sync_reg[29]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/sync_reg[30]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gpio_top0/sync_reg[31] )
+INFO: [Synth 8-3886] merging instance 'uart_top0/regs/delayed_modem_signals_reg[0]' (FDC) to 'uart_top0/regs/delayed_modem_signals_reg[1]'
+INFO: [Synth 8-3886] merging instance 'uart_top0/regs/delayed_modem_signals_reg[1]' (FDC) to 'uart_top0/regs/delayed_modem_signals_reg[2]'
+INFO: [Synth 8-3886] merging instance 'uart_top0/regs/delayed_modem_signals_reg[2]' (FDC) to 'uart_top0/regs/delayed_modem_signals_reg[3]'
+INFO: [Synth 8-3886] merging instance 'DDR2/next_state_reg[4]' (FDCE) to 'DDR2/next_state_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\DDR2/next_state_reg[3] )
+INFO: [Synth 8-3886] merging instance 'DDR2/Ram/ram_a_int_reg[1]' (FD) to 'DDR2/Ram/ram_a_int_reg[0]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/ext_pad_s_reg[17]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/ext_pad_s_reg[18]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/ext_pad_s_reg[19]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/ext_pad_s_reg[20]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/ext_pad_s_reg[21]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/ext_pad_s_reg[22]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/ext_pad_s_reg[23]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/ext_pad_s_reg[24]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/ext_pad_s_reg[25]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/ext_pad_s_reg[26]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/ext_pad_s_reg[27]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/ext_pad_s_reg[28]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/ext_pad_s_reg[29]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/ext_pad_s_reg[30]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gpio_top0/ext_pad_s_reg[31]' (FDC) to 'gpio_top0/sync_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ps2_keyboard_driver/count3_reg[16] )
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m7/s14_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m7/s12_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m6/s14_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m6/s12_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m5/s14_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m5/s12_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m4/s14_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m4/s12_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m3/s14_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m3/s12_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m2/s14_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m2/s12_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m7/s13_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m7/s12_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m6/s13_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m6/s12_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m5/s13_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m5/s12_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m4/s13_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m4/s12_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m3/s13_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m3/s12_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m2/s13_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m2/s12_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m7/s12_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m7/s10_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m6/s12_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m6/s10_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m5/s12_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m5/s10_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m4/s12_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m4/s10_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m3/s12_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m3/s10_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m2/s12_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m2/s10_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m7/s11_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m7/s10_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m6/s11_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m6/s10_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m5/s11_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m5/s10_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m4/s11_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m4/s10_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m3/s11_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m3/s10_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m2/s11_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m2/s10_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m7/s10_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m7/s8_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m6/s10_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m6/s8_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m5/s10_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m5/s8_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m4/s10_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m4/s8_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m3/s10_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m3/s8_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m2/s10_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m2/s8_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m7/s9_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m7/s8_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m6/s9_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m6/s8_cyc_o_reg'
+INFO: [Synth 8-3886] merging instance 'wb_conmax_top0/m5/s9_cyc_o_reg' (FDCE) to 'wb_conmax_top0/m5/s8_cyc_o_reg'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ps2_keyboard_driver/ps2_asci_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\DDR2/Ram/mem_addr_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (wb_conmax_top0/m7/s15_cyc_o_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (wb_conmax_top0/m6/s15_cyc_o_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (wb_conmax_top0/m5/s15_cyc_o_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (wb_conmax_top0/m4/s15_cyc_o_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (wb_conmax_top0/m3/s15_cyc_o_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (wb_conmax_top0/m2/s15_cyc_o_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ps2_keyboard_driver/wb_dat_o_reg[31] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\flash_rom/wp_n_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\DDR2/Ram/ram_a_int_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (wb_conmax_top0/s1/m2_cyc_r_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gpio_top0/sync_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (wb_conmax_top0/s5/m2_cyc_r_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (wb_conmax_top0/s3/m2_cyc_r_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (wb_conmax_top0/s2/m2_cyc_r_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (wb_conmax_top0/s4/m2_cyc_r_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (wb_conmax_top0/s15/m2_cyc_r_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gpio_top0/sync_reg[31] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\DDR2/Ram/mem_wdf_mask_reg[15] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 1333.934 ; gain = 763.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++-----------------------+--------------------------------------------------+-----------+----------------------+--------------+
+|Module Name            | RTL Object                                       | Inference | Size (Depth x Width) | Primitives   | 
++-----------------------+--------------------------------------------------+-----------+----------------------+--------------+
+|openmips_min_sopc__GC0 | uart_top0/regs/receiver/fifo_rx/rfifo/ram_reg    | Implied   | 16 x 8               | RAM32M x 2   | 
+|openmips_min_sopc__GC0 | uart_top0/regs/transmitter/fifo_tx/tfifo/ram_reg | Implied   | 16 x 8               | RAM32M x 2   | 
++-----------------------+--------------------------------------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |openmips_min_sopc__GC0          |           1|      6745|
+|2     |openmips__GB0_#REUSE#           |           1|         0|
+|3     |openmips__GB1_#REUSE#           |           1|         0|
+|4     |GraphicsController__GB0_#REUSE# |           1|         0|
+|5     |GraphicsController__GB1_#REUSE# |           1|         0|
+|6     |GraphicsController__GB2_#REUSE# |           1|         0|
++------+--------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Stitch Unchanged AreaOpt Partitions
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged AreaOpt Partitions : Time (s): cpu = 00:00:25 ; elapsed = 00:00:43 . Memory (MB): peak = 1333.934 ; gain = 763.738
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+------------------------+------------+----------+
+|      |RTL Partition           |Replication |Instances |
++------+------------------------+------------+----------+
+|1     |openmips_min_sopc__GC0  |           1|      6745|
+|2     |openmips__GB0           |           1|     12212|
+|3     |openmips__GB1           |           1|     11198|
+|4     |GraphicsController__GB0 |           1|       343|
+|5     |GraphicsController__GB1 |           1|      8161|
+|6     |GraphicsController__GB2 |           1|        47|
++------+------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'DDR2/Ram/Inst_DDR/ui_clk' to pin 'DDR2/Ram/Inst_DDR/bbstub_ui_clk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'DDR2/clk_1/clk_out1' to pin 'DDR2/clk_1/bbstub_clk_out1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'DDR2/clk_1/clk_out2' to pin 'DDR2/clk_1/bbstub_clk_out2/O'
+INFO: [Synth 8-5819] Moved 3 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:50 . Memory (MB): peak = 1333.934 ; gain = 763.738
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |openmips_min_sopc__GC0          |           1|      6745|
+|2     |openmips__GB0_#REUSE#           |           1|         0|
+|3     |openmips__GB1_#REUSE#           |           1|         0|
+|4     |GraphicsController__GB0_#REUSE# |           1|         0|
+|5     |GraphicsController__GB1_#REUSE# |           1|         0|
+|6     |GraphicsController__GB2_#REUSE# |           1|         0|
++------+--------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:51 . Memory (MB): peak = 1333.934 ; gain = 763.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++-----------------------+--------------------------------------------------+-----------+----------------------+--------------+
+|Module Name            | RTL Object                                       | Inference | Size (Depth x Width) | Primitives   | 
++-----------------------+--------------------------------------------------+-----------+----------------------+--------------+
+|openmips_min_sopc__GC0 | uart_top0/regs/receiver/fifo_rx/rfifo/ram_reg    | Implied   | 16 x 8               | RAM32M x 2   | 
+|openmips_min_sopc__GC0 | uart_top0/regs/transmitter/fifo_tx/tfifo/ram_reg | Implied   | 16 x 8               | RAM32M x 2   | 
++-----------------------+--------------------------------------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |openmips_min_sopc__GC0          |           1|      6629|
+|2     |openmips__GB0_#REUSE#           |           1|         0|
+|3     |openmips__GB1_#REUSE#           |           1|         0|
+|4     |GraphicsController__GB0_#REUSE# |           1|         0|
+|5     |GraphicsController__GB1_#REUSE# |           1|         0|
+|6     |GraphicsController__GB2_#REUSE# |           1|         0|
++------+--------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+Warning: IncrSyn: subsequent runs will still be incremental as the reference run was parallel and that data is reused
+INFO: [Synth 8-5966] Removing register instance (\flash_rom/read_count_reg[10] ) from module (openmips_min_sopc__GC0) as it has self-loop and (\flash_rom/read_count_reg[10]__0 ) is actual driver [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:94]
+INFO: [Synth 8-5966] Removing register instance (\flash_rom/read_count_reg[9] ) from module (openmips_min_sopc__GC0) as it has self-loop and (\flash_rom/read_count_reg[9]__0 ) is actual driver [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:94]
+INFO: [Synth 8-5966] Removing register instance (\flash_rom/read_count_reg[8] ) from module (openmips_min_sopc__GC0) as it has self-loop and (\flash_rom/read_count_reg[8]__0 ) is actual driver [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:94]
+INFO: [Synth 8-5966] Removing register instance (\flash_rom/read_count_reg[7] ) from module (openmips_min_sopc__GC0) as it has self-loop and (\flash_rom/read_count_reg[7]__0 ) is actual driver [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:94]
+INFO: [Synth 8-5966] Removing register instance (\flash_rom/read_count_reg[6] ) from module (openmips_min_sopc__GC0) as it has self-loop and (\flash_rom/read_count_reg[6]__0 ) is actual driver [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:94]
+INFO: [Synth 8-5966] Removing register instance (\flash_rom/read_count_reg[5] ) from module (openmips_min_sopc__GC0) as it has self-loop and (\flash_rom/read_count_reg[5]__0 ) is actual driver [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:94]
+INFO: [Synth 8-5966] Removing register instance (\flash_rom/read_count_reg[4] ) from module (openmips_min_sopc__GC0) as it has self-loop and (\flash_rom/read_count_reg[4]__0 ) is actual driver [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:94]
+INFO: [Synth 8-5966] Removing register instance (\flash_rom/read_count_reg[3] ) from module (openmips_min_sopc__GC0) as it has self-loop and (\flash_rom/read_count_reg[3]__0 ) is actual driver [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:94]
+INFO: [Synth 8-5966] Removing register instance (\flash_rom/read_count_reg[2] ) from module (openmips_min_sopc__GC0) as it has self-loop and (\flash_rom/read_count_reg[2]__0 ) is actual driver [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:94]
+INFO: [Synth 8-5966] Removing register instance (\flash_rom/read_count_reg[1] ) from module (openmips_min_sopc__GC0) as it has self-loop and (\flash_rom/read_count_reg[1]__0 ) is actual driver [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:94]
+INFO: [Synth 8-5966] Removing register instance (\flash_rom/read_count_reg[0] ) from module (openmips_min_sopc__GC0) as it has self-loop and (\flash_rom/read_count_reg[0]__0 ) is actual driver [E:/codehub/OpenMIPS_final/OpenMIPS.srcs/sources_1/new/flash_rom.v:94]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:52 . Memory (MB): peak = 1333.934 ; gain = 763.738
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |openmips_min_sopc__GC0          |           1|      3516|
+|2     |openmips__GB0_#REUSE#           |           1|         0|
+|3     |openmips__GB1_#REUSE#           |           1|         0|
+|4     |GraphicsController__GB0_#REUSE# |           1|         0|
+|5     |GraphicsController__GB1_#REUSE# |           1|         0|
+|6     |GraphicsController__GB2_#REUSE# |           1|         0|
++------+--------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Stitch Unchanged Partitions
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged Partitions : Time (s): cpu = 00:00:34 ; elapsed = 00:00:52 . Memory (MB): peak = 1333.934 ; gain = 763.738
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+------------------------+------------+----------+
+|      |RTL Partition           |Replication |Instances |
++------+------------------------+------------+----------+
+|1     |openmips_min_sopc__GC0  |           1|      3516|
+|2     |openmips__GB0           |           1|      5210|
+|3     |openmips__GB1           |           1|      5353|
+|4     |GraphicsController__GB0 |           1|       214|
+|5     |GraphicsController__GB1 |           1|      3145|
+|6     |GraphicsController__GB2 |           1|        21|
++------+------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin DDR2/p_r_inferred:in0 to constant 0
+WARNING: [Synth 8-3295] tying undriven pin DDR2/r_r_inferred:in0 to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:55 . Memory (MB): peak = 1333.934 ; gain = 763.738
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:55 . Memory (MB): peak = 1333.934 ; gain = 763.738
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:56 . Memory (MB): peak = 1333.934 ; gain = 763.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:56 . Memory (MB): peak = 1333.934 ; gain = 763.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:56 . Memory (MB): peak = 1333.934 ; gain = 763.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:56 . Memory (MB): peak = 1333.934 ; gain = 763.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
+|2     |mig_7series_0 |         1|
+|3     |blk_mem_gen_1 |         1|
+|4     |blk_mem_gen_0 |         1|
+|5     |rom0          |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |blk_mem_gen_0 |     1|
+|2     |blk_mem_gen_1 |     1|
+|3     |clk_wiz_0     |     1|
+|4     |mig_7series_0 |     1|
+|5     |rom0__1       |     1|
+|6     |BUFG          |    11|
+|7     |CARRY4        |   329|
+|8     |DSP48E1       |     4|
+|9     |LUT1          |   283|
+|10    |LUT2          |  1665|
+|11    |LUT3          |   677|
+|12    |LUT4          |   860|
+|13    |LUT5          |  1282|
+|14    |LUT6          |  3999|
+|15    |MUXF7         |   486|
+|16    |MUXF8         |    84|
+|17    |RAM32M        |    16|
+|18    |STARTUPE2     |     1|
+|19    |FDCE          |  1163|
+|20    |FDPE          |    38|
+|21    |FDRE          |  5855|
+|22    |FDSE          |    17|
+|23    |LD            |    76|
+|24    |LDC           |   296|
+|25    |IBUF          |    22|
+|26    |OBUF          |    38|
++------+--------------+------+
+
+Report Instance Areas: 
++------+------------------------+----------------------+------+
+|      |Instance                |Module                |Cells |
++------+------------------------+----------------------+------+
+|1     |top                     |                      | 17537|
+|2     |  DDR2                  |DDR2                  |   524|
+|3     |    Ram                 |Ram2Ddr               |   375|
+|4     |  GraphicsController    |GraphicsController    |  3383|
+|5     |    display             |vga1024x768           |   721|
+|6     |  flash_rom             |flash_rom             |   380|
+|7     |  gpio_top0             |gpio_top              |   330|
+|8     |  openmips0             |openmips              | 11127|
+|9     |    ctrl0               |ctrl                  |    32|
+|10    |    LLbit_reg0          |LLbit_reg             |     1|
+|11    |    cp0_reg0            |cp0_reg               |   638|
+|12    |    div0                |div                   |   441|
+|13    |    dwishbone_bus_if    |wishbone_bus_if       |   591|
+|14    |    ex0                 |ex                    |   329|
+|15    |    ex_mem0             |ex_mem                |  1159|
+|16    |    hilo_reg0           |hilo_reg              |    64|
+|17    |    id0                 |id                    |   113|
+|18    |    id_ex0              |id_ex                 |  1645|
+|19    |    if_id0              |if_id                 |   650|
+|20    |    iwishbone_bus_if    |wishbone_bus_if_41    |   427|
+|21    |    mem0                |mem                   |    76|
+|22    |    mem_wb0             |mem_wb                |   378|
+|23    |    pc_reg0             |pc_reg                |   218|
+|24    |    regfile1            |regfile               |    12|
+|25    |    tlb0                |tlb                   |  4353|
+|26    |  ps2_keyboard_driver   |ps2_keyboard_driver   |   152|
+|27    |  seg80                 |seg8                  |    39|
+|28    |  uart_top0             |uart_top              |   892|
+|29    |    regs                |uart_regs             |   700|
+|30    |      i_uart_sync_flops |uart_sync_flops       |     5|
+|31    |      receiver          |uart_receiver         |   397|
+|32    |        fifo_rx         |uart_rfifo            |   250|
+|33    |          rfifo         |raminfr_40            |    15|
+|34    |      transmitter       |uart_transmitter      |   104|
+|35    |        fifo_tx         |uart_tfifo            |    52|
+|36    |          tfifo         |raminfr               |    12|
+|37    |    wb_interface        |uart_wb               |   192|
+|38    |  wb_conmax_top0        |wb_conmax_top         |   581|
+|39    |    m0                  |wb_conmax_master_if   |     8|
+|40    |    m1                  |wb_conmax_master_if_0 |     7|
+|41    |    rf                  |wb_conmax_rf          |   470|
+|42    |    s0                  |wb_conmax_slave_if    |    13|
+|43    |      msel              |wb_conmax_msel_35     |    10|
+|44    |        arb0            |wb_conmax_arb_36      |     1|
+|45    |        arb1            |wb_conmax_arb_37      |     1|
+|46    |        arb2            |wb_conmax_arb_38      |     4|
+|47    |        arb3            |wb_conmax_arb_39      |     1|
+|48    |    s1                  |wb_conmax_slave_if_1  |    15|
+|49    |      msel              |wb_conmax_msel_30     |    12|
+|50    |        arb0            |wb_conmax_arb_31      |     1|
+|51    |        arb1            |wb_conmax_arb_32      |     1|
+|52    |        arb2            |wb_conmax_arb_33      |     6|
+|53    |        arb3            |wb_conmax_arb_34      |     1|
+|54    |    s15                 |wb_conmax_slave_if_2  |    13|
+|55    |      msel              |wb_conmax_msel_25     |    10|
+|56    |        arb0            |wb_conmax_arb_26      |     1|
+|57    |        arb1            |wb_conmax_arb_27      |     1|
+|58    |        arb2            |wb_conmax_arb_28      |     4|
+|59    |        arb3            |wb_conmax_arb_29      |     1|
+|60    |    s2                  |wb_conmax_slave_if_3  |    13|
+|61    |      msel              |wb_conmax_msel_20     |    10|
+|62    |        arb0            |wb_conmax_arb_21      |     1|
+|63    |        arb1            |wb_conmax_arb_22      |     1|
+|64    |        arb2            |wb_conmax_arb_23      |     4|
+|65    |        arb3            |wb_conmax_arb_24      |     1|
+|66    |    s3                  |wb_conmax_slave_if_4  |    15|
+|67    |      msel              |wb_conmax_msel_15     |    12|
+|68    |        arb0            |wb_conmax_arb_16      |     1|
+|69    |        arb1            |wb_conmax_arb_17      |     1|
+|70    |        arb2            |wb_conmax_arb_18      |     6|
+|71    |        arb3            |wb_conmax_arb_19      |     1|
+|72    |    s4                  |wb_conmax_slave_if_5  |    14|
+|73    |      msel              |wb_conmax_msel_10     |    11|
+|74    |        arb0            |wb_conmax_arb_11      |     1|
+|75    |        arb1            |wb_conmax_arb_12      |     1|
+|76    |        arb2            |wb_conmax_arb_13      |     5|
+|77    |        arb3            |wb_conmax_arb_14      |     1|
+|78    |    s5                  |wb_conmax_slave_if_6  |    13|
+|79    |      msel              |wb_conmax_msel        |    10|
+|80    |        arb0            |wb_conmax_arb         |     1|
+|81    |        arb1            |wb_conmax_arb_7       |     1|
+|82    |        arb2            |wb_conmax_arb_8       |     4|
+|83    |        arb3            |wb_conmax_arb_9       |     1|
++------+------------------------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:56 . Memory (MB): peak = 1333.934 ; gain = 763.738
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 102 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:47 . Memory (MB): peak = 1333.934 ; gain = 387.727
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:57 . Memory (MB): peak = 1333.934 ; gain = 763.738
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1292 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1333.934 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 388 instances were transformed.
+  LD => LDCE: 76 instances
+  LDC => LDCE: 296 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 16 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+330 Infos, 156 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:01:03 . Memory (MB): peak = 1333.934 ; gain = 1015.625
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1333.934 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/codehub/OpenMIPS_final/OpenMIPS.runs/synth_1/openmips_min_sopc.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file openmips_min_sopc_utilization_synth.rpt -pb openmips_min_sopc_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 13 08:23:31 2022...

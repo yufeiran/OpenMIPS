@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="8382000000fs"></ZoomStartTime>
-      <ZoomEndTime time="9258000001fs"></ZoomEndTime>
-      <Cursor1Time time="8795000000fs"></Cursor1Time>
+      <ZoomStartTime time="75317129629fs"></ZoomStartTime>
+      <ZoomEndTime time="106136574075fs"></ZoomEndTime>
+      <Cursor1Time time="92005000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="308"></NameColumnWidth>
-      <ValueColumnWidth column_width="344"></ValueColumnWidth>
+      <ValueColumnWidth column_width="195"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="16" />
+   <WVObjectSize size="17" />
    <wvobject fp_name="/openmips_min_sopc_tb/rst" type="logic">
       <obj_property name="ElementShortName">rst</obj_property>
       <obj_property name="ObjectShortName">rst</obj_property>
@@ -320,6 +320,7 @@
    <wvobject fp_name="group852" type="group">
       <obj_property name="label">cpu</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/clk" type="logic">
          <obj_property name="ElementShortName">clk</obj_property>
          <obj_property name="ObjectShortName">clk</obj_property>
@@ -940,21 +941,633 @@
          <obj_property name="ElementShortName">rom_addr_o</obj_property>
          <obj_property name="ObjectShortName">rom_addr_o</obj_property>
       </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/bus_pc" type="array">
+         <obj_property name="ElementShortName">bus_pc[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bus_pc[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/bus_ram_addr_o" type="array">
+         <obj_property name="ElementShortName">bus_ram_addr_o[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bus_ram_addr_o[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/pc" type="array">
+         <obj_property name="ElementShortName">pc[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pc[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="group678" type="group">
+         <obj_property name="label">phyTObusDATA</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/dphy_bus_addr_conv/rst_n" type="logic">
+            <obj_property name="ElementShortName">rst_n</obj_property>
+            <obj_property name="ObjectShortName">rst_n</obj_property>
+         </wvobject>
+         <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/dphy_bus_addr_conv/phy_addr_i" type="array">
+            <obj_property name="ElementShortName">phy_addr_i[31:0]</obj_property>
+            <obj_property name="ObjectShortName">phy_addr_i[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/dphy_bus_addr_conv/bus_addr_o" type="array">
+            <obj_property name="ElementShortName">bus_addr_o[31:0]</obj_property>
+            <obj_property name="ObjectShortName">bus_addr_o[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/dphy_bus_addr_conv/ddrram_index" type="array">
+            <obj_property name="ElementShortName">ddrram_index[31:0]</obj_property>
+            <obj_property name="ObjectShortName">ddrram_index[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/dphy_bus_addr_conv/uart_index" type="array">
+            <obj_property name="ElementShortName">uart_index[31:0]</obj_property>
+            <obj_property name="ObjectShortName">uart_index[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/dphy_bus_addr_conv/gpio_index" type="array">
+            <obj_property name="ElementShortName">gpio_index[31:0]</obj_property>
+            <obj_property name="ObjectShortName">gpio_index[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/dphy_bus_addr_conv/flash_index" type="array">
+            <obj_property name="ElementShortName">flash_index[31:0]</obj_property>
+            <obj_property name="ObjectShortName">flash_index[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/dphy_bus_addr_conv/vga_index" type="array">
+            <obj_property name="ElementShortName">vga_index[31:0]</obj_property>
+            <obj_property name="ObjectShortName">vga_index[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/dphy_bus_addr_conv/keyboard_index" type="array">
+            <obj_property name="ElementShortName">keyboard_index[31:0]</obj_property>
+            <obj_property name="ObjectShortName">keyboard_index[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group668" type="group">
+         <obj_property name="label">phyTObusINST</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/iphy_bus_addr_conv/rst_n" type="logic">
+            <obj_property name="ElementShortName">rst_n</obj_property>
+            <obj_property name="ObjectShortName">rst_n</obj_property>
+         </wvobject>
+         <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/iphy_bus_addr_conv/phy_addr_i" type="array">
+            <obj_property name="ElementShortName">phy_addr_i[31:0]</obj_property>
+            <obj_property name="ObjectShortName">phy_addr_i[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/iphy_bus_addr_conv/bus_addr_o" type="array">
+            <obj_property name="ElementShortName">bus_addr_o[31:0]</obj_property>
+            <obj_property name="ObjectShortName">bus_addr_o[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/iphy_bus_addr_conv/ddrram_index" type="array">
+            <obj_property name="ElementShortName">ddrram_index[31:0]</obj_property>
+            <obj_property name="ObjectShortName">ddrram_index[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/iphy_bus_addr_conv/uart_index" type="array">
+            <obj_property name="ElementShortName">uart_index[31:0]</obj_property>
+            <obj_property name="ObjectShortName">uart_index[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/iphy_bus_addr_conv/gpio_index" type="array">
+            <obj_property name="ElementShortName">gpio_index[31:0]</obj_property>
+            <obj_property name="ObjectShortName">gpio_index[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/iphy_bus_addr_conv/flash_index" type="array">
+            <obj_property name="ElementShortName">flash_index[31:0]</obj_property>
+            <obj_property name="ObjectShortName">flash_index[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/iphy_bus_addr_conv/vga_index" type="array">
+            <obj_property name="ElementShortName">vga_index[31:0]</obj_property>
+            <obj_property name="ObjectShortName">vga_index[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/openmips0/iphy_bus_addr_conv/keyboard_index" type="array">
+            <obj_property name="ElementShortName">keyboard_index[31:0]</obj_property>
+            <obj_property name="ObjectShortName">keyboard_index[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
    </wvobject>
    <wvobject fp_name="group1007" type="group">
       <obj_property name="label">ROM</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/wb_clk_i" type="logic">
+         <obj_property name="ElementShortName">wb_clk_i</obj_property>
+         <obj_property name="ObjectShortName">wb_clk_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/wb_rst_i" type="logic">
+         <obj_property name="ElementShortName">wb_rst_i</obj_property>
+         <obj_property name="ObjectShortName">wb_rst_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/wb_cyc_i" type="logic">
+         <obj_property name="ElementShortName">wb_cyc_i</obj_property>
+         <obj_property name="ObjectShortName">wb_cyc_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/wb_stb_i" type="logic">
+         <obj_property name="ElementShortName">wb_stb_i</obj_property>
+         <obj_property name="ObjectShortName">wb_stb_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/wb_we_i" type="logic">
+         <obj_property name="ElementShortName">wb_we_i</obj_property>
+         <obj_property name="ObjectShortName">wb_we_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/wb_sel_i" type="array">
+         <obj_property name="ElementShortName">wb_sel_i[3:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_sel_i[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/wb_adr_i" type="array">
+         <obj_property name="ElementShortName">wb_adr_i[23:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_adr_i[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/wb_dat_i" type="array">
+         <obj_property name="ElementShortName">wb_dat_i[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat_i[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/wb_dat_o" type="array">
+         <obj_property name="ElementShortName">wb_dat_o[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat_o[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/wb_ack_o" type="logic">
+         <obj_property name="ElementShortName">wb_ack_o</obj_property>
+         <obj_property name="ObjectShortName">wb_ack_o</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/flash_continue" type="logic">
+         <obj_property name="ElementShortName">flash_continue</obj_property>
+         <obj_property name="ObjectShortName">flash_continue</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/cs_n" type="logic">
+         <obj_property name="ElementShortName">cs_n</obj_property>
+         <obj_property name="ObjectShortName">cs_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/sdi" type="logic">
+         <obj_property name="ElementShortName">sdi</obj_property>
+         <obj_property name="ObjectShortName">sdi</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/sdo" type="logic">
+         <obj_property name="ElementShortName">sdo</obj_property>
+         <obj_property name="ObjectShortName">sdo</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/wp_n" type="logic">
+         <obj_property name="ElementShortName">wp_n</obj_property>
+         <obj_property name="ObjectShortName">wp_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/hld_n" type="logic">
+         <obj_property name="ElementShortName">hld_n</obj_property>
+         <obj_property name="ObjectShortName">hld_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/init_count" type="array">
+         <obj_property name="ElementShortName">init_count[4:0]</obj_property>
+         <obj_property name="ObjectShortName">init_count[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/sck" type="logic">
+         <obj_property name="ElementShortName">sck</obj_property>
+         <obj_property name="ObjectShortName">sck</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/state" type="array">
+         <obj_property name="ElementShortName">state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/next_state" type="array">
+         <obj_property name="ElementShortName">next_state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">next_state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/instruction" type="array">
+         <obj_property name="ElementShortName">instruction[7:0]</obj_property>
+         <obj_property name="ObjectShortName">instruction[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/datain_shift" type="array">
+         <obj_property name="ElementShortName">datain_shift[7:0]</obj_property>
+         <obj_property name="ObjectShortName">datain_shift[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/datain" type="array">
+         <obj_property name="ElementShortName">datain[7:0]</obj_property>
+         <obj_property name="ObjectShortName">datain[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/dataout" type="array">
+         <obj_property name="ElementShortName">dataout[7:0]</obj_property>
+         <obj_property name="ObjectShortName">dataout[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/sck_en" type="logic">
+         <obj_property name="ElementShortName">sck_en</obj_property>
+         <obj_property name="ObjectShortName">sck_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/sck_en_d" type="array">
+         <obj_property name="ElementShortName">sck_en_d[2:0]</obj_property>
+         <obj_property name="ObjectShortName">sck_en_d[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/read_count" type="array">
+         <obj_property name="ElementShortName">read_count[10:0]</obj_property>
+         <obj_property name="ObjectShortName">read_count[10:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/cs_n_d" type="array">
+         <obj_property name="ElementShortName">cs_n_d[2:0]</obj_property>
+         <obj_property name="ObjectShortName">cs_n_d[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/temp" type="logic">
+         <obj_property name="ElementShortName">temp</obj_property>
+         <obj_property name="ObjectShortName">temp</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/sdo_count" type="array">
+         <obj_property name="ElementShortName">sdo_count[3:0]</obj_property>
+         <obj_property name="ObjectShortName">sdo_count[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/page_count" type="array">
+         <obj_property name="ElementShortName">page_count[15:0]</obj_property>
+         <obj_property name="ObjectShortName">page_count[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/wait_count" type="array">
+         <obj_property name="ElementShortName">wait_count[7:0]</obj_property>
+         <obj_property name="ObjectShortName">wait_count[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/addr" type="array">
+         <obj_property name="ElementShortName">addr[23:0]</obj_property>
+         <obj_property name="ObjectShortName">addr[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/wrh_rdl" type="logic">
+         <obj_property name="ElementShortName">wrh_rdl</obj_property>
+         <obj_property name="ObjectShortName">wrh_rdl</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/addr_req" type="logic">
+         <obj_property name="ElementShortName">addr_req</obj_property>
+         <obj_property name="ObjectShortName">addr_req</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/wr_cnt" type="array">
+         <obj_property name="ElementShortName">wr_cnt[15:0]</obj_property>
+         <obj_property name="ObjectShortName">wr_cnt[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/rd_cnt" type="array">
+         <obj_property name="ElementShortName">rd_cnt[15:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_cnt[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/read_data" type="array">
+         <obj_property name="ElementShortName">read_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">read_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/wb_dat_o_w" type="array">
+         <obj_property name="ElementShortName">wb_dat_o_w[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat_o_w[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/addr_rom" type="array">
+         <obj_property name="ElementShortName">addr_rom[14:0]</obj_property>
+         <obj_property name="ObjectShortName">addr_rom[14:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/IDLE" type="array">
+         <obj_property name="ElementShortName">IDLE[4:0]</obj_property>
+         <obj_property name="ObjectShortName">IDLE[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/START" type="array">
+         <obj_property name="ElementShortName">START[4:0]</obj_property>
+         <obj_property name="ObjectShortName">START[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/INST_OUT" type="array">
+         <obj_property name="ElementShortName">INST_OUT[4:0]</obj_property>
+         <obj_property name="ObjectShortName">INST_OUT[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/ADDR1_OUT" type="array">
+         <obj_property name="ElementShortName">ADDR1_OUT[4:0]</obj_property>
+         <obj_property name="ObjectShortName">ADDR1_OUT[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/ADDR2_OUT" type="array">
+         <obj_property name="ElementShortName">ADDR2_OUT[4:0]</obj_property>
+         <obj_property name="ObjectShortName">ADDR2_OUT[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/ADDR3_OUT" type="array">
+         <obj_property name="ElementShortName">ADDR3_OUT[4:0]</obj_property>
+         <obj_property name="ObjectShortName">ADDR3_OUT[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/WRITE_DATA" type="array">
+         <obj_property name="ElementShortName">WRITE_DATA[4:0]</obj_property>
+         <obj_property name="ObjectShortName">WRITE_DATA[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/READ_DATA" type="array">
+         <obj_property name="ElementShortName">READ_DATA[4:0]</obj_property>
+         <obj_property name="ObjectShortName">READ_DATA[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/READ_DATA1" type="array">
+         <obj_property name="ElementShortName">READ_DATA1[4:0]</obj_property>
+         <obj_property name="ObjectShortName">READ_DATA1[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/READ_DATA2" type="array">
+         <obj_property name="ElementShortName">READ_DATA2[4:0]</obj_property>
+         <obj_property name="ObjectShortName">READ_DATA2[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/READ_DATA3" type="array">
+         <obj_property name="ElementShortName">READ_DATA3[4:0]</obj_property>
+         <obj_property name="ObjectShortName">READ_DATA3[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/READ_DATA4" type="array">
+         <obj_property name="ElementShortName">READ_DATA4[4:0]</obj_property>
+         <obj_property name="ObjectShortName">READ_DATA4[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/READ_DATA5" type="array">
+         <obj_property name="ElementShortName">READ_DATA5[4:0]</obj_property>
+         <obj_property name="ObjectShortName">READ_DATA5[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/WAITING" type="array">
+         <obj_property name="ElementShortName">WAITING[4:0]</obj_property>
+         <obj_property name="ObjectShortName">WAITING[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/flash_rom/ENDING" type="array">
+         <obj_property name="ElementShortName">ENDING[4:0]</obj_property>
+         <obj_property name="ObjectShortName">ENDING[4:0]</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject fp_name="group1021" type="group">
       <obj_property name="label">RAM</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/wb_clk_i" type="logic">
+         <obj_property name="ElementShortName">wb_clk_i</obj_property>
+         <obj_property name="ObjectShortName">wb_clk_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/wb_rst_i" type="logic">
+         <obj_property name="ElementShortName">wb_rst_i</obj_property>
+         <obj_property name="ObjectShortName">wb_rst_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/wb_cyc_i" type="logic">
+         <obj_property name="ElementShortName">wb_cyc_i</obj_property>
+         <obj_property name="ObjectShortName">wb_cyc_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/wb_stb_i" type="logic">
+         <obj_property name="ElementShortName">wb_stb_i</obj_property>
+         <obj_property name="ObjectShortName">wb_stb_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/wb_we_i" type="logic">
+         <obj_property name="ElementShortName">wb_we_i</obj_property>
+         <obj_property name="ObjectShortName">wb_we_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/wb_sel_i" type="array">
+         <obj_property name="ElementShortName">wb_sel_i[3:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_sel_i[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/wb_adr_i" type="array">
+         <obj_property name="ElementShortName">wb_adr_i[26:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_adr_i[26:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/wb_dat_i" type="array">
+         <obj_property name="ElementShortName">wb_dat_i[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat_i[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/wb_dat_o" type="array">
+         <obj_property name="ElementShortName">wb_dat_o[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat_o[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/wb_ack_o" type="logic">
+         <obj_property name="ElementShortName">wb_ack_o</obj_property>
+         <obj_property name="ObjectShortName">wb_ack_o</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/init_calib_complete" type="logic">
+         <obj_property name="ElementShortName">init_calib_complete</obj_property>
+         <obj_property name="ObjectShortName">init_calib_complete</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/ddr2_addr" type="array">
+         <obj_property name="ElementShortName">ddr2_addr[12:0]</obj_property>
+         <obj_property name="ObjectShortName">ddr2_addr[12:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/ddr2_ba" type="array">
+         <obj_property name="ElementShortName">ddr2_ba[2:0]</obj_property>
+         <obj_property name="ObjectShortName">ddr2_ba[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/ddr2_ras_n" type="logic">
+         <obj_property name="ElementShortName">ddr2_ras_n</obj_property>
+         <obj_property name="ObjectShortName">ddr2_ras_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/ddr2_cas_n" type="logic">
+         <obj_property name="ElementShortName">ddr2_cas_n</obj_property>
+         <obj_property name="ObjectShortName">ddr2_cas_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/ddr2_we_n" type="logic">
+         <obj_property name="ElementShortName">ddr2_we_n</obj_property>
+         <obj_property name="ObjectShortName">ddr2_we_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/ddr2_ck_p" type="logic">
+         <obj_property name="ElementShortName">ddr2_ck_p</obj_property>
+         <obj_property name="ObjectShortName">ddr2_ck_p</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/ddr2_ck_n" type="logic">
+         <obj_property name="ElementShortName">ddr2_ck_n</obj_property>
+         <obj_property name="ObjectShortName">ddr2_ck_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/ddr2_cke" type="logic">
+         <obj_property name="ElementShortName">ddr2_cke</obj_property>
+         <obj_property name="ObjectShortName">ddr2_cke</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/ddr2_cs_n" type="logic">
+         <obj_property name="ElementShortName">ddr2_cs_n</obj_property>
+         <obj_property name="ObjectShortName">ddr2_cs_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/ddr2_dm" type="array">
+         <obj_property name="ElementShortName">ddr2_dm[1:0]</obj_property>
+         <obj_property name="ObjectShortName">ddr2_dm[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/ddr2_odt" type="logic">
+         <obj_property name="ElementShortName">ddr2_odt</obj_property>
+         <obj_property name="ObjectShortName">ddr2_odt</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/ddr2_dq" type="array">
+         <obj_property name="ElementShortName">ddr2_dq[15:0]</obj_property>
+         <obj_property name="ObjectShortName">ddr2_dq[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/ddr2_dqs_p" type="array">
+         <obj_property name="ElementShortName">ddr2_dqs_p[1:0]</obj_property>
+         <obj_property name="ObjectShortName">ddr2_dqs_p[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/ddr2_dqs_n" type="array">
+         <obj_property name="ElementShortName">ddr2_dqs_n[1:0]</obj_property>
+         <obj_property name="ObjectShortName">ddr2_dqs_n[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/max_block" type="array">
+         <obj_property name="ElementShortName">max_block[22:0]</obj_property>
+         <obj_property name="ObjectShortName">max_block[22:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/timercnt" type="array">
+         <obj_property name="ElementShortName">timercnt[26:0]</obj_property>
+         <obj_property name="ObjectShortName">timercnt[26:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/timerval" type="array">
+         <obj_property name="ElementShortName">timerval[11:0]</obj_property>
+         <obj_property name="ObjectShortName">timerval[11:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/set_max" type="logic">
+         <obj_property name="ElementShortName">set_max</obj_property>
+         <obj_property name="ObjectShortName">set_max</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/reset_max" type="logic">
+         <obj_property name="ElementShortName">reset_max</obj_property>
+         <obj_property name="ObjectShortName">reset_max</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/p" type="logic">
+         <obj_property name="ElementShortName">p</obj_property>
+         <obj_property name="ObjectShortName">p</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/r" type="logic">
+         <obj_property name="ElementShortName">r</obj_property>
+         <obj_property name="ObjectShortName">r</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/p_r" type="logic">
+         <obj_property name="ElementShortName">p_r</obj_property>
+         <obj_property name="ObjectShortName">p_r</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/r_r" type="logic">
+         <obj_property name="ElementShortName">r_r</obj_property>
+         <obj_property name="ObjectShortName">r_r</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/del_mem" type="logic">
+         <obj_property name="ElementShortName">del_mem</obj_property>
+         <obj_property name="ObjectShortName">del_mem</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/delete" type="logic">
+         <obj_property name="ElementShortName">delete</obj_property>
+         <obj_property name="ObjectShortName">delete</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/delete_bank" type="array">
+         <obj_property name="ElementShortName">delete_bank[2:0]</obj_property>
+         <obj_property name="ObjectShortName">delete_bank[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/mem_bank" type="array">
+         <obj_property name="ElementShortName">mem_bank[2:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_bank[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/write_zero" type="logic">
+         <obj_property name="ElementShortName">write_zero</obj_property>
+         <obj_property name="ObjectShortName">write_zero</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/current_block" type="array">
+         <obj_property name="ElementShortName">current_block[22:0]</obj_property>
+         <obj_property name="ObjectShortName">current_block[22:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/buttons_db" type="array">
+         <obj_property name="ElementShortName">buttons_db[3:0]</obj_property>
+         <obj_property name="ObjectShortName">buttons_db[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/active" type="array">
+         <obj_property name="ElementShortName">active[7:0]</obj_property>
+         <obj_property name="ObjectShortName">active[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/current_bank" type="array">
+         <obj_property name="ElementShortName">current_bank[2:0]</obj_property>
+         <obj_property name="ObjectShortName">current_bank[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/mem_a_w" type="array">
+         <obj_property name="ElementShortName">mem_a_w[26:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_a_w[26:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/mem_a" type="array">
+         <obj_property name="ElementShortName">mem_a[26:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_a[26:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/mem_dq_i" type="array">
+         <obj_property name="ElementShortName">mem_dq_i[31:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_dq_i[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/mem_dq_i_w" type="array">
+         <obj_property name="ElementShortName">mem_dq_i_w[31:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_dq_i_w[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/mem_dq_o" type="array">
+         <obj_property name="ElementShortName">mem_dq_o[31:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_dq_o[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/mem_cen" type="logic">
+         <obj_property name="ElementShortName">mem_cen</obj_property>
+         <obj_property name="ObjectShortName">mem_cen</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/mem_oen" type="logic">
+         <obj_property name="ElementShortName">mem_oen</obj_property>
+         <obj_property name="ObjectShortName">mem_oen</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/mem_wen" type="logic">
+         <obj_property name="ElementShortName">mem_wen</obj_property>
+         <obj_property name="ObjectShortName">mem_wen</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/mem_cen_w" type="logic">
+         <obj_property name="ElementShortName">mem_cen_w</obj_property>
+         <obj_property name="ObjectShortName">mem_cen_w</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/mem_oen_w" type="logic">
+         <obj_property name="ElementShortName">mem_oen_w</obj_property>
+         <obj_property name="ObjectShortName">mem_oen_w</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/mem_wen_w" type="logic">
+         <obj_property name="ElementShortName">mem_wen_w</obj_property>
+         <obj_property name="ObjectShortName">mem_wen_w</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/mem_ub" type="logic">
+         <obj_property name="ElementShortName">mem_ub</obj_property>
+         <obj_property name="ObjectShortName">mem_ub</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/mem_lb" type="logic">
+         <obj_property name="ElementShortName">mem_lb</obj_property>
+         <obj_property name="ObjectShortName">mem_lb</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/mem_sel" type="array">
+         <obj_property name="ElementShortName">mem_sel[3:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_sel[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/chipTemp" type="array">
+         <obj_property name="ElementShortName">chipTemp[15:0]</obj_property>
+         <obj_property name="ObjectShortName">chipTemp[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/data_flag" type="logic">
+         <obj_property name="ElementShortName">data_flag</obj_property>
+         <obj_property name="ObjectShortName">data_flag</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/data_ready" type="logic">
+         <obj_property name="ElementShortName">data_ready</obj_property>
+         <obj_property name="ObjectShortName">data_ready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/mix_data" type="logic">
+         <obj_property name="ElementShortName">mix_data</obj_property>
+         <obj_property name="ObjectShortName">mix_data</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/block44KHz" type="array">
+         <obj_property name="ElementShortName">block44KHz[22:0]</obj_property>
+         <obj_property name="ObjectShortName">block44KHz[22:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/init_calib_complete_w" type="logic">
+         <obj_property name="ElementShortName">init_calib_complete_w</obj_property>
+         <obj_property name="ObjectShortName">init_calib_complete_w</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/state" type="array">
+         <obj_property name="ElementShortName">state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/next_state" type="array">
+         <obj_property name="ElementShortName">next_state[4:0]</obj_property>
+         <obj_property name="ObjectShortName">next_state[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/wait_count" type="array">
+         <obj_property name="ElementShortName">wait_count[15:0]</obj_property>
+         <obj_property name="ObjectShortName">wait_count[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/clk_out_100MHZ" type="logic">
+         <obj_property name="ElementShortName">clk_out_100MHZ</obj_property>
+         <obj_property name="ObjectShortName">clk_out_100MHZ</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/clk_out2_200MHZ" type="logic">
+         <obj_property name="ElementShortName">clk_out2_200MHZ</obj_property>
+         <obj_property name="ObjectShortName">clk_out2_200MHZ</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/tenhz" type="array">
+         <obj_property name="ElementShortName">tenhz[31:0]</obj_property>
+         <obj_property name="ObjectShortName">tenhz[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/IDLE" type="array">
+         <obj_property name="ElementShortName">IDLE[4:0]</obj_property>
+         <obj_property name="ObjectShortName">IDLE[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/START" type="array">
+         <obj_property name="ElementShortName">START[4:0]</obj_property>
+         <obj_property name="ObjectShortName">START[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/WRITE" type="array">
+         <obj_property name="ElementShortName">WRITE[4:0]</obj_property>
+         <obj_property name="ObjectShortName">WRITE[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/READ" type="array">
+         <obj_property name="ElementShortName">READ[4:0]</obj_property>
+         <obj_property name="ObjectShortName">READ[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/WAIT" type="array">
+         <obj_property name="ElementShortName">WAIT[4:0]</obj_property>
+         <obj_property name="ObjectShortName">WAIT[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/ENDING" type="array">
+         <obj_property name="ElementShortName">ENDING[4:0]</obj_property>
+         <obj_property name="ObjectShortName">ENDING[4:0]</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject fp_name="group319" type="group">
       <obj_property name="label">CG</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/GraphicsController/wb_clk_i" type="logic">
          <obj_property name="ElementShortName">wb_clk_i</obj_property>
          <obj_property name="ObjectShortName">wb_clk_i</obj_property>
@@ -1962,6 +2575,167 @@
       <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/DDR2/ENDING" type="array">
          <obj_property name="ElementShortName">ENDING[4:0]</obj_property>
          <obj_property name="ObjectShortName">ENDING[4:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group643" type="group">
+      <obj_property name="label">keyboard</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/clk_in" type="logic">
+         <obj_property name="ElementShortName">clk_in</obj_property>
+         <obj_property name="ObjectShortName">clk_in</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/rst_n" type="logic">
+         <obj_property name="ElementShortName">rst_n</obj_property>
+         <obj_property name="ObjectShortName">rst_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/read" type="logic">
+         <obj_property name="ElementShortName">read</obj_property>
+         <obj_property name="ObjectShortName">read</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/ps2k_clk" type="logic">
+         <obj_property name="ElementShortName">ps2k_clk</obj_property>
+         <obj_property name="ObjectShortName">ps2k_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/ps2k_data" type="logic">
+         <obj_property name="ElementShortName">ps2k_data</obj_property>
+         <obj_property name="ObjectShortName">ps2k_data</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/ps2_byte" type="array">
+         <obj_property name="ElementShortName">ps2_byte[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ps2_byte[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/ps2_state" type="logic">
+         <obj_property name="ElementShortName">ps2_state</obj_property>
+         <obj_property name="ObjectShortName">ps2_state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/sm_bit" type="array">
+         <obj_property name="ElementShortName">sm_bit[1:0]</obj_property>
+         <obj_property name="ObjectShortName">sm_bit[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/sm_seg" type="array">
+         <obj_property name="ElementShortName">sm_seg[7:0]</obj_property>
+         <obj_property name="ObjectShortName">sm_seg[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/int" type="logic">
+         <obj_property name="ElementShortName">int</obj_property>
+         <obj_property name="ObjectShortName">int</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/wb_cyc_i" type="logic">
+         <obj_property name="ElementShortName">wb_cyc_i</obj_property>
+         <obj_property name="ObjectShortName">wb_cyc_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/wb_stb_i" type="logic">
+         <obj_property name="ElementShortName">wb_stb_i</obj_property>
+         <obj_property name="ObjectShortName">wb_stb_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/wb_we_i" type="logic">
+         <obj_property name="ElementShortName">wb_we_i</obj_property>
+         <obj_property name="ObjectShortName">wb_we_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/wb_sel_i" type="array">
+         <obj_property name="ElementShortName">wb_sel_i[3:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_sel_i[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/wb_adr_i" type="array">
+         <obj_property name="ElementShortName">wb_adr_i[16:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_adr_i[16:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/wb_dat_i" type="array">
+         <obj_property name="ElementShortName">wb_dat_i[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat_i[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/wb_dat_o" type="array">
+         <obj_property name="ElementShortName">wb_dat_o[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wb_dat_o[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/wb_ack_o" type="logic">
+         <obj_property name="ElementShortName">wb_ack_o</obj_property>
+         <obj_property name="ObjectShortName">wb_ack_o</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/ps2_asci" type="array">
+         <obj_property name="ElementShortName">ps2_asci[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ps2_asci[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/sm_seg_" type="array">
+         <obj_property name="ElementShortName">sm_seg_[7:0]</obj_property>
+         <obj_property name="ObjectShortName">sm_seg_[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/bus_use" type="logic">
+         <obj_property name="ElementShortName">bus_use</obj_property>
+         <obj_property name="ObjectShortName">bus_use</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/readflag" type="logic">
+         <obj_property name="ElementShortName">readflag</obj_property>
+         <obj_property name="ObjectShortName">readflag</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/int_r" type="logic">
+         <obj_property name="ElementShortName">int_r</obj_property>
+         <obj_property name="ObjectShortName">int_r</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/count" type="logic">
+         <obj_property name="ElementShortName">count</obj_property>
+         <obj_property name="ObjectShortName">count</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/state" type="array">
+         <obj_property name="ElementShortName">state[1:0]</obj_property>
+         <obj_property name="ObjectShortName">state[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/ps2k_clk_r0" type="logic">
+         <obj_property name="ElementShortName">ps2k_clk_r0</obj_property>
+         <obj_property name="ObjectShortName">ps2k_clk_r0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/ps2k_clk_r1" type="logic">
+         <obj_property name="ElementShortName">ps2k_clk_r1</obj_property>
+         <obj_property name="ObjectShortName">ps2k_clk_r1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/ps2k_clk_r2" type="logic">
+         <obj_property name="ElementShortName">ps2k_clk_r2</obj_property>
+         <obj_property name="ObjectShortName">ps2k_clk_r2</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/neg_ps2k_clk" type="logic">
+         <obj_property name="ElementShortName">neg_ps2k_clk</obj_property>
+         <obj_property name="ObjectShortName">neg_ps2k_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/ps2_byte_r" type="array">
+         <obj_property name="ElementShortName">ps2_byte_r[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ps2_byte_r[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/temp_data" type="array">
+         <obj_property name="ElementShortName">temp_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">temp_data[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/num" type="array">
+         <obj_property name="ElementShortName">num[3:0]</obj_property>
+         <obj_property name="ObjectShortName">num[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/key_f0" type="logic">
+         <obj_property name="ElementShortName">key_f0</obj_property>
+         <obj_property name="ObjectShortName">key_f0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/ps2_state_r" type="logic">
+         <obj_property name="ElementShortName">ps2_state_r</obj_property>
+         <obj_property name="ObjectShortName">ps2_state_r</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/clk3" type="logic">
+         <obj_property name="ElementShortName">clk3</obj_property>
+         <obj_property name="ObjectShortName">clk3</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/count3" type="array">
+         <obj_property name="ElementShortName">count3[16:0]</obj_property>
+         <obj_property name="ObjectShortName">count3[16:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/Num" type="array">
+         <obj_property name="ElementShortName">Num[3:0]</obj_property>
+         <obj_property name="ObjectShortName">Num[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/openmips_min_sopc_tb/openmips_min_sopc0/ps2_keyboard_driver/N2" type="array">
+         <obj_property name="ElementShortName">N2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">N2[31:0]</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>

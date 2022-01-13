@@ -92,3 +92,39 @@ openmips_min_sopc_tb.ddr2_model.cmd_task: at time 17635485.0 ps INFO: Refresh
 openmips_min_sopc_tb.ddr2_model.cmd_task: at time 19368819.0 ps INFO: Refresh  
 openmips_min_sopc_tb.ddr2_model.cmd_task: at time 21102152.0 ps INFO: Refresh  
 openmips_min_sopc_tb.ddr2_model.cmd_task: at time 22835485.0 ps INFO: Refresh  
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 24568819.0 ps INFO: Load Mode 0
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 24568819.0 ps INFO: Load Mode 0 Burst Length =  8
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 24568819.0 ps INFO: Load Mode 0 Burst Order = Sequential
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 24568819.0 ps INFO: Load Mode 0 CAS Latency =           5
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 24568819.0 ps INFO: Load Mode 0 Test Mode = Normal
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 24568819.0 ps INFO: Load Mode 0 DLL Reset = Normal
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 24568819.0 ps INFO: Load Mode 0 Write Recovery =           5
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 24568819.0 ps INFO: Load Mode 0 Power Down Mode = Fast Exit
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 26302152.0 ps INFO: Load Mode 0
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 26302152.0 ps INFO: Load Mode 0 Burst Length =  8
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 26302152.0 ps INFO: Load Mode 0 Burst Order = Sequential
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 26302152.0 ps INFO: Load Mode 0 CAS Latency =           5
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 26302152.0 ps INFO: Load Mode 0 Test Mode = Normal
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 26302152.0 ps INFO: Load Mode 0 DLL Reset = Normal
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 26302152.0 ps INFO: Load Mode 0 Write Recovery =           5
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 26302152.0 ps INFO: Load Mode 0 Power Down Mode = Fast Exit
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 28035485.0 ps INFO: Load Mode 1
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 28035485.0 ps INFO: Load Mode 1 DLL Enable = Enabled
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 28035485.0 ps INFO: Load Mode 1 Output Drive Strength = Full
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 28035485.0 ps INFO: Load Mode 1 ODT Rtt = 50 Ohm
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 28035485.0 ps INFO: Load Mode 1 Additive Latency =           0
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 28035485.0 ps INFO: Load Mode 1 OCD Program = OCD Default
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 28035485.0 ps INFO: Load Mode 1 DQS_N Enable = Enabled
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 28035485.0 ps INFO: Load Mode 1 RDQS Enable = Disabled
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 28035485.0 ps INFO: Load Mode 1 Output Enable = Enabled
+PHY_INIT: Memory Initialization completed at 29681766.0 ps
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 29768819.0 ps INFO: Load Mode 1
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 29768819.0 ps INFO: Load Mode 1 DLL Enable = Enabled
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 29768819.0 ps INFO: Load Mode 1 Output Drive Strength = Full
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 29768819.0 ps INFO: Load Mode 1 ODT Rtt = 50 Ohm
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 29768819.0 ps INFO: Load Mode 1 Additive Latency =           0
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 29768819.0 ps INFO: Load Mode 1 OCD Program = OCD Exit
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 29768819.0 ps INFO: Load Mode 1 DQS_N Enable = Enabled
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 29768819.0 ps INFO: Load Mode 1 RDQS Enable = Disabled
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 29768819.0 ps INFO: Load Mode 1 Output Enable = Enabled
+openmips_min_sopc_tb.ddr2_model.cmd_task: at time 29768819.0 ps INFO: Initialization Sequence is complete

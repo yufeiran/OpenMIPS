@@ -1,0 +1,36 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|                clk_pll_i |              sys_clk_pin |                                                                                   DDR2/wb_dat_o_reg[23]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                    DDR2/wb_dat_o_reg[9]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                   DDR2/wb_dat_o_reg[10]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                   DDR2/wb_dat_o_reg[22]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                   DDR2/wb_dat_o_reg[11]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                    DDR2/wb_dat_o_reg[8]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                   DDR2/wb_dat_o_reg[27]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                    DDR2/wb_dat_o_reg[3]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                   DDR2/wb_dat_o_reg[26]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                    DDR2/wb_dat_o_reg[2]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                    DDR2/wb_dat_o_reg[1]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                   DDR2/wb_dat_o_reg[17]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                   DDR2/wb_dat_o_reg[18]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                   DDR2/wb_dat_o_reg[24]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                   DDR2/wb_dat_o_reg[19]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                   DDR2/wb_dat_o_reg[16]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                   DDR2/wb_dat_o_reg[31]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                   DDR2/wb_dat_o_reg[15]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                   DDR2/wb_dat_o_reg[14]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                   DDR2/wb_dat_o_reg[20]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                    DDR2/wb_dat_o_reg[0]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                    DDR2/wb_dat_o_reg[7]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                   DDR2/wb_dat_o_reg[21]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                    DDR2/wb_dat_o_reg[6]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                   DDR2/wb_dat_o_reg[25]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                            DDR2/init_calib_complete_reg/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                   DDR2/wb_dat_o_reg[30]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                   DDR2/wb_dat_o_reg[29]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                    DDR2/wb_dat_o_reg[5]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                    DDR2/wb_dat_o_reg[4]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                   DDR2/wb_dat_o_reg[12]/D|
+|                clk_pll_i |              sys_clk_pin |                                                                                   DDR2/wb_dat_o_reg[28]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

@@ -3,41 +3,55 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="E:/codehub/OpenMIPS_without_ddr/OpenMIPS/OpenMIPS.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+      <db_ref path="E:/codehub/OpenMIPS_final/OpenMIPS.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
          <top_modules>
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="21459fs"></ZoomEndTime>
-      <Cursor1Time time="944000fs"></Cursor1Time>
+      <ZoomEndTime time="5321fs"></ZoomEndTime>
+      <Cursor1Time time="410000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="220"></NameColumnWidth>
-      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+      <NameColumnWidth column_width="306"></NameColumnWidth>
+      <ValueColumnWidth column_width="201"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="3" />
-   <wvobject fp_name="openmips0/pc" type="array">
+   <WVObjectSize size="5" />
+   <wvobject fp_name="openmips0/pc0" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">openmips0/pc[31:0]</obj_property>
-      <obj_property name="ObjectShortName">pc[31:0]</obj_property>
+      <obj_property name="ElementShortName">openmips0/pc0[31:1]</obj_property>
+      <obj_property name="ObjectShortName">pc0[31:1]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="flash_rom/state" type="array">
+   <wvobject fp_name="ps2_keyboard_driver/int_r_reg_0" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">flash_rom/state[4:0]</obj_property>
-      <obj_property name="ObjectShortName">state[4:0]</obj_property>
+      <obj_property name="ElementShortName">ps2_keyboard_driver/int_r_reg_0[0:0]</obj_property>
+      <obj_property name="ObjectShortName">int_r_reg_0[0:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="DDR2/state" type="array">
+   <wvobject fp_name="ps2_keyboard_driver/wb_ack_o_i_1__1_n_9" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">DDR2/state[2:0]</obj_property>
-      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+      <obj_property name="ElementShortName">ps2_keyboard_driver/wb_ack_o_i_1__1_n_9</obj_property>
+      <obj_property name="ObjectShortName">wb_ack_o_i_1__1_n_9</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="ps2_keyboard_driver/bus_use" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">ps2_keyboard_driver/bus_use</obj_property>
+      <obj_property name="ObjectShortName">bus_use</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="s5_reg_data_o" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">s5_reg_data_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s5_reg_data_o[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>

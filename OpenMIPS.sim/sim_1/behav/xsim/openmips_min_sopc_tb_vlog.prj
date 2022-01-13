@@ -92,9 +92,11 @@ verilog xil_defaultlib  --include "../../../../OpenMIPS.srcs/sources_1/new/OpenM
 "../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/openmips.v" \
 "../../../../OpenMIPS.srcs/sources_1/new/openmips_min_sopc.v" \
 "../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/pc_reg.v" \
+"../../../../OpenMIPS.srcs/sources_1/new/phy_bus_addr_conv.v" \
 "../../../../OpenMIPS.srcs/sources_1/new/uart/raminfr.v" \
 "../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/regfile.v" \
 "../../../../OpenMIPS.srcs/sources_1/new/seg8.v" \
+"../../../../OpenMIPS.srcs/sources_1/new/OpenMIPS/tlb.v" \
 "../../../../OpenMIPS.srcs/sources_1/new/uart/uart_debug_if.v" \
 "../../../../OpenMIPS.srcs/sources_1/new/uart/uart_receiver.v" \
 "../../../../OpenMIPS.srcs/sources_1/new/uart/uart_regs.v" \

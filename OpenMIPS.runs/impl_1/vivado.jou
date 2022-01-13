@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Jan 13 08:23:37 2022
+# Process ID: 16072
+# Current directory: E:/codehub/OpenMIPS_final/OpenMIPS.runs/impl_1
+# Command line: vivado.exe -log openmips_min_sopc.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source openmips_min_sopc.tcl -notrace
+# Log file: E:/codehub/OpenMIPS_final/OpenMIPS.runs/impl_1/openmips_min_sopc.vdi
+# Journal file: E:/codehub/OpenMIPS_final/OpenMIPS.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source openmips_min_sopc.tcl -notrace

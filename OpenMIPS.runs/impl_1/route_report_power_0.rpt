@@ -1,0 +1,196 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date             : Thu Jan 13 08:26:50 2022
+| Host             : DESKTOP-5BPV03O running 64-bit major release  (build 9200)
+| Command          : report_power -file route_report_power_0.rpt -pb route_report_power_summary_0.pb -rpx route_report_power_0.rpx
+| Design           : openmips_min_sopc
+| Device           : xc7a100tcsg324-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 1.142        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 1.034        |
+| Device Static (W)        | 0.108        |
+| Effective TJA (C/W)      | 4.6          |
+| Max Ambient (C)          | 79.8         |
+| Junction Temperature (C) | 30.2         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.026 |       25 |       --- |             --- |
+| Slice Logic              |     0.015 |    29661 |       --- |             --- |
+|   LUT as Logic           |     0.012 |    11907 |     63400 |           18.78 |
+|   CARRY4                 |     0.001 |      469 |     15850 |            2.96 |
+|   Register               |    <0.001 |    12798 |    126800 |           10.09 |
+|   LUT as Distributed RAM |    <0.001 |      504 |     19000 |            2.65 |
+|   BUFG                   |    <0.001 |       11 |        32 |           34.38 |
+|   LUT as Shift Register  |    <0.001 |      154 |     19000 |            0.81 |
+|   F7/F8 Muxes            |    <0.001 |      586 |     63400 |            0.92 |
+|   Others                 |     0.000 |      498 |       --- |             --- |
+| Signals                  |     0.019 |    22950 |       --- |             --- |
+| Block RAM                |     0.004 |        6 |       135 |            4.44 |
+| MMCM                     |     0.218 |        2 |         6 |           33.33 |
+| PLL                      |     0.110 |        1 |         6 |           16.67 |
+| DSPs                     |     0.000 |        4 |       240 |            1.67 |
+| I/O                      |     0.538 |      107 |       210 |           50.95 |
+| PHASER                   |     0.102 |       14 |       --- |             --- |
+| Static Power             |     0.108 |          |           |                 |
+| Total                    |     1.142 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.116 |       0.098 |      0.018 |
+| Vccaux    |       1.800 |     0.295 |       0.277 |      0.018 |
+| Vcco33    |       3.300 |     0.007 |       0.003 |      0.004 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.241 |       0.237 |      0.004 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.000 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 4.6                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                                                                                                                                     | Domain                                                                                                                                                                                                   | Constraint (ns) |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| clk_out2_clk_wiz_0                                                                                                                                        | DDR2/clk_1/inst/clk_out2_clk_wiz_0                                                                                                                                                                       |             5.0 |
+| clk_pll_i                                                                                                                                                 | DDR2/Ram/Inst_DDR/u_mig_7series_0_mig/u_ddr2_infrastructure/clk_pll_i                                                                                                                                    |            13.3 |
+| clkfbout_clk_wiz_0                                                                                                                                        | DDR2/clk_1/inst/clkfbout_clk_wiz_0                                                                                                                                                                       |            10.0 |
+| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK                                                                | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/tck_bs                                                                                                                                     |            33.0 |
+| freq_refclk                                                                                                                                               | DDR2/Ram/Inst_DDR/u_mig_7series_0_mig/u_ddr2_infrastructure/freq_refclk                                                                                                                                  |             1.7 |
+| iserdes_clkdiv                                                                                                                                            | DDR2/Ram/Inst_DDR/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clkdiv       |            13.3 |
+| iserdes_clkdiv_1                                                                                                                                          | DDR2/Ram/Inst_DDR/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clkdiv       |            13.3 |
+| mem_refclk                                                                                                                                                | DDR2/Ram/Inst_DDR/u_mig_7series_0_mig/u_ddr2_infrastructure/mem_refclk                                                                                                                                   |             3.3 |
+| oserdes_clk                                                                                                                                               | DDR2/Ram/Inst_DDR/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk          |             3.3 |
+| oserdes_clk_1                                                                                                                                             | DDR2/Ram/Inst_DDR/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk          |             3.3 |
+| oserdes_clk_2                                                                                                                                             | DDR2/Ram/Inst_DDR/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk          |             3.3 |
+| oserdes_clk_3                                                                                                                                             | DDR2/Ram/Inst_DDR/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk          |             3.3 |
+| oserdes_clkdiv                                                                                                                                            | DDR2/Ram/Inst_DDR/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clkdiv       |             6.7 |
+| oserdes_clkdiv_1                                                                                                                                          | DDR2/Ram/Inst_DDR/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clkdiv       |            13.3 |
+| oserdes_clkdiv_2                                                                                                                                          | DDR2/Ram/Inst_DDR/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clkdiv       |             6.7 |
+| oserdes_clkdiv_3                                                                                                                                          | DDR2/Ram/Inst_DDR/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clkdiv       |            13.3 |
+| pll_clk3_out                                                                                                                                              | DDR2/Ram/Inst_DDR/u_mig_7series_0_mig/u_ddr2_infrastructure/pll_clk3_out                                                                                                                                 |            13.3 |
+| pll_clkfbout                                                                                                                                              | DDR2/Ram/Inst_DDR/u_mig_7series_0_mig/u_ddr2_infrastructure/pll_clkfbout                                                                                                                                 |             5.0 |
+| sync_pulse                                                                                                                                                | DDR2/Ram/Inst_DDR/u_mig_7series_0_mig/u_ddr2_infrastructure/sync_pulse                                                                                                                                   |            53.3 |
+| sys_clk_pin                                                                                                                                               | clk_in                                                                                                                                                                                                   |            10.0 |
+| sys_clk_pin                                                                                                                                               | clk_in_IBUF                                                                                                                                                                                              |            10.0 |
+| u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clk | DDR2/Ram/Inst_DDR/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/A_rst_primitives_reg |             3.3 |
+| u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clk | DDR2/Ram/Inst_DDR/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/A_rst_primitives_reg |             3.3 |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++--------------------------+-----------+
+| Name                     | Power (W) |
++--------------------------+-----------+
+| openmips_min_sopc        |     1.034 |
+|   DDR2                   |     0.983 |
+|     Ram                  |     0.875 |
+|       Inst_DDR           |     0.875 |
+|     clk_1                |     0.107 |
+|       inst               |     0.107 |
+|   GraphicsController     |     0.012 |
+|     showRam              |     0.004 |
+|       U0                 |     0.004 |
+|   dbg_hub                |     0.004 |
+|     inst                 |     0.004 |
+|       BSCANID.u_xsdbm_id |     0.004 |
+|   flash_rom              |     0.001 |
+|   openmips0              |     0.009 |
+|     cp0_reg0             |     0.004 |
+|     div0                 |     0.005 |
+|   ps2_keyboard_driver    |     0.003 |
+|   u_ila_0                |     0.004 |
+|     inst                 |     0.004 |
+|       ila_core_inst      |     0.004 |
++--------------------------+-----------+
+
+

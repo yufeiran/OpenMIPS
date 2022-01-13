@@ -359,3 +359,8 @@
 //context
 `define PTE_BASE_BITS 31:23
 `define BAD_VPN2_BITS 22:4
+
+
+// phy_bus_addr_conv
+`define WishboneAddrBus 31:0
+`define PhyAddrBus 31:0

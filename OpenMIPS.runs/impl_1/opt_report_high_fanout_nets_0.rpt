@@ -1,0 +1,31 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Jan 13 08:24:45 2022
+| Host         : DESKTOP-5BPV03O running 64-bit major release  (build 9200)
+| Command      : report_high_fanout_nets -file opt_report_high_fanout_nets_0.rpt
+| Design       : openmips_min_sopc
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+High Fan-out Nets Information
+
+1. Summary
+----------
+
++--------------------------------------------------------------------------------------------------+--------+-------------+
+| Net Name                                                                                         | Fanout | Driver Type |
++--------------------------------------------------------------------------------------------------+--------+-------------+
+| openmips0/tlb0/SR[0]                                                                             |   4806 | LUT1        |
+| GraphicsController/screenlinebuf                                                                 |   1033 | LUT3        |
+| rst_n_in                                                                                         |    576 | FDRE        |
+| openmips0/dwishbone_bus_if/E[0]                                                                  |    386 | LUT6        |
+| DDR2/Ram/Inst_DDR/u_mig_7series_0_mig/u_memc_ui_top_std/u_ui_top/ui_wr_data0/app_wdf_rdy_r_copy2 |    290 | FDRE        |
+| GraphicsController/display/x[0]                                                                  |    257 | LUT4        |
+| GraphicsController/display/x[1]                                                                  |    257 | LUT4        |
+| openmips0/dwishbone_bus_if/rst_n_in_reg[0]                                                       |    255 | LUT5        |
+| openmips0/ex0/rst_n_in_reg_3                                                                     |    244 | LUT6        |
+| openmips0/ex_mem0/rst_n_in_reg_70[0]                                                             |    197 | LUT2        |
++--------------------------------------------------------------------------------------------------+--------+-------------+
+
+

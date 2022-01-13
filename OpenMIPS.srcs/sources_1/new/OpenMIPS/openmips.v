@@ -721,6 +721,22 @@ module openmips(
     .EntryLo1_out(tlb_entry_lo1),
     .Index_out(tlb_index)
 );
+    wire [31:0] bus_pc;
+    phy_bus_addr_conv iphy_bus_addr_conv(
+        .rst_n(rst),
+        .phy_addr_i(pc),
+        .bus_addr_o(bus_pc)
+    );
+    
+    
+    wire [31:0] bus_ram_addr_o;
+    phy_bus_addr_conv dphy_bus_addr_conv(
+        .rst_n(rst),
+        .phy_addr_i(ram_addr_o),
+        .bus_addr_o(bus_ram_addr_o)
+    );
+    
+    
 
     wishbone_bus_if dwishbone_bus_if(       //data总线接口
         .clk(clk),
@@ -733,7 +749,7 @@ module openmips(
         //CPU侧读写操作信息
         .cpu_ce_i(ram_ce_o),
         .cpu_data_i(ram_data_o),
-        .cpu_addr_i(ram_addr_o),
+        .cpu_addr_i(bus_ram_addr_o),
         .cpu_we_i(ram_we_o),
         .cpu_sel_i(ram_sel_o),
         .cpu_data_o(ram_data_i),
@@ -762,7 +778,7 @@ module openmips(
         //CPU侧读写操作信息
         .cpu_ce_i(rom_ce),
         .cpu_data_i(32'h00000000),
-        .cpu_addr_i(pc),
+        .cpu_addr_i(bus_pc),
         .cpu_we_i(1'b0),
         .cpu_sel_i(4'b1111),
         .cpu_data_o(inst_i),

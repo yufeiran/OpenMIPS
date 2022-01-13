@@ -45,8 +45,8 @@ output wire int;
  
  reg[7:0] ps2_asci;	//接收数据的相应ASCII码
 reg [7:0]sm_seg_;
-
-reg readflag=0;
+(* Mark_debug ="true" *)reg bus_use=0; //for debug
+ reg readflag=0;
 
 reg int_r=0;
 reg clk=0;
@@ -70,6 +70,7 @@ assign int=int_r;
     begin
         if(wb_cyc_i&wb_stb_i)
         begin
+            bus_use<=1'b1;
             if(state==`waitrom)
                 state<=`waitrom1;
             else if(state==`waitrom1)

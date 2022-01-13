@@ -80,6 +80,7 @@ module openmips_min_sopc(
     
     wire [1:0] sm_bit;  //keyboard test
     wire [7:0] sm_seg;
+    wire [7:0]keyboard_dtube_data;
     
     assign dtube_cs_n={2'b11,sm_bit,dtube_cs_n_temp};
 
@@ -161,7 +162,16 @@ module openmips_min_sopc(
     wire       s5_cyc_o;
     wire       s5_stb_o;
     wire       s5_ack_i;
-    reg [31:0] s5_reg_data_o;
+    
+    wire[31:0] s6_data_i;
+    wire[31:0] s6_data_o;
+    wire[31:0] s6_addr_o;
+    wire[3:0] s6_sel_o;
+    wire       s6_we_o;
+    wire       s6_cyc_o;
+    wire       s6_stb_o;
+    wire       s6_ack_i;
+    (* Mark_debug ="true" *) reg [31:0] s5_reg_data_o;
     wire[31:0] gpio_o;
     
     wire rst;
@@ -209,7 +219,7 @@ module openmips_min_sopc(
 	 .dtube_data(seg80_data)
  );
   assign dtube_data=seg80_data;
-
+  //assign dtube_data=keyboard_dtube_data;
 
     //wire       sdram_init_done;
 
@@ -367,7 +377,7 @@ module openmips_min_sopc(
     .VGA_B(VGA_B)
     );
     wire ps2_state;
-    wire [7:0]keyboard_dtube_data;
+
    ps2_keyboard_driver ps2_keyboard_driver(clk_in,rst_n,gpio_i[0],ps2k_clk,ps2k_data,sm_bit,keyboard_dtube_data,ps2_state,keyboard_int,s5_cyc_o,s5_stb_o,s5_we_o,s5_sel_o,s5_addr_o,s5_data_o,s5_data_i,s5_ack_i);
    
 
@@ -472,12 +482,11 @@ module openmips_min_sopc(
         .s5_err_i(1'b0),.s5_rty_i(1'b0),
 
         //?????6
-        .s6_data_i(),.s6_data_o(),
-        .s6_addr_o(),.s6_sel_o(),
-        .s6_we_o(),.s6_cyc_o(),
-        .s6_stb_o(),.s6_ack_i(1'b0),
+        .s6_data_i(s6_data_i),.s6_data_o(s6_data_o),
+        .s6_addr_o(s6_addr_o),.s6_sel_o(s6_sel_o),
+        .s6_we_o(s6_we_o),.s6_cyc_o(s6_cyc_o),
+        .s6_stb_o(s6_stb_o),.s6_ack_i(s6_ack_i),
         .s6_err_i(1'b0),.s6_rty_i(1'b0),
-
         //?????7
         .s7_data_i(),.s7_data_o(),
         .s7_addr_o(),.s7_sel_o(),
