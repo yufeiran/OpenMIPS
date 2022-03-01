@@ -2,6 +2,7 @@
 
 ## 简介
 一个基础但功能完善的计算机系统，包含：CPU、外设、操作系统。
+视频演示[自制CPU和外设运行贪吃蛇](https://www.bilibili.com/video/BV1Rf4y1t7Wo)
 ### CPU
 CPU使用MIPS32 release 1指令集，采用五级流水线结构, 实现了协处理器CP0、内存管理单元TLB ，在FPGA开发板Nexys4 DDR上运行主频为50Mhz。使用硬件描述语言Verilog实现。
 
