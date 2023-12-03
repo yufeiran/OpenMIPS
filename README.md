@@ -7,8 +7,12 @@
 ### CPU
 CPU使用MIPS32 release 1指令集，采用五级流水线结构, 实现了协处理器CP0、内存管理单元TLB ，在FPGA开发板Nexys4 DDR上运行主频为50Mhz。使用硬件描述语言Verilog实现。
 
+
 (tlb正准备实装)
 ### 外设
+CPU使用总线与外设连接的方式如下图所示
+![image](https://github.com/yufeiran/OpenMIPS/assets/22091612/891cdfd5-a7a7-4b40-80ca-8c4853c77957)
+
 外设实现了：DDR2 RAM控制器、SPI FLASH控制器、PS/2键盘和VGA显示模块，
 使用wishbone总线协议。使用硬件描述语言Verilog实现。
 
