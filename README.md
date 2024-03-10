@@ -26,6 +26,20 @@ CPU使用总线与外设连接的方式如下图所示
 | FLASH ROM控制器 | 0x0A00_0000 ~ 0x0AFF_FFFF |
 | VGA控制器 | 0x0B00_0000 ~ 0x0B00_1800 |
 | KEYBOARD | 0x0C00_0000 ~ 0x0C00_0010 |
+
+#### VGA显示模块
+![vga显示模块](https://github.com/yufeiran/OpenMIPS/assets/22091612/ed365116-1f72-4b47-ae89-1eac6fe52778)
+
+工作流程：
+1. CPU通过总线读写显存数据
+2. 绘制逻辑结合显存和ASCII点阵字库来填满当前行缓冲区
+3. VGA信号控制逻辑根据时序和行缓冲区输出对应的VGA信号
+
+
+
+
+
+
 ### 操作系统
 操作系统基于MIT开发的类UNIX的xv6操作系统进行改进，改进包括：
 
