@@ -28,12 +28,12 @@ module if_id(
 
     input wire flush,
     
-    //À´×ÔÈ¡Ö·½×¶ÎµÄĞÅºÅ£¬ÆäÖĞºê¶¨ÒåInstBus±íÊ¾Ö¸Áî¿í¶È,Îª32
+    //æ¥è‡ªå–å€é˜¶æ®µçš„ä¿¡å·ï¼Œå…¶ä¸­å®å®šä¹‰InstBusè¡¨ç¤ºæŒ‡ä»¤å®½åº¦,ä¸º32
     input wire [`InstAddrBus]       if_pc,
     input wire [`InstBus]           if_inst,
     input wire inst_tlb_refillF, inst_tlb_invalidF,
     
-    //¶ÔÓ¦ÒëÂë½×¶ÎµÄĞÅºÅ
+    //å¯¹åº”è¯‘ç é˜¶æ®µçš„ä¿¡å·
     output reg[`InstAddrBus]        id_pc,
     output reg[`InstBus]            id_inst,
     output reg inst_tlb_refillD, inst_tlb_invalidD
@@ -41,13 +41,13 @@ module if_id(
     
     always@(posedge clk)begin
         if(rst==`RstEnable) begin
-            id_pc<=`ZeroWord;   //¸´Î»µÄÊ±ºòpcÎª0
-            id_inst<=`ZeroWord; //¸´Î»µÄÊ±ºòÖ¸ÁîÒ²Îª0£¬Êµ¼Ê¾ÍÊÇ¿ÕÖ¸Áî
+            id_pc<=`ZeroWord;   //å¤ä½çš„æ—¶å€™pcä¸º0
+            id_inst<=`ZeroWord; //å¤ä½çš„æ—¶å€™æŒ‡ä»¤ä¹Ÿä¸º0ï¼Œå®é™…å°±æ˜¯ç©ºæŒ‡ä»¤
             inst_tlb_refillD    <= 0;
             inst_tlb_invalidD   <= 0;
         end else if(flush==1'b1)begin
-            //flush==1±íÊ¾Òì³£·¢Éú£¬ÒªÇå³ıÁ÷Ë®Ïß
-            //ËùÒÔ¸´Î»id_pc,id_inst¼Ä´æÆ÷µÄÖµ
+            //flush==1è¡¨ç¤ºå¼‚å¸¸å‘ç”Ÿï¼Œè¦æ¸…é™¤æµæ°´çº¿
+            //æ‰€ä»¥å¤ä½id_pc,id_instå¯„å­˜å™¨çš„å€¼
             id_pc<=`ZeroWord;
             id_inst<=`ZeroWord;
             inst_tlb_refillD    <= 0;
@@ -58,7 +58,7 @@ module if_id(
             inst_tlb_refillD    <= 0;
             inst_tlb_invalidD   <= 0;
         end else if(stall[1]==`NoStop)begin
-            id_pc<=if_pc;       //ÆäÓàÊ±¿ÌÏòÏÂ´«µİÈ¡Öµ½×¶ÎµÄÖµ
+            id_pc<=if_pc;       //å…¶ä½™æ—¶åˆ»å‘ä¸‹ä¼ é€’å–å€¼é˜¶æ®µçš„å€¼
             id_inst<=if_inst;
             inst_tlb_refillD    <= inst_tlb_refillF     ;
             inst_tlb_invalidD   <= inst_tlb_invalidF    ;

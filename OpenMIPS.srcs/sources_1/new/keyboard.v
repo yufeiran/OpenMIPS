@@ -21,13 +21,13 @@
 `include"OpenMIPS/OpenMIPS.vh"
 module ps2_keyboard_driver(clk_in,rst_n,read,ps2k_clk,ps2k_data,sm_bit,sm_seg,ps2_state,int,wb_cyc_i,wb_stb_i,wb_we_i,wb_sel_i,wb_adr_i,wb_dat_i,wb_dat_o,wb_ack_o);
 
-input clk_in;		//50MÊ±ÖÓĞÅºÅ
-input rst_n;	//¸´Î»ĞÅºÅ
+input clk_in;		//50Mæ—¶é’Ÿä¿¡å·
+input rst_n;	//å¤ä½ä¿¡å·
 input read;
-input ps2k_clk;	//PS2½Ó¿ÚÊ±ÖÓĞÅºÅ
-input ps2k_data;		//PS2½Ó¿ÚÊı¾İĞÅºÅ
-wire [7:0] ps2_byte;	// 1byte¼üÖµ£¬Ö»×ö¼òµ¥µÄ°´¼üÉ¨Ãè
-output ps2_state;		//¼üÅÌµ±Ç°×´Ì¬£¬ps2_state=1±íÊ¾ÓĞ¼ü±»°´ÏÂ 
+input ps2k_clk;	//PS2æ¥å£æ—¶é’Ÿä¿¡å·
+input ps2k_data;		//PS2æ¥å£æ•°æ®ä¿¡å·
+wire [7:0] ps2_byte;	// 1byteé”®å€¼ï¼Œåªåšç®€å•çš„æŒ‰é”®æ‰«æ
+output ps2_state;		//é”®ç›˜å½“å‰çŠ¶æ€ï¼Œps2_state=1è¡¨ç¤ºæœ‰é”®è¢«æŒ‰ä¸‹
 output reg [1:0] sm_bit='b01;
 output reg [7:0]sm_seg;
 output wire int;
@@ -43,7 +43,7 @@ output wire int;
  
  
  
- reg[7:0] ps2_asci;	//½ÓÊÕÊı¾İµÄÏàÓ¦ASCIIÂë
+ reg[7:0] ps2_asci;	//æ¥æ”¶æ•°æ®çš„ç›¸åº”ASCIIç 
 reg [7:0]sm_seg_;
 (* Mark_debug ="true" *)reg bus_use=0; //for debug
  reg readflag=0;
@@ -90,51 +90,51 @@ assign int=int_r;
     end
 
 //------------------------------------------
-reg ps2k_clk_r0,ps2k_clk_r1,ps2k_clk_r2;	//ps2k_clk×´Ì¬¼Ä´æÆ÷
-//wire pos_ps2k_clk; 	// ps2k_clkÉÏÉıÑØ±êÖ¾Î»
-wire neg_ps2k_clk;	// ps2k_clkÏÂ½µÑØ±êÖ¾Î»
-//Éè±¸·¢ËÍÏòÖ÷»úµÄÊı¾İÔÚÏÂ½µÑØÓĞĞ§£¬Ê×ÏÈ¼ì²âPS2k_clkµÄÏÂ½µÑØ
-//ÀûÓÃÉÏÃæÂß¼­¸³ÖµÓï¾ä¿ÉÒÔÌáÈ¡µÃÏÂ½µÑØ£¬neg_ps2k_clkÎª¸ßµçÆ½Ê±±íÊ¾Êı¾İ¿ÉÒÔ±»²É¼¯
+reg ps2k_clk_r0,ps2k_clk_r1,ps2k_clk_r2;	//ps2k_clkçŠ¶æ€å¯„å­˜å™¨
+//wire pos_ps2k_clk; 	// ps2k_clkä¸Šå‡æ²¿æ ‡å¿—ä½
+wire neg_ps2k_clk;	// ps2k_clkä¸‹é™æ²¿æ ‡å¿—ä½
+//è®¾å¤‡å‘é€å‘ä¸»æœºçš„æ•°æ®åœ¨ä¸‹é™æ²¿æœ‰æ•ˆï¼Œé¦–å…ˆæ£€æµ‹PS2k_clkçš„ä¸‹é™æ²¿
+//åˆ©ç”¨ä¸Šé¢é€»è¾‘èµ‹å€¼è¯­å¥å¯ä»¥æå–å¾—ä¸‹é™æ²¿ï¼Œneg_ps2k_clkä¸ºé«˜ç”µå¹³æ—¶è¡¨ç¤ºæ•°æ®å¯ä»¥è¢«é‡‡é›†
 always @ (posedge clk or negedge rst_n) begin
 	if(!rst_n) begin
 			ps2k_clk_r0 <= 1'b0;
 			ps2k_clk_r1 <= 1'b0;
 			ps2k_clk_r2 <= 1'b0;
 		end
-	else begin								//Ëø´æ×´Ì¬£¬½øĞĞÂË²¨
+	else begin								//é”å­˜çŠ¶æ€ï¼Œè¿›è¡Œæ»¤æ³¢
 			ps2k_clk_r0 <= ps2k_clk;
 			ps2k_clk_r1 <= ps2k_clk_r0;
 			ps2k_clk_r2 <= ps2k_clk_r1;
 		end
 end
  
-assign neg_ps2k_clk = ~ps2k_clk_r1 & ps2k_clk_r2;	//ÏÂ½µÑØ
+assign neg_ps2k_clk = ~ps2k_clk_r1 & ps2k_clk_r2;	//ä¸‹é™æ²¿
  
-//-----------------Êı¾İ²É¼¯-------------------------
+//-----------------æ•°æ®é‡‡é›†-------------------------
 	/*
-	Ö¡½á¹¹£ºÉè±¸·¢ÍùÖ÷»úÊı¾İÖ¡Îª11±ÈÌØ£¬£¨Ö÷»ú·¢ËÍÊı¾İ°üÎª12bit£© 
+	å¸§ç»“æ„ï¼šè®¾å¤‡å‘å¾€ä¸»æœºæ•°æ®å¸§ä¸º11æ¯”ç‰¹ï¼Œï¼ˆä¸»æœºå‘é€æ•°æ®åŒ…ä¸º12bitï¼‰
 			1bit start bit ,This is always 0,
 			 8bit data bits, 
-			 1 parity bit,(odd parity)Ğ£ÑéÎ»£¬ÆæĞ£Ñé£¬
-			 data bits ÎªÅ¼Êı¸ö1Ê±¸ÃÎ»Îª1£¬
-			 data bits ÎªÆæÊı¸ö1Ê±¸ÃÎ»Îª0.
+			 1 parity bit,(odd parity)æ ¡éªŒä½ï¼Œå¥‡æ ¡éªŒï¼Œ
+			 data bits ä¸ºå¶æ•°ä¸ª1æ—¶è¯¥ä½ä¸º1ï¼Œ
+			 data bits ä¸ºå¥‡æ•°ä¸ª1æ—¶è¯¥ä½ä¸º0.
 	         1bit stop bit ,this is always 1.
-				num ·¶Î§Îª 'h00,'h0A;
+				num èŒƒå›´ä¸º 'h00,'h0A;
 	*/
-reg[7:0] ps2_byte_r;		//PC½ÓÊÕÀ´×ÔPS2µÄÒ»¸ö×Ö½ÚÊı¾İ´æ´¢Æ÷
-reg[7:0] temp_data;			//µ±Ç°½ÓÊÕÊı¾İ¼Ä´æÆ÷
-reg[3:0] num;				//¼ÆÊı¼Ä´æÆ÷
+reg[7:0] ps2_byte_r;		//PCæ¥æ”¶æ¥è‡ªPS2çš„ä¸€ä¸ªå­—èŠ‚æ•°æ®å­˜å‚¨å™¨
+reg[7:0] temp_data;			//å½“å‰æ¥æ”¶æ•°æ®å¯„å­˜å™¨
+reg[3:0] num;				//è®¡æ•°å¯„å­˜å™¨
  
 always @ (posedge clk or negedge rst_n) begin
 	if(!rst_n) begin
 			num <= 4'd0;
 			temp_data <= 8'd0;
 		end
-	else if(neg_ps2k_clk) begin	//¼ì²âµ½ps2k_clkµÄÏÂ½µÑØ
+	else if(neg_ps2k_clk) begin	//æ£€æµ‹åˆ°ps2k_clkçš„ä¸‹é™æ²¿
 			case (num)
 			 /*
-		Ö¡½á¹¹ÖĞÊı¾İÎ»ÎªÒ»¸ö×Ö½Ú£¬ÇÒµÍÎ»ÔÚÇ°£¬¸ßÎ»ÔÚºó£¬
-		ÕâÀïÒª¶¨ÒåÒ»¸öbuf,size is one Byte.
+		å¸§ç»“æ„ä¸­æ•°æ®ä½ä¸ºä¸€ä¸ªå­—èŠ‚ï¼Œä¸”ä½ä½åœ¨å‰ï¼Œé«˜ä½åœ¨åï¼Œ
+		è¿™é‡Œè¦å®šä¹‰ä¸€ä¸ªbuf,size is one Byte.
 	 */   
 				4'd0:	num <= num+1'b1;
 				4'd1:	begin
@@ -170,37 +170,37 @@ always @ (posedge clk or negedge rst_n) begin
 							temp_data[7] <= ps2k_data;	//bit7
 						end
 				4'd9:	begin
-							num <= num+1'b1;	//ÆæÅ¼Ğ£ÑéÎ»£¬²»×ö´¦Àí
+							num <= num+1'b1;	//å¥‡å¶æ ¡éªŒä½ï¼Œä¸åšå¤„ç†
 						end
 				4'd10: begin
-							num <= 4'd0;	// numÇåÁã
+							num <= 4'd0;	// numæ¸…é›¶
 						end
 				default: ;
 				endcase
 		end	
 end
  
-reg key_f0;		//ËÉ¼ü±êÖ¾Î»£¬ÖÃ1±íÊ¾½ÓÊÕµ½Êı¾İ8'hf0£¬ÔÙ½ÓÊÕµ½ÏÂÒ»¸öÊı¾İºóÇåÁã
-reg ps2_state_r;	//¼üÅÌµ±Ç°×´Ì¬£¬ps2_state_r=1±íÊ¾ÓĞ¼ü±»°´ÏÂ 
-//+++++++++++++++Êı¾İ´¦Àí¿ªÊ¼++++++++++++++++=============
-always @ (posedge clk or negedge rst_n) begin	//½ÓÊÕÊı¾İµÄÏàÓ¦´¦Àí£¬ÕâÀïÖ»¶Ô1byteµÄ¼üÖµ½øĞĞ´¦Àí
+reg key_f0;		//æ¾é”®æ ‡å¿—ä½ï¼Œç½®1è¡¨ç¤ºæ¥æ”¶åˆ°æ•°æ®8'hf0ï¼Œå†æ¥æ”¶åˆ°ä¸‹ä¸€ä¸ªæ•°æ®åæ¸…é›¶
+reg ps2_state_r;	//é”®ç›˜å½“å‰çŠ¶æ€ï¼Œps2_state_r=1è¡¨ç¤ºæœ‰é”®è¢«æŒ‰ä¸‹
+//+++++++++++++++æ•°æ®å¤„ç†å¼€å§‹++++++++++++++++=============
+always @ (posedge clk or negedge rst_n) begin	//æ¥æ”¶æ•°æ®çš„ç›¸åº”å¤„ç†ï¼Œè¿™é‡Œåªå¯¹1byteçš„é”®å€¼è¿›è¡Œå¤„ç†
 	if(!rst_n) begin
 			key_f0 <= 1'b0;
 			ps2_state_r <= 1'b0;
 		end
-	else if(num==4'd10) ///Ò»Ö¡Êı¾İÊÇ·ñ²É¼¯Íê¡£
-			begin	//¸Õ´«ËÍÍêÒ»¸ö×Ö½ÚÊı¾İ
+	else if(num==4'd10) ///ä¸€å¸§æ•°æ®æ˜¯å¦é‡‡é›†å®Œã€‚
+			begin	//åˆšä¼ é€å®Œä¸€ä¸ªå­—èŠ‚æ•°æ®
 					if(temp_data == 8'hf0)begin
-					    key_f0 <= 1'b1;//ÅĞ¶Ï¸Ã½ÓÊÕÊı¾İÊÇ·ñÎª¶ÏÂë
+					    key_f0 <= 1'b1;//åˆ¤æ–­è¯¥æ¥æ”¶æ•°æ®æ˜¯å¦ä¸ºæ–­ç 
 					    int_r<=1'b0;
 					 end
 				else
 					begin
-					//========================Àí½âÀ§ÄÑ==================================
+					//========================ç†è§£å›°éš¾==================================
 						if(!key_f0) 
-								begin	//ËµÃ÷ÓĞ¼ü°´ÏÂ
+								begin	//è¯´æ˜æœ‰é”®æŒ‰ä¸‹
 									ps2_state_r <= 1'b1;
-									ps2_byte_r <= temp_data;	//Ëø´æµ±Ç°¼üÖµ
+									ps2_byte_r <= temp_data;	//é”å­˜å½“å‰é”®å€¼
 									wb_dat_o<={24'd0,ps2_asci};
 									int_r<=1'b1;
 								end
@@ -221,17 +221,17 @@ always @ (posedge clk or negedge rst_n) begin	//½ÓÊÕÊı¾İµÄÏàÓ¦´¦Àí£¬ÕâÀïÖ»¶Ô1byt
         end
     end
 end
-/*+++++++++++++µÈĞ§Ğ´·¨+++++++++++++++++++++++++++++
-reg key_released;//ÊÕµ½Âë¶ÎºóÊÇ·ñËÉ¿ª
+/*+++++++++++++ç­‰æ•ˆå†™æ³•+++++++++++++++++++++++++++++
+reg key_released;//æ”¶åˆ°ç æ®µåæ˜¯å¦æ¾å¼€
 reg [7:0] ps2_byte;
 always @(posedge clk or negedge rst)
 begin
 	if(!rst)
 	 key_released<='b0;
-	else if(cnt=='h0A)//Ò»Ö¡Êı¾İÊÇ·ñ²É¼¯Íê¡£
+	else if(cnt=='h0A)//ä¸€å¸§æ•°æ®æ˜¯å¦é‡‡é›†å®Œã€‚
 		begin
-			if(ps2_byte_buf==8'hF0)//Êı¾İÎª¶ÎÂëf0
-				key_released<='b1;//ËÉ¿ª±êÖ¾Î»ÖÃÎ»
+			if(ps2_byte_buf==8'hF0)//æ•°æ®ä¸ºæ®µç f0
+				key_released<='b1;//æ¾å¼€æ ‡å¿—ä½ç½®ä½
 			else
 				key_released<='b0;
 		end
@@ -240,15 +240,15 @@ always @ (posedge clk or negedge rst)
 begin             
   if(!rst)
     key_pressed<= 0;
-  else if (cnt == 4'hA)                 // ²É¼¯ÍêÒ»¸ö×Ö½Ú£¿ 
+  else if (cnt == 4'hA)                 // é‡‡é›†å®Œä¸€ä¸ªå­—èŠ‚ï¼Ÿ
   begin      
-    if (!key_released)                  // ÓĞ¼ü°´¹ı£¿
+    if (!key_released)                  // æœ‰é”®æŒ‰è¿‡ï¼Ÿ
     begin 
-      ps2_byte<= ps2_byte_buf;      // Ëø´æµ±Ç°¼üÖµ
-      key_pressed <= 'b1;                 // °´ÏÂ±êÖ¾ÖÃÒ»
+      ps2_byte<= ps2_byte_buf;      // é”å­˜å½“å‰é”®å€¼
+      key_pressed <= 'b1;                 // æŒ‰ä¸‹æ ‡å¿—ç½®ä¸€
     end
     else 
-      key_pressed <= 'b0;                 // °´ÏÂ±êÖ¾ÇåÁã
+      key_pressed <= 'b0;                 // æŒ‰ä¸‹æ ‡å¿—æ¸…é›¶
   end
 end 
 */
@@ -256,7 +256,7 @@ end
 
  
 always @ (ps2_byte_r) begin
-	case (ps2_byte_r)		//¼üÖµ×ª»»ÎªASCIIÂë£¬ÕâÀï×öµÄ±È½Ï¼òµ¥£¬Ö»´¦Àí×ÖÄ¸
+	case (ps2_byte_r)		//é”®å€¼è½¬æ¢ä¸ºASCIIç ï¼Œè¿™é‡Œåšçš„æ¯”è¾ƒç®€å•ï¼Œåªå¤„ç†å­—æ¯
 		8'h15: ps2_asci <= 8'h51;	//Q
 		8'h1d: ps2_asci <= 8'h57;	//W
 		8'h24: ps2_asci <= 8'h45;	//E
@@ -293,7 +293,7 @@ always @ (ps2_byte_r) begin
 		8'h3d:ps2_asci<=8'h37;
 		8'h3e:ps2_asci<=8'h38;
 		8'h46:ps2_asci<=8'h39;    //9
-		8'h29:ps2_asci<=8'h20;    //¿Õ¸ñ
+		8'h29:ps2_asci<=8'h20;    //ç©ºæ ¼
 		8'h66:ps2_asci<=8'h08;    //backSpace
 		8'h5a:ps2_asci<=8'h0a;    //enter
         8'h75:ps2_asci<=8'h26;    //up
@@ -375,7 +375,7 @@ end
 			4'h2 : sm_seg_ = 8'h5b;   // "2"
 			4'h3 : sm_seg_ = 8'h4f;   // "3"
 			4'h4 : sm_seg_ = 8'h66;   // "4"
-			4'h5 : sm_seg_ = 8'h6d;   // "5"//¹²Òõ¼«ÊıÂë¹Ü±í
+			4'h5 : sm_seg_ = 8'h6d;   // "5"//å…±é˜´ææ•°ç ç®¡è¡¨
 			4'h6 : sm_seg_ = 8'h7d;   // "6"
 			4'h7 : sm_seg_ = 8'h07;   // "7"
 			4'h8 : sm_seg_ = 8'h7f;   // "8"

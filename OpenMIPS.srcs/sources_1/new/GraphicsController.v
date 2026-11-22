@@ -37,7 +37,7 @@ module GraphicsController(
     output wire [3:0] VGA_G,
     output wire [3:0] VGA_B
     );
-    wire rst=wb_rst_i;  //¸´Î»ĞÅºÅ´¦Àí
+    wire rst=wb_rst_i;  //å¤ä½ä¿¡å·å¤„ç†
     
     reg[12:0] inputAddrShowRam=0;
     reg[7:0] inputDataShowRam=0;
@@ -77,7 +77,7 @@ module GraphicsController(
     
     
     //=======================================================================================
-    //VGAĞÅºÅÊ±ÖÓÉú³ÉÆ÷
+    //VGAä¿¡å·æ—¶é’Ÿç”Ÿæˆå™¨
     reg [15:0] cnt=16'd0;
     reg pix_stb;
     //1024 x 768 @ 70 Hz
@@ -85,11 +85,11 @@ module GraphicsController(
     always@(posedge wb_clk_i)
         {pix_stb,cnt} <= cnt+16'hC000;       //divide by 4/3: (2^16)/4*3 = 0xC000
     //=======================================================================================
-    wire [9:0] x;           // x×ø±ê
-    wire [9:0] y;            // y×ø±ê
+    wire [9:0] x;           // xåæ ‡
+    wire [9:0] y;            // yåæ ‡
       
       //=======================================================================================
-    //ÊµÀı»¯vgaÏÔÊ¾
+    //å®ä¾‹åŒ–vgaæ˜¾ç¤º
     vga1024x768 display(.i_clk(wb_clk_i),.i_pix_stb(pix_stb),.i_rst(rst),.o_hs(VGA_HS_O),.o_vs(VGA_VS_O),.o_x(x),.o_y(y));
     //=======================================================================================
      
@@ -119,17 +119,17 @@ module GraphicsController(
     reg [3:0] lineBuffer=0;
     reg [4:0] state=0;
     reg [4:0] next_state=0;
-    reg [10:0] drawX=11'd50; //´ı»æÖÆµÄ·ûºÅÎ»ÖÃÆğÊ¼
+    reg [10:0] drawX=11'd50; //å¾…ç»˜åˆ¶çš„ç¬¦å·ä½ç½®èµ·å§‹
     reg [9:0] drawY=11'd70;
     reg [4:0] drawHeight=5'd16;
     reg [4:0] drawWidth=5'd8;
     
     reg [127:0] wordbuf=128'd0;
-    reg [5:0] lineNowCount=6'd0; //¶ÁÈ¡µÄ×ÖµÄĞĞÊı
+    reg [5:0] lineNowCount=6'd0; //è¯»å–çš„å­—çš„è¡Œæ•°
 
-    reg isDrawPoint=0; //×îÖÕ»æÖÆµÄÊı¾İ
+    reg isDrawPoint=0; //æœ€ç»ˆç»˜åˆ¶çš„æ•°æ®
     reg [7:0] loadAsciiAddr=0;
-    reg [10:0] nowYInShowRam=0; //ÔÚshowramÀïÃæµÄÎ»ÖÃ
+    reg [10:0] nowYInShowRam=0; //åœ¨showramé‡Œé¢çš„ä½ç½®
     reg [9:0] nowXInShowRam=0;
     
 
@@ -152,7 +152,7 @@ module GraphicsController(
     begin
         case(state)
         0:begin
-         //³õÊ¼»¯×´Ì¬
+         //åˆå§‹åŒ–çŠ¶æ€
             lineNow<=0;
             lineBuffer<=0;
             isDrawPoint<=0;
@@ -162,7 +162,7 @@ module GraphicsController(
  
             next_state<=state+1;
         end
-        1:  //µÈ´ıVGAµ½ĞĞÄ©Î²
+        1:  //ç­‰å¾…VGAåˆ°è¡Œæœ«å°¾
         begin
             if(VGA_HS_O==0)
             begin
@@ -176,13 +176,13 @@ module GraphicsController(
                 screenlinebuf<=1024'd0;
             end
         end
-        2:  //»ñÈ¡µ±Ç°ASCIIÖµ
+        2:  //è·å–å½“å‰ASCIIå€¼
         begin
             nowYInShowRam<=y>>4;
             vgaAddrShowRam<=nowYInShowRam*128+nowXInShowRam;
             next_state<=state+1;
         end
-        3: //»ñÈ¡µ±Ç°µãÕóÊı¾İ
+        3: //è·å–å½“å‰ç‚¹é˜µæ•°æ®
         begin
              AsciiAddr<=(vgaDataShowRamW[7:0]>32)?(vgaDataShowRamW[7:0]-32):0;
              lineNow<=y-nowYInShowRam*16;

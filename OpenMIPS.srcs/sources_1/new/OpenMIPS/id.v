@@ -25,16 +25,16 @@ module id(
     input wire [`InstAddrBus]   pc_i,
     input wire [`InstBus]       inst_i,
     
-    // ¶ÁÈ¡µÄRegfileµÄÖµ
+    // è¯»å–çš„Regfileçš„å€¼
     input wire [`RegBus]        reg1_data_i,
     input wire [`RegBus]        reg2_data_i,
     
-    //´¦ÓÚÖ´ĞĞ½×¶ÎµÄÖ¸ÁîÔËËã½á¹û
+    //å¤„äºæ‰§è¡Œé˜¶æ®µçš„æŒ‡ä»¤è¿ç®—ç»“æœ
 	input wire         ex_wreg_i,
 	input wire [`RegBus] ex_wdata_i,
 	input wire [`RegAddrBus] ex_wd_i,
 	
-	//´¦ÓÚ·Ã´æ½×¶ÎµÄÖ¸ÁîÔËËã½á¹û
+	//å¤„äºè®¿å­˜é˜¶æ®µçš„æŒ‡ä»¤è¿ç®—ç»“æœ
 	input wire         mem_wreg_i,
 	input wire [`RegBus] mem_wdata_i,
 	input wire [`RegAddrBus] mem_wd_i,
@@ -54,13 +54,13 @@ module id(
     output reg[`RegBus] link_addr_o,
     output reg          is_in_delayslot_o,
     
-    // Êä³öµ½RegfileµÄĞÅÏ¢
+    // è¾“å‡ºåˆ°Regfileçš„ä¿¡æ¯
     output reg                  reg1_read_o,
     output reg                  reg2_read_o,
     output reg [`RegAddrBus]    reg1_addr_o,
     output reg [`RegAddrBus]    reg2_addr_o,
     
-    //ËÍµ½Ö´ĞĞ½×¶ÎµÄĞÅÏ¢
+    //é€åˆ°æ‰§è¡Œé˜¶æ®µçš„ä¿¡æ¯
     output reg[`AluOpBus]       aluop_o,
     output reg[`AluSelBus]      alusel_o,
     output reg[`RegBus]         reg1_o,
@@ -74,23 +74,23 @@ module id(
     output wire [3:0] tlb_typeD
     );
 
-    reg excepttype_is_syscall;      //ÊÇ·ñÎªÏµÍ³µ÷ÓÃÒì³£
-    reg excepttype_is_eret;         //ÊÇ·ñÎªÒì³£·µ»ØÖ¸Áîeret
+    reg excepttype_is_syscall;      //æ˜¯å¦ä¸ºç³»ç»Ÿè°ƒç”¨å¼‚å¸¸
+    reg excepttype_is_eret;         //æ˜¯å¦ä¸ºå¼‚å¸¸è¿”å›æŒ‡ä»¤eret
     wire TLBWR, TLBWI, TLBP, TLBR;
 
   
     
-    // È¡µÃÖ¸ÁîµÄÖ¸ÁîÂë£¬¹¦ÄÜÂë
-    // ¶ÔÓÚoriÖ¸ÁîÖ»ĞèÍ¨¹ıÅĞ¶ÏµÚ26-31bitµÄÖµ£¬¼´¿ÉÅĞ¶ÏÊÇ·ñÊÇoriÖ¸Áî
+    // å–å¾—æŒ‡ä»¤çš„æŒ‡ä»¤ç ï¼ŒåŠŸèƒ½ç 
+    // å¯¹äºoriæŒ‡ä»¤åªéœ€é€šè¿‡åˆ¤æ–­ç¬¬26-31bitçš„å€¼ï¼Œå³å¯åˆ¤æ–­æ˜¯å¦æ˜¯oriæŒ‡ä»¤
     wire[5:0] op=inst_i[31:26];
     wire[4:0] op2=inst_i[10:6];
     wire[5:0] op3=inst_i[5:0];
     wire[4:0] op4=inst_i[20:16];
     
-    //±£´æÖ¸ÁîÖ´ĞĞĞèÒªµÄÁ¢¼´Êı
+    //ä¿å­˜æŒ‡ä»¤æ‰§è¡Œéœ€è¦çš„ç«‹å³æ•°
     reg[`RegBus] imm;
     
-    //Ö¸Ê¾Ö¸ÁîÊÇ·ñÓĞĞ§
+    //æŒ‡ç¤ºæŒ‡ä»¤æ˜¯å¦æœ‰æ•ˆ
     reg instvalid;
 
     assign excepttype_o={19'b0,excepttype_is_eret,2'b0,instvalid,excepttype_is_syscall,8'b0};
@@ -101,10 +101,10 @@ module id(
 
     wire [`RegBus] imm_sll2_signedext;
 
-    assign pc_plus_8=pc_i+8;    //µ±Ç°PCÖµºóµÚ¶şÌõÖ¸Áî
-    assign pc_plus_4=pc_i+4;    //µ±Ç°PCÖµºóµÚÒ»ÌõÖ¸Áî
+    assign pc_plus_8=pc_i+8;    //å½“å‰PCå€¼åç¬¬äºŒæ¡æŒ‡ä»¤
+    assign pc_plus_4=pc_i+4;    //å½“å‰PCå€¼åç¬¬ä¸€æ¡æŒ‡ä»¤
 
-    //imm_sll2_signedext ¶ÔÓ¦·ÖÖ§Ö¸ÁîÖĞµÄoffset×óÒÆÁ½Î»£¬ÔÙ·ûºÅÀ©Õ¹ÖÁ32Î»µÄÖµ
+    //imm_sll2_signedext å¯¹åº”åˆ†æ”¯æŒ‡ä»¤ä¸­çš„offsetå·¦ç§»ä¸¤ä½ï¼Œå†ç¬¦å·æ‰©å±•è‡³32ä½çš„å€¼
     assign imm_sll2_signedext={{14{inst_i[15]}},inst_i[15:0],2'b00};
 
     assign inst_o=inst_i;
@@ -113,8 +113,8 @@ module id(
     reg stallreq_for_reg2_loadrelate;
     wire pre_inst_is_load;
 
-    //¸ù¾İÊäÈëĞÅºÅex_aluop_iµÄÖµ£¬ÅĞ¶ÏÉÏÒ»ÌõÖ¸ÁîÊÇ·ñÊÇ¼ÓÔØÖ¸Áî£¬
-    //Èç¹ûÊÇ¼ÓÔØÖ¸Áî£¬ÄÇÃ´ÖÃpre_inst_is_loadÎª1£¬·´Ö®ÖÃÎª0
+    //æ ¹æ®è¾“å…¥ä¿¡å·ex_aluop_içš„å€¼ï¼Œåˆ¤æ–­ä¸Šä¸€æ¡æŒ‡ä»¤æ˜¯å¦æ˜¯åŠ è½½æŒ‡ä»¤ï¼Œ
+    //å¦‚æœæ˜¯åŠ è½½æŒ‡ä»¤ï¼Œé‚£ä¹ˆç½®pre_inst_is_loadä¸º1ï¼Œåä¹‹ç½®ä¸º0
     assign pre_inst_is_load=((ex_aluop_i==`EXE_LB_OP)||
                             (ex_aluop_i==`EXE_LBU_OP)||
                             (ex_aluop_i==`EXE_LH_OP)||
@@ -128,7 +128,7 @@ module id(
 
     
     /************************************************
-     ************** µÚÒ»½×¶Î£º¶ÔÖ¸Áî½øĞĞÒëÂë *********
+     ************** ç¬¬ä¸€é˜¶æ®µï¼šå¯¹æŒ‡ä»¤è¿›è¡Œè¯‘ç  *********
      ************************************************/
     always@(*)begin
         if(rst==`RstEnable) begin
@@ -157,8 +157,8 @@ module id(
             instvalid<=`InstInvalid;
             reg1_read_o<=1'b0;
             reg2_read_o<=1'b0;
-            reg1_addr_o<=inst_i[25:21];     //Ä¬ÈÏÍ¨¹ıRegfile¶Á¶Ë¿Ú1¶ÁÈ¡µÄ¼Ä´æÆ÷µØÖ·
-            reg2_addr_o<=inst_i[20:16];     //Ä¬ÈÏÍ¨¹ıRegfile¶Á¶Ë¿Ú1¶ÁÈ¡µÄ¼Ä´æÆ÷µØÖ·
+            reg1_addr_o<=inst_i[25:21];     //é»˜è®¤é€šè¿‡Regfileè¯»ç«¯å£1è¯»å–çš„å¯„å­˜å™¨åœ°å€
+            reg2_addr_o<=inst_i[20:16];     //é»˜è®¤é€šè¿‡Regfileè¯»ç«¯å£1è¯»å–çš„å¯„å­˜å™¨åœ°å€
             imm<=`ZeroWord;
             link_addr_o<=`ZeroWord;
             branch_target_address_o<=`ZeroWord;
@@ -518,7 +518,7 @@ module id(
                                     reg1_read_o<=1'b1;
                                     reg2_read_o<=1'b1;
                                     instvalid<=`InstValid;
-                                    //reg2_oµÄÖµ¾ÍÊÇµØÖ·ÎªrtµÄÍ¨ÓÃ¼Ä´æÆ÷µÄÖµ
+                                    //reg2_oçš„å€¼å°±æ˜¯åœ°å€ä¸ºrtçš„é€šç”¨å¯„å­˜å™¨çš„å€¼
                                     if(reg2_o!=`ZeroWord)begin
                                         wreg_o<=`WriteEnable;
                                     end else begin
@@ -531,7 +531,7 @@ module id(
                                     reg1_read_o<=1'b1;
                                     reg2_read_o<=1'b1;
                                     instvalid<=`InstValid;
-                                    //reg2_oµÄÖµ¾ÍÊÇµØÖ·ÎªrtµÄÍ¨ÓÃ¼Ä´æÆ÷µÄÖµ
+                                    //reg2_oçš„å€¼å°±æ˜¯åœ°å€ä¸ºrtçš„é€šç”¨å¯„å­˜å™¨çš„å€¼
                                     if(reg2_o==`ZeroWord)begin
                                         wreg_o<=`WriteEnable;
                                     end else begin
@@ -692,22 +692,22 @@ module id(
                     end
                 end
                                     
-                `EXE_ORI: begin //ÒÀ¾İopµÄ¼ÛÖµÅĞ¶ÏÊÇ·ñÊÇoriÖ¸Áî
-                    //oriÖ¸ÁîĞèÒª½«½á¹ûĞ´Èëµ½Ä¿µÄ¼Ä´æÆ÷£¬ËùÒÔwreg_oÎªWriteEnable
+                `EXE_ORI: begin //ä¾æ®opçš„ä»·å€¼åˆ¤æ–­æ˜¯å¦æ˜¯oriæŒ‡ä»¤
+                    //oriæŒ‡ä»¤éœ€è¦å°†ç»“æœå†™å…¥åˆ°ç›®çš„å¯„å­˜å™¨ï¼Œæ‰€ä»¥wreg_oä¸ºWriteEnable
                     wreg_o<=`WriteEnable;
-                    //ÔËËãµÄ×ÓÀàĞÍÊÇÂß¼­"»ò"ÔËËã
+                    //è¿ç®—çš„å­ç±»å‹æ˜¯é€»è¾‘"æˆ–"è¿ç®—
                     aluop_o<=`EXE_OR_OP;
-                    //ÔËËãÀàĞÍÊÇÂß¼­ÔËËã
+                    //è¿ç®—ç±»å‹æ˜¯é€»è¾‘è¿ç®—
                     alusel_o<=`EXE_RES_LOGIC;
-                    //ĞèÒªÍ¨¹ıRegfileµÄ¶Á¶Ë¿Ú1¶ÁÈ¡¼Ä´æÆ÷
+                    //éœ€è¦é€šè¿‡Regfileçš„è¯»ç«¯å£1è¯»å–å¯„å­˜å™¨
                     reg1_read_o<=1'b1;
-                    //²»ĞèÒªÍ¨¹ıRegfileµÄ¶Á¶Ë¿Ú2¶ÁÈ¡¼Ä´æÆ÷
+                    //ä¸éœ€è¦é€šè¿‡Regfileçš„è¯»ç«¯å£2è¯»å–å¯„å­˜å™¨
                     reg2_read_o<=1'b0;
-                    //Ö¸ÁîÖ´ĞĞĞèÒªµÄÁ¢¼´Êı
+                    //æŒ‡ä»¤æ‰§è¡Œéœ€è¦çš„ç«‹å³æ•°
                     imm<={16'h0,inst_i[15:0]};
-                    //Ö¸ÁîÖ´ĞĞÒªĞ´µÄÄ¿µÄ¼Ä´æÆ÷µØÖ·
+                    //æŒ‡ä»¤æ‰§è¡Œè¦å†™çš„ç›®çš„å¯„å­˜å™¨åœ°å€
                     wd_o<=inst_i[20:16];
-                    //oriÖ¸ÁîÊÇÓĞĞ§Ö¸Áî
+                    //oriæŒ‡ä»¤æ˜¯æœ‰æ•ˆæŒ‡ä»¤
                     instvalid<=`InstValid;
                     
                   end
@@ -1022,9 +1022,9 @@ module id(
             end
          end
          
-   //¸øreg1_0¸³ÖµÊ±Ôö¼ÓÁ½ÖÖÇé¿ö
-    //  1.reg1_o Òª¶ÁÈ¡µÄ¼Ä´æÆ÷ÊÇÖ´ĞĞ½×¶ÎÒªĞ´µÄ¼Ä´æÆ÷Ê± reg1_o=ex_wdata_i
-    //  2.reg1_o Òª¶ÁÈ¡µÄ¼Ä´æÆ÷ÊÇ·Ã´æ½×¶ÎÒªĞ´µÄ¼Ä´æÆ÷Ê± reg1_o=mem_wdata_i
+   //ç»™reg1_0èµ‹å€¼æ—¶å¢åŠ ä¸¤ç§æƒ…å†µ
+    //  1.reg1_o è¦è¯»å–çš„å¯„å­˜å™¨æ˜¯æ‰§è¡Œé˜¶æ®µè¦å†™çš„å¯„å­˜å™¨æ—¶ reg1_o=ex_wdata_i
+    //  2.reg1_o è¦è¯»å–çš„å¯„å­˜å™¨æ˜¯è®¿å­˜é˜¶æ®µè¦å†™çš„å¯„å­˜å™¨æ—¶ reg1_o=mem_wdata_i
 	always @ (*) begin
         stallreq_for_reg1_loadrelate<=`NoStop;
 		if(rst == `RstEnable) begin
@@ -1044,7 +1044,7 @@ module id(
 	  end
 	end
 	
-	// reg2_oÓëreg1_oÀàËÆ
+	// reg2_oä¸reg1_oç±»ä¼¼
 	always @ (*) begin
         stallreq_for_reg2_loadrelate<=`NoStop;
 		if(rst == `RstEnable) begin

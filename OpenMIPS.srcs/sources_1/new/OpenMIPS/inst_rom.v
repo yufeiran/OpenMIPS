@@ -26,13 +26,13 @@ module inst_rom(
     output reg[`InstBus]    inst
     );
     
-    //定义一个数组，大小是InstMemNum,元素宽度是InstBus
+    //瀹氫箟涓�涓暟缁勶紝澶у皬鏄疘nstMemNum,鍏冪礌瀹藉害鏄疘nstBus
     reg[`InstBus] inst_mem[0:`InstMemNum-1];
     
-    //使用文件inst_rom.data初始化指令存储器
+    //浣跨敤鏂囦欢inst_rom.data鍒濆鍖栨寚浠ゅ瓨鍌ㄥ櫒
     initial $readmemh("inst_rom.data",inst_mem);
     
-    //当复位信号无效时，依据输入的地址，给出指令存储器ROM中对应的元素
+    //褰撳浣嶄俊鍙锋棤鏁堟椂锛屼緷鎹緭鍏ョ殑鍦板潃锛岀粰鍑烘寚浠ゅ瓨鍌ㄥ櫒ROM涓搴旂殑鍏冪礌
     always@(*)begin
         if(ce==`ChipDisable) begin
             inst<=`ZeroWord;

@@ -24,7 +24,7 @@ module id_ex(
     input wire clk,
     input wire rst,
     
-    //´ÓÒëÂë½×¶Î´«µİ¹ıÀ´µÄĞÅÏ¢
+    //ä»è¯‘ç é˜¶æ®µä¼ é€’è¿‡æ¥çš„ä¿¡æ¯
     input wire [`AluOpBus] id_aluop,
     input wire [`AluSelBus] id_alusel,
     input wire [`RegBus] id_reg1,
@@ -58,7 +58,7 @@ module id_ex(
     output reg            ex_is_in_delayslot,
     output reg            is_in_delayslot_o,
     
-    //´«µİµ½Ö´ĞĞ½×¶ÎµÄĞÅÏ¢
+    //ä¼ é€’åˆ°æ‰§è¡Œé˜¶æ®µçš„ä¿¡æ¯
     output reg[`AluOpBus]   ex_aluop,
     output reg[`AluSelBus]   ex_alusel,
     output reg[`RegBus]     ex_reg1,

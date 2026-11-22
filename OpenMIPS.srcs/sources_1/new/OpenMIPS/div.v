@@ -36,7 +36,7 @@ module div(
 );
     
     wire [32:0] div_temp;
-    reg [5:0] cnt;      //ÊÔÉÌ·¨¼ÆÊıÆ÷
+    reg [5:0] cnt;      //è¯•å•†æ³•è®¡æ•°å™¨
     reg [64:0] dividend;
     reg[1:0] state;
     
@@ -44,9 +44,9 @@ module div(
     reg[31:0] temp_op1;
     reg[31:0] temp_op2;
     
-    //dividend µÄµÍ32Î»±£´æµÄÊÇ±»³ıÊı¡¢ÖĞ¼ä½á¹û£ºµÚk´Îµü´ú½áÊøµÄÊ±ºòdividend[k:0]
-    //±£´æµÄ¾ÍÊÇµ±Ç°µÃµ½µÄÖĞ¼ä½á¹û£¬dividend[31:k+1]±£´æµÄ¾ÍÊÇ±»³ıÊıÖĞ»¹Ã»ÓĞ²ÎÓëÔËËã
-    //µÄÊı¾İ£¬dividend¸ß32Î»ÊÇÃ¿´Îµü´úÊ±µÄ±»³ıÊı£¬ËùÒÔdividend[63:32]¾ÍÊÇminued ,divisor¾ÍÊÇ³ıÊın£¬´Ë´¦½øĞĞµÄ¾ÍÊÇminuend-nÔËËã£¬½á¹û±£´æÔÚdiv_tempÖĞ
+    //dividend çš„ä½32ä½ä¿å­˜çš„æ˜¯è¢«é™¤æ•°ã€ä¸­é—´ç»“æœï¼šç¬¬kæ¬¡è¿­ä»£ç»“æŸçš„æ—¶å€™dividend[k:0]
+    //ä¿å­˜çš„å°±æ˜¯å½“å‰å¾—åˆ°çš„ä¸­é—´ç»“æœï¼Œdividend[31:k+1]ä¿å­˜çš„å°±æ˜¯è¢«é™¤æ•°ä¸­è¿˜æ²¡æœ‰å‚ä¸è¿ç®—
+    //çš„æ•°æ®ï¼Œdividendé«˜32ä½æ˜¯æ¯æ¬¡è¿­ä»£æ—¶çš„è¢«é™¤æ•°ï¼Œæ‰€ä»¥dividend[63:32]å°±æ˜¯minued ,divisorå°±æ˜¯é™¤æ•°nï¼Œæ­¤å¤„è¿›è¡Œçš„å°±æ˜¯minuend-nè¿ç®—ï¼Œç»“æœä¿å­˜åœ¨div_tempä¸­
     assign div_temp={1'b0,dividend[63:32]}-{1'b0,divisor};
     
     always@(posedge clk)begin
@@ -97,14 +97,14 @@ module div(
                             dividend<={div_temp[31:0],dividend[31:0],1'b1};
                         end
                         cnt<=cnt+1;
-                    end else begin  //ÊÔÉÌ·¨½áÊø
+                    end else begin  //è¯•å•†æ³•ç»“æŸ
                         if((signed_div_i==1'b1)&&
                         ((opdata1_i[31]^opdata2_i[21])==1'b1))begin
-                            dividend[31:0]<=(~dividend[31:0]+1);        //Çó²¹Âë
+                            dividend[31:0]<=(~dividend[31:0]+1);        //æ±‚è¡¥ç 
                         end
                         if((signed_div_i==1'b1)&&
                         ((opdata1_i[31]^dividend[64])==1'b1))begin
-                            dividend[64:33]<=(~dividend[64:33]+1);      //Çó²¹Âë
+                            dividend[64:33]<=(~dividend[64:33]+1);      //æ±‚è¡¥ç 
                         end
                         state<=`DivEnd;
                         cnt<=6'b000000;

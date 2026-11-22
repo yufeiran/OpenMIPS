@@ -43,14 +43,14 @@ module tlb(
 
 
 /**
-    查找TLB�?
+    查找TLB：
         把输入的地址和TLB每一项对比，生成MASK(只有1位为1)，然后用编码器生成一个索引index
-        1. 如果是访存指令，由于输入的地�?是E阶段的，因此将index经过�?级流水线（为M阶段），得到index_r
-            通过index_r访问特定项，获得tlb_entrylo,获取pfn,flag等信�?
-        2. 如果是TLBP指令，则index是根据M阶段的EntryHi_in产生的，直接将其赋�?�给EntryHi_out
+        1. 如果是访存指令，由于输入的地址是E阶段的，因此将index经过一级流水线（为M阶段），得到index_r
+            通过index_r访问特定项，获得tlb_entrylo,获取pfn,flag等信息
+        2. 如果是TLBP指令，则index是根据M阶段的EntryHi_in产生的，直接将其赋值给EntryHi_out
     读TLB逻辑:
         根据index直接访问TLB中对应的项，index可以来自地址查找生成的index，也可以来TLBR的Index_in
-    写TLB逻辑�?
+    写TLB逻辑：
         TLBWI，TLBWR
 
 */
@@ -263,7 +263,7 @@ wire [`TAG_WIDTH-1:0] data_vpnE;
 reg [`TAG_WIDTH-1:0] data_vpnM;
 assign data_vpnE=data_vaddr[31:`OFFSET_WIDTH];
 
-//M阶段的data的物理页�?
+//M阶段的data的物理页号
 assign data_pfn=data_kseg01M? {3'b0,data_vpnM[`TAG_WIDTH-4:0]}:
             ~data_oddM ? EntryLo0_read2[`PFN_BITS]:EntryLo1_read2[`PFN_BITS];
 

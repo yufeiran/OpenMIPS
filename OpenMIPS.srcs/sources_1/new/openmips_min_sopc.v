@@ -34,8 +34,8 @@ module openmips_min_sopc(
 	input wire[15:0]             gpio_i,
 	//output wire[31:0]            gpio_o,
 	
-	input wire ps2k_clk,	//PS2½Ó¿ÚÊ±ÖÓĞÅºÅ
-    input wire ps2k_data,		//PS2½Ó¿ÚÊı¾İĞÅºÅ
+	input wire ps2k_clk,	//PS2æ¥å£æ—¶é’Ÿä¿¡å·
+    input wire ps2k_data,		//PS2æ¥å£æ•°æ®ä¿¡å·
 
     output wire[7:0]dtube_cs_n,
     output wire[7:0]dtube_data,
@@ -267,7 +267,7 @@ module openmips_min_sopc(
     
    wire sdram_init_done;
 
-  //assign gpio_i_temp = {15'h0000, sdram_init_done, gpio_i}; sdram_init_done Ã»ÓĞÁË »»³É1'b1
+  //assign gpio_i_temp = {15'h0000, sdram_init_done, gpio_i}; sdram_init_done æ²¡æœ‰äº† æ¢æˆ1'b1
     assign gpio_i_temp={15'h0000,sdram_init_done,gpio_i};
 
     

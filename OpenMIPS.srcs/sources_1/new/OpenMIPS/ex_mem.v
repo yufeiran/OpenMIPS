@@ -25,7 +25,7 @@ module ex_mem(
     input wire clk,
     input wire rst,
     
-    //À´×ÔÖ´ĞĞ½×¶ÎµÄĞÅÏ¢
+    //æ¥è‡ªæ‰§è¡Œé˜¶æ®µçš„ä¿¡æ¯
     input wire [`RegAddrBus] ex_wd,
     input wire               ex_wreg,
     input wire [`RegBus]     ex_wdata,
@@ -66,7 +66,7 @@ module ex_mem(
     output reg[`RegBus]     mem_mem_addr,
     output reg[`RegBus]     mem_reg2,
     
-    //ËÍµ½·Ã´æ½×¶ÎµÄĞÅÏ¢
+    //é€åˆ°è®¿å­˜é˜¶æ®µçš„ä¿¡æ¯
     output reg  [`RegAddrBus] mem_wd,
     output reg                mem_wreg,
     output reg  [`RegBus]     mem_wdata,
@@ -74,7 +74,7 @@ module ex_mem(
     output reg  [`RegBus]     mem_lo,
     output reg                mem_whilo,
 
-    //Ôö¼ÓµÄÊä³ö½Ó¿Ú
+    //å¢åŠ çš„è¾“å‡ºæ¥å£
     output reg[`DoubleRegBus] hilo_o,
     output reg[1:0]           cnt_o,
 

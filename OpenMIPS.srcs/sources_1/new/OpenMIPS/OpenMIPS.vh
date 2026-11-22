@@ -1,22 +1,22 @@
-//**************************************    È«¾ÖµÄºê¶¨Òå          *****************************
-`define RstEnable           1'b1                    //¸´Î»ĞÅºÅÓĞĞ§
-`define RstDisable          1'b0                    //¸´Î»ĞÅºÅÎŞĞ§
-`define ZeroWord            32'h00000000            //32Î»µÄÊıÖµ0
-`define WriteEnable         1'b1                    //Ğ´Ê¹ÄÜ
-`define WriteDisable        1'b0                    //½ûÖ¹Ğ´
-`define ReadEnable          1'b1                    //¶ÁÊ¹ÄÜ
-`define ReadDisable         1'b0                    //½ûÖ¹¶Á
-`define AluOpBus            7:0                     //ÒëÂë½×¶ÎµÄÊä³ö   aluop_o µÄ¿í¶È
-`define AluSelBus           2:0                     //ÒëÂë½×¶ÎµÄÊä³ö   alusel_oµÄ¿í¶È
-`define InstValid           1'b0                    //Ö¸ÁîÓĞĞ§
-`define InstInvalid         1'b1                    //Ö¸ÁîÎŞĞ§
-`define True_V              1'b1                    //Âß¼­¡°Õæ¡±
-`define False_V             1'b0                    //Âß¼­¡°¼Ù¡±
-`define ChipEnable          1'b1                    //Ğ¾Æ¬Ê¹ÄÜ
-`define ChipDisable         1'b0                    //Ğ¾Æ¬½ûÖ¹
+//**************************************    å…¨å±€çš„å®å®šä¹‰          *****************************
+`define RstEnable           1'b1                    //å¤ä½ä¿¡å·æœ‰æ•ˆ
+`define RstDisable          1'b0                    //å¤ä½ä¿¡å·æ— æ•ˆ
+`define ZeroWord            32'h00000000            //32ä½çš„æ•°å€¼0
+`define WriteEnable         1'b1                    //å†™ä½¿èƒ½
+`define WriteDisable        1'b0                    //ç¦æ­¢å†™
+`define ReadEnable          1'b1                    //è¯»ä½¿èƒ½
+`define ReadDisable         1'b0                    //ç¦æ­¢è¯»
+`define AluOpBus            7:0                     //è¯‘ç é˜¶æ®µçš„è¾“å‡º   aluop_o çš„å®½åº¦
+`define AluSelBus           2:0                     //è¯‘ç é˜¶æ®µçš„è¾“å‡º   alusel_oçš„å®½åº¦
+`define InstValid           1'b0                    //æŒ‡ä»¤æœ‰æ•ˆ
+`define InstInvalid         1'b1                    //æŒ‡ä»¤æ— æ•ˆ
+`define True_V              1'b1                    //é€»è¾‘â€œçœŸâ€
+`define False_V             1'b0                    //é€»è¾‘â€œå‡â€
+`define ChipEnable          1'b1                    //èŠ¯ç‰‡ä½¿èƒ½
+`define ChipDisable         1'b0                    //èŠ¯ç‰‡ç¦æ­¢
 
-`define Stop                1'b1                    //Á÷Ë®ÏßÔİÍ£
-`define NoStop              1'b0                    //Á÷Ë®Ïß¼ÌĞø
+`define Stop                1'b1                    //æµæ°´çº¿æš‚åœ
+`define NoStop              1'b0                    //æµæ°´çº¿ç»§ç»­
 
 `define Branch              1'b1
 `define NotBranch           1'b0
@@ -40,8 +40,8 @@
 `define WB_BUSY     2'b01
 `define WB_WAIT_FOR_STALL   2'b11
 
-//************************** Óë¾ßÌåÖ¸ÁîÓĞ¹ØµÄºê¶¨Òå *******************************
-`define EXE_ORI         6'b001101           //Ö¸ÁîoriµÄÖ¸ÁîÂë
+//************************** ä¸å…·ä½“æŒ‡ä»¤æœ‰å…³çš„å®å®šä¹‰ *******************************
+`define EXE_ORI         6'b001101           //æŒ‡ä»¤oriçš„æŒ‡ä»¤ç 
 `define EXE_NOP         6'b000000
 `define EXE_AND         6'b100100
 `define EXE_OR          6'b100101
@@ -265,31 +265,31 @@
 
 `define EXE_RES_NOP     3'b000
 
-//************************** ÓëÖ¸Áî´æ´¢Æ÷ROMÓĞ¹ØµÄºê¶¨Òå **************************
-`define InstAddrBus     31:0                //ROMµÄµØÖ·×ÜÏß¿í¶È
-`define InstBus         31:0                //ROMµÄÊı¾İ×ÜÏß¿í¶È
-`define InstMemNum      131071              //ROMµÄÊµ¼Ê´óĞ¡Îª128KB
-`define InstMemNumLog2  17                  //ROMµÄÊµ¼ÊÊ¹ÓÃµÄµØÖ·Ïß¿í¶È
+//************************** ä¸æŒ‡ä»¤å­˜å‚¨å™¨ROMæœ‰å…³çš„å®å®šä¹‰ **************************
+`define InstAddrBus     31:0                //ROMçš„åœ°å€æ€»çº¿å®½åº¦
+`define InstBus         31:0                //ROMçš„æ•°æ®æ€»çº¿å®½åº¦
+`define InstMemNum      131071              //ROMçš„å®é™…å¤§å°ä¸º128KB
+`define InstMemNumLog2  17                  //ROMçš„å®é™…ä½¿ç”¨çš„åœ°å€çº¿å®½åº¦
 
-//************************* ÓëÊı¾İ´æ´¢Æ÷data_ramÓĞ¹ØµÄºê¶¨Òå **********************
+//************************* ä¸æ•°æ®å­˜å‚¨å™¨data_ramæœ‰å…³çš„å®å®šä¹‰ **********************
 `define DataAddrBus 31:0
 `define DataBus     31:0
 `define DataMemNum  131071
 `define DataMemNumLog2 17
 `define ByteWidth    7:0
 
-//*************************** ÓëÍ¨ÓÃ¼Ä´æÆ÷RegfileÓĞ¹ØµÄºê¶¨Òå**********************
-`define RegAddrBus      4:0                 //Regfile Ä£¿éµÄµØÖ·Ïß¿í¶È
-`define RegBus          31:0                //Regfile Ä£¿éµÄÊı¾İÏß¿í¶È
-`define RegWidth        32                  //Í¨ÓÃ¼Ä´æÆ÷µÄ¿í¶È
-`define DoubleRegWidth  64                  //Á½±¶Í¨ÓÃ¼Ä´æÆ÷µÄ¿í¶È
-`define DoubleRegBus    63:0                //Á½±¶µÄÍ¨ÓÃ¼Ä´æÆ÷µÄÊı¾İÏß¿í¶È
-`define RegNum          32                  //Í¨ÓÃ¼Ä´æÆ÷µÄÊıÁ¿
-`define RegNumLog2      5                   //Ñ°Ö·Í¨ÓÃ¼Ä´æÆ÷Ê¹ÓÃµÄµØÖ·Î»Êı
+//*************************** ä¸é€šç”¨å¯„å­˜å™¨Regfileæœ‰å…³çš„å®å®šä¹‰**********************
+`define RegAddrBus      4:0                 //Regfile æ¨¡å—çš„åœ°å€çº¿å®½åº¦
+`define RegBus          31:0                //Regfile æ¨¡å—çš„æ•°æ®çº¿å®½åº¦
+`define RegWidth        32                  //é€šç”¨å¯„å­˜å™¨çš„å®½åº¦
+`define DoubleRegWidth  64                  //ä¸¤å€é€šç”¨å¯„å­˜å™¨çš„å®½åº¦
+`define DoubleRegBus    63:0                //ä¸¤å€çš„é€šç”¨å¯„å­˜å™¨çš„æ•°æ®çº¿å®½åº¦
+`define RegNum          32                  //é€šç”¨å¯„å­˜å™¨çš„æ•°é‡
+`define RegNumLog2      5                   //å¯»å€é€šç”¨å¯„å­˜å™¨ä½¿ç”¨çš„åœ°å€ä½æ•°
 `define NOPRegAddr      5'b00000
 
 
-//************************* DIVÄ£¿é¶¨Òå ******************************************8
+//************************* DIVæ¨¡å—å®šä¹‰ ******************************************8
 `define DivFree     2'b00
 `define DivByZero   2'b01
 `define DivOn      2'b10

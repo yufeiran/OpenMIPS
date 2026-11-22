@@ -1,4 +1,4 @@
-//È«¾Ö
+//å…¨å±€
 `define RstEnable 1'b1
 `define RstDisable 1'b0
 `define ZeroWord 32'h00000000
@@ -26,7 +26,7 @@
 `define ChipDisable 1'b0
 
 
-//Ö¸Áî
+//æŒ‡ä»¤
 `define EXE_AND  6'b100100
 `define EXE_OR   6'b100101
 `define EXE_XOR 6'b100110
@@ -240,20 +240,20 @@
 `define EXE_RES_NOP 3'b000
 
 
-//Ö¸Áî´æ´¢Æ÷inst_rom
+//æŒ‡ä»¤å­˜å‚¨å™¨inst_rom
 `define InstAddrBus 31:0
 `define InstBus 31:0
 `define InstMemNum 131071
 `define InstMemNumLog2 17
 
-//Êı¾İ´æ´¢Æ÷data_ram
+//æ•°æ®å­˜å‚¨å™¨data_ram
 `define DataAddrBus 31:0
 `define DataBus 31:0
 `define DataMemNum 131071
 `define DataMemNumLog2 17
 `define ByteWidth 7:0
 
-//Í¨ÓÃ¼Ä´æÆ÷regfile
+//é€šç”¨å¯„å­˜å™¨regfile
 `define RegAddrBus 4:0
 `define RegBus 31:0
 `define RegWidth 32
@@ -263,7 +263,7 @@
 `define RegNumLog2 5
 `define NOPRegAddr 5'b00000
 
-//³ı·¨div
+//é™¤æ³•div
 `define DivFree 2'b00
 `define DivByZero 2'b01
 `define DivOn 2'b10
@@ -273,11 +273,11 @@
 `define DivStart 1'b1
 `define DivStop 1'b0
 
-//CP0¼Ä´æÆ÷µØÖ·
-`define CP0_REG_COUNT    5'b01001        //¿É¶ÁĞ´
-`define CP0_REG_COMPARE    5'b01011      //¿É¶ÁĞ´
-`define CP0_REG_STATUS    5'b01100       //¿É¶ÁĞ´
-`define CP0_REG_CAUSE    5'b01101        //Ö»¶Á
-`define CP0_REG_EPC    5'b01110          //¿É¶ÁĞ´
-`define CP0_REG_PrId    5'b01111         //Ö»¶Á
-`define CP0_REG_CONFIG    5'b10000       //Ö»¶Á
+//CP0å¯„å­˜å™¨åœ°å€
+`define CP0_REG_COUNT    5'b01001        //å¯è¯»å†™
+`define CP0_REG_COMPARE    5'b01011      //å¯è¯»å†™
+`define CP0_REG_STATUS    5'b01100       //å¯è¯»å†™
+`define CP0_REG_CAUSE    5'b01101        //åªè¯»
+`define CP0_REG_EPC    5'b01110          //å¯è¯»å†™
+`define CP0_REG_PrId    5'b01111         //åªè¯»
+`define CP0_REG_CONFIG    5'b10000       //åªè¯»

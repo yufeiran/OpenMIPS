@@ -1,0 +1,8 @@
+root = true
+
+# Current RTL, simulation sources and constraints use UTF-8 without a BOM.
+[OpenMIPS.srcs/{sources_1,sim_1,constrs_1}/new/**]
+charset = utf-8
+
+[scripts/open-vivado-utf8.ps1]
+charset = utf-8

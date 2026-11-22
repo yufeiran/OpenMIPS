@@ -23,7 +23,7 @@
 module pc_reg(
     input wire      clk,
     input wire      rst,
-    input wire[5:0]  stall,     //À´×Ô¿ØÖÆÄ£¿éCTRL
+    input wire[5:0]  stall,     //æ¥è‡ªæ§åˆ¶æ¨¡å—CTRL
     input wire      branch_flag_i,
     input wire[`RegBus] branch_target_address_i,
 
@@ -35,19 +35,19 @@ module pc_reg(
     );
     always@(posedge clk) begin
         if(rst==`RstEnable) begin
-            ce<=`ChipDisable;       //¸´Î»µÄÊ±ºòÖ¸Áî´æ´¢Æ÷±»½ûÓÃ
+            ce<=`ChipDisable;       //å¤ä½çš„æ—¶å€™æŒ‡ä»¤å­˜å‚¨å™¨è¢«ç¦ç”¨
         end else begin
-            ce<=`ChipEnable;        //¸´Î»½áÊøºó£¬Ö¸Áî´æ´¢Æ÷Ê¹ÄÜ
+            ce<=`ChipEnable;        //å¤ä½ç»“æŸåï¼ŒæŒ‡ä»¤å­˜å‚¨å™¨ä½¿èƒ½
         end
     end
     
     always@(posedge clk) begin
         if(ce ==`ChipDisable) begin
-            pc<=32'h0A000000;       //È¡µÃµÚÒ»ÌõÖ¸ÁîµØÖ·Îª0x0A00_0000
+            pc<=32'h0A000000;       //å–å¾—ç¬¬ä¸€æ¡æŒ‡ä»¤åœ°å€ä¸º0x0A00_0000
         end else begin
             if(flush==1'b1)begin
-                //ÊäÈëĞÅºÅflush==1±íÊ¾Òì³£·¢Éú£¬½«´ÓCTRLÄ£¿é¸ø³öµÄÒì³£´¦Àí
-                //Àı³ÌÈë¿ÚµØÖ·new_pc´¦È¡Ö¸Ö´ĞĞ
+                //è¾“å…¥ä¿¡å·flush==1è¡¨ç¤ºå¼‚å¸¸å‘ç”Ÿï¼Œå°†ä»CTRLæ¨¡å—ç»™å‡ºçš„å¼‚å¸¸å¤„ç†
+                //ä¾‹ç¨‹å…¥å£åœ°å€new_pcå¤„å–æŒ‡æ‰§è¡Œ
                 pc<=new_pc;
             end else if(stall[0]==`NoStop) begin
                 if(branch_flag_i==`Branch)begin

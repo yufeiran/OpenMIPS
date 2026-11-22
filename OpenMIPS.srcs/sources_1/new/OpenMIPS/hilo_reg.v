@@ -24,12 +24,12 @@ module hilo_reg(
     input wire clk,
     input wire rst,
     
-    //Ğ´¶Ë¿Ú
+    //å†™ç«¯å£
     input wire we,
     input wire[`RegBus] hi_i,
     input wire[`RegBus] lo_i,
     
-    //¶Á¶Ë¿Ú
+    //è¯»ç«¯å£
     output reg[`RegBus] hi_o,
     output reg[`RegBus] lo_o
     );
