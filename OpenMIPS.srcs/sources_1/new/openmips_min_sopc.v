@@ -26,11 +26,11 @@ module openmips_min_sopc(
     
     input wire flash_continue,
 
- 	//????
+	// 串口收发信号
 	input wire                   uart_in,
 	output wire                   uart_out,
 	
-	//GPIO??
+	// GPIO 输入
 	input wire[15:0]             gpio_i,
 	//output wire[31:0]            gpio_o,
 	
@@ -242,16 +242,16 @@ module openmips_min_sopc(
         
         );
 
-    //OpenMIPS?????,????????UART???GPIO??
+    // OpenMIPS 中断输入，从高位到低位依次为两位保留、键盘、GPIO、UART 和定时器
     //keyboard_int
     assign int={2'b00,keyboard_int,gpio_int,uart_int,timer_int};
     
     assign LED0=keyboard_int;
     assign LED1=0;
     assign LED2=0;
-    //??GPIO
+    // GPIO 控制器
     gpio_top gpio_top0(
-        //GPIO???Wishbone????????????2
+        // GPIO 连接到 Wishbone 从设备端口 2
         .wb_clk_i(clk),.wb_rst_i(rst),
         .wb_cyc_i(s2_cyc_o),.wb_adr_i(s2_addr_o[7:0]),
         .wb_dat_i(s2_data_o),.wb_sel_i(s2_sel_o),
@@ -261,7 +261,7 @@ module openmips_min_sopc(
 
         .wb_inta_o(gpio_int),
         .ext_pad_i(gpio_i_temp),
-        .ext_pad_o(gpio_o),     //???32?????
+        .ext_pad_o(gpio_o),     // GPIO 的 32 位输出
         .ext_padoe_o()
     );
     
@@ -324,19 +324,19 @@ module openmips_min_sopc(
 		.ddr2_odt(ddr2_odt)
   );
 
-    //??UART???
+    // UART 控制器
     uart_top uart_top0(
-        //UART??????Wishbone????????????1
+        // UART 连接到 Wishbone 从设备端口 1
         .wb_clk_i(clk),.wb_rst_i(rst),
         .wb_adr_i(s1_addr_o[4:0]),.wb_dat_i(s1_data_o),
         .wb_dat_o(s1_data_i),.wb_we_i(s1_we_o),
         .wb_stb_i(s1_stb_o),.wb_cyc_i(s1_cyc_o),
         .wb_ack_o(s1_ack_i),.wb_sel_i(s1_sel_o),
 
-        //????
+        // UART 中断输出
         .int_o(uart_int),
 
-        //??UART??
+        // UART 串行收发引脚
         .stx_pad_o(uart_out),.srx_pad_i(uart_in),
         .cts_pad_i(1'b0),.dsr_pad_i(1'b0),
         .ri_pad_i(1'b0),.dcd_pad_i(1'b0),
@@ -381,169 +381,169 @@ module openmips_min_sopc(
    ps2_keyboard_driver ps2_keyboard_driver(clk_in,rst_n,gpio_i[0],ps2k_clk,ps2k_data,sm_bit,keyboard_dtube_data,ps2_state,keyboard_int,s5_cyc_o,s5_stb_o,s5_we_o,s5_sel_o,s5_addr_o,s5_data_o,s5_data_i,s5_ack_i);
    
 
-    //??WB_CONMAX
+    // Wishbone 总线互连
     wb_conmax_top wb_conmax_top0(
         .clk_i(clk),.rst_i(rst),
 
-        //?????0????OpenMIPS??????Wishbone????
+        // 主设备端口 0：OpenMIPS 数据访问接口
         .m0_data_i(m0_data_i),.m0_data_o(m0_data_o),
         .m0_addr_i(m0_addr_i),.m0_sel_i(m0_sel_i),
         .m0_we_i(m0_we_i),.m0_cyc_i(m0_cyc_i),
         .m0_stb_i(m0_stb_i),.m0_ack_o(m0_ack_o),
 
-        //?????0????OpenMIPS??????Wishbone????
+        // 主设备端口 1：OpenMIPS 取指接口
         .m1_data_i(m1_data_i),.m1_data_o(m1_data_o),
         .m1_addr_i(m1_addr_i),.m1_sel_i(m1_sel_i),
         .m1_we_i(m1_we_i),.m1_cyc_i(m1_cyc_i),
         .m1_stb_i(m1_stb_i),.m1_ack_o(m1_ack_o),
 
-        //?????2
+        // 主设备端口 2：未使用
         .m2_data_i(`ZeroWord),.m2_data_o(),
         .m2_addr_i(`ZeroWord),.m2_sel_i(4'b0000),
         .m2_we_i(1'b0),.m2_cyc_i(1'b0),
         .m2_stb_i(1'b0),.m2_ack_o(),
         .m2_err_o(),.m2_rty_o(),
 
-        //?????3
+        // 主设备端口 3：未使用
         .m3_data_i(`ZeroWord),.m3_data_o(),
         .m3_addr_i(`ZeroWord),.m3_sel_i(4'b0000),
         .m3_we_i(1'b0),.m3_cyc_i(1'b0),
         .m3_stb_i(1'b0),.m3_ack_o(),
         .m3_err_o(),.m3_rty_o(),
 
-        //?????4
+        // 主设备端口 4：未使用
         .m4_data_i(`ZeroWord),.m4_data_o(),
         .m4_addr_i(`ZeroWord),.m4_sel_i(4'b0000),
         .m4_we_i(1'b0),.m4_cyc_i(1'b0),
         .m4_stb_i(1'b0),.m4_ack_o(),
         .m4_err_o(),.m4_rty_o(),
 
-        //?????5
+        // 主设备端口 5：未使用
         .m5_data_i(`ZeroWord),.m5_data_o(),
         .m5_addr_i(`ZeroWord),.m5_sel_i(4'b0000),
         .m5_we_i(1'b0),.m5_cyc_i(1'b0),
         .m5_stb_i(1'b0),.m5_ack_o(),
         .m5_err_o(),.m5_rty_o(),
 
-        //?????6
+        // 主设备端口 6：未使用
         .m6_data_i(`ZeroWord),.m6_data_o(),
         .m6_addr_i(`ZeroWord),.m6_sel_i(4'b0000),
         .m6_we_i(1'b0),.m6_cyc_i(1'b0),
         .m6_stb_i(1'b0),.m6_ack_o(),
         .m6_err_o(),.m6_rty_o(),
 
-        //?????7
+        // 主设备端口 7：未使用
         .m7_data_i(`ZeroWord),.m7_data_o(),
         .m7_addr_i(`ZeroWord),.m7_sel_i(4'b0000),
         .m7_we_i(1'b0),.m7_cyc_i(1'b0),
         .m7_stb_i(1'b0),.m7_ack_o(),
         .m7_err_o(),.m7_rty_o(),
 
-         //?????0????SDRAM???
+         // 从设备端口 0：DDR2 控制器
         .s0_data_i(s0_data_i),.s0_data_o(s0_data_o),
         .s0_addr_o(s0_addr_o),.s0_sel_o(s0_sel_o),
         .s0_we_o(s0_we_o),.s0_cyc_o(s0_cyc_o),
         .s0_stb_o(s0_stb_o),.s0_ack_i(s0_ack_i),
         .s0_err_i(1'b0),.s0_rty_i(1'b0),
 
-        //?????1????UART???
+        // 从设备端口 1：UART 控制器
         .s1_data_i(s1_data_i),.s1_data_o(s1_data_o),
         .s1_addr_o(s1_addr_o),.s1_sel_o(s1_sel_o),
         .s1_we_o(s1_we_o),.s1_cyc_o(s1_cyc_o),
         .s1_stb_o(s1_stb_o),.s1_ack_i(s1_ack_i),
         .s1_err_i(1'b0),.s1_rty_i(1'b0),
 
-        //?????2????GPIO
+        // 从设备端口 2：GPIO 控制器
         .s2_data_i(s2_data_i),.s2_data_o(s2_data_o),
         .s2_addr_o(s2_addr_o),.s2_sel_o(s2_sel_o),
         .s2_we_o(s2_we_o),.s2_cyc_o(s2_cyc_o),
         .s2_stb_o(s2_stb_o),.s2_ack_i(s2_ack_i),
         .s2_err_i(1'b0),.s2_rty_i(1'b0),
 
-        //?????3????Flash???
+        // 从设备端口 3：SPI Flash 接口
         .s3_data_i(s3_data_i),.s3_data_o(s3_data_o),
         .s3_addr_o(s3_addr_o),.s3_sel_o(s3_sel_o),
         .s3_we_o(s3_we_o),.s3_cyc_o(s3_cyc_o),
         .s3_stb_o(s3_stb_o),.s3_ack_i(s3_ack_i),
         .s3_err_i(1'b0),.s3_rty_i(1'b0),
 
-        //?????4 VGA RAM
+        // 从设备端口 4：VGA 显存
         .s4_data_i(s4_data_i),.s4_data_o(s4_data_o),
         .s4_addr_o(s4_addr_o),.s4_sel_o(s4_sel_o),
         .s4_we_o(s4_we_o),.s4_cyc_o(s4_cyc_o),
         .s4_stb_o(s4_stb_o),.s4_ack_i(s4_ack_i),
         .s4_err_i(1'b0),.s4_rty_i(1'b0),
 
-        //?????5
+        // 从设备端口 5：PS/2 键盘接口
         .s5_data_i(s5_data_i),.s5_data_o(s5_data_o),
         .s5_addr_o(s5_addr_o),.s5_sel_o(s5_sel_o),
         .s5_we_o(s5_we_o),.s5_cyc_o(s5_cyc_o),
         .s5_stb_o(s5_stb_o),.s5_ack_i(s5_ack_i),
         .s5_err_i(1'b0),.s5_rty_i(1'b0),
 
-        //?????6
+        // 从设备端口 6：已引出信号，未接外设
         .s6_data_i(s6_data_i),.s6_data_o(s6_data_o),
         .s6_addr_o(s6_addr_o),.s6_sel_o(s6_sel_o),
         .s6_we_o(s6_we_o),.s6_cyc_o(s6_cyc_o),
         .s6_stb_o(s6_stb_o),.s6_ack_i(s6_ack_i),
         .s6_err_i(1'b0),.s6_rty_i(1'b0),
-        //?????7
+        // 从设备端口 7：未接外设
         .s7_data_i(),.s7_data_o(),
         .s7_addr_o(),.s7_sel_o(),
         .s7_we_o(),.s7_cyc_o(),
         .s7_stb_o(),.s7_ack_i(1'b0),
         .s7_err_i(1'b0),.s7_rty_i(1'b0),
 
-        //?????8
+        // 从设备端口 8：未接外设
         .s8_data_i(),.s8_data_o(),
         .s8_addr_o(),.s8_sel_o(),
         .s8_we_o(),.s8_cyc_o(),
         .s8_stb_o(),.s8_ack_i(1'b0),
         .s8_err_i(1'b0),.s8_rty_i(1'b0),
 
-        //?????9
+        // 从设备端口 9：未接外设
         .s9_data_i(),.s9_data_o(),
         .s9_addr_o(),.s9_sel_o(),
         .s9_we_o(),.s9_cyc_o(),
         .s9_stb_o(),.s9_ack_i(1'b0),
         .s9_err_i(1'b0),.s9_rty_i(1'b0),
 
-        //?????10
+        // 从设备端口 10：未接外设
         .s10_data_i(),.s10_data_o(),
         .s10_addr_o(),.s10_sel_o(),
         .s10_we_o(),.s10_cyc_o(),
         .s10_stb_o(),.s10_ack_i(1'b0),
         .s10_err_i(1'b0),.s10_rty_i(1'b0),
 
-        //?????11
+        // 从设备端口 11：未接外设
         .s11_data_i(),.s11_data_o(),
         .s11_addr_o(),.s11_sel_o(),
         .s11_we_o(),.s11_cyc_o(),
         .s11_stb_o(),.s11_ack_i(1'b0),
         .s11_err_i(1'b0),.s11_rty_i(1'b0),
 
-        //?????12
+        // 从设备端口 12：未接外设
         .s12_data_i(),.s12_data_o(),
         .s12_addr_o(),.s12_sel_o(),
         .s12_we_o(),.s12_cyc_o(),
         .s12_stb_o(),.s12_ack_i(1'b0),
         .s12_err_i(1'b0),.s12_rty_i(1'b0),
 
-        //?????13
+        // 从设备端口 13：未接外设
         .s13_data_i(),.s13_data_o(),
         .s13_addr_o(),.s13_sel_o(),
         .s13_we_o(),.s13_cyc_o(),
         .s13_stb_o(),.s13_ack_i(1'b0),
         .s13_err_i(1'b0),.s13_rty_i(1'b0),
 
-        //?????14
+        // 从设备端口 14：未接外设
         .s14_data_i(),.s14_data_o(),
         .s14_addr_o(),.s14_sel_o(),
         .s14_we_o(),.s14_cyc_o(),
         .s14_stb_o(),.s14_ack_i(1'b0),
         .s14_err_i(1'b0),.s14_rty_i(1'b0),
 
-        //?????15
+        // 从设备端口 15：未接外设
         .s15_data_i(),.s15_data_o(),
         .s15_addr_o(),.s15_sel_o(),
         .s15_we_o(),.s15_cyc_o(),

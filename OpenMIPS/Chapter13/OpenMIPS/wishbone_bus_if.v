@@ -26,7 +26,7 @@
 // File:    wishbone_bus_if.v
 // Author:  Lei Silei
 // E-mail:  leishangwen@163.com
-// Description: wishbone????
+// Description: Wishbone 总线接口
 // Revision: 1.0
 //////////////////////////////////////////////////////////////////////
 
@@ -37,11 +37,11 @@ module wishbone_bus_if(
 	input	wire										clk,
 	input wire										rst,
 	
-	//??????ctrl
+	// 来自 ctrl 模块的暂停和冲刷信号
 	input wire[5:0]               stall_i,
 	input                         flush_i,
 	
-	//CPU???????
+	// CPU 侧的访问接口
 	input wire                    cpu_ce_i,
 	input wire[`RegBus]           cpu_data_i,
 	input wire[`RegBus]           cpu_addr_i,
@@ -49,7 +49,7 @@ module wishbone_bus_if(
 	input wire[3:0]               cpu_sel_i,
 	output reg[`RegBus]           cpu_data_o,
 	
-	//Wishbone?????
+	// Wishbone 总线侧接口
 	input wire[`RegBus]           wishbone_data_i,
 	input wire                    wishbone_ack_i,
 	output reg[`RegBus]           wishbone_addr_o,
@@ -156,7 +156,7 @@ module wishbone_bus_if(
 					if(wishbone_ack_i == 1'b1) begin
 						stallreq <= `NoStop;
 						if(wishbone_we_o == `WriteDisable) begin
-							cpu_data_o <= wishbone_data_i;  //????
+							cpu_data_o <= wishbone_data_i;  // 将从设备读出的数据返回给 CPU
 						end else begin
 						  cpu_data_o <= `ZeroWord;
 						end							

@@ -26,12 +26,12 @@
 // File:    openmips_min_sopc.v
 // Author:  Lei Silei
 // E-mail:  leishangwen@163.com
-// Description: ??OpenMIPS????????SOPC????????
-//              wishbone?????openmips??SOPC??openmips?
-//              wb_conmax?GPIO controller?flash controller?uart 
-//              controller???????flash???flashmem????
-//              ???????????ram???datamem??????
-//              ???????wishbone????    
+// Description: 以 OpenMIPS 为处理器的小型 SOPC
+//              OpenMIPS 的取指和数据接口接入 Wishbone 总线。
+//              wb_conmax 连接 GPIO、Flash、UART 和 SDRAM 控制器。
+//              Flash 控制器连接外部 Flash。
+//              数据存储使用外部 SDRAM，另有 datamem 实例作为参考。
+//              这些外设通过 Wishbone 从设备端口访问。
 // Revision: 1.0
 //////////////////////////////////////////////////////////////////////
 
@@ -42,11 +42,11 @@ module openmips_min_sopc(
 	input	wire										clk,
 	input wire										rst,
 	
-	//????
+	// 串口收发信号
 	input wire                   uart_in,
 	output wire                   uart_out,
 	
-	//GPIO??
+	// GPIO 接口
 	input wire[15:0]             gpio_i,
 	output wire[31:0]            gpio_o,
 	

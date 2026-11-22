@@ -269,16 +269,16 @@ module cp0_reg(
         //index,entry_hi/lo,page_mask
         wire mtc0_index,mtc0_entry_lo0,mtc0_entry_lo1,mtc0_entry_hi,mtc0_page_mask;
 
-        //1. mtc0鍐?
+        //1. mtc0写
         assign mtc0_index=we_i&(waddr_i==`CP0_REG_INDEX);
         assign mtc0_entry_hi=we_i&(waddr_i==`CP0_REG_EntryHi);
         assign mtc0_entry_lo0=we_i&(waddr_i==`CP0_REG_EntryLo0);
         assign mtc0_entry_lo1=we_i&(waddr_i==`CP0_REG_EntryLo1);
         assign mtc0_page_mask=we_i&(waddr_i==`CP0_REG_PageMask);
-        //2. tlb鎸囦护鍐?
+        //2. tlb指令写
         wire tlbr,tlbp,tlbwi,tlbwr;
         assign {tlbwr,tlbwi,tlbr,tlbp}=tlb_typeM;
-        //3.寮傚父鏇存柊 entry_hi
+        //3.异常更新 entry_hi
         wire tlb_exception;
         assign tlb_exception=~|excepttype_i[4:2]&|excepttype_i[1:0]; //exe_code_mod , exe_code_tlbl,exe_code_tlbs
 
