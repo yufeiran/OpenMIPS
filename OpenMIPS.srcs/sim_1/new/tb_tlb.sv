@@ -49,7 +49,7 @@ module tb_tlb(
 
     
     always #5 clk = ~clk;
-    always #5 Random_in = Random_in + 32'd1;
+    // always #5 Random_in = Random_in + 32'd1;
     
     tlb dut(
         .clk,
@@ -79,6 +79,7 @@ module tb_tlb(
     
     initial begin
         reset = 1'b1;
+        Random_in = 32'd5;
         
         #10 reset = 1'b0;
         
@@ -114,7 +115,76 @@ module tb_tlb(
         if(dut.EntryLo1_out !== 32'h0000_0D06)
             $fatal(1,"EntryLo1: expected 00000D06, got %08h", dut.EntryLo1_out);
 
-        $display("PASS! TLBWI/TLBR readback at index %0d", Index_in);
+
+        // TLBP
+        #10 
+        TLBR = 1'b0;
+        TLBP = 1'b1;
+
+        EntryHi_in = 32'h0040_0042;
+        Index_in = 32'd0;
+        #1
+        if(dut.Index_out!==32'd3)
+            $fatal(1,"Index_out: expected 00000003, got %0d",dut.Index_out);
+
+        #10
+        EntryHi_in = 32'h0040_0043;
+        #1
+        if(dut.Index_out!==32'h8000_0000)
+            $fatal(1,"Index_out: expected 80000000, got %08h",dut.Index_out);
+
+
+        @(negedge clk);
+        TLBP = 1'b0;
+        TLBR = 1'b0;
+        TLBWI = 1'b0;
+
+        Index_in = 32'd3;
+        Random_in = 32'd5;
+        TLBWR = 1'b1;
+
+        EntryHi_in = 32'h0040_2042;
+        EntryLo0_in = 32'h0000_1086;
+        EntryLo1_in = 32'h0000_1486;
+        PageMask_in = 32'h0000_0000;
+
+        @(negedge clk);
+        Index_in = 32'd5;
+        TLBR = 1'b1;
+        TLBWR = 1'b0;
+
+        @(posedge clk);
+        #1;
+        if (dut.PageMask_out !== 32'h0000_0000)
+            $fatal(1, "PageMask: expected 00000000, got %08h", dut.PageMask_out);
+
+        if(dut.EntryHi_out !== 32'h0040_2042)
+            $fatal(1,"EntryHi: expected 00402042, got %08h", dut.EntryHi_out);
+        
+        if(dut.EntryLo0_out !== 32'h0000_1086)
+            $fatal(1,"EntryLo0: expected 00001086, got %08h", dut.EntryLo0_out);
+
+        if(dut.EntryLo1_out !== 32'h0000_1486)
+            $fatal(1,"EntryLo1: expected 00001486, got %08h", dut.EntryLo1_out);
+
+        Index_in = 32'd3;
+
+        @(posedge clk);
+        #1;
+        if (dut.PageMask_out !== 32'h0000_0000)
+            $fatal(1, "PageMask: expected 00000000, got %08h", dut.PageMask_out);
+
+        if(dut.EntryHi_out !== 32'h0040_0042)
+            $fatal(1,"EntryHi: expected 00400042, got %08h", dut.EntryHi_out);
+        
+        if(dut.EntryLo0_out !== 32'h0000_0486)
+            $fatal(1,"EntryLo0: expected 00000486, got %08h", dut.EntryLo0_out);
+
+        if(dut.EntryLo1_out !== 32'h0000_0D06)
+            $fatal(1,"EntryLo1: expected 00000D06, got %08h", dut.EntryLo1_out);
+
+
+        $display("PASS! TLBWI/TLBR readback, TLBP hit and ASID miss");
         $finish;
     end
     

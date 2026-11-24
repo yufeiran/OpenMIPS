@@ -87,7 +87,7 @@ generate
     for(i=0;i<`TLB_SUM;i=i+1)
     begin:find
         assign find_mask1[i]=((vaddr1[`VPN2_BITS]&~TLB_PageMask[i][`VPN2_BITS])==(TLB_EntryHi[i][`VPN2_BITS]&~TLB_PageMask[i][`VPN2_BITS]))&&(TLB_EntryHi[i][`G_BIT]||TLB_EntryHi[i][`ASID_BITS]==EntryHi_in[`ASID_BITS]);
-        assign find_mask2[i]=((vaddr1[`VPN2_BITS]&~TLB_PageMask[i][`VPN2_BITS])==(TLB_EntryHi[i][`VPN2_BITS]&~TLB_PageMask[i][`VPN2_BITS]))&&(TLB_EntryHi[i][`G_BIT]||TLB_EntryHi[i][`ASID_BITS]==EntryHi_in[`ASID_BITS]);
+        assign find_mask2[i]=((vaddr2[`VPN2_BITS]&~TLB_PageMask[i][`VPN2_BITS])==(TLB_EntryHi[i][`VPN2_BITS]&~TLB_PageMask[i][`VPN2_BITS]))&&(TLB_EntryHi[i][`G_BIT]||TLB_EntryHi[i][`ASID_BITS]==EntryHi_in[`ASID_BITS]);
     end
 endgenerate
 
@@ -278,7 +278,7 @@ wire inst_oddE;
 reg inst_oddM;
 assign inst_oddE=inst_vaddr[`OFFSET_WIDTH];
 
-wire isnt_kseg01E,inst_kseg1E;
+wire inst_kseg01E,inst_kseg1E;
 reg inst_kseg01M,inst_kseg1M;
 assign inst_kseg01E=inst_vaddr[31:30]==2'b10 ? 1'b1:1'b0;
 assign inst_kseg1E=inst_vaddr[31:29]==3'b101 ? 1'b1:1'b0;
